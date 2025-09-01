@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Västtrafik</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/globals.css">
+    <link rel="stylesheet" href="/css/styleguide.css">
+</head>
+<body>
+<div id="load"></div>
+<div class="search-container">
+    <label for="origin">Origin</label>
+    <input list="origins" type="text" name="origin" id="origin">
+    <datalist id="origins"></datalist>
+    <label for="destination">Destination</label>
+    <input type="text" name="destination" id="destination">
+    <!--<datalist id="destinations"></datalist>-->
+    <!--<label for="time">Departure Date</label>
+    <input type="date" name="time" id="time">
+    <label for="time2">Departure Time</label>
+    <input type="time" name="time2" id="time2">-->
+</div>
+<button type="button" onclick="searchJourney(); searchProducts()">Sök Resa</button>
+<script src="js/vtraf.js"></script>
+<script src="js/footer.js"></script>
+</body>
+</html>
