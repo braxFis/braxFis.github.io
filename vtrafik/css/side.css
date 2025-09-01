@@ -1,0 +1,108 @@
+/* Floating Action Button (FAB) */
+.menu-fab {
+    margin-bottom: 20px;
+}
+
+/* Navigation Items */
+.destinations {
+    width: 100%;
+}
+
+.nav-item, .div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-item:hover, .div:hover {
+    background: #555;
+}
+
+/* Icons */
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Labels */
+.label, .text-wrapper {
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Sidebar */
+.navigation-rail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px; /* Collapsed width */
+    height: 100vh;
+    background: #333;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+/* Expand sidebar on hover */
+.navigation-rail:hover {
+    width: 200px; /* Expanded width */
+}
+
+/* Navigation items */
+.destinations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.nav-item:hover {
+    background: #444;
+}
+
+/* Icons */
+.icon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Text hidden by default */
+.nav-item .label {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+/* Show text when expanded */
+.navigation-rail:hover .nav-item .label {
+    opacity: 1;
+}
+
+/* Main content adjustment */
+.main-content {
+    margin-left: 60px; /* Same as collapsed width */
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.navigation-rail:hover + .main-content {
+    margin-left: 300px; /* Adjust when sidebar expands */
+}
