@@ -30,7 +30,8 @@ async function fetchGames(page=1) {
     key: "8bc47dab600645ac9164f534d0182baf",
     page: page,
     count: 10000,
-    dates: "2025-01-01"
+    dates: "2025-01-01",
+    ordering: "-rating",
   });
 
   fetch(`https://api.rawg.io/api/games?${params}`, {

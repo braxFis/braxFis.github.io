@@ -1,7 +1,9 @@
 function side_tab(page = 1, key = 'tba') {
   const params = new URLSearchParams({
     key: "8bc47dab600645ac9164f534d0182baf",
-    page: page
+    page: page,
+    dates: "2026-01-01",
+    ordering: "-rating"
   });
 
   fetch(`https://api.rawg.io/api/games?${params}`)
