@@ -29,7 +29,8 @@ async function fetchGames(page=1) {
   const params = new URLSearchParams({
     key: "8bc47dab600645ac9164f534d0182baf",
     page: page,
-    count: 10000
+    count: 10000,
+    dates: "2025-01-01"
   });
 
   fetch(`https://api.rawg.io/api/games?${params}`, {
