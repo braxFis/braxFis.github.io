@@ -51,7 +51,8 @@ async function fetchGames(page=1) {
     key: "8bc47dab600645ac9164f534d0182baf",
     page: page,
     page_size: 1,
-    count: 10000
+    count: 10000,
+    dates: "2025-01-01"
   });
 
   try {
