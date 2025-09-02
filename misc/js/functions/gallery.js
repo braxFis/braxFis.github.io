@@ -2,13 +2,15 @@ let images = [];
 
 async function gallery_rotator() {
   const params = new URLSearchParams({
-    key: "8bc47dab600645ac9164f534d0182baf"
+    key: "8bc47dab600645ac9164f534d0182baf",
+    dates: "2025-01-01",
+    ordering: "created"
   });
 
   try {
     const response = await fetch(`https://api.rawg.io/api/games?${params}`);
     const data = await response.json();
-    
+
     // Store all background images in the array
     images = data.results
       .map(item => item.background_image)
