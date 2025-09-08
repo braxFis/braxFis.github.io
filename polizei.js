@@ -66,7 +66,7 @@ function displayCrimes() {
                         <td>${data.name}</td>
                         <td>${data.datetime}</td>
                         <td>${data.summary}</td>
-                        <td><a href="${data.url}" target="_blank">Link</a></td>
+                        <td><a href="https://polisen.se/${data.url}" target="_blank">Link</a></td>
                         <td>${data.type}</td>
                         <td>${data.location?.name || "N/A"}</td>
                         <td>${data.location?.gps || "N/A"}</td>
