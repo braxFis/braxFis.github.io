@@ -1,0 +1,22 @@
+{
+  "name": "nigel/cms",
+  "description": "the library for creating reviews, previews, articles for GameDefiners (name tbc)",
+  "type": "library",
+  "minimum-stability": "beta",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "app\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Nick",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "ext-pdo": "*",
+    "ext-json": "*"
+  }
+}
