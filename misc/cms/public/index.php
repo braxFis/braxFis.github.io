@@ -11,17 +11,54 @@ $request = trim($request, '/');
 $routes = [
 
     'ADMIN' => [
-    'GET' => [],
-    'POST' => []
+    'GET' => [
+
+      //Reviews
+      'review' => ['controller' => '\app\controllers\ReviewController', 'method' => 'index'],
+      'review/create' => ['controller' => '\app\controllers\ReviewController', 'method' => 'create'],
+      'review/edit/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'edit'],
+
+      //Previews
+      'preview' => ['controller' => '\app\controllers\PreviewController', 'method' => 'index'],
+      'preview/create'  => ['controller' => '\app\controllers\PreviewController', 'method' => 'create'],
+      'preview/edit/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'edit']
+
+    ],
+    'POST' => [
+
+      //Reviews
+      'review/store' => ['controller' => '\app\controllers\ReviewController', 'method' => 'store'],
+      'review/delete/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'delete'],
+      'review/update/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'update'],
+
+      //Previews
+      'preview/store'  => ['controller' => '\app\controllers\PreviewController', 'method' => 'store'],
+      'preview/delete/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'delete'],
+      'preview/update/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'update'],
+    ]
     ],
     'USER' => [
-        'GET' => [],
-        'POST' => []
+        'GET' => [
+          'profile' => ['controller' => '\app\controllers\ProfileController', 'method' => 'viewProfile'],
+          'profile/edit' => ['controller' => '\app\controllers\ProfileController', 'method' => 'editProfile'],
+          'profile/confirm-delete' => ['controller' => '\app\controllers\ProfileController', 'method' => 'confirmDelete'],
+        ],
+        'POST' => [
+          'profile/update' => ['controller' => '\app\controllers\ProfileController', 'method' => 'updateProfile'],
+          'profile/delete' => ['controller' => '\app\controllers\ProfileController', 'method' => 'deleteProfile'],
+        ]
     ],
 
     'PUBLIC' => [
-        'GET' => [],
-        'POST' => []
+        'GET' => [
+          'login' => ['controller' => '\app\controllers\UserController', 'method' => 'login'],
+          'register' => ['controller' => '\app\controllers\UserController', 'method' => 'register'],
+          'logout' => ['controller' => '\app\controllers\UserController', 'method' => 'logout'],
+        ],
+        'POST' => [
+          'login' => ['controller' => '\app\controllers\UserController', 'method' => 'login'],
+          'register' => ['controller' => '\app\controllers\UserController', 'method' => 'register'],
+        ]
     ]
 ];
 $path = $request;
