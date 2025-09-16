@@ -13,8 +13,8 @@ class Review{
     $this->db = new \Database;
   }
 
-  public function createReview($title, $subtitle, $content, $author, $category, $genre, $platform, $status, $tags){
-    $sql = "INSERT INTO reviews(title, subtitle, content, author, category, genre, media, platform, status, tags) VALUES(:title, :subtitle, :content, :author, :category, :genre, :platform, :status, :tags)";
+  public function createReview($title, $subtitle, $content, $author, $category, $genre, $platform, $status, $tags, $rawg){
+    $sql = "INSERT INTO reviews(title, subtitle, content, author, category, genre, media, platform, status, tags, rawg_game_id) VALUES(:title, :subtitle, :content, :author, :category, :genre, :platform, :status, :tags, :rawg_game_id)";
     $stmt = $this->db->conn->prepare($sql);
     $stmt->bindParam(':title', $title);
     $stmt->bindParam(':subtitle', $subtitle);
@@ -26,6 +26,7 @@ class Review{
     $stmt->bindParam(':platform', $platform);
     $stmt->bindParam(':status', $status);
     $stmt->bindParam(':tags', $tags);
+    $stmt->bindParam(':rawg_game_id', $rawg);
     $stmt->execute();
   }
 
@@ -42,7 +43,7 @@ class Review{
   }
 
   public function create($data){
-    $stmt = $this->db->conn->prepare("INSERT INTO reviews(title, subtitle, content, author, category, genre, media, platform, status, tags) VALUES (:title, :subtitle, :content, :author, :category, :genre, :media, :platform, :status, :tags)");
+    $stmt = $this->db->conn->prepare("INSERT INTO reviews(title, subtitle, content, author, category, genre, media, platform, status, tags, rawg_game_id) VALUES (:title, :subtitle, :content, :author, :category, :genre, :media, :platform, :status, :tags, :rawg_game_id)");
     $stmt->execute([
       ':title' => $data['title'],
       'subtitle' => $data['subtitle'],
@@ -53,7 +54,8 @@ class Review{
       'media' => $data['media'],
       'platform' => $data['platform'],
       'status' => $data['status'],
-      'tags' => $data['tags']
+      'tags' => $data['tags'],
+      'rawg_game_id' => $data['rawg_game_id']
       ]);
   }
 
