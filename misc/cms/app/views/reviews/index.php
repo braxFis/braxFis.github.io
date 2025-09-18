@@ -1,22 +1,35 @@
 <h2>Reviews</h2>
 <ul>
   <?php foreach ($reviews as $review):?>
-  <li>
-    <?php echo $review->title; ?>
-    <?php echo $review->subtitle; ?>
-    <?php echo $review->content; ?>
-    <?php echo $review->date; ?>
-    <?php echo $review->author; ?>
-    <?php echo $review->category; ?>
-    <?php echo $review->genre;?>
-    <?php echo $review->media;?>
-    <?php echo $review->platform;?>
-    <?php echo $review->status; ?>
-    <?php echo $review->tags;?>
+  <li style="list-style-type: none">
+    <div class="add-border">
+      <label for="title">Title</label>
+      <p><?php echo $review->title; ?></p>
+      <label for="subtitle">Subtitle</label>
+      <p><?php echo $review->subtitle; ?></p>
+      <label for="content">Content</label>
+      <p><?php echo $review->content; ?></p>
+      <label for="date">Date</label>
+      <p><?php echo $review->date; ?></p>
+      <label for="author">Author</label>
+      <p><?php echo $review->author; ?></p>
+      <label for="category">Category</label>
+      <!--<p><?php //echo $review->category; ?></p>-->
+      <label for="Genre">Genre</label>
+      <p><?php echo $review->genre;?></p>
+      <label for="Media">Media</label>
+      <p><?php echo $review->media;?></p>
+      <label for="Platform">Platform</label>
+      <p><?php echo $review->platform;?></p>
+      <label for="Status">Status</label>
+      <p><?php echo $review->status; ?></p>
+      <label for="Tags">Tags</label>
+      <p><?php echo $review->tags;?></p>
+    </div>
   </li>
   <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
-    <li>
-      <a href="/review/edit/<?php echo $review->id;?>">Edit Review</a>
+    <li style="list-style-type: none">
+      <button><a style="text-decoration: none; color: white" href="/review/edit/<?php echo $review->id;?>">Edit Review</a></button>
       <!-- Delete Review -->
       <form action="/review/delete/<?php echo $review->id;?>" method="post">
         <input type="hidden" name="id" id="" value="<?php echo $review->id;?>">
@@ -27,7 +40,7 @@
   <?php endforeach; ?>
 
   <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
-    <a href="/review/create">Create Review</a>
+    <button><a style="text-decoration: none; color: white;" href="/review/create">Create Review</a></button>
   <?php endif;?>
 </ul>
 </ul>

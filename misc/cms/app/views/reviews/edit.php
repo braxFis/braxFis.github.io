@@ -18,7 +18,10 @@
       <label for="platform">Review Platform</label>
       <input type="text" name="platform" id="platform" value="<?php echo $review->platform;?>">
       <label for="status">Review Status</label>
-      <input type="text" name="status" id="status" value="<?php echo $review->status;?>">
+      <select name="status" id="status">
+        <option value="draft">Draft</option>
+        <option value="published">Published</option>
+      </select>
       <label for="tags">Review Tags</label>
       <input type="text" name="tags" id="tags" value="<?php echo $review->tags;?>">
   </div>

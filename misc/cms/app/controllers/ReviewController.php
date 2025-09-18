@@ -13,19 +13,20 @@ class ReviewController extends BaseController {
 
   public function index() {
     $reviews = $this->model->getReviews();
+    ob_start();
     require __DIR__ . '/../views/reviews/index.php';
+    $content = ob_get_clean();
+    include __DIR__ . '/../views/layout.php';
   }
 
   public function create(){
     $this->requireAdmin();
     $reviewModel = new \app\models\Review;
     $reviews = $reviewModel->getReviews();
-    //$menus
-    //$footers
-    //ob_start();
+    ob_start();
     require __DIR__ . '/../views/reviews/create.php';
-    //$content = ob_get_clean();
-    //require __DIR__ . '/../views/layout.php';
+    $content = ob_get_clean();
+    include __DIR__ . '/../views/layout.php';
   }
 
   public function store($postData){
@@ -40,7 +41,10 @@ class ReviewController extends BaseController {
       //require __DIR__ . '/app/views/errors/404.php';
       exit;
     }
+    ob_start();
     require __DIR__ . '/../views/reviews/edit.php';
+    $content = ob_get_clean();
+    include __DIR__ . '/../views/layout.php';
   }
 
   public function update($id, $data){
