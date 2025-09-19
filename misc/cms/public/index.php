@@ -51,6 +51,7 @@ $routes = [
 
     'PUBLIC' => [
         'GET' => [
+          '' => ['controller' => '\app\controllers\DashboardController', 'method' => 'index'],
           'login' => ['controller' => '\app\controllers\UserController', 'method' => 'login'],
           'register' => ['controller' => '\app\controllers\UserController', 'method' => 'register'],
           'logout' => ['controller' => '\app\controllers\UserController', 'method' => 'logout'],
