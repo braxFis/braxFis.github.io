@@ -263,6 +263,12 @@
         align-items: center;
     }
 
+    .container{
+      display: flex;
+    }
+    .reviews{}
+    .previews{}
+    .news{}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <nav class="menu-prime">
