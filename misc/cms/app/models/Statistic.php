@@ -20,13 +20,13 @@ class Statistic{
   }
 
   public function getReviewChartData(){
-    $stmt = $this->db->conn->prepare("SELECT * FROM reviews");
+    $stmt = $this->db->conn->prepare("SELECT title, rating FROM reviews");
     $stmt->execute();
     $rows = $stmt->fetchAll(\PDO::FETCH_OBJ);
 
-    $data = [['Titel', 'Subtitel']]; // header
+    $data = [['Title', 'Rating']]; // header
     foreach ($rows as $row) {
-      $data[] = [$row->title, $row->subtitle];
+      $data[] = [$row->title, $row->rating];
     }
 
     return $data;

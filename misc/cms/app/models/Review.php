@@ -13,8 +13,8 @@ class Review{
     $this->db = new \Database;
   }
 
-  public function createReview($title, $subtitle, $content, $author, $category, $genre, $platform, $status, $tags, $rawg){
-    $sql = "INSERT INTO reviews(title, subtitle, content, author, category, genre, media, platform, status, tags, rawg_game_id) VALUES(:title, :subtitle, :content, :author, :category, :genre, :platform, :status, :tags, :rawg_game_id)";
+  public function createReview($title, $subtitle, $content, $author, $category, $genre, $platform, $status, $tags, $rawg, $rating){
+    $sql = "INSERT INTO reviews(title, subtitle, content, author, category, genre, media, platform, status, tags, rawg_game_id, rating) VALUES(:title, :subtitle, :content, :author, :category, :genre, :platform, :status, :tags, :rawg_game_id, :rating)";
     $stmt = $this->db->conn->prepare($sql);
     $stmt->bindParam(':title', $title);
     $stmt->bindParam(':subtitle', $subtitle);
@@ -27,6 +27,7 @@ class Review{
     $stmt->bindParam(':status', $status);
     $stmt->bindParam(':tags', $tags);
     $stmt->bindParam(':rawg_game_id', $rawg);
+    $stmt->bindParam(':rating', $rating);
     $stmt->execute();
   }
 
@@ -43,9 +44,9 @@ class Review{
   }
 
   public function create($data){
-    $stmt = $this->db->conn->prepare("INSERT INTO reviews(title, subtitle, content, author, category, genre, media, platform, status, tags, rawg_game_id) VALUES (:title, :subtitle, :content, :author, :category, :genre, :media, :platform, :status, :tags, :rawg_game_id)");
+    $stmt = $this->db->conn->prepare("INSERT INTO reviews(title, subtitle, content, author, category, genre, media, platform, status, tags, rawg_game_id, rating) VALUES (:title, :subtitle, :content, :author, :category, :genre, :media, :platform, :status, :tags, :rawg_game_id, :rating)");
     $stmt->execute([
-      ':title' => $data['title'],
+      'title' => $data['title'],
       'subtitle' => $data['subtitle'],
       'content' => $data['content'],
       'author' => $data['author'],
@@ -55,12 +56,13 @@ class Review{
       'platform' => $data['platform'],
       'status' => $data['status'],
       'tags' => $data['tags'],
-      'rawg_game_id' => $data['rawg_game_id']
+      'rawg_game_id' => $data['rawg_game_id'],
+      'rating' => $data['rating']
       ]);
   }
 
   public function update($data, $id){
-    $stmt = $this->db->conn->prepare("UPDATE reviews SET title = :title, subtitle = :subtitle, content = :content, author = :author, category = :category, genre = :genre, media = :media, platform = :platform, status = :status, tags = :tags WHERE id = :id");
+    $stmt = $this->db->conn->prepare("UPDATE reviews SET title = :title, subtitle = :subtitle, content = :content, author = :author, category = :category, genre = :genre, media = :media, platform = :platform, status = :status, tags = :tags, rating = :rating WHERE id = :id");
     $stmt->execute([
       'title' => $data['title'],
       'subtitle' => $data['subtitle'],
@@ -72,6 +74,7 @@ class Review{
       'platform' => $data['platform'],
       'status' => $data['status'],
       'tags' => $data['tags'],
+      'rating' => $data['rating'],
       'id' => $id
       ]);
   }

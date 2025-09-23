@@ -267,8 +267,18 @@
       display: flex;
     }
     .reviews{}
+
+    .reviews li{
+      list-style-type: none
+    }
+
+    .add-border li{
+      list-style-type: none
+    }
     .previews{}
     .news{}
+
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <nav class="menu-prime">

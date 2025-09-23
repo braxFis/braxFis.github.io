@@ -11,6 +11,21 @@ class ReviewController extends BaseController {
     $this->model = new \app\models\Review;
   }
 
+  public function indieReview($id){
+    $review = $this->model->getReview($id);
+    ob_start();
+    require __DIR__ . '/../views/reviews/indieReview.php';
+    $content = ob_get_clean();
+    include __DIR__ . '/../views/layout.php';
+  }
+  public function listReview(){
+    $reviews = $this->model->getReviews();
+    ob_start();
+    require __DIR__ . '/../views/reviews/listReview.php';
+    $content = ob_get_clean();
+    include __DIR__ . '/../views/layout.php';
+  }
+
   public function index() {
     $reviews = $this->model->getReviews();
     ob_start();
@@ -38,7 +53,7 @@ class ReviewController extends BaseController {
   public function edit($id){
     $review = $this->model->getReview($id);
     if($review == null){
-      //require __DIR__ . '/app/views/errors/404.php';
+      require __DIR__ . '/../views/errors/404.php';
       exit;
     }
     ob_start();

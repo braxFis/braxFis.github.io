@@ -22,6 +22,8 @@
     <input type="text" name="tags" id="tags">
     <label for="rawg">RAWG Game ID</label>
     <input type="text" name="rawg" id="rawg" value="">
+    <label for="rating">Review Rating</label>
+    <input type="text" name="rating" id="rating">
   </div>
   <button type="submit">Create Review</button>
 </form>

@@ -2,64 +2,60 @@
 
 namespace app\controllers;
 
-require_once __DIR__ . '/../models/Preview.php';
+require_once __DIR__ . '/../models/News.php';
 
-class PreviewController extends BaseController {
+class NewsController extends BaseController {
   private $model;
 
   public function __construct() {
-    $this->model = new \app\models\Preview;
+    $this->model = new \app\models\News;
   }
 
-  public function indiePreview($id){
-    $preview = $this->model->getPreview($id);
+  public function indieNews($id){
+    $new = $this->model->getNew($id);
     ob_start();
-    require __DIR__ . '/../views/previews/indiePreview.php';
+    require __DIR__ . '/../views/news/indieNews.php';
     $content = ob_get_clean();
     include __DIR__ . '/../views/layout.php';
   }
-  public function listPreview(){
-    $previews = $this->model->getPreviews();
+  public function listNews(){
+    $news = $this->model->getNews();
     ob_start();
-    require __DIR__ . '/../views/previews/listPreview.php';
+    require __DIR__ . '/../views/news/listNews.php';
     $content = ob_get_clean();
     include __DIR__ . '/../views/layout.php';
   }
 
   public function index() {
-    $previews = $this->model->getPreviews();
+    $news = $this->model->getNews();
     ob_start();
-    require __DIR__ . '/../views/previews/index.php';
+    require_once __DIR__ . '/../views/news/index.php';
     $content = ob_get_clean();
     include __DIR__ . '/../views/layout.php';
   }
 
-  public function create(){
+  public function create() {
     $this->requireAdmin();
-    $previewModel = new \app\models\Preview;
-    $previews = $previewModel->getPreviews();
-    //$menus
-    //$footers
+    $news = $this->model->getNews();
     ob_start();
-    require __DIR__ . '/../views/previews/create.php';
+    require_once __DIR__ . '/../views/news/create.php';
     $content = ob_get_clean();
-    require __DIR__ . '/../views/layout.php';
+    include __DIR__ . '/../views/layout.php';
   }
 
   public function store($postData){
     $this->requireAdmin();
     $this->model->create($postData);
-    header('Location: /preview');
+    header('Location: /news');
   }
-
   public function edit($id){
-    $preview = $this->model->getPreview($id);
-    if($preview == null){
+    $new = $this->model->getNew($id);
+    if($new == null){
       require __DIR__ . '/../views/errors/404.php';
       exit;
     }
     ob_start();
-    require __DIR__ . '/../views/previews/edit.php';
+    require __DIR__ . '/../views/news/edit.php';
     $content = ob_get_clean();
     include __DIR__ . '/../views/layout.php';
   }
@@ -67,15 +63,14 @@ class PreviewController extends BaseController {
   public function update($id, $data){
     $this->requireAdmin();
     $this->model->update($id, $data);
-    header('Location: /preview');
+    header('Location: /news');
     exit;
   }
 
   public function delete($id){
     $this->requireAdmin();
     $this->model->delete($id);
-    header('Location: /preview');
+    header('Location: /news');
     exit;
   }
-
 }

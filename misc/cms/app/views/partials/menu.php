@@ -226,6 +226,7 @@
     .add-border > p{
       border: 1px solid black
     }
+
 </style>
 </head>
 <body>

@@ -24,6 +24,8 @@
       </select>
       <label for="tags">Review Tags</label>
       <input type="text" name="tags" id="tags" value="<?php echo $review->tags;?>">
+    <label for="rating">Rating</label>
+    <input type="text" name="rating" id="rating" value="<?php echo $review->rating;?>">
   </div>
   <button type="submit">Update Review</button>
 </form>

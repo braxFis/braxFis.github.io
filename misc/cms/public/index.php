@@ -12,19 +12,31 @@ $routes = [
 
     'ADMIN' => [
     'GET' => [
-
       //Reviews
-      'review' => ['controller' => '\app\controllers\ReviewController', 'method' => 'index'],
+      'review' => ['controller' => '\app\controllers\ReviewController', 'method' => 'listReview'],
+      'review/list' => ['controller' => '\app\controllers\ReviewController', 'method' => 'index'],
       'review/create' => ['controller' => '\app\controllers\ReviewController', 'method' => 'create'],
       'review/edit/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'edit'],
 
       //Previews
-      'preview' => ['controller' => '\app\controllers\PreviewController', 'method' => 'index'],
+      'preview' => ['controller' => '\app\controllers\PreviewController', 'method' => 'listPreview'],
+      'preview/list' =>  ['controller' => '\app\controllers\PreviewController', 'method' => 'index'],
       'preview/create'  => ['controller' => '\app\controllers\PreviewController', 'method' => 'create'],
-      'preview/edit/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'edit']
+      'preview/edit/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'edit'],
+
+      //News
+      'news' => ['controller' => '\app\controllers\NewsController', 'method' => 'listNews'],
+      'news/list' => ['controller' => '\app\controllers\NewsController', 'method' => 'index'],
+      'news/create' => ['controller' => '\app\controllers\NewsController', 'method' => 'create'],
+      'news/edit/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'edit'],
 
     ],
     'POST' => [
+
+      //News
+      'news/store' => ['controller' => '\app\controllers\NewsController', 'method' => 'store'],
+      'news/delete/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'delete'],
+      'news/update/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'update'],
 
       //Reviews
       'review/store' => ['controller' => '\app\controllers\ReviewController', 'method' => 'store'],
@@ -51,6 +63,10 @@ $routes = [
 
     'PUBLIC' => [
         'GET' => [
+
+          'news/indie/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'indieNews'],
+          'review/indie/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'indieReview'],
+          'preview/indie/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'indiePreview'],
           '' => ['controller' => '\app\controllers\DashboardController', 'method' => 'index'],
           'stat/view' => ['controller' => '\app\controllers\StatisticController', 'method' => 'reviewChart'],
           'login' => ['controller' => '\app\controllers\UserController', 'method' => 'login'],

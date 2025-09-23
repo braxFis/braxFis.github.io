@@ -25,6 +25,8 @@
       <p><?php echo $review->status; ?></p>
       <label for="Tags">Tags</label>
       <p><?php echo $review->tags;?></p>
+      <label for="Rating">Rating</label>
+      <p><?php echo $review->rating;?></p>
     </div>
   </li>
   <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
