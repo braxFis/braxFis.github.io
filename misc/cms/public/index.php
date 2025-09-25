@@ -30,6 +30,16 @@ $routes = [
       'news/create' => ['controller' => '\app\controllers\NewsController', 'method' => 'create'],
       'news/edit/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'edit'],
 
+      //Menu
+      'menu' => ['controller' => '\app\controllers\MenuController', 'method' => 'index'],
+      'menu/edit/([0-9]+)' => ['controller' => '\app\controllers\MenuController', 'method' => 'edit'],
+      'menu/create' => ['controller' => '\app\controllers\MenuController', 'method' => 'create'],
+
+      //Footer
+      'footer/create' => ['controller' => '\app\controllers\FooterController', 'method' => 'create'],
+      'footer/edit/([0-9]+)' => ['controller' => '\app\controllers\FooterController', 'method' => 'edit'],
+      'footer'  => ['controller' => '\app\controllers\FooterController', 'method' => 'index'],
+
     ],
     'POST' => [
 
@@ -47,6 +57,17 @@ $routes = [
       'preview/store'  => ['controller' => '\app\controllers\PreviewController', 'method' => 'store'],
       'preview/delete/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'delete'],
       'preview/update/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'update'],
+
+      //Menu
+      'menu/store' => ['controller' => '\app\controllers\MenuController', 'method' => 'store'],
+      'menu/update/([0-9]+)' => ['controller' => '\app\controllers\MenuController', 'method' => 'update'],
+      'menu/delete/([0-9]+)' => ['controller' => '\app\controllers\MenuController', 'method' => 'delete'],
+
+      //Footer
+      'footer/delete/([0-9]+)' => ['controller' => '\app\controllers\FooterController', 'method' => 'delete'],
+      'footer/update/([0-9]+)' => ['controller' => '\app\controllers\FooterController', 'method' => 'update'],
+      'footer/store' => ['controller' => '\app\controllers\FooterController', 'method' => 'store'],
+
     ]
     ],
     'USER' => [
@@ -67,7 +88,7 @@ $routes = [
           'news/indie/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'indieNews'],
           'review/indie/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'indieReview'],
           'preview/indie/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'indiePreview'],
-          '' => ['controller' => '\app\controllers\DashboardController', 'method' => 'index'],
+          'dashboard' => ['controller' => '\app\controllers\DashboardController', 'method' => 'index'],
           'stat/view' => ['controller' => '\app\controllers\StatisticController', 'method' => 'reviewChart'],
           'login' => ['controller' => '\app\controllers\UserController', 'method' => 'login'],
           'register' => ['controller' => '\app\controllers\UserController', 'method' => 'register'],

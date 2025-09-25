@@ -3,7 +3,7 @@
   <ul>
     <li>
       <h6><?php echo $new->id;?></h6>
-      <h6><?php echo $new->title;?>/h6>
+      <h6><?php echo $new->title;?></h6>
       <h6><?php echo $new->subtitle;?></h6>
       <h6><?php echo $new->content;?></h6>
       <h6><?php echo $new->date;?></h6>
