@@ -40,6 +40,10 @@ $routes = [
       'footer/edit/([0-9]+)' => ['controller' => '\app\controllers\FooterController', 'method' => 'edit'],
       'footer'  => ['controller' => '\app\controllers\FooterController', 'method' => 'index'],
 
+      //Page
+      'page' =>  ['controller' => '\app\controllers\PageController', 'method' => 'index'],
+      'page/create'  => ['controller' => '\app\controllers\PageController', 'method' => 'create'],
+      'page/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PageController', 'method' => 'edit'],
     ],
     'POST' => [
 
@@ -68,6 +72,11 @@ $routes = [
       'footer/update/([0-9]+)' => ['controller' => '\app\controllers\FooterController', 'method' => 'update'],
       'footer/store' => ['controller' => '\app\controllers\FooterController', 'method' => 'store'],
 
+      //Page
+      'page/store' => ['controller' => '\app\controllers\PageController', 'method' => 'store'],
+      'page/delete/([0-9]+)' => ['controller' => '\app\controllers\PageController', 'method' => 'delete'],
+      'page/update/([0-9]+)' => ['controller' => '\app\controllers\PageController', 'method' => 'update'],
+
     ]
     ],
     'USER' => [
@@ -85,6 +94,7 @@ $routes = [
     'PUBLIC' => [
         'GET' => [
 
+          'page/{slug}' => ['controller' => '\app\controllers\PageController', 'method' => 'view'],
           'news/indie/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'indieNews'],
           'review/indie/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'indieReview'],
           'preview/indie/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'indiePreview'],
@@ -139,7 +149,7 @@ foreach ($routes['USER'][$method] as $route => $info) {
 }
 
 foreach ($routes['PUBLIC'][$method] as $route => $info) {
-    $pattern = preg_replace('#/([0-9]+)#', '/([0-9]+)', $route);
+    $pattern = preg_replace('#/a-zA-Z([0-9]+)#', '/([a-zA-Z0-9]+)', $route);
     if(preg_match("#^$pattern$#", $path, $matches)){
         //var_dump(class_exists('\app\controllers\PostController'));
 //        var_dump(get_included_files());

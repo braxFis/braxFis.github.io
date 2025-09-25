@@ -30,7 +30,7 @@ class CommentController extends BaseController{
         }
 
         $this->model->createComment($postId, $body, $userId);
-        header("Location: /posts/show/$postId");
+        header("Location: /news/$postId");
         exit;
     }
 
@@ -43,7 +43,7 @@ class CommentController extends BaseController{
         //Check if the comment exists
         if (!$comment) {
             $_SESSION['message'] = 'error, Comment not found';
-            header("Location: /posts/show/" . $comment->post_id);
+            header("Location: /news/" . $comment->post_id);
             exit;
         }
 
@@ -54,11 +54,11 @@ class CommentController extends BaseController{
         // Check if the post exists
         if(!$post){
             $_SESSION['message'] = 'error, Post not found';
-            header("Location: /posts/show/" . $comment->post_id);
+            header("Location: /news/" . $comment->post_id);
             exit;
         }
         //Load the view
-        require BASE_DIR . '/app/views/admin/comments/edit.php';
+        require BASE_DIR . '/app/views/comments/edit.php';
     }
 
     public function update($data, $id){
@@ -71,9 +71,9 @@ class CommentController extends BaseController{
         if(!empty($data['post_id'])){
             $postId = $data['post_id'];
             $_SESSION['message'] = 'Comment updated successfully.';
-            header("Location: /posts/show/" . $postId);
+            header("Location: /news/" . $postId);
         } else {
-            header("Location: /posts");
+            header("Location: /news");
         }
     }
 
@@ -84,6 +84,6 @@ class CommentController extends BaseController{
         // Delete the comment from the database
         $this->model->deleteComment($id);
         // Redirect to the post page
-        header("Location: /posts");
+        header("Location: /news");
     }
 }
