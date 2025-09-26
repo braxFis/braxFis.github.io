@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <title></title>
 <style>
     @media (max-width: 600px) {
         .post-item {
@@ -277,9 +282,24 @@
     }
     .previews{}
     .news{}
-
-
 </style>
+</head>
+<script src="https://cdn.tiny.cloud/1/19srbsosgvqyagoc7x8ztcytwjhd2vwnqbz8ql6cdpj3t72a/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+  tinymce.init({
+    selector: 'textarea#content',
+    height: 400,
+    plugins: [
+      'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview', 'anchor',
+      'searchreplace', 'visualblocks', 'code', 'fullscreen',
+      'insertdatetime', 'media', 'table', 'help', 'wordcount'
+    ],
+    toolbar: 'undo redo | formatselect | bold italic backcolor | \
+    alignleft aligncenter alignright alignjustify | \
+    bullist numlist outdent indent | removeformat | help'
+  });
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <nav class="menu-prime">
         <img src="/uploads/logo.png" alt="logowork.." width="75" height="75">

@@ -44,6 +44,8 @@ $routes = [
       'page' =>  ['controller' => '\app\controllers\PageController', 'method' => 'index'],
       'page/create'  => ['controller' => '\app\controllers\PageController', 'method' => 'create'],
       'page/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PageController', 'method' => 'edit'],
+
+      'page/{slug}' => ['controller' => '\app\controllers\PageController', 'method' => 'view']
     ],
     'POST' => [
 
@@ -81,6 +83,9 @@ $routes = [
     ],
     'USER' => [
         'GET' => [
+
+          'comments' => ['controller' => '\app\controllers\CommentController', 'method' => 'store'],
+          'comments/edit/([0-9]+)' => ['controller' => '\app\controllers\CommentController', 'method' => 'edit'],
           'profile' => ['controller' => '\app\controllers\ProfileController', 'method' => 'viewProfile'],
           'profile/edit' => ['controller' => '\app\controllers\ProfileController', 'method' => 'editProfile'],
           'profile/confirm-delete' => ['controller' => '\app\controllers\ProfileController', 'method' => 'confirmDelete'],
@@ -88,13 +93,15 @@ $routes = [
         'POST' => [
           'profile/update' => ['controller' => '\app\controllers\ProfileController', 'method' => 'updateProfile'],
           'profile/delete' => ['controller' => '\app\controllers\ProfileController', 'method' => 'deleteProfile'],
+          'comments/store' => ['controller' => '\app\controllers\CommentController', 'method' => 'store'],
+          'comments/delete/([0-9]+)' => ['controller' => '\app\controllers\CommentController', 'method' => 'delete'],
+          'comments/update/([0-9]+)' => ['controller' => '\app\controllers\CommentController', 'method' => 'update'],
         ]
     ],
 
     'PUBLIC' => [
         'GET' => [
 
-          'page/{slug}' => ['controller' => '\app\controllers\PageController', 'method' => 'view'],
           'news/indie/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'indieNews'],
           'review/indie/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'indieReview'],
           'preview/indie/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'indiePreview'],
@@ -115,8 +122,8 @@ $path = $request;
 $method = $_SERVER['REQUEST_METHOD'];
 
 foreach ($routes['ADMIN'][$method] as $route => $info) {
-    $pattern = preg_replace('#/([0-9]+)#', '/([0-9]+)', $route);
-    if(preg_match("#^$pattern$#", $path, $matches)){
+  $pattern = preg_replace(['#\{id\}#', '#\{slug\}#'], ['([0-9]+)', '([a-zA-Z0-9\-]+)'], $route);
+  if(preg_match("#^$pattern$#", $path, $matches)){
         //var_dump(class_exists('\app\controllers\PostController'));
         //var_dump(get_included_files());
         $controller = new $info['controller'];

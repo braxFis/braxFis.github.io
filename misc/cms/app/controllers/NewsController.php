@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 require_once __DIR__ . '/../models/News.php';
+require_once __DIR__ . '/../models/Comment.php';
 
 class NewsController extends BaseController {
   private $model;
@@ -13,11 +14,19 @@ class NewsController extends BaseController {
 
   public function indieNews($id){
     $new = $this->model->getNew($id);
+    if($new == null){
+      require __DIR__ . '/../views/404.php';
+      return;
+    }
+    $commentModel = new \app\models\Comment;
+    $comments = $commentModel->getComments($id);
+    $comment = $commentModel->getComment($id);
     ob_start();
     require __DIR__ . '/../views/news/indieNews.php';
     $content = ob_get_clean();
     include __DIR__ . '/../views/layout.php';
   }
+
   public function listNews(){
     $news = $this->model->getNews();
     ob_start();

@@ -1,10 +1,10 @@
-<section class="page-container">
+<section class="about-container">
     <?php foreach ($pages as $page): ?>
-    <div class="page-column">
-        <h1>Page</h1>
+    <div class="about-column">
+        <h1>About</h1>
         <h2><?= htmlspecialchars($page->title) ?></h2>
         <p><?= nl2br(htmlspecialchars($page->slug)) ?></p>
-        <p><?= htmlspecialchars($page->content);?></p>
+        <p><?= $page->content ?></p>
     </div>
     <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
         <li>

@@ -10,7 +10,7 @@ class Page{
         $this->db = new \Database;
     }
     public function getPage($id){
-        $stmt = $this->db->conn->prepare("SELECT * FROM page WHERE id = :id");
+        $stmt = $this->db->conn->prepare("SELECT * FROM about WHERE id = :id");
         $stmt->execute(['id' => $id]);
         return  $stmt->fetch(\PDO::FETCH_OBJ);
     }
@@ -22,25 +22,24 @@ class Page{
     }
 
     public function getBySlug($slug){
-      $stmt = $this->db->conn->prepare("SELECT * FROM page WHERE slug = :slug");
-      $stmt->execute(['slug' => $slug]);
-      return  $stmt->fetch(\PDO::FETCH_OBJ);
+        $stmt = $this->db->conn->prepare("SELECT * FROM page WHERE slug = :slug");
+        $stmt->execute(['slug' => $slug]);
+        return  $stmt->fetch(\PDO::FETCH_OBJ);
     }
     public function create($data){
         $stmt = $this->db->conn->prepare("INSERT INTO page(title, slug, content) VALUES(:title, :slug, :content)");
         $stmt->execute([':title' => isset($data['title']) ? $data['title'] : null, ':slug' => isset($data['slug']) ? $data['slug'] : null, ':content' => isset($data['content']) ? $data['content'] : null]);
     }
 
-  public function update($data, $id){
-    $stmt = $this->db->conn->prepare("UPDATE page SET title = :title, slug = :slug, content = :content WHERE id = :id");
-    $success = $stmt->execute([':title' => $data['title'], ':slug' => $data['slug'], ':content' => $data['content'], ':id' => $id]);
-    if(!$success){
-      die('Update failed');
+    public function update($data, $id){
+        $stmt = $this->db->conn->prepare("UPDATE page SET title = :title, slug = :slug, content = :content WHERE id = :id");
+        $success = $stmt->execute([':title' => $data['title'], ':slug' => $data['slug'], ':content' => $data['content'], ':id' => $id]);
+        if(!$success){
+            die('Update failed');
+        }
     }
-  }
 
-
-  public function delete($id){
+    public function delete($id){
         $stmt = $this->db->conn->prepare("DELETE FROM page WHERE id = :id");
         $stmt->execute([':id' => $id]);
     }
