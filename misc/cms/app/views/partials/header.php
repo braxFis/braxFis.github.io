@@ -284,6 +284,7 @@
     .news{}
 </style>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 <script src="https://cdn.tiny.cloud/1/19srbsosgvqyagoc7x8ztcytwjhd2vwnqbz8ql6cdpj3t72a/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
   tinymce.init({

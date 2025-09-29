@@ -45,9 +45,21 @@ $routes = [
       'page/create'  => ['controller' => '\app\controllers\PageController', 'method' => 'create'],
       'page/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PageController', 'method' => 'edit'],
 
-      'page/{slug}' => ['controller' => '\app\controllers\PageController', 'method' => 'view']
+      'page/{slug}' => ['controller' => '\app\controllers\PageController', 'method' => 'view'],
+
+      //Media
+      'media/create'  => ['controller' => '\app\controllers\MediaController', 'method' => 'create'],
+      'media/edit/([0-9]+)' => ['controller' => '\app\controllers\MediaController', 'method' => 'edit'],
+      'media'   => ['controller' => '\app\controllers\MediaController', 'method' => 'index'],
+
+      //DnD
+      'item' => ['controller' => '\app\controllers\ItemController', 'method' => 'index']
+
     ],
     'POST' => [
+
+      //DnD
+      'item/index' => ['controller' => '\app\controllers\ItemController', 'method' => 'index'],
 
       //News
       'news/store' => ['controller' => '\app\controllers\NewsController', 'method' => 'store'],
@@ -78,6 +90,11 @@ $routes = [
       'page/store' => ['controller' => '\app\controllers\PageController', 'method' => 'store'],
       'page/delete/([0-9]+)' => ['controller' => '\app\controllers\PageController', 'method' => 'delete'],
       'page/update/([0-9]+)' => ['controller' => '\app\controllers\PageController', 'method' => 'update'],
+
+      //Media
+      'media/delete/([0-9]+)' => ['controller' => '\app\controllers\MediaController', 'method' => 'delete'],
+      'media/update/([0-9]+)' => ['controller' => '\app\controllers\MediaController', 'method' => 'update'],
+      'media/store' => ['controller' => '\app\controllers\MediaController', 'method' => 'store'],
 
     ]
     ],

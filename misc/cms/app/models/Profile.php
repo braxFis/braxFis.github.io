@@ -13,7 +13,7 @@ class Profile{
   public function view($id){
     $stmt = $this->db->conn->prepare("SELECT * FROM users WHERE id = :id");
     $stmt->execute([':id' => $id]);
-    return $stmt->fetch(\PDO::FETCH_ASSOC);
+    return $stmt->fetch(\PDO::FETCH_OBJ);
   }
 
   public function edit(){
@@ -43,7 +43,8 @@ class Profile{
   }
 
 
-  public function delete($id){
+  public function delete($id): bool
+  {
     $stmt = $this->db->conn->prepare("DELETE FROM users WHERE id = :id");
     return $stmt->execute([':id' => $id]);
   }

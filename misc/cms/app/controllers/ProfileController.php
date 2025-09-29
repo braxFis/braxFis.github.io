@@ -2,13 +2,13 @@
 
 namespace app\controllers;
 
-//use app\helpers\UploadHelper;
-//use app\models\Footer;
-//use app\models\Menu;
+use app\models\Footer;
+use app\helpers\UploadHelper;
+use app\models\Menu;
 use app\models\Profile;
 
 require_once __DIR__ . "/../models/Profile.php";
-//require_once __DIR__ . '/../helpers/UploadHelper.php';
+require_once __DIR__ . '/../helpers/UploadHelper.php';
 
 class ProfileController extends BaseController {
   private $model;
@@ -27,19 +27,18 @@ class ProfileController extends BaseController {
       exit;
     }
 
-   // $imageUrl = (new UploadHelper)->handleImageUpload();
-   // if ($imageUrl) {
-   //   $postData['image'] = $imageUrl;
-   // }
+   $imageUrl = (new UploadHelper)->handleImageUpload();
+    if ($imageUrl) {
+      $postData['image'] = $imageUrl;
+    }
     $profile = $this->model->view($id);
-   // $menus = (new Menu)->getMenuItems();
-   // $footers = (new Footer)->getFooterItems();
-    //ob_start();
+    $menus = (new Menu)->getMenuItems();
+    $footers = (new Footer)->getFooterItems();
+    ob_start();
     require __DIR__ . "/../views/profile/index.php";
-    //$content = ob_get_clean();
-   // require __DIR__ . "/../views/layout.php";
+    $content = ob_get_clean();
+    require __DIR__ . "/../views/layout.php";
   }
-
 
   public function editProfile(){
     //$this->requireUser();
