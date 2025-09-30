@@ -231,7 +231,7 @@
 </head>
 <body>
 
-<?php include 'side.php'; ?>
+<?php //include 'side.php'; ?>
 <!-- Burger icon -->
 <div class="burger" id="burger">
     <i class="fas fa-bars"></i>
