@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Chat with File Upload</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    #chat-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+    }
+    #messages {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+    .message {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: flex-start;
+    }
+    .message .sender {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+    .message-text {
+      background-color: #e9e9e9;
+      border-radius: 8px;
+      padding: 8px;
+      max-width: 70%;
+      word-wrap: break-word;
+    }
+    .message.self .message-text {
+      background-color: #0084ff;
+      color: white;
+      align-self: flex-end;
+    }
+    #input-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #message-input {
+      width: 60%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-right: 10px;
+      resize: none;
+    }
+    #send-button {
+      padding: 10px 20px;
+      background-color: #0084ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #send-button:disabled {
+      background-color: #aaa;
+    }
+    #emoji-button {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    #file-input {
+      display: block;
+    }
+    .mention {
+      color: #1a73e8;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chat-container">
+  <div id="messages"></div>
+  <div id="input-container">
+    <textarea id="message-input" rows="2" placeholder="Type a message..."></textarea>
+    <input type="file" id="file-input" />
+    <button id="emoji-button">😊</button>
+    <button id="send-button" disabled>Send</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emoji-mart/2.12.0/index.min.js"></script>
+<script src="/js/functions/chat.js"></script>
+
+</body>
+</html>

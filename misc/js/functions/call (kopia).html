@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call Example</title>
+    <style>
+        video {
+            width: 45%;
+            margin: 10px;
+        }
+        #localVideo {
+            border: 2px solid green;
+        }
+        #remoteVideo {
+            border: 2px solid blue;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>WebRTC Video Call Example</h2>
+
+<!-- Local and Remote video elements -->
+<video id="localVideo" autoplay muted></video>
+<video id="remoteVideo" autoplay></video>
+
+<br>
+
+<button id="startCallBtn">Start Call</button>
+<button id="hangUpBtn" disabled>Hang Up</button>
+
+<script src="/js/functions/call.js"></script>
+</body>
+</html>

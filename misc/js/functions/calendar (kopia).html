@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <style>
+    .calendar-container {
+      width: 300px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .calendar-body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .calendar-day {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    .event-form {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .event-input {
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    .event-button {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .event-button:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+<div class="calendar-container">
+  <div class="header">
+    <button class="button" onclick="goToPreviousMonth()">&lt; Previous</button>
+    <h2 id="month-year"></h2>
+    <button class="button" onclick="goToNextMonth()">Next &gt;</button>
+  </div>
+
+  <div class="calendar-body">
+    <div class="calendar-header" id="days-of-week"></div>
+    <div class="calendar-grid" id="days-grid"></div>
+
+    <div id="event-form" class="event-form" style="display: none;">
+      <h3 id="event-title"></h3>
+      <input id="event-input" class="event-input" type="text" placeholder="Enter event" />
+      <button id="add-event-btn" class="event-button" onclick="addEvent()">Add Event</button>
+      <div id="events-list"></div>
+    </div>
+  </div>
+</div>
+<script src="/js/functions/calendar.js"></script>
+</body>
+</html>

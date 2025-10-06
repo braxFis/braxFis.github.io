@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Note App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      padding: 5px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 5px 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h3>Create a Note</h3>
+<input type="text" id="noteInput" placeholder="Type your note here">
+<button onclick="addNote()">Add Note</button>
+
+<div>
+  <h4>Your Notes:</h4>
+  <ul id="notesList"></ul>
+</div>
+
+<script src="/js/functions/notes.js"></script>
+
+</body>
+</html>
