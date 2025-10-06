@@ -1,8 +1,12 @@
 <html>
-
 <body>
 
 <div class="container">
+
+  <div class="notification">
+    <?= $notification?>
+  </div>
+
   <div class="reviews">
     <h2>Reviews</h2>
     <ul>

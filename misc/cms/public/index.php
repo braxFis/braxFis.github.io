@@ -5,6 +5,7 @@ require_once __DIR__ . '/../bootstrap.php'; // ✅ Garanterat rätt path
 //echo "Requested URI: " . $_SERVER['REQUEST_URI'];
 // index.php (din befintliga)
 require __DIR__ . '/../core/PluginManager.php';
+
 //Extract the path component from the full URL of the current request
 $request = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $request = trim($request, '/');
@@ -58,7 +59,7 @@ $routes = [
       'plugins/install' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'install'],
 
       //DnD
-      'item' => ['controller' => '\app\controllers\ItemController', 'method' => 'index']
+      'dnd' => ['controller' => '\app\controllers\LayoutController', 'method' => 'save']
 
     ],
     'POST' => [
