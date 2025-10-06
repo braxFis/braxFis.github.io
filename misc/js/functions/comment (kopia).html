@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commenting System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .comment-container {
+      width: 80%;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .comment-form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    #comment-input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    #submit-comment {
+      padding: 10px 20px;
+      background-color: #0084ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .comment {
+      margin-bottom: 15px;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .comment .author {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .comment .text {
+      margin-top: 5px;
+    }
+
+    .reply {
+      margin-left: 20px;
+      margin-top: 10px;
+      background-color: #e9e9e9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="comment-container">
+  <h2>Comments</h2>
+
+  <!-- Comment form -->
+  <div class="comment-form">
+    <textarea id="comment-input" placeholder="Write a comment..." rows="3"></textarea>
+    <button id="submit-comment" disabled>Submit Comment</button>
+  </div>
+
+  <!-- Display comments here -->
+  <div id="comments-list"></div>
+</div>
+
+<script src="/js/functions/comment.js"></script>
+
+</body>
+</html>

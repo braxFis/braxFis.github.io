@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Form</title>
+  <style>
+    .newsletter-section {
+      padding: 20px;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    .newsletter-heading {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-subheading {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      margin-bottom: 15px;
+    }
+
+    .input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .submit-button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+<div class="newsletter-section">
+  <div class="newsletter-content">
+    <h2 class="newsletter-heading">Follow the latest trends</h2>
+    <p class="newsletter-subheading">With our daily newsletter</p>
+  </div>
+
+  <form id="newsletter-form" class="newsletter-form">
+    <div class="input-field">
+      <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              class="input"
+              required
+      />
+    </div>
+    <button type="submit" id="submit-button" class="submit-button">
+      Submit
+    </button>
+  </form>
+
+  <p id="message" class="message"></p>
+</div>
+
+<script src="/js/functions/newsletter.js"></script>
+
+</body>
+</html>

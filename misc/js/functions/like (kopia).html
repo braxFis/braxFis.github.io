@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Like/Dislike</title>
+  <style>
+    .like, .dislike {
+      padding: 10px 20px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .like {
+      background-color: gray;
+    }
+    .dislike {
+      background-color: gray;
+    }
+    .liked {
+      background-color: green !important;
+    }
+    .disliked {
+      background-color: red !important;
+    }
+  </style>
+</head>
+<body>
+
+<h3>Plain JS Like/Dislike Buttons</h3>
+<p>Do you like this content?</p>
+
+<button id="likeBtn" class="like">Like</button>
+<button id="dislikeBtn" class="dislike">Dislike</button>
+
+<p id="message"></p>
+
+<script src="/js/functions/like.js"></script>
+
+</body>
+</html>
