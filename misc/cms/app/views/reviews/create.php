@@ -25,5 +25,21 @@
     <label for="rating">Review Rating</label>
     <input type="text" name="rating" id="rating">
   </div>
+
+  <div class="conclusion">
+    <label for="conclusion">Conclusion</label>
+    <textarea name="conclusion" id="conclusion" cols="30" rows="10">
+      ...
+    </textarea>
+  </div>
+
+  <div class="scorecard">
+    <label for="">TBD Point 1</label>
+    <label for="">TBD Point 2</label>
+    <label for="">TBD Point 3</label>
+    <label for="">TBD Point 4</label>
+    <label for="">TBD Point 5</label>
+  </div>
+
   <button type="submit">Create Review</button>
 </form>

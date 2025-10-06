@@ -25,7 +25,6 @@ class PluginManager {
   }
 
   public function registerRoutes(&$routes) {
-    echo "Registrerar HelloWorld routes";
     $routes['ADMIN']['GET']['/hello'] = [
       'controller' => '\app\controllers\PluginController',
       'method' => 'index'
