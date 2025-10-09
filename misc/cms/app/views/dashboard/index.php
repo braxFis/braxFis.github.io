@@ -4,7 +4,8 @@
 <div class="container">
 
   <div class="notification">
-    <?= $notification?>
+    <?php echo $notification->title;?>
+    <?php echo $notification->date;?>
   </div>
 
   <div class="reviews">

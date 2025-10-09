@@ -13,5 +13,10 @@ class NotificationController extends BaseController {
 
   public function Notification(){
     $notification = $this->model->getNotification();
+    ob_start();
+    require_once __DIR__ . '/../views/notifications/index.php';
+    $content = ob_get_clean();
+    require __DIR__ . '/../views/layout.php';
+
   }
 }

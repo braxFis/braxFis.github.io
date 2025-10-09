@@ -14,7 +14,16 @@ class Notification{
   }
 
   public function getNotification(){
-    $stmt = $this->db->conn->prepare("SELECT * FROM reviews AS REV UNION previews AS PREV UNION news AS NEWS WHERE REV.date=CURRENT TIMESTAMP OR PREV.date=CURRENT TIMESTAMP OR NEWS.date=CURRENT TIMESTAMP");
+    $stmt = $this->db->conn->prepare("
+SELECT * FROM (
+        SELECT title,date FROM reviews
+        UNION
+        SELECT title,date FROM previews
+        UNION
+        SELECT title,date FROM news
+    ) AS combined
+    WHERE date >= NOW() - INTERVAL 1 HOUR
+");
     $stmt->execute();
     return $stmt->fetch(\PDO::FETCH_OBJ);
   }

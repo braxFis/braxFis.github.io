@@ -37,7 +37,7 @@
     <form action="/comments/store" method="post" style="margin-top: 20px;">
       <label for="body">Comment:</label><br>
       <textarea name="body" id="body" cols="30" rows="5" required></textarea>
-      <input type="hidden" name="news_id" value="<?php echo $new->id; ?>">
+      <input type="hidden" name="id" value="<?php echo $new->id; ?>">
       <input type="hidden" name="user_id" value="<?php echo $new->user_id; ?>">
       <br><button type="submit">Submit</button>
     </form>
