@@ -11,7 +11,4 @@ class Like{
     $this->db = new \Database;
   }
 
-  public function displayButtons(){
-
-  }
 }

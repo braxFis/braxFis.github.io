@@ -75,4 +75,10 @@ class FooterController extends BaseController{
         header('Location: /footer');
         exit;
     }
+
+    public function updateOrder() {
+      $data = json_decode(file_get_contents('php://input'), true);
+      $this->model->updateOrder($data['order']);
+      echo json_encode(['status' => 'success']);
+  }
 }

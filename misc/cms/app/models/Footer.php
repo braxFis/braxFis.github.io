@@ -38,4 +38,12 @@ class Footer{
         $stmt = $this->db->conn->prepare($sql);
         $stmt->execute([':id' => $id]);
     }
+
+  public function updateOrder($orderData) {
+    foreach ($orderData as $id => $position) {
+      $sql = "UPDATE footer SET position = :position WHERE id = :id";
+      $stmt = $this->db->conn->prepare($sql);
+      $stmt->execute([':position' => $position, ':id' => $id]);
+    }
+  }
 }

@@ -59,8 +59,10 @@ $routes = [
       'plugins/install' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'install'],
 
       //DnD
-      'dnd' => ['controller' => '\app\controllers\LayoutController', 'method' => 'save']
+      'dnd' => ['controller' => '\app\controllers\LayoutController', 'method' => 'save'],
 
+      //Modules
+      'modules/move'  => ['controller' => '\app\controllers\ModuleController', 'method' => 'move'],
     ],
     'POST' => [
 
@@ -91,6 +93,7 @@ $routes = [
       'footer/delete/([0-9]+)' => ['controller' => '\app\controllers\FooterController', 'method' => 'delete'],
       'footer/update/([0-9]+)' => ['controller' => '\app\controllers\FooterController', 'method' => 'update'],
       'footer/store' => ['controller' => '\app\controllers\FooterController', 'method' => 'store'],
+      'footer/update' => ['controller' => '\app\controllers\FooterController', 'method' => 'updateOrder'],
 
       //Page
       'page/store' => ['controller' => '\app\controllers\PageController', 'method' => 'store'],
@@ -104,6 +107,12 @@ $routes = [
 
       //Plugins
       'plugins/store' => ['controller' => '\app\controllers\PluginController', 'method' => 'store'],
+
+      //Modules
+
+      //Component
+      'component/move' => ['controller' => '\app\controllers\ComponentController', 'method' => 'move'],
+
     ]
     ],
     'USER' => [
