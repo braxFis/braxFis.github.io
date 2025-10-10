@@ -24,6 +24,8 @@ class Plugin{
     return $stmt->fetch(\PDO::FETCH_OBJ);
   }
 
+  //getViewFromPlugin(){}
+
   public function install($data){
     $stmt = $this->db->conn->prepare("INSERT INTO plugins(name, active) VALUES(:name, :active)");
     $stmt->execute(['name' => $data['name'], 'active' => $data['active']]);
@@ -40,4 +42,15 @@ class Plugin{
     $stmt = $this->db->conn->prepare("DELETE FROM plugins WHERE id = :id");
     $stmt->execute(['id' => $id]);
   }
+
+  public function findByName(string $name): ?array
+    {
+        $stmt = $this->db->conn->prepare("SELECT * FROM plugins WHERE name = :name LIMIT 1");
+        $stmt->execute([':name' => $name]);
+
+        $plugin = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+        // Returnera null om inget hittades
+        return $plugin ?: null;
+    }
 }

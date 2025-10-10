@@ -2,8 +2,8 @@
 
 namespace app\controllers;
 
-//use app\models\Footer;
-//use app\models\Menu;
+use app\models\Footer;
+use app\models\Menu;
 
 use app\models\User;
 use app\controllers\BaseController;
@@ -23,12 +23,12 @@ class UserController{
       header('Location: /profile');
       exit;
     }
-    //$menus = (new Menu)->getMenuItems();
-    //$footers = (new Footer)->getFooterItems();
-    //ob_start();
+    $menus = (new Menu)->getMenuItems();
+    $footers = (new Footer)->getFooterItems();
+    ob_start();
     require __DIR__ . "/../views/user/login.php";
-    //$content = ob_get_clean();
-    //require __DIR__ . '/../views/layout.php';
+    $content = ob_get_clean();
+    require __DIR__ . '/../views/layout.php';
   }
 
   public function logout() {

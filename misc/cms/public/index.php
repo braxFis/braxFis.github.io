@@ -56,8 +56,10 @@ $routes = [
 
       //Plugins
       'plugins' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'index'],
+      'plugins/view/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'view'],
       'plugins/install' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'install'],
-
+      'plugins/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'edit'],
+    
       //DnD
       'dnd' => ['controller' => '\app\controllers\LayoutController', 'method' => 'save'],
 
@@ -107,6 +109,8 @@ $routes = [
 
       //Plugins
       'plugins/store' => ['controller' => '\app\controllers\PluginController', 'method' => 'store'],
+      'plugins/delete/([0-9]+)' => ['controller' => '\app\controllers\PluginController', 'method' => 'delete'],
+      'plugins/update/([0-9]+)' => ['controller' => '\app\controllers\PluginController', 'method' => 'update'],
 
       //Modules
 
@@ -165,12 +169,6 @@ $routes = [
 $path = $request;
 
 $method = $_SERVER['REQUEST_METHOD'];
-
-//Load plugins
-$plugins = new PluginManager();
-$plugins->loadPlugins();
-
-$plugins->registerRoutes($routes);
 
 foreach ($routes['ADMIN'][$method] as $route => $info) {
   $pattern = preg_replace(['#\{id\}#', '#\{slug\}#'], ['([0-9]+)', '([a-zA-Z0-9\-]+)'], $route);

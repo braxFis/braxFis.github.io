@@ -1,0 +1,1 @@
+<input type="search" name="search" id="search-query" class="search-container" placeholder="Search..." value="<?= $query ?>" draggable="true">

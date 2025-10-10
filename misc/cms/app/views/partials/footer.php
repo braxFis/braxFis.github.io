@@ -54,5 +54,8 @@ background: #555;
             behavior: 'smooth'
         });
     });
+
+    //DnD starts from here
+
 </script>
 </body>

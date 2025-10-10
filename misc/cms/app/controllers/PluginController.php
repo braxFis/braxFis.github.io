@@ -4,15 +4,17 @@ namespace app\controllers;
 
 use app\models\Footer;
 use app\models\Menu;
+use app\models\Plugin;
+use app\core\PluginManager;
 use ZipArchive;
 
 require_once __DIR__ . '/../models/Plugin.php';
-
+require_once __DIR__ . '/../../core/PluginManager.php';
 class PluginController extends BaseController {
   private $model;
 
   public function __construct() {
-    $this->model = new \app\models\Plugin;
+    $this->model = new Plugin;
   }
 
   public function index(){
@@ -69,24 +71,25 @@ class PluginController extends BaseController {
 
   public function store($postData){
     $this->requireAdmin();
+
     if (!isset($_POST['name'], $_POST['active'], $_FILES['zip'])) {
       die("Alla fält måste fyllas i.");
     }
 
-    $name = $_POST['name'];
+    $name = preg_replace('/[^a-zA-Z0-9_-]/', '',$_POST['name']);
     $active = (int) $_POST['active'];
     $zipFile = $_FILES['zip'];
 
-    // Kontrollera att det är zip
+    // Kontrollera zip
     if (pathinfo($zipFile['name'], PATHINFO_EXTENSION) !== 'zip') {
       die("Endast zip-filer är tillåtna.");
     }
 
-    // Sätt destinationsmapp
+    // Skapa pluginmapp
     $pluginDir = __DIR__ . '/../plugins/' . $name;
     if (!is_dir($pluginDir)) mkdir($pluginDir, 0755, true);
 
-    // Packa upp zip
+    // Packa upp
     $zip = new ZipArchive;
     if ($zip->open($zipFile['tmp_name']) === TRUE) {
       $zip->extractTo($pluginDir);
@@ -95,8 +98,14 @@ class PluginController extends BaseController {
       die("Fel vid uppackning av zip.");
     }
 
-    $this->model->install($postData);
-    header('Location: /plugins');
+    // 🔧 Nytt: Flytta controller/model/view till rätt mappar
+    $manager = new \PluginManager();
+    $manager->movePluginParts($pluginDir);
+
+    // 🔧 Spara till databasen
+    $this->model->install($_POST);
+
+    //header('Location: /plugins');
     exit;
   }
 }

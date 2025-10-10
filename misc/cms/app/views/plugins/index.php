@@ -9,7 +9,7 @@
     <li>
       <a href="/plugins/edit/<?php echo $plugin->id;?>">Edit</a>
       <!-- Delete Chapter -->
-      <form action="/plugins/inactivate/<?php echo $plugin->id;?>" method="POST">
+      <form action="/plugins/delete/<?php echo $plugin->id;?>" method="POST">
         <input type="hidden" name="id" id="" value="<?php echo $plugin->id;?>">
         <button type="submit">Inactivate Plugin</button>
       </form>

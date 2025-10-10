@@ -282,9 +282,37 @@
     }
     .previews{}
     .news{}
+
+
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+#draggable {
+  text-align: center;
+  background: white;
+}
+
+.dropzone {
+  width: 200px;
+  height: 20px;
+  background: blueviolet;
+  margin: 10px;
+  padding: 10px;
+}
+
+.dropzone.dragover {
+  background-color: purple;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
 </style>
 </head>
-<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>-->
 <script src="https://cdn.tiny.cloud/1/19srbsosgvqyagoc7x8ztcytwjhd2vwnqbz8ql6cdpj3t72a/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
   tinymce.init({
@@ -300,15 +328,69 @@
     bullist numlist outdent indent | removeformat | help'
   });
 </script>
-
+<div class="dropzone">
+  <div id="draggable" draggable="true">This div is draggable</div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<nav class="menu-prime">
-        <img src="/uploads/logo.png" alt="logowork.." width="75" height="75">
+<nav class="menu-prime dropzone" id="drop-target"> <!--Add DnD tags here -->
+        <!--<img src="/uploads/logo.png" alt="logowork.." width="75" height="75">-->
         <button><a href="/">Home</a></button>
-
+        <button><a href="/login">Login</a></button>
         <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
 
         <?php endif; ?>
-        <input type="search" name="search" id="search-query" class="search-container" placeholder="Search..." >
 </nav>
 <script type="module" src="/index.js"></script>
+<script>
+    let dragged;
+
+/* events fired on the draggable target */
+const source = document.getElementById("draggable");
+source.addEventListener("drag", (event) => {
+  console.log("dragging");
+});
+
+source.addEventListener("dragstart", (event) => {
+  // store a ref. on the dragged elem
+  dragged = event.target;
+  // make it half transparent
+  event.target.classList.add("dragging");
+});
+
+source.addEventListener("dragend", (event) => {
+  // reset the transparency
+  event.target.classList.remove("dragging");
+});
+
+/* events fired on the drop targets */
+const target = document.getElementById("drop-target");
+target.addEventListener("dragover", (event) => {
+  // prevent default to allow drop
+  event.preventDefault();
+});
+
+target.addEventListener("dragenter", (event) => {
+  // highlight potential drop target when the draggable element enters it
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.add("dragover");
+  }
+});
+
+target.addEventListener("dragleave", (event) => {
+  // reset background of potential drop target when the draggable element leaves it
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
+  }
+});
+
+target.addEventListener("drop", (event) => {
+  // prevent default action (open as link for some elements)
+  event.preventDefault();
+  // move dragged element to the selected drop target
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
+    event.target.appendChild(dragged);
+  }
+});
+
+</script>
