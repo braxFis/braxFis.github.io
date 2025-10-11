@@ -222,9 +222,19 @@
         border: 1px solid #ccc;
     }
 
+.menu-prime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1c1c1c;
+    padding: 15px 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    gap: 10px;
+}
 .menu-prime button{
     background: linear-gradient(135deg, rgb(0, 123, 255), rgb(123, 0, 255));
 }
+
 .menu-prime button a{
     color: white;
     list-style-type: none;
@@ -295,8 +305,8 @@ body {
 }
 
 .dropzone {
-  width: 200px;
-  height: 20px;
+  width: max-width;
+  height: max-height;
   background: blueviolet;
   margin: 10px;
   padding: 10px;
@@ -328,9 +338,13 @@ body {
     bullist numlist outdent indent | removeformat | help'
   });
 </script>
-<div class="dropzone">
-  <div id="draggable" draggable="true">This div is draggable</div>
+
+<button id="resetBtn">Återställ</button>
+
+<div class="menu-prime dropzone">
+  <button style="background: blue;color:black;"class="menu-prime" id="draggable" draggable="true"><a style="color:black;"href="/login">Buttface</a></button>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <nav class="menu-prime dropzone" id="drop-target"> <!--Add DnD tags here -->
         <!--<img src="/uploads/logo.png" alt="logowork.." width="75" height="75">-->
@@ -340,57 +354,55 @@ body {
 
         <?php endif; ?>
 </nav>
-<script type="module" src="/index.js"></script>
+<!--<script type="module" src="/index.js"></script>-->
 <script>
-    let dragged;
+// 🧹 Reset-knapp
+document.getElementById('resetBtn').addEventListener('click', () => {
+  fetch('reset_position.php', { method: 'POST' })
+    .then(() => location.reload());
+});
+let dragged;
+
+// Hämta sparad position från servern vid laddning
+window.addEventListener('load', () => {
+    fetch('get_position.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.dropzoneId) {
+                const draggedElem = document.getElementById("draggable");
+                const targetElem = document.getElementById(data.dropzoneId);
+                if (draggedElem && targetElem) {
+                    targetElem.appendChild(draggedElem);
+                }
+            }
+        });
+});
 
 /* events fired on the draggable target */
 const source = document.getElementById("draggable");
-source.addEventListener("drag", (event) => {
-  console.log("dragging");
-});
-
 source.addEventListener("dragstart", (event) => {
-  // store a ref. on the dragged elem
-  dragged = event.target;
-  // make it half transparent
-  event.target.classList.add("dragging");
+    dragged = event.target;
+    event.target.classList.add("dragging");
 });
 
 source.addEventListener("dragend", (event) => {
-  // reset the transparency
-  event.target.classList.remove("dragging");
+    event.target.classList.remove("dragging");
 });
 
 /* events fired on the drop targets */
 const target = document.getElementById("drop-target");
-target.addEventListener("dragover", (event) => {
-  // prevent default to allow drop
-  event.preventDefault();
-});
-
-target.addEventListener("dragenter", (event) => {
-  // highlight potential drop target when the draggable element enters it
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.add("dragover");
-  }
-});
-
-target.addEventListener("dragleave", (event) => {
-  // reset background of potential drop target when the draggable element leaves it
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-  }
-});
-
+target.addEventListener("dragover", (event) => event.preventDefault());
 target.addEventListener("drop", (event) => {
-  // prevent default action (open as link for some elements)
-  event.preventDefault();
-  // move dragged element to the selected drop target
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-    event.target.appendChild(dragged);
-  }
-});
+    event.preventDefault();
+    if (event.target.classList.contains("dropzone")) {
+        event.target.appendChild(dragged);
 
+        // Skicka ny position till servern
+        fetch('save_position.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({elementId: dragged.id, dropzoneId: event.target.id})
+        });
+    }
+});
 </script>

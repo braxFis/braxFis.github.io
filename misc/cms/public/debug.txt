@@ -1,0 +1,1 @@
+{"elementId":"draggable","dropzoneId":"drop-target"}
