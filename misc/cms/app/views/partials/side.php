@@ -29,7 +29,6 @@
                           <li class="sortable-item" data-id="<?php echo $item->id; ?>">
                             <?php echo $item->title; ?>
                           </li>
-                        <?php var_dump($items);?>
                         <?php endforeach; ?>
                       </ul>
                     </a>

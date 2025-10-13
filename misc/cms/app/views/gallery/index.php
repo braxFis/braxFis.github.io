@@ -172,10 +172,10 @@ background: rgba(255, 255, 255, 0.2);
     <?php foreach ($images as $i => $image): ?>
         <div class="slide<?= $i === 0 ? ' active' : '' ?>">
             <div class="image-container">
-                <img src="<?= htmlspecialchars($image['url']) ?>" alt="<?= htmlspecialchars($image['title']) ?>">
+                <img src="<?= $image['media'] ?>" alt="<?= $image['title'] ?>">
             </div>
             <div class="caption">
-                <h3><?= htmlspecialchars($image['title']) ?></h3>
+                <h3><?= $image['title'] ?></h3>
             </div>
         </div>
     <?php endforeach; ?>
@@ -187,7 +187,7 @@ background: rgba(255, 255, 255, 0.2);
 <!-- Thumbnail bar -->
 <div id="thumbnails">
     <?php foreach ($images as $i => $image): ?>
-        <img src="<?= htmlspecialchars($image['url']) ?>"
+        <img src="<?= $image['media'] ?>"
              data-index="<?= $i ?>"
              class="thumb<?= $i === 0 ? ' active' : '' ?>">
     <?php endforeach; ?>

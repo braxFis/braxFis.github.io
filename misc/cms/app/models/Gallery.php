@@ -12,6 +12,6 @@ class Gallery{
     public function getGallery(){
         $stmt = $this->db->conn->prepare("SELECT * FROM news");
         $stmt->execute();
-        return $stmt->fetch(\PDO::FETCH_OBJ);
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 }

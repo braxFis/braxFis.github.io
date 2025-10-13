@@ -7,9 +7,10 @@ require_once __DIR__ . '/../models/Comment.php';
 
 class NewsController extends BaseController {
   private $model;
-
+  private $media;
   public function __construct() {
     $this->model = new \app\models\News;
+    $this->media = new \app\models\Media;
   }
 
   public function indieNews($id){
@@ -59,6 +60,7 @@ class NewsController extends BaseController {
   }
   public function edit($id){
     $new = $this->model->getNew($id);
+    $medias = $this->media->getMedias();
     if($new == null){
       require __DIR__ . '/../views/errors/404.php';
       exit;

@@ -4,8 +4,10 @@ namespace app\controllers;
 
 use app\models\Footer;
 use app\models\Menu;
+use app\models\Media;
 
 require_once __DIR__ . "/../models/Menu.php";
+require_once __DIR__ . "/../models/Media.php";
 
 class MenuController extends BaseController{
     private $model;
@@ -17,6 +19,7 @@ class MenuController extends BaseController{
     public function index(){
         $menus = $this->model->getMenuItems();
         $menus = (new Menu)->getMenuItems();
+        $items = (new Media)->getMedias();
         $footers = (new Footer)->getFooterItems();
         ob_start();
         require __DIR__ . "/../views/menu/index.php";

@@ -2,11 +2,16 @@
 
 namespace app\models;
 
-require_once __DIR__ . '/../../bootstrap.php';
+use Database;
 
-class Home{
+require_once __DIR__ . '/../../bootstrap.php';;
+
+class Main{
     private $db;
+
     public function __construct(){
         $this->db = new \Database;
     }
+
+
 }

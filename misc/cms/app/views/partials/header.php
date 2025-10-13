@@ -350,6 +350,7 @@ body {
         <!--<img src="/uploads/logo.png" alt="logowork.." width="75" height="75">-->
         <button><a href="/">Home</a></button>
         <button><a href="/login">Login</a></button>
+        <button><a href="/media">Media</a></button>
         <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
 
         <?php endif; ?>

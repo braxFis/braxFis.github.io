@@ -6,7 +6,8 @@
   "license": "proprietary",
   "autoload": {
     "psr-4": {
-      "app\\": "app/"
+      "app\\": "app/",
+      "modules\\": "modules/"
     }
   },
   "authors": [

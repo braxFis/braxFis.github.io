@@ -14,6 +14,13 @@ $routes = [
 
     'ADMIN' => [
     'GET' => [
+
+      //Posts
+     'posts' => ['controller' => '\app\controllers\AdminController', 'method' => 'index'],
+     'posts/show/([0-9]+)' => ['controller' => '\app\controllers\PostController', 'method' => 'show'],
+     'posts/create' => ['controller' => '\app\controllers\AdminController', 'method' => 'create'],
+     'posts/edit/([0-9]+)' => ['controller' => '\app\controllers\AdminController', 'method' => 'edit'],
+
       //Reviews
       'review' => ['controller' => '\app\controllers\ReviewController', 'method' => 'listReview'],
       'review/list' => ['controller' => '\app\controllers\ReviewController', 'method' => 'index'],
@@ -67,6 +74,11 @@ $routes = [
       'modules/move'  => ['controller' => '\app\controllers\ModuleController', 'method' => 'move'],
     ],
     'POST' => [
+
+      //Posts
+     'posts/store'  => ['controller' => '\app\controllers\AdminController', 'method' => 'store'],
+     'posts/update/([0-9]+)' => ['controller' => '\app\controllers\AdminController', 'method' => 'update'],
+     'posts/delete/([0-9]+)' => ['controller' => '\app\controllers\AdminController', 'method' => 'delete'],
 
       //DnD
       'item/index' => ['controller' => '\app\controllers\ItemController', 'method' => 'index'],
@@ -150,7 +162,8 @@ $routes = [
 
     'PUBLIC' => [
         'GET' => [
-          '' => ['controller' => '\app\controllers\HomeController', 'method' => 'index'],
+          'trailers' => ['controller' => '\modules\game\controllers\TrailerController', 'method' => 'index'],
+          '' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'index'],
           'news/indie/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'indieNews'],
           'review/indie/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'indieReview'],
           'preview/indie/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'indiePreview'],

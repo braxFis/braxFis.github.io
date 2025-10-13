@@ -12,7 +12,14 @@
     <label for="author">News Author</label>
     <input type="text" name="author" id="author" value="<?php echo $new->author;?>">
     <label for="media">Media</label>
-    <input type="text" name="media" id="media" value="<?php echo $new->media;?>">
+    <!--<input type="text" name="media" id="media" value="<?php echo $new->media;?>">-->
+    <input list="images" name="media" id="imageInput">
+  <datalist id="images">
+    <?php foreach($medias as $media): ?>
+      <option value="<?php echo htmlspecialchars($media->url); ?>">
+    <?php endforeach; ?>
+  </datalist>
+  <img id="preview" src="" style="display:none; width:150px;">
     <label for="Status">Status</label>
     <select name="status" id="status">
       <option value="draft">Draft</option>
@@ -23,3 +30,12 @@
   </div>
   <button type="submit">Update News</button>
 </form>
+<script>
+const input = document.getElementById('imageInput');
+const preview = document.getElementById('preview');
+
+input.addEventListener('input', () => {
+  preview.src = input.value;
+  preview.style.display = 'block';
+});
+</script>
