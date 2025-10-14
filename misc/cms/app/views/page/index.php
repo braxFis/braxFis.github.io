@@ -1,7 +1,7 @@
 <section class="about-container">
     <?php foreach ($pages as $page): ?>
     <div class="about-column">
-        <h1>About</h1>
+        <h1><?= $page->title ?></h1>
         <h2><?= htmlspecialchars($page->title) ?></h2>
         <p><?= nl2br(htmlspecialchars($page->slug)) ?></p>
         <p><?= $page->content ?></p>

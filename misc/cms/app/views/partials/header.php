@@ -349,10 +349,9 @@ body {
 <nav class="menu-prime dropzone" id="drop-target"> <!--Add DnD tags here -->
         <!--<img src="/uploads/logo.png" alt="logowork.." width="75" height="75">-->
         <button><a href="/">Home</a></button>
+        <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
         <button><a href="/login">Login</a></button>
         <button><a href="/media">Media</a></button>
-        <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
-
         <?php endif; ?>
 </nav>
 <!--<script type="module" src="/index.js"></script>-->

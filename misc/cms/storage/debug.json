@@ -1,0 +1,10 @@
+{
+    "raw": "{\"fields\":[{\"value\":\"input\"}]}",
+    "decoded": {
+        "fields": [
+            {
+                "value": "input"
+            }
+        ]
+    }
+}

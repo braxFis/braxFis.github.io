@@ -9,6 +9,14 @@ class Page{
     public function __construct(){
         $this->db = new \Database;
     }
+
+   public function saveLayout($layout) {
+        $stmt = $this->db->conn->prepare("UPDATE page SET layout = :layout");
+        return $stmt->execute([
+            ':layout' => json_encode($layout, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
+        ]);
+    }
+
     public function getPage($id){
         $stmt = $this->db->conn->prepare("SELECT * FROM about WHERE id = :id");
         $stmt->execute(['id' => $id]);
@@ -27,8 +35,8 @@ class Page{
         return  $stmt->fetch(\PDO::FETCH_OBJ);
     }
     public function create($data){
-        $stmt = $this->db->conn->prepare("INSERT INTO page(title, slug, content) VALUES(:title, :slug, :content)");
-        $stmt->execute([':title' => isset($data['title']) ? $data['title'] : null, ':slug' => isset($data['slug']) ? $data['slug'] : null, ':content' => isset($data['content']) ? $data['content'] : null]);
+        $stmt = $this->db->conn->prepare("INSERT INTO page(title, slug, content, layout) VALUES(:title, :slug, :content, :layout)");
+        $stmt->execute([':title' => isset($data['title']) ? $data['title'] : null, ':slug' => isset($data['slug']) ? $data['slug'] : null, ':content' => isset($data['content']) ? $data['content'] : null, ':layout' => isset($data['layout']) ? $data['layout'] : null]);
     }
 
     public function update($data, $id){

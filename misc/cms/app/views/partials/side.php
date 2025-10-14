@@ -21,17 +21,28 @@
     <div class="menu-fab">
         <div class="menu">
             <div class="container">
-                <div class="state-layer nav-item">
+                <!--<div class="state-layer nav-item">
                     <a href="/media" style="color:white;">
-                      <p>Media</p>
-                      <ul id="sortable-list">
-                        <?php foreach($items as $item): ?>
-                          <li class="sortable-item" data-id="<?php echo $item->id; ?>">
-                            <?php echo $item->title; ?>
+                      <p>Media</p>-->
+                      <!--<ul id="sortable-list">
+                        <?php //foreach($items as $item): ?>
+                          <li class="sortable-item" data-id="<?php //echo $item->id; ?>">
+                            <?php //echo $item->title; ?>
                           </li>
-                        <?php endforeach; ?>
-                      </ul>
+                        <?php //endforeach; ?>
+                      </ul>-->
                     </a>
+                <!--</div>-->
+                <div class="state-layer nav-item">
+                  <a href="/menu" style="color:white;">
+                    <p>Menu</p>
+                  </a>
+                </div>
+
+                <div class="state-layer nav-item">
+                  <a href="/page" style="color:white;">
+                    <p>Page</p>
+                  </a>
                 </div>
             </div>
         </div>
