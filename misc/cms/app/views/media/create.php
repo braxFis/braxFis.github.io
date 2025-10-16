@@ -35,7 +35,27 @@
     <input type="text" name="uploaded_at" id="uploaded_at" value="<?php echo date('Y-m-d H:i:s') ?>">
 
     <label for="image_url">Image Upload</label>
-    <input type="file" name="image_url" id="image_url" accept="image/*" required>
+    <input type="file" name="image_url" id="image_url fileInput" accept="image/*, video/*" required>
 
-    <button type="submit">Create Media</button>
+    <button type="submit">Upload Media</button>
+
+    <progress id="progressBar" value="0" max="100"></progress>
+    <p id="status"></p>
+
 </form>
+<script>
+    document.getElementById('fileInput').addEventListener('change', function () {
+  xhr.upload.addEventListener('progress', function (e) {
+    if (e.lengthComputable) {
+      const percent = Math.round((e.loaded / e.total) * 100);
+      document.getElementById('progressBar').value = percent;
+      document.getElementById('status').innerText = `${percent}% uppladdat`;
+    }
+  });
+
+  xhr.upload.addEventListener('load', function () {
+    document.getElementById('status').innerText = '✅ Klar!';
+  });
+});
+
+</script>

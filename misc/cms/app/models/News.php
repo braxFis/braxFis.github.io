@@ -13,14 +13,16 @@ class News{
     $this->db = new \Database;
   }
 
-  public function createNews($title, $subtitle, $content, $date, $author){
-    $sql = "INSERT INTO news(title, subtitle, content, date, author) VALUES (:title, :subtitle, :content, :date, :author)";
+  public function createNews($title, $subtitle, $content, $date, $author, $media, $tags){
+    $sql = "INSERT INTO news(title, subtitle, content, date, author, media, tags) VALUES (:title, :subtitle, :content, :date, :author, :media, :tags)";
     $stmt = $this->db->conn->prepare($sql);
     $stmt->bindParam(':title', $title);
     $stmt->bindParam(':subtitle', $subtitle);
     $stmt->bindParam(':content', $content);
     $stmt->bindParam(':date', $date);
     $stmt->bindParam(':author', $author);
+    $stmt->bindParam(':media', $media);
+    $stmt->bindParam(':tags', $tags);
     $stmt->execute();
   }
 
@@ -37,24 +39,28 @@ class News{
   }
 
   public function create($data){
-    $stmt = $this->db->conn->prepare("INSERT INTO news(title, subtitle, content, date, author) VALUES (:title, :subtitle, :content, :date, :author)");
-    $stmt->execute([
-      'title' => $data['title'],
-      'subtitle' => $data['subtitle'],
-      'content' => $data['content'],
-      'date' => $data['date'],
-      'author' => $data['author']
-    ]);
-  }
-
-  public function update($data, $id){
-    $stmt = $this->db->conn->prepare("UPDATE news SET title = :title, subtitle = :subtitle, content = :content, date = :date, author = :author WHERE id = :id");
+    $stmt = $this->db->conn->prepare("INSERT INTO news(title, subtitle, content, date, author, media, tags) VALUES (:title, :subtitle, :content, :date, :author, :media, :tags)");
     $stmt->execute([
       'title' => $data['title'],
       'subtitle' => $data['subtitle'],
       'content' => $data['content'],
       'date' => $data['date'],
       'author' => $data['author'],
+      'media' => $data['media'],
+      'tags' => $data['tags']
+    ]);
+  }
+
+  public function update($data, $id){
+    $stmt = $this->db->conn->prepare("UPDATE news SET title = :title, subtitle = :subtitle, content = :content, date = :date, author = :author, media = :media, tags = :tags WHERE id = :id");
+    $stmt->execute([
+      'title' => $data['title'],
+      'subtitle' => $data['subtitle'],
+      'content' => $data['content'],
+      'date' => $data['date'],
+      'author' => $data['author'],
+      'media' => $data['media'],
+      'tags' => $data['tags'],
       'id' => $id
     ]);
   }

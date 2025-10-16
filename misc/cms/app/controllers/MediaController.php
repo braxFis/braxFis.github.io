@@ -65,7 +65,7 @@ class MediaController extends BaseController{
             $fileNameCmps = explode(".", $fileName);
             $fileExtension = strtolower(end($fileNameCmps));
 
-            $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+            $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'mp4', 'mov', 'avi', 'mkv'];
             if (!in_array($fileExtension, $allowedExtensions)) {
                 die('Invalid file extension.');
             }
