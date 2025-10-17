@@ -56,9 +56,7 @@ $routes = [
 
       'page/{slug}' => ['controller' => '\app\controllers\PageController', 'method' => 'view'],
 
-      'page/save-layout' => ['controller' => '\app\controllers\PageController', 'method' => 'saveLayout'],
-
-      'pagetwo' =>  ['controller' => '\app\controllers\PageTwoController', 'method' => 'index'],
+      'page/save-layout' => ['controller' => '\app\controllers\DragDropController', 'method' => 'save'],
 
       //Media
       'media/create'  => ['controller' => '\app\controllers\MediaController', 'method' => 'create'],
@@ -71,16 +69,12 @@ $routes = [
       'plugins/install' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'install'],
       'plugins/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'edit'],
     
-      //DnD
-      'dnd' => ['controller' => '\app\controllers\LayoutController', 'method' => 'save'],
-
-      //Modules
-      'modules/move'  => ['controller' => '\app\controllers\ModuleController', 'method' => 'move'],
-
-      //CustomFields
-      'customfields' => ['controller' => '\app\controllers\CustomFieldController', 'method' => 'index'],
+      'dragdrop/load' => ['controller' => '\app\controllers\DragDropController', 'method' => 'load'],
+      
     ],
     'POST' => [
+
+    'dragdrop/save' => ['controller' => '\app\controllers\DragDropController', 'method' => 'save'],
 
       //CustomFields
      'customfields/save' => ['controller' => '\app\controllers\CustomFieldController', 'method' => 'save'],

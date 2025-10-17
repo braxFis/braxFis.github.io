@@ -1,0 +1,341 @@
+[16-Oct-2025 23:45:47 UTC] Test logg
+[16-Oct-2025 23:45:48 UTC] Test logg
+[16-Oct-2025 23:45:48 UTC] Test logg
+[16-Oct-2025 23:45:50 UTC] Test logg
+[16-Oct-2025 23:45:50 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[16-Oct-2025 23:45:50 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[16-Oct-2025 23:45:50 UTC] Test logg
+[16-Oct-2025 23:45:56 UTC] Test logg
+[16-Oct-2025 23:45:56 UTC] DragDropController::save() körs
+[16-Oct-2025 23:45:56 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[16-Oct-2025 23:45:56 UTC] 💾 saveLayout() körs för slug=
+[16-Oct-2025 23:45:56 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[16-Oct-2025 23:45:56 UTC] 💾 Result: OK
+[16-Oct-2025 23:45:56 UTC] Sparar layout för slug=
+[16-Oct-2025 23:45:59 UTC] Test logg
+[16-Oct-2025 23:45:59 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$title is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 67
+[16-Oct-2025 23:45:59 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$slug is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 68
+[16-Oct-2025 23:45:59 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$layout is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 69
+[16-Oct-2025 23:45:59 UTC] Test logg
+[16-Oct-2025 23:46:03 UTC] Test logg
+[16-Oct-2025 23:46:03 UTC] Test logg
+[16-Oct-2025 23:59:33 UTC] Test logg
+[16-Oct-2025 23:59:36 UTC] Test logg
+[16-Oct-2025 23:59:36 UTC] Test logg
+[16-Oct-2025 23:59:37 UTC] Test logg
+[16-Oct-2025 23:59:37 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[16-Oct-2025 23:59:37 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[16-Oct-2025 23:59:38 UTC] Test logg
+[17-Oct-2025 00:00:19 UTC] Test logg
+[17-Oct-2025 00:00:24 UTC] Test logg
+[17-Oct-2025 00:00:24 UTC] DragDropController::save() körs
+[17-Oct-2025 00:00:24 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:00:24 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:00:24 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:00:24 UTC] 💾 Result: OK
+[17-Oct-2025 00:00:24 UTC] Sparar layout för slug=
+[17-Oct-2025 00:11:24 UTC] Test logg
+[17-Oct-2025 00:11:25 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:11:25 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:11:25 UTC] Test logg
+[17-Oct-2025 00:11:32 UTC] Test logg
+[17-Oct-2025 00:11:32 UTC] DragDropController::save() körs
+[17-Oct-2025 00:11:32 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:11:32 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:11:32 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:11:32 UTC] 💾 Result: OK
+[17-Oct-2025 00:11:32 UTC] Sparar layout för slug=
+[17-Oct-2025 00:11:35 UTC] Test logg
+[17-Oct-2025 00:11:35 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$title is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 67
+[17-Oct-2025 00:11:35 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$slug is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 68
+[17-Oct-2025 00:11:35 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$layout is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 69
+[17-Oct-2025 00:11:35 UTC] Test logg
+[17-Oct-2025 00:11:43 UTC] Test logg
+[17-Oct-2025 00:11:43 UTC] Test logg
+[17-Oct-2025 00:12:09 UTC] Test logg
+[17-Oct-2025 00:12:09 UTC] Test logg
+[17-Oct-2025 00:12:10 UTC] Test logg
+[17-Oct-2025 00:12:10 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:12:10 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:12:10 UTC] Test logg
+[17-Oct-2025 00:12:16 UTC] Test logg
+[17-Oct-2025 00:12:19 UTC] Test logg
+[17-Oct-2025 00:12:19 UTC] DragDropController::save() körs
+[17-Oct-2025 00:12:19 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:12:19 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:12:19 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:12:19 UTC] 💾 Result: OK
+[17-Oct-2025 00:12:19 UTC] Sparar layout för slug=
+[17-Oct-2025 00:12:44 UTC] Test logg
+[17-Oct-2025 00:12:44 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$title is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 67
+[17-Oct-2025 00:12:44 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$slug is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 68
+[17-Oct-2025 00:12:44 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$layout is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 69
+[17-Oct-2025 00:12:44 UTC] Test logg
+[17-Oct-2025 00:12:47 UTC] Test logg
+[17-Oct-2025 00:12:55 UTC] Test logg
+[17-Oct-2025 00:12:55 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:12:55 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:12:55 UTC] Test logg
+[17-Oct-2025 00:12:59 UTC] Test logg
+[17-Oct-2025 00:12:59 UTC] DragDropController::save() körs
+[17-Oct-2025 00:12:59 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:12:59 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:12:59 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:12:59 UTC] 💾 Result: OK
+[17-Oct-2025 00:12:59 UTC] Sparar layout för slug=
+[17-Oct-2025 00:13:05 UTC] Test logg
+[17-Oct-2025 00:13:43 UTC] Test logg
+[17-Oct-2025 00:13:44 UTC] Test logg
+[17-Oct-2025 00:13:44 UTC] Test logg
+[17-Oct-2025 00:13:45 UTC] Test logg
+[17-Oct-2025 00:13:45 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:13:45 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:13:45 UTC] Test logg
+[17-Oct-2025 00:13:52 UTC] Test logg
+[17-Oct-2025 00:13:52 UTC] DragDropController::save() körs
+[17-Oct-2025 00:13:52 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:13:52 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:13:52 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:13:52 UTC] 💾 Result: OK
+[17-Oct-2025 00:13:52 UTC] Sparar layout för slug=
+[17-Oct-2025 00:13:59 UTC] Test logg
+[17-Oct-2025 00:14:05 UTC] Test logg
+[17-Oct-2025 00:14:05 UTC] DragDropController::save() körs
+[17-Oct-2025 00:14:05 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:14:05 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:14:05 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:14:05 UTC] 💾 Result: OK
+[17-Oct-2025 00:14:05 UTC] Sparar layout för slug=
+[17-Oct-2025 00:14:13 UTC] Test logg
+[17-Oct-2025 00:14:13 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$title is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 67
+[17-Oct-2025 00:14:13 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$slug is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 68
+[17-Oct-2025 00:14:13 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$layout is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 69
+[17-Oct-2025 00:14:13 UTC] Test logg
+[17-Oct-2025 00:14:14 UTC] Test logg
+[17-Oct-2025 00:14:23 UTC] Test logg
+[17-Oct-2025 00:14:23 UTC] Test logg
+[17-Oct-2025 00:14:23 UTC] Test logg
+[17-Oct-2025 00:16:19 UTC] Test logg
+[17-Oct-2025 00:16:19 UTC] Test logg
+[17-Oct-2025 00:16:20 UTC] Test logg
+[17-Oct-2025 00:16:20 UTC] Test logg
+[17-Oct-2025 00:16:21 UTC] Test logg
+[17-Oct-2025 00:16:21 UTC] Test logg
+[17-Oct-2025 00:16:22 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:16:22 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:16:22 UTC] Test logg
+[17-Oct-2025 00:16:22 UTC] Test logg
+[17-Oct-2025 00:16:28 UTC] Test logg
+[17-Oct-2025 00:16:28 UTC] DragDropController::save() körs
+[17-Oct-2025 00:16:28 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:16:28 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:16:28 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:16:28 UTC] 💾 Result: OK
+[17-Oct-2025 00:16:28 UTC] Sparar layout för slug=
+[17-Oct-2025 00:16:42 UTC] Test logg
+[17-Oct-2025 00:16:42 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$title is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 67
+[17-Oct-2025 00:16:42 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$slug is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 68
+[17-Oct-2025 00:16:42 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$layout is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 69
+[17-Oct-2025 00:16:42 UTC] Test logg
+[17-Oct-2025 00:16:42 UTC] Test logg
+[17-Oct-2025 00:16:47 UTC] Test logg
+[17-Oct-2025 00:16:47 UTC] Test logg
+[17-Oct-2025 00:16:47 UTC] Test logg
+[17-Oct-2025 00:22:37 UTC] Test logg
+[17-Oct-2025 00:22:38 UTC] Test logg
+[17-Oct-2025 00:22:38 UTC] Test logg
+[17-Oct-2025 00:22:40 UTC] Test logg
+[17-Oct-2025 00:22:40 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 00:22:40 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:22:40 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:22:40 UTC] Test logg
+[17-Oct-2025 00:22:47 UTC] Test logg
+[17-Oct-2025 00:22:47 UTC] DragDropController::save() körs
+[17-Oct-2025 00:22:47 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:22:47 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:22:47 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:22:47 UTC] 💾 Result: OK
+[17-Oct-2025 00:22:47 UTC] Sparar layout för slug=
+[17-Oct-2025 00:22:52 UTC] Test logg
+[17-Oct-2025 00:22:52 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$title is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 67
+[17-Oct-2025 00:22:52 UTC] PHP Deprecated:  Creation of dynamic property app\models\Page::$slug is deprecated in D:\braxFis.github.io\misc\cms\app\controllers\PageController.php on line 68
+[17-Oct-2025 00:22:52 UTC] Test logg
+[17-Oct-2025 00:22:56 UTC] Test logg
+[17-Oct-2025 00:23:00 UTC] Test logg
+[17-Oct-2025 00:23:00 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 00:23:00 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:23:00 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:23:00 UTC] Test logg
+[17-Oct-2025 00:23:00 UTC] Test logg
+[17-Oct-2025 00:23:06 UTC] Test logg
+[17-Oct-2025 00:23:06 UTC] DragDropController::save() körs
+[17-Oct-2025 00:23:06 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:23:06 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:23:06 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:23:06 UTC] 💾 Result: OK
+[17-Oct-2025 00:23:06 UTC] Sparar layout för slug=
+[17-Oct-2025 00:23:43 UTC] Test logg
+[17-Oct-2025 00:23:43 UTC] PHP Warning:  Undefined array key "slug" in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 16
+[17-Oct-2025 00:23:43 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 00:23:43 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:23:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:23:43 UTC] Test logg
+[17-Oct-2025 00:23:43 UTC] Test logg
+[17-Oct-2025 00:23:47 UTC] Test logg
+[17-Oct-2025 00:23:47 UTC] DragDropController::save() körs
+[17-Oct-2025 00:23:47 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:23:47 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:23:47 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:23:47 UTC] 💾 Result: OK
+[17-Oct-2025 00:23:47 UTC] Sparar layout för slug=
+[17-Oct-2025 00:24:52 UTC] Test logg
+[17-Oct-2025 00:24:52 UTC] PHP Warning:  Undefined variable $pageModel in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 16
+[17-Oct-2025 00:24:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getById() on null in D:\braxFis.github.io\misc\cms\app\views\page\create.php:16
+Stack trace:
+#0 D:\braxFis.github.io\misc\cms\app\controllers\PageController.php(32): require()
+#1 D:\braxFis.github.io\misc\cms\public\index.php(202): app\controllers\PageController->create()
+#2 {main}
+  thrown in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 16
+[17-Oct-2025 00:24:52 UTC] Test logg
+[17-Oct-2025 00:25:04 UTC] Test logg
+[17-Oct-2025 00:25:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method app\models\Page::getById() in D:\braxFis.github.io\misc\cms\app\views\page\create.php:16
+Stack trace:
+#0 D:\braxFis.github.io\misc\cms\app\controllers\PageController.php(32): require()
+#1 D:\braxFis.github.io\misc\cms\public\index.php(202): app\controllers\PageController->create()
+#2 {main}
+  thrown in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 16
+[17-Oct-2025 00:25:04 UTC] Test logg
+[17-Oct-2025 00:25:16 UTC] Test logg
+[17-Oct-2025 00:25:16 UTC] PHP Warning:  Undefined variable $slug in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 16
+[17-Oct-2025 00:25:16 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 00:25:16 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:25:16 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:25:16 UTC] Test logg
+[17-Oct-2025 00:25:17 UTC] Test logg
+[17-Oct-2025 00:26:31 UTC] Test logg
+[17-Oct-2025 00:26:31 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 00:26:31 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:26:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:26:32 UTC] Test logg
+[17-Oct-2025 00:26:32 UTC] Test logg
+[17-Oct-2025 00:26:40 UTC] Test logg
+[17-Oct-2025 00:26:40 UTC] DragDropController::save() körs
+[17-Oct-2025 00:26:40 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"}]}
+[17-Oct-2025 00:26:40 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 00:26:40 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 00:26:40 UTC] 💾 Result: OK
+[17-Oct-2025 00:26:40 UTC] Sparar layout för slug=
+[17-Oct-2025 00:32:42 UTC] Test logg
+[17-Oct-2025 00:32:42 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 00:32:42 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:32:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 00:32:42 UTC] Test logg
+[17-Oct-2025 00:32:42 UTC] Test logg

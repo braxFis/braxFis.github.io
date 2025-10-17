@@ -23,3 +23,4 @@
   </div>
   <button type="submit">Create News</button>
 </form>
+<?= (new \app\controllers\DragDropController())->editor(); ?>

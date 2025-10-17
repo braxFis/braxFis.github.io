@@ -54,9 +54,51 @@ class NewsController extends BaseController {
   }
 
   public function store($postData){
-    $this->requireAdmin();
-    $this->model->create($postData);
-    header('Location: /news');
+     $this->requireAdmin();
+
+        // Sanera och hämta värden
+        $title  = trim($_POST['title'] ?? '');
+        $slug   = trim($_POST['slug'] ?? '');
+        $layout = $_POST['layout'] ?? '';
+
+        // Om layouten är tom eller ogiltig -> använd tom array
+        if (empty($layout)) {
+            $layout = [];
+        } else {
+            // Försök tolka JSON om den redan skickas som text
+            $decoded = json_decode($layout, true);
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                $layout = [];
+            } else {
+                $layout = $decoded;
+            }
+        }
+
+        // Validering
+        if ($title === '') {
+            die('Titel får inte vara tom');
+        }
+
+        // Skapa ny News-instans
+        $news = new \app\models\News();
+        $news->title  = $title;
+        //$news->slug   = $slug !== '' ? $slug : $this->model->getBySlug($title);
+        $news->layout = $layout;
+
+        // Försök spara
+        $saved = $this->model->create(
+            //'title' => $title,
+            //'slug'  => $slug,
+            //'layout'=> json_encode($layout, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
+            $postData
+        );
+
+        if ($saved) {
+            header('Location: /news');
+            exit;
+        } else {
+            echo "Kunde inte skapa sidan.";
+        }
   }
   public function edit($id){
     $new = $this->model->getNew($id);

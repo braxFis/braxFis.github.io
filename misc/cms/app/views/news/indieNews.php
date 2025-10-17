@@ -62,6 +62,17 @@
 .main-content{
   width: 700px;
 }
+
+.headline p{
+  background-color: red;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  width: max-content;
+  color: white;
+  margin:10px;
+}
 </style>
 <!-- News Section -->
 <div class="news-container">
@@ -80,27 +91,11 @@
     <p><?php echo nl2br($new->content);?></p>
   </div>
   <div class="img">
-    <?php echo "Image is at:" . $new->media;?>
     <img src="<?php echo $new->media;?>" alt="News Image" style="max-width: 400px; height: auto;">
   </div>
-</div>
-<!-- End News Section -->
 
-<?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
-  <li style="list-style-type: none">
-    <button><a style="text-decoration: none; color: white" href="/news/edit/<?php echo $new->id;?>">Edit News</a></button>
-    <!-- Delete Preview -->
-    <form action="/news/delete/<?php echo $new->id;?>" method="post">
-      <input type="hidden" name="id" id="" value="<?php echo $new->id;?>">
-      <button type="submit">Delete News</button>
-    </form>
-  </li>
-<?php endif;?>
-</ul>
-
-<!-- Comments Section -->
+  <!-- Comments Section -->
 <div>
-  <h3>Comments</h3>
   <?php foreach ($comments as $comment): ?>
     <div style="margin-bottom: 20px;">
       <p><strong>User ID:</strong><?php echo htmlspecialchars($comment->user_id, ENT_QUOTES); ?></p>
@@ -124,3 +119,18 @@
 
 </div>
 <!-- End Comments Section -->
+
+</div>
+<!-- End News Section -->
+
+<?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
+  <li style="list-style-type: none">
+    <button><a style="text-decoration: none; color: white" href="/news/edit/<?php echo $new->id;?>">Edit News</a></button>
+    <!-- Delete Preview -->
+    <form action="/news/delete/<?php echo $new->id;?>" method="post">
+      <input type="hidden" name="id" id="" value="<?php echo $new->id;?>">
+      <button type="submit">Delete News</button>
+    </form>
+  </li>
+<?php endif;?>
+</ul>
