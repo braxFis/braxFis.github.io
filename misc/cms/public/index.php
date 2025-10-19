@@ -69,8 +69,10 @@ $routes = [
       'plugins/install' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'install'],
       'plugins/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'edit'],
     
+      //DnD
       'dragdrop/load' => ['controller' => '\app\controllers\DragDropController', 'method' => 'load'],
-      
+      'dragdrop/editor' => ['controller' => '\app\controllers\DragDropController', 'method' => 'editor']
+
     ],
     'POST' => [
 

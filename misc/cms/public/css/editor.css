@@ -2,7 +2,7 @@
 #palette, #canvas {
   border: 1px solid #ccc;
   padding: 10px;
-  width: 45%;
+  width: 1000px;
   min-height: 200px;
   background: #fdfdfd;
   border-radius: 8px;
@@ -23,4 +23,9 @@
 .placeholder {
   color: #999;
   font-style: italic;
+}
+
+#pageForm {
+  max-width: 1000px !important;
+  margin: auto;
 }
