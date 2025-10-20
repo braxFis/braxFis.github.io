@@ -53,9 +53,9 @@ $routes = [
       'page' =>  ['controller' => '\app\controllers\PageController', 'method' => 'index'],
       'page/create'  => ['controller' => '\app\controllers\PageController', 'method' => 'create'],
       'page/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PageController', 'method' => 'edit'],
-
       'page/{slug}' => ['controller' => '\app\controllers\PageController', 'method' => 'view'],
 
+      //Drag and Drop
       'page/save-layout' => ['controller' => '\app\controllers\DragDropController', 'method' => 'save'],
 
       //Media
@@ -68,24 +68,20 @@ $routes = [
       'plugins/view/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'view'],
       'plugins/install' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'install'],
       'plugins/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'edit'],
-    
+
+      //Drag and Drop
       'dragdrop/load' => ['controller' => '\app\controllers\DragDropController', 'method' => 'load'],
-      
+
     ],
     'POST' => [
 
-    'dragdrop/save' => ['controller' => '\app\controllers\DragDropController', 'method' => 'save'],
-
-      //CustomFields
-     'customfields/save' => ['controller' => '\app\controllers\CustomFieldController', 'method' => 'save'],
+      //Drag and Drop
+      'dragdrop/save' => ['controller' => '\app\controllers\DragDropController', 'method' => 'save'],
 
       //Posts
      'posts/store'  => ['controller' => '\app\controllers\AdminController', 'method' => 'store'],
      'posts/update/([0-9]+)' => ['controller' => '\app\controllers\AdminController', 'method' => 'update'],
      'posts/delete/([0-9]+)' => ['controller' => '\app\controllers\AdminController', 'method' => 'delete'],
-
-      //DnD
-      'item/index' => ['controller' => '\app\controllers\ItemController', 'method' => 'index'],
 
       //News
       'news/store' => ['controller' => '\app\controllers\NewsController', 'method' => 'store'],
@@ -127,11 +123,6 @@ $routes = [
       'plugins/store' => ['controller' => '\app\controllers\PluginController', 'method' => 'store'],
       'plugins/delete/([0-9]+)' => ['controller' => '\app\controllers\PluginController', 'method' => 'delete'],
       'plugins/update/([0-9]+)' => ['controller' => '\app\controllers\PluginController', 'method' => 'update'],
-
-      //Modules
-
-      //Component
-      'component/move' => ['controller' => '\app\controllers\ComponentController', 'method' => 'move'],
 
     ]
     ],
