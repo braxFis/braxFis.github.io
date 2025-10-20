@@ -68,9 +68,16 @@ $routes = [
       'plugins/view/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'view'],
       'plugins/install' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'install'],
       'plugins/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'edit'],
+<<<<<<< HEAD
 
       //Drag and Drop
       'dragdrop/load' => ['controller' => '\app\controllers\DragDropController', 'method' => 'load'],
+=======
+    
+      //DnD
+      'dragdrop/load' => ['controller' => '\app\controllers\DragDropController', 'method' => 'load'],
+      'dragdrop/editor' => ['controller' => '\app\controllers\DragDropController', 'method' => 'editor']
+>>>>>>> b2597b58f8660edd87ec6de4f248c3fdce70892e
 
     ],
     'POST' => [
