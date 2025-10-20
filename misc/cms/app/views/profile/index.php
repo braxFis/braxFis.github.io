@@ -19,6 +19,10 @@
   <label for="role">Role</label>
   <input type="text" name="role" id="role" value="<?= htmlspecialchars($profile->role) ?>">
 
+  <!-- Support for Subscriptions -->
+  <label for="subscribe">Subscribe</label>
+  <input type="checkbox" name="subscribe" value="<?= htmlspecialchars($profile->subscribe) ?>)">
+
   <button type="submit">Update Profile</button>
 
   <a href="/profile/confirm-delete">Delete Profile</a>

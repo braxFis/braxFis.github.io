@@ -43,7 +43,6 @@ class NewsController extends BaseController {
     $content = ob_get_clean();
     include __DIR__ . '/../views/layout.php';
   }
-
   public function create() {
     $this->requireAdmin();
     $news = $this->model->getNews();

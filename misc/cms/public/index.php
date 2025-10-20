@@ -68,19 +68,24 @@ $routes = [
       'plugins/view/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'view'],
       'plugins/install' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'install'],
       'plugins/edit/([0-9]+)' =>  ['controller' => '\app\controllers\PluginController', 'method' => 'edit'],
-<<<<<<< HEAD
 
       //Drag and Drop
       'dragdrop/load' => ['controller' => '\app\controllers\DragDropController', 'method' => 'load'],
-=======
-    
-      //DnD
-      'dragdrop/load' => ['controller' => '\app\controllers\DragDropController', 'method' => 'load'],
-      'dragdrop/editor' => ['controller' => '\app\controllers\DragDropController', 'method' => 'editor']
->>>>>>> b2597b58f8660edd87ec6de4f248c3fdce70892e
+
+      'dragdrop/editor' => ['controller' => '\app\controllers\DragDropController', 'method' => 'editor'],
+
+      //Plan
+      'plan' => ['controller' => '\app\controllers\PlanController', 'method' => 'index'],
+      'plan/edit/([0-9]+)' => ['controller' => '\app\controllers\PlanController', 'method' => 'edit'],
+      'plan/create' => ['controller' => '\app\controllers\PlanController', 'method' => 'create'],
 
     ],
     'POST' => [
+
+      //Plan
+      'plan/store'  => ['controller' => '\app\controllers\PlanController', 'method' => 'store'],
+      'plan/update/([0-9]+)' => ['controller' => '\app\controllers\PlanController', 'method' => 'update'],
+      'plan/delete/([0-9]+)' => ['controller' => '\app\controllers\PlanController', 'method' => 'delete'],
 
       //Drag and Drop
       'dragdrop/save' => ['controller' => '\app\controllers\DragDropController', 'method' => 'save'],
@@ -148,6 +153,10 @@ $routes = [
           //Subscribe
           'subscribe' => ['controller' => '\app\controllers\SubscribeController', 'method' => 'store'],
           'subscribe/edit' => ['controller' => '\app\controllers\SubscribeController', 'method' => 'edit'],
+
+          //Regular
+          'regular' => ['controller' => '\app\controllers\RegularController', 'method' => 'index'],
+
         ],
         'POST' => [
 
@@ -159,6 +168,7 @@ $routes = [
           'comments/store' => ['controller' => '\app\controllers\CommentController', 'method' => 'store'],
           'comments/delete/([0-9]+)' => ['controller' => '\app\controllers\CommentController', 'method' => 'delete'],
           'comments/update/([0-9]+)' => ['controller' => '\app\controllers\CommentController', 'method' => 'update'],
+
         ]
     ],
 

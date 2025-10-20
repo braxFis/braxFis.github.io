@@ -6,7 +6,7 @@ class Gallery
     private $apiUrl = "https://api.rawg.io/api/games";
     private $apiKey = "8bc47dab600645ac9164f534d0182baf";
 
-    public function getGallery($date = '2025-01-01', $order = 'created')
+    public function getGallery($date = '2025-01-01', $order = 'created'): array
     {
         $params = [
             'key' => $this->apiKey,

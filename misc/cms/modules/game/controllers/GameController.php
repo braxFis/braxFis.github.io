@@ -12,12 +12,12 @@ class GameController {
         $this->model = new Game();
     }
 
-    public function index($page = 1) {
+    public function index($page = 1): array {
         $data = $this->model->getGames($page);
         $games = [];
         $model = new Gallery();
         $images = $model->getGallery();
-     
+
         foreach ($data['results'] as $item) {
             $id = $item['id'];
             $item['description'] = $this->model->getDescription($id);
@@ -30,6 +30,8 @@ class GameController {
         require __DIR__ . "/../views/index.php";
         $content = ob_get_clean();
         require __DIR__ . "/../../../app/views/layout.php";
+
+        return $games;
     }
-    
+
 }

@@ -11,7 +11,6 @@ class User{
   public function __construct(){
     $this->db = new \Database;
   }
-
   public function login($data)
   {
     $username = isset($data['username']) ? trim($data['username']) : '';

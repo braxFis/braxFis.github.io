@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Games</title>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/misc/css/style.css">
 </head>
 <body>
 

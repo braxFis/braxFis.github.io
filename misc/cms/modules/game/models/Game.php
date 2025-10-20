@@ -29,9 +29,12 @@ class Game {
         return $data['description'] ?? 'No description available';
     }
 
-    public function getTrailers($id) {
+    public function getTrailers($id): array
+    {
         $data = $this->fetchAPI("games/{$id}/movies");
         if (!$data || !isset($data['results'])) return [];
-        return array_map(fn($r) => $r['data']['max'], $data['results']);
+        return array_map(function ($r) {
+          return $r['data']['max'];
+        }, $data['results']);
     }
 }
