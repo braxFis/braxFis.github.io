@@ -339,3 +339,366 @@ Stack trace:
 [17-Oct-2025 00:32:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
 [17-Oct-2025 00:32:42 UTC] Test logg
 [17-Oct-2025 00:32:42 UTC] Test logg
+[17-Oct-2025 14:45:32 UTC] Test logg
+[17-Oct-2025 14:46:08 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games?key=8bc47dab600645ac9164f534d0182baf&amp;dates=2025-01-01&amp;ordering=created): Failed to open stream: HTTP request failed! HTTP/1.1 504 Gateway Timeout
+ in D:\braxFis.github.io\misc\cms\modules\game\models\Gallery.php on line 18
+[17-Oct-2025 14:46:08 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\braxFis.github.io\misc\cms\modules\game\models\Gallery.php on line 18
+[17-Oct-2025 14:46:43 UTC] Test logg
+[17-Oct-2025 14:46:44 UTC] PHP Warning:  Undefined variable $menus in D:\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[17-Oct-2025 14:46:44 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[17-Oct-2025 14:46:44 UTC] PHP Warning:  Undefined variable $footers in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[17-Oct-2025 14:46:44 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[17-Oct-2025 14:46:45 UTC] Test logg
+[17-Oct-2025 14:47:39 UTC] Test logg
+[17-Oct-2025 14:47:39 UTC] PHP Warning:  Undefined variable $menus in D:\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[17-Oct-2025 14:47:39 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[17-Oct-2025 14:47:39 UTC] PHP Warning:  Undefined variable $footers in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[17-Oct-2025 14:47:39 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[17-Oct-2025 14:47:39 UTC] Test logg
+[17-Oct-2025 14:47:44 UTC] Test logg
+[17-Oct-2025 14:47:47 UTC] Test logg
+[17-Oct-2025 14:47:47 UTC] Test logg
+[17-Oct-2025 14:47:49 UTC] Test logg
+[17-Oct-2025 14:47:49 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:47:49 UTC] PHP Warning:  Undefined variable $videos in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 14:47:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 24
+[17-Oct-2025 14:47:49 UTC] Test logg
+[17-Oct-2025 14:49:29 UTC] Test logg
+[17-Oct-2025 14:49:29 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:49:29 UTC] Test logg
+[17-Oct-2025 14:50:15 UTC] Test logg
+[17-Oct-2025 14:50:15 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:50:15 UTC] PHP Parse error:  syntax error, unexpected token ";" in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 39
+[17-Oct-2025 14:50:22 UTC] Test logg
+[17-Oct-2025 14:50:22 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:50:22 UTC] PHP Parse error:  syntax error, unexpected token ";" in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 39
+[17-Oct-2025 14:50:46 UTC] Test logg
+[17-Oct-2025 14:50:46 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:50:46 UTC] Test logg
+[17-Oct-2025 14:51:34 UTC] Test logg
+[17-Oct-2025 14:52:05 UTC] Test logg
+[17-Oct-2025 14:52:05 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:52:05 UTC] Test logg
+[17-Oct-2025 14:52:05 UTC] Test logg
+[17-Oct-2025 14:53:11 UTC] Test logg
+[17-Oct-2025 14:53:11 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:53:11 UTC] Test logg
+[17-Oct-2025 14:55:03 UTC] Test logg
+[17-Oct-2025 14:55:03 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:55:03 UTC] Test logg
+[17-Oct-2025 14:55:10 UTC] Test logg
+[17-Oct-2025 14:55:10 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:55:10 UTC] Test logg
+[17-Oct-2025 14:55:12 UTC] Test logg
+[17-Oct-2025 14:55:12 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:55:12 UTC] Test logg
+[17-Oct-2025 14:55:22 UTC] Test logg
+[17-Oct-2025 14:55:22 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:55:22 UTC] Test logg
+[17-Oct-2025 14:55:44 UTC] Test logg
+[17-Oct-2025 14:55:44 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:55:44 UTC] Test logg
+[17-Oct-2025 14:56:13 UTC] Test logg
+[17-Oct-2025 14:56:56 UTC] Test logg
+[17-Oct-2025 14:56:56 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 17
+[17-Oct-2025 14:56:56 UTC] Test logg
+[17-Oct-2025 16:03:06 UTC] Test logg
+[17-Oct-2025 16:03:07 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:03:07 UTC] Test logg
+[17-Oct-2025 16:03:32 UTC] Test logg
+[17-Oct-2025 16:03:32 UTC] DragDropController::save() körs
+[17-Oct-2025 16:03:32 UTC] RAW DATA: {"slug":"","layout":[{"type":"h1","content":"Rubrik"},{"type":"h1","content":"Rubrik"},{"type":"h3","content":"Rubrik"},{"type":"h4","content":"Rubrik"}]}
+[17-Oct-2025 16:03:32 UTC] 💾 saveLayout() körs för slug=
+[17-Oct-2025 16:03:32 UTC] 💾 Layout-data: Array
+(
+    [0] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+    [1] => Array
+        (
+            [type] => h1
+            [content] => Rubrik
+        )
+
+    [2] => Array
+        (
+            [type] => h3
+            [content] => Rubrik
+        )
+
+    [3] => Array
+        (
+            [type] => h4
+            [content] => Rubrik
+        )
+
+)
+
+[17-Oct-2025 16:03:32 UTC] 💾 Result: OK
+[17-Oct-2025 16:03:32 UTC] Sparar layout för slug=
+[17-Oct-2025 16:05:47 UTC] Test logg
+[17-Oct-2025 16:05:47 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:05:47 UTC] Test logg
+[17-Oct-2025 16:07:14 UTC] Test logg
+[17-Oct-2025 16:07:14 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:07:15 UTC] Test logg
+[17-Oct-2025 16:09:29 UTC] Test logg
+[17-Oct-2025 16:09:29 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:09:29 UTC] Test logg
+[17-Oct-2025 16:10:14 UTC] Test logg
+[17-Oct-2025 16:10:14 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:10:14 UTC] Test logg
+[17-Oct-2025 16:12:02 UTC] Test logg
+[17-Oct-2025 16:12:02 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:12:02 UTC] Test logg
+[17-Oct-2025 16:15:25 UTC] Test logg
+[17-Oct-2025 16:15:25 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:15:25 UTC] Test logg
+[17-Oct-2025 16:15:39 UTC] Test logg
+[17-Oct-2025 16:15:39 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:15:39 UTC] Test logg
+[17-Oct-2025 16:16:11 UTC] Test logg
+[17-Oct-2025 16:16:11 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:16:11 UTC] Test logg
+[17-Oct-2025 16:16:17 UTC] Test logg
+[17-Oct-2025 16:16:17 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:16:17 UTC] Test logg
+[17-Oct-2025 16:18:52 UTC] Test logg
+[17-Oct-2025 16:18:52 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 20
+[17-Oct-2025 16:18:53 UTC] Test logg
+[17-Oct-2025 17:04:01 UTC] Test logg
+[17-Oct-2025 17:04:01 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 19
+[17-Oct-2025 17:04:01 UTC] Test logg
+[17-Oct-2025 17:04:55 UTC] Test logg
+[17-Oct-2025 17:04:56 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 22
+[17-Oct-2025 17:04:56 UTC] Test logg
+[17-Oct-2025 17:05:02 UTC] Test logg
+[17-Oct-2025 17:05:02 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 22
+[17-Oct-2025 17:05:03 UTC] Test logg
+[17-Oct-2025 17:05:27 UTC] Test logg
+[17-Oct-2025 17:05:27 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 22
+[17-Oct-2025 17:05:27 UTC] Test logg
+[17-Oct-2025 17:05:58 UTC] Test logg
+[17-Oct-2025 17:05:58 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:05:58 UTC] Test logg
+[17-Oct-2025 17:06:06 UTC] Test logg
+[17-Oct-2025 17:06:06 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:06:06 UTC] Test logg
+[17-Oct-2025 17:11:37 UTC] Test logg
+[17-Oct-2025 17:15:10 UTC] Test logg
+[17-Oct-2025 17:15:10 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:15:10 UTC] Test logg
+[17-Oct-2025 17:15:11 UTC] Test logg
+[17-Oct-2025 17:15:20 UTC] Test logg
+[17-Oct-2025 17:15:20 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:15:21 UTC] Test logg
+[17-Oct-2025 17:15:25 UTC] Test logg
+[17-Oct-2025 17:15:25 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:15:26 UTC] Test logg
+[17-Oct-2025 17:15:39 UTC] Test logg
+[17-Oct-2025 17:15:39 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:15:39 UTC] Test logg
+[17-Oct-2025 17:15:50 UTC] Test logg
+[17-Oct-2025 17:15:50 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:15:50 UTC] Test logg
+[17-Oct-2025 17:16:20 UTC] Test logg
+[17-Oct-2025 17:16:20 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:16:21 UTC] Test logg
+[17-Oct-2025 17:16:27 UTC] Test logg
+[17-Oct-2025 17:16:27 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:16:27 UTC] Test logg
+[17-Oct-2025 17:20:06 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "]" in D:\braxFis.github.io\misc\cms\public\index.php on line 187
+[17-Oct-2025 17:20:12 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "]" in D:\braxFis.github.io\misc\cms\public\index.php on line 187
+[17-Oct-2025 17:20:22 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "]" in D:\braxFis.github.io\misc\cms\public\index.php on line 187
+[17-Oct-2025 17:20:37 UTC] Test logg
+[17-Oct-2025 17:20:37 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:20:37 UTC] Test logg
+[17-Oct-2025 17:20:48 UTC] Test logg
+[17-Oct-2025 17:20:48 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:20:48 UTC] Test logg
+[17-Oct-2025 17:20:50 UTC] Test logg
+[17-Oct-2025 17:20:55 UTC] Test logg
+[17-Oct-2025 17:20:55 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:20:55 UTC] Test logg
+[17-Oct-2025 17:22:36 UTC] Test logg
+[17-Oct-2025 17:22:36 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:22:36 UTC] Test logg
+[17-Oct-2025 17:23:13 UTC] Test logg
+[17-Oct-2025 17:23:13 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:23:14 UTC] Test logg
+[17-Oct-2025 17:24:00 UTC] Test logg
+[17-Oct-2025 17:24:01 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:24:01 UTC] Test logg
+[17-Oct-2025 17:25:29 UTC] Test logg
+[17-Oct-2025 17:25:29 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:25:30 UTC] Test logg
+[17-Oct-2025 17:26:17 UTC] Test logg
+[17-Oct-2025 17:26:17 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:26:17 UTC] Test logg
+[17-Oct-2025 17:26:46 UTC] Test logg
+[17-Oct-2025 17:26:46 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:26:46 UTC] Test logg
+[17-Oct-2025 17:26:59 UTC] Test logg
+[17-Oct-2025 17:26:59 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 17:26:59 UTC] Test logg
+[17-Oct-2025 19:27:32 UTC] Test logg
+[17-Oct-2025 19:30:01 UTC] Test logg
+[17-Oct-2025 19:30:02 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:30:02 UTC] Test logg
+[17-Oct-2025 19:30:02 UTC] Test logg
+[17-Oct-2025 19:33:18 UTC] Test logg
+[17-Oct-2025 19:33:18 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:33:18 UTC] Test logg
+[17-Oct-2025 19:33:31 UTC] Test logg
+[17-Oct-2025 19:33:31 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:33:31 UTC] Test logg
+[17-Oct-2025 19:33:39 UTC] Test logg
+[17-Oct-2025 19:33:44 UTC] Test logg
+[17-Oct-2025 19:33:44 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:33:45 UTC] Test logg
+[17-Oct-2025 19:33:49 UTC] Test logg
+[17-Oct-2025 19:33:49 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:33:50 UTC] Test logg
+[17-Oct-2025 19:34:58 UTC] Test logg
+[17-Oct-2025 19:34:58 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:34:58 UTC] Test logg
+[17-Oct-2025 19:34:58 UTC] Test logg
+[17-Oct-2025 19:34:59 UTC] Test logg
+[17-Oct-2025 19:34:59 UTC] Test logg
+[17-Oct-2025 19:35:03 UTC] Test logg
+[17-Oct-2025 19:35:06 UTC] Test logg
+[17-Oct-2025 19:35:06 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:35:06 UTC] Test logg
+[17-Oct-2025 19:35:06 UTC] Test logg
+[17-Oct-2025 19:35:06 UTC] Test logg
+[17-Oct-2025 19:35:06 UTC] Test logg
+[17-Oct-2025 19:35:12 UTC] Test logg
+[17-Oct-2025 19:35:12 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:35:12 UTC] Test logg
+[17-Oct-2025 19:35:12 UTC] Test logg
+[17-Oct-2025 19:35:12 UTC] Test logg
+[17-Oct-2025 19:35:12 UTC] Test logg
+[17-Oct-2025 19:35:21 UTC] Test logg
+[17-Oct-2025 19:35:21 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:35:21 UTC] Test logg
+[17-Oct-2025 19:35:21 UTC] Test logg
+[17-Oct-2025 19:35:21 UTC] Test logg
+[17-Oct-2025 19:35:21 UTC] Test logg
+[17-Oct-2025 19:35:50 UTC] Test logg
+[17-Oct-2025 19:35:50 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:35:50 UTC] Test logg
+[17-Oct-2025 19:35:50 UTC] Test logg
+[17-Oct-2025 19:35:50 UTC] Test logg
+[17-Oct-2025 19:35:50 UTC] Test logg
+[17-Oct-2025 19:36:12 UTC] Test logg
+[17-Oct-2025 19:36:12 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:36:13 UTC] Test logg
+[17-Oct-2025 19:36:13 UTC] Test logg
+[17-Oct-2025 19:36:13 UTC] Test logg
+[17-Oct-2025 19:36:13 UTC] Test logg
+[17-Oct-2025 19:36:17 UTC] Test logg
+[17-Oct-2025 19:36:31 UTC] Test logg
+[17-Oct-2025 19:36:31 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:36:31 UTC] Test logg
+[17-Oct-2025 19:36:31 UTC] Test logg
+[17-Oct-2025 19:36:31 UTC] Test logg
+[17-Oct-2025 19:36:31 UTC] Test logg
+[17-Oct-2025 19:37:36 UTC] Test logg
+[17-Oct-2025 19:37:36 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:37:37 UTC] PHP Warning:  Undefined variable $src in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 13
+[17-Oct-2025 19:37:37 UTC] PHP Warning:  Undefined variable $src in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 14
+[17-Oct-2025 19:37:37 UTC] PHP Warning:  Undefined variable $src in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 15
+[17-Oct-2025 19:37:37 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 41
+[17-Oct-2025 19:37:37 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 41
+[17-Oct-2025 19:37:37 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 41
+[17-Oct-2025 19:37:37 UTC] Test logg
+[17-Oct-2025 19:37:52 UTC] Test logg
+[17-Oct-2025 19:37:52 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:37:52 UTC] Test logg
+[17-Oct-2025 19:37:52 UTC] Test logg
+[17-Oct-2025 19:37:52 UTC] Test logg
+[17-Oct-2025 19:37:53 UTC] Test logg
+[17-Oct-2025 19:47:32 UTC] Test logg
+[17-Oct-2025 19:47:33 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:47:33 UTC] Test logg
+[17-Oct-2025 19:47:33 UTC] Test logg
+[17-Oct-2025 19:47:33 UTC] Test logg
+[17-Oct-2025 19:47:33 UTC] Test logg
+[17-Oct-2025 19:47:33 UTC] Test logg
+[17-Oct-2025 19:47:37 UTC] Test logg
+[17-Oct-2025 19:47:40 UTC] Test logg
+[17-Oct-2025 19:47:40 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:47:40 UTC] Test logg
+[17-Oct-2025 19:47:40 UTC] Test logg
+[17-Oct-2025 19:47:40 UTC] Test logg
+[17-Oct-2025 19:47:40 UTC] Test logg
+[17-Oct-2025 19:50:21 UTC] Test logg
+[17-Oct-2025 19:50:21 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:50:21 UTC] PHP Warning:  Undefined variable $audioSource in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 67
+[17-Oct-2025 19:50:21 UTC] Test logg
+[17-Oct-2025 19:50:21 UTC] Test logg
+[17-Oct-2025 19:50:21 UTC] Test logg
+[17-Oct-2025 19:50:21 UTC] Test logg
+[17-Oct-2025 19:50:28 UTC] Test logg
+[17-Oct-2025 19:51:56 UTC] Test logg
+[17-Oct-2025 19:51:56 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:51:56 UTC] PHP Warning:  Undefined variable $audioSource in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 67
+[17-Oct-2025 19:51:56 UTC] Test logg
+[17-Oct-2025 19:51:56 UTC] Test logg
+[17-Oct-2025 19:51:56 UTC] Test logg
+[17-Oct-2025 19:51:56 UTC] Test logg
+[17-Oct-2025 19:59:27 UTC] Test logg
+[17-Oct-2025 19:59:28 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 19:59:28 UTC] PHP Warning:  Undefined variable $audioSource in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 67
+[17-Oct-2025 19:59:28 UTC] Test logg
+[17-Oct-2025 19:59:28 UTC] Test logg
+[17-Oct-2025 19:59:28 UTC] Test logg
+[17-Oct-2025 19:59:28 UTC] Test logg
+[17-Oct-2025 23:34:25 UTC] Test logg
+[17-Oct-2025 23:34:31 UTC] PHP Warning:  Undefined variable $menus in D:\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[17-Oct-2025 23:34:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[17-Oct-2025 23:34:31 UTC] PHP Warning:  Undefined variable $footers in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[17-Oct-2025 23:34:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[17-Oct-2025 23:34:31 UTC] Test logg
+[17-Oct-2025 23:34:32 UTC] Test logg
+[17-Oct-2025 23:34:53 UTC] Test logg
+[17-Oct-2025 23:34:53 UTC] PHP Warning:  Undefined array key "role" in D:\braxFis.github.io\misc\cms\app\controllers\BaseController.php on line 7
+[17-Oct-2025 23:34:53 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 23:34:53 UTC] PHP Warning:  Undefined variable $audioSource in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 67
+[17-Oct-2025 23:34:53 UTC] Test logg
+[17-Oct-2025 23:34:59 UTC] Test logg
+[17-Oct-2025 23:34:59 UTC] Test logg
+[17-Oct-2025 23:35:11 UTC] Test logg
+[17-Oct-2025 23:35:15 UTC] Test logg
+[17-Oct-2025 23:35:22 UTC] Test logg
+[17-Oct-2025 23:35:23 UTC] Test logg
+[17-Oct-2025 23:35:23 UTC] PHP Warning:  Trying to access array offset on false in D:\braxFis.github.io\misc\cms\app\views\page\create.php on line 21
+[17-Oct-2025 23:35:23 UTC] PHP Warning:  Undefined variable $audioSource in D:\braxFis.github.io\misc\cms\app\views\dragdrop\editor.php on line 67
+[17-Oct-2025 23:35:23 UTC] Test logg
+[17-Oct-2025 23:35:23 UTC] Test logg
+[17-Oct-2025 23:35:23 UTC] Test logg
+[17-Oct-2025 23:35:23 UTC] Test logg
+[17-Oct-2025 23:49:28 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in C:\Users\Niko\dev\lammen_tystnar.php on line 26
+[17-Oct-2025 23:49:49 UTC] PHP Warning:  Undefined variable $picker in C:\Users\Niko\dev\lammen_tystnar.php on line 58
+[17-Oct-2025 23:49:49 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getColor() on null in C:\Users\Niko\dev\lammen_tystnar.php:58
+Stack trace:
+#0 {main}
+  thrown in C:\Users\Niko\dev\lammen_tystnar.php on line 58
+[18-Oct-2025 00:10:42 UTC] PHP Warning:  Undefined variable $picker in C:\Users\Niko\dev\lammen_tystnar.php on line 58
+[18-Oct-2025 00:10:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getColor() on null in C:\Users\Niko\dev\lammen_tystnar.php:58
+Stack trace:
+#0 {main}
+  thrown in C:\Users\Niko\dev\lammen_tystnar.php on line 58
+[18-Oct-2025 02:19:53 UTC] PHP Warning:  Undefined variable $picker in C:\Users\Niko\dev\lammen_tystnar.php on line 58
+[18-Oct-2025 02:19:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getColor() on null in C:\Users\Niko\dev\lammen_tystnar.php:58
+Stack trace:
+#0 {main}
+  thrown in C:\Users\Niko\dev\lammen_tystnar.php on line 58
+[18-Oct-2025 02:20:05 UTC] Test logg
+[18-Oct-2025 02:20:27 UTC] Test logg
+[18-Oct-2025 02:20:30 UTC] Test logg
+[19-Oct-2025 01:02:59 UTC] Test logg
+[19-Oct-2025 01:03:15 UTC] Test logg
