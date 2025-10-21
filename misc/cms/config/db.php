@@ -6,6 +6,7 @@ class Database
     private $user = "root";
     private $pass = "pezDispenser1!";
     private $dbname = "gd_data";
+
     public $conn;
     public function __construct(){
         try{

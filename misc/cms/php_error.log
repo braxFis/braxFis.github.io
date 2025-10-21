@@ -982,3 +982,118 @@ Stack trace:
 [20-Oct-2025 11:18:49 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
 [20-Oct-2025 11:18:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
 [20-Oct-2025 11:18:49 UTC] Test logg
+[21-Oct-2025 08:26:40 UTC] Test logg
+[21-Oct-2025 08:26:46 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:26:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:26:46 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:26:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:26:46 UTC] Test logg
+[21-Oct-2025 08:26:47 UTC] Test logg
+[21-Oct-2025 08:26:59 UTC] Test logg
+[21-Oct-2025 08:27:02 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:27:02 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:27:02 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:27:02 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:27:02 UTC] Test logg
+[21-Oct-2025 08:28:43 UTC] Test logg
+[21-Oct-2025 08:32:20 UTC] Test logg
+[21-Oct-2025 08:32:20 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:32:20 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:32:20 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:32:20 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:32:20 UTC] Test logg
+[21-Oct-2025 08:32:57 UTC] Test logg
+[21-Oct-2025 08:33:01 UTC] Test logg
+[21-Oct-2025 08:33:05 UTC] Test logg
+[21-Oct-2025 08:33:05 UTC] Test logg
+[21-Oct-2025 08:33:05 UTC] PHP Warning:  Undefined property: stdClass::$subscribe in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\profile\index.php on line 24
+[21-Oct-2025 08:33:05 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\profile\index.php on line 24
+[21-Oct-2025 08:33:09 UTC] Test logg
+[21-Oct-2025 08:33:09 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:33:09 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:33:09 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:33:09 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:33:09 UTC] Test logg
+[21-Oct-2025 08:33:14 UTC] Test logg
+[21-Oct-2025 08:33:14 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:33:14 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:33:14 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:33:14 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:33:14 UTC] Test logg
+[21-Oct-2025 08:37:07 UTC] Test logg
+[21-Oct-2025 08:37:07 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:37:07 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:37:07 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:37:07 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:37:07 UTC] Test logg
+[21-Oct-2025 08:37:08 UTC] Test logg
+[21-Oct-2025 08:37:08 UTC] PHP Warning:  Undefined property: stdClass::$subscribe in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\profile\index.php on line 24
+[21-Oct-2025 08:37:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\profile\index.php on line 24
+[21-Oct-2025 08:37:10 UTC] Test logg
+[21-Oct-2025 08:37:11 UTC] Test logg
+[21-Oct-2025 08:37:11 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:37:11 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:37:11 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:37:11 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:37:11 UTC] Test logg
+[21-Oct-2025 08:37:11 UTC] Test logg
+[21-Oct-2025 08:37:15 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:37:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:37:15 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:37:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:37:15 UTC] Test logg
+[21-Oct-2025 08:37:22 UTC] Test logg
+[21-Oct-2025 08:37:26 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:37:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 08:37:26 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:37:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 08:37:26 UTC] Test logg
+[21-Oct-2025 09:22:31 UTC] Test logg
+[21-Oct-2025 09:22:32 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:32 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:32 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:32 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:32 UTC] Test logg
+[21-Oct-2025 09:22:38 UTC] Test logg
+[21-Oct-2025 09:22:38 UTC] PHP Warning:  Undefined variable $comments in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 33
+[21-Oct-2025 09:22:38 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 33
+[21-Oct-2025 09:22:38 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:38 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:38 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:38 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:38 UTC] Test logg
+[21-Oct-2025 09:22:44 UTC] Test logg
+[21-Oct-2025 09:22:44 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:44 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:44 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:44 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:46 UTC] Test logg
+[21-Oct-2025 09:22:46 UTC] PHP Warning:  Undefined variable $comments in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 33
+[21-Oct-2025 09:22:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 33
+[21-Oct-2025 09:22:46 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:46 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:46 UTC] Test logg
+[21-Oct-2025 09:22:49 UTC] Test logg
+[21-Oct-2025 09:22:50 UTC] PHP Warning:  Undefined variable $comments in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 33
+[21-Oct-2025 09:22:50 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 33
+[21-Oct-2025 09:22:50 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:50 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:50 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:50 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:50 UTC] Test logg
+[21-Oct-2025 09:22:54 UTC] Test logg
+[21-Oct-2025 09:22:54 UTC] PHP Warning:  Undefined variable $comments in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 33
+[21-Oct-2025 09:22:54 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 33
+[21-Oct-2025 09:22:54 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:54 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:22:54 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:54 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:22:54 UTC] Test logg
+[21-Oct-2025 09:37:27 UTC] Test logg
+[21-Oct-2025 09:37:27 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:37:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[21-Oct-2025 09:37:27 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:37:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[21-Oct-2025 09:37:27 UTC] Test logg

@@ -3,6 +3,8 @@
 namespace app\models;
 
 use app\controllers\RegularController;
+use app\models\Standard;
+use app\models\Premium;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
@@ -48,10 +50,14 @@ class Plan{
     $stmt = $this->db->conn->prepare("DELETE FROM plan WHERE id = :id");
     $stmt->execute(['id' => $id]);
   }
-  public function freePlan(RegularController $regular):RegularController{
-    return $regular;
+  public function freePlan():RegularController{
+    return self::freePlan();
   }
-  public function standardPlan(RegularController $regular, Standard $standard){}
-  public function premiumPlan(RegularController $regular, Standard $standard, Premium $premium){}
+  public function standardPlan(){
+    (new Standard())->audio();
+  }
+  public function premiumPlan(){
+    (new Premium())->interviews();
+  }
 
 }

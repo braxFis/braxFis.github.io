@@ -6,7 +6,8 @@ use app\models\Footer;
 use app\models\Menu;
 use app\models\Regular;
 use modules\game\controllers\GameController;
-use modules\game\models\Game;
+//use modules\game\models\Game;
+use modules\game;
 
 require_once __DIR__ . '/../models/Regular.php';
 
