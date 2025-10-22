@@ -18,6 +18,9 @@
       <option value="draft">Draft</option>
       <option value="published">Published</option>
     </select>
+    <label for="user_id">User ID</label>
+    <input type="number" name="user_id" id="user_id" required>
+    
     <label for="tags">Tags</label>
     <input type="text" name="tags" id="tags">
   </div>

@@ -81,6 +81,15 @@
     <div class="float-right"><p>By <?php echo $new->author;?> | <?php echo $new->date;?></p></div>
     <h3><?php echo $new->subtitle;?></h3>
     <p>Tags: <?php echo $new->tags; ?></p>
+    <h3>USER ID:<?php echo $new->user_id;?></h3>
+    
+  <!-- Läs Senare Widget? -->
+   <?php 
+   use app\widgets\ReadWidget;
+   echo ReadWidget::renderButton($new->id);
+   ?>
+  <!-- End Läs Senare Widget -->
+
   </div>
 
   <!-- Share Widget --> <!-- End Share Widget -->

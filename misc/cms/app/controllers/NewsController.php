@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\controllers\ReadController;
+
 require_once __DIR__ . '/../models/News.php';
 require_once __DIR__ . '/../models/Comment.php';
 

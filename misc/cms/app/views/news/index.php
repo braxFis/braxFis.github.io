@@ -17,7 +17,8 @@
         <img src="<?php echo $new->media;?>" alt="">
         <label for="tags">Tags</label>
         <p><?php echo $new->tags;?></p>
-
+        <label for="user_id">User ID</label>
+        <p><?php echo $new->user_id;?></p>
       </div>
     </li>
 

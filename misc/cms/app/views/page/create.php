@@ -21,4 +21,6 @@ $page = $this->model->getBySlug($slug); // eller getBySlug($slug)
 $slug = $page['slug'];
 ?>
 
+<!-- Widget -->
 <?= (new \app\controllers\DragDropController())->editor($slug); ?>
+<!-- End Widget -->

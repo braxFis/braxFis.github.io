@@ -1,4 +1,6 @@
 <?php
+
+
 $apiKey = "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";
 
 // 1️⃣ Prepare request data

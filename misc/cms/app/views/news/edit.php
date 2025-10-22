@@ -12,7 +12,8 @@
     <label for="author">News Author</label>
     <input type="text" name="author" id="author" value="<?php echo $new->author;?>">
     <label for="media">Media</label>
-    <!--<input type="text" name="media" id="media" value="<?php echo $new->media;?>">-->
+    <label for="user_id">User ID</label>
+    <input type="number" name="user_id" id="user_id" value="<?php echo $new->user_id;?>">
     <input list="images" name="media" id="imageInput">
   <datalist id="images">
     <?php foreach($medias as $media): ?>

@@ -12,10 +12,41 @@ $request = trim($request, '/');
 
 $routes = [
 
+    //Förbered route för senare användning
+    //När du så småningom sätter igång med skriveriet
+    'EDITOR' => [
+        'GET' => [
+            '' => ''
+        ],
+        'POST'=> [
+            ''=> ''
+        ]
+    ],
+
     'ADMIN' => [
     'GET' => [
+    
+     //Read Later
+     'read_list' => ['controller' => '\app\controllers\ReadController', 'method' => 'getReader'],
+     'remove_read' => ['controller' => '\app\controllers\ReadController', 'method' => 'removeRead'],
+     'read_list_improved' => ['controller' => '\app\controllers\ReadController', 'method' =>'getReaderNew'],
 
-      //Posts
+     //Features -> Share
+     'feature/share' => ['controller' => '\app\controllers\ShareController', 'method' => 'index'],
+     'feature/share/create' => ['controller' => '\app\controllers\ShareController', 'method' => 'create'],
+     'feature/share/edit/([0-9]+)' => ['controller' => '\app\controllers\ShareController', 'method' => 'edit'],
+
+     //Features -> Todo
+     'feature/todo' => ['controller' => '\app\controllers\TodoController', 'method' => 'index'],
+     'feature/todo/create' => ['controller' => '\app\controllers\TodoController', 'method' => 'create'],
+     'feature/todo/edit/([0-9]+)' => ['controller' => '\app\controllers\TodoController', 'method' => 'edit'],
+
+     //Features -> Wishlist
+     'feature/wishlist' => ['controller' => '\app\controllers\WishlistController', 'method' => 'index'],
+     'feature/wishlist/create' => ['controller' => '\app\controllers\WishlistController', 'method' => 'create'],
+     'feature/wishlist/edit/([0-9]+)' => ['controller' => '\app\controllers\WishlistController', 'method' => 'edit'],
+
+     //Posts
      'posts' => ['controller' => '\app\controllers\AdminController', 'method' => 'index'],
      'posts/show/([0-9]+)' => ['controller' => '\app\controllers\PostController', 'method' => 'show'],
      'posts/create' => ['controller' => '\app\controllers\AdminController', 'method' => 'create'],
@@ -81,6 +112,21 @@ $routes = [
 
     ],
     'POST' => [
+
+      //Share
+      'feature/share/store' => ['controller' => '\app\controllers\ShareController', 'method' => 'store'],
+      'feature/share/update/([0-9]+)' => ['controller' => '\app\controllers\ShareController', 'method' => 'update'],
+      'feature/share/delete/([0-9]+)' => ['controller' => '\app\controllers\ShareController', 'method' => 'delete'],
+
+      //Todo
+      'feature/todo/store' => ['controller' => '\app\controllers\TodoController', 'method' => 'store'],
+      'feature/todo/update/([0-9]+)' => ['controller' => '\app\controllers\TodoController', 'method' => 'update'],
+      'feature/todo/delete/([0-9]+)' => ['controller' => '\app\controllers\TodoController', 'method' => 'delete'],
+
+      //Wishlist
+      'feature/wishlist/store' => ['controller' => '\app\controllers\WishlistController', 'method' => 'store'],
+      'feature/wishlist/update/([0-9]+)' => ['controller' => '\app\controllers\WishlistController', 'method' => 'update'],
+      'feature/wishlist/delete/([0-9]+)' => ['controller' => '\app\controllers\WishlistController', 'method' => 'delete'],
 
       //Plan
       'plan/store'  => ['controller' => '\app\controllers\PlanController', 'method' => 'store'],
