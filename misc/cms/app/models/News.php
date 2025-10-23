@@ -13,20 +13,6 @@ class News{
     $this->db = new \Database;
   }
 
-  public function createNews($title, $subtitle, $content, $date, $author, $media, $tags, $layout){
-    $sql = "INSERT INTO news(title, subtitle, content, date, author, media, tags) VALUES (:title, :subtitle, :content, :date, :author, :media, :tags)";
-    $stmt = $this->db->conn->prepare($sql);
-    $stmt->bindParam(':title', $title);
-    $stmt->bindParam(':subtitle', $subtitle);
-    $stmt->bindParam(':content', $content);
-    $stmt->bindParam(':date', $date);
-    $stmt->bindParam(':author', $author);
-    $stmt->bindParam(':media', $media);
-    $stmt->bindParam(':tags', $tags);
-    $stmt->bindParam(':layout', $layout);
-    $stmt->execute();
-  }
-
   public function getNew($id){
     $stmt = $this->db->conn->prepare("SELECT * FROM news WHERE id = :id");
     $stmt->execute(['id' => $id]);

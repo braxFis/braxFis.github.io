@@ -26,6 +26,11 @@ $routes = [
     'ADMIN' => [
     'GET' => [
 
+      //Scores
+      'scores' => ['controller' => '\app\controllers\ScoreController', 'method' => 'index'],
+      'scores/create' => ['controller' => '\app\controllers\ScoreController', 'method' => 'create'],
+      'scores/edit/([0-9]+)' => ['controller' => '\app\controllers\ScoreController', 'method' => 'edit'],
+
       //Todo
       'todo_list' => ['controller' => '\app\controllers\TodoController', 'method' => 'getTodos'],
 
@@ -115,6 +120,11 @@ $routes = [
 
     ],
     'POST' => [
+
+      //Score
+      'scores/store' => ['controller' => '\app\controllers\ScoreController', 'method' => 'store'],
+      'scores/update/([0-9]+)' => ['controller' => '\app\controllers\ScoreController', 'method' => 'update'],
+      'scores/delete/([0-9]+)' => ['controller' => '\app\controllers\ScoreController', 'method'=> 'delete'],
 
       //Läs Senare
       'read_add' => ['controller' => '\app\controllers\ReadController', 'method' => 'addToReadList'],
