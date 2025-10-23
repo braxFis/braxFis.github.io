@@ -5,14 +5,20 @@ namespace app\widgets;
 use app\models\Read;
 
 class ReadWidget {
+    
     public static function renderButton($articleId) {
-        return "<button class='save-btn' data-id='{$articleId}'>📘 Läs senare</button>";
+        return "
+                <form method='POST' action='/read_add'>
+                    <input type='hidden' name='article_id' value='$articleId'>
+                    <button type='submit' class='save-btn'>📘 Läs senare</button>
+                </form>
+                ";
     }
 
     public static function renderList($userId) {
 
         $readModel = new Read();
-        $articles = $readModel->getReadList($userId);
+        $articles = $readModel->getReadList(9);
 
         if (!$articles) {
             return "<p>Du har inga sparade artiklar.</p>";

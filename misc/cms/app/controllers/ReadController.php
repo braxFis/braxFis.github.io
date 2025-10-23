@@ -1,56 +1,53 @@
-<?php 
+<?php
 
 namespace app\controllers;
 
-use app\models\Footer;
-use app\models\Menu;
-use app\models\News;
+use app\models\Read;
 
-require_once __DIR__ . '/../models/Read.php';
-
-class ReadController extends BaseController{
-    private $model;
-
-    public function __construct(){
-        $this->model = new \app\models\Read;
-    }
-
-    public function getReader(){
-        //$news = new \app\models\News;
-        //$news = $news->getNews();
-        /**
-         * Lägg till resterande funktionalitet nedan
-         */
-        // Om användaren klickat "Läs senare"
-        if (isset($_GET['add'])) {
-            $user_id = $_SESSION['user_id'] ?? null;
-            $article_id = (int) $_GET['add'];
-
-            $this->model->read($user_id, $article_id);
-            exit; // Viktigt om du header-redirectar i modellen
-        }
-        include __DIR__ . '/../views/later/read.php';
-    }
-
-    public function removeRead(){
-        $user_id = $_SESSION['user_id'] ?? null;
-        $article_id = $_GET['id'] ?? null;
-
-        $this->model->remove($user_id, $article_id);
-        header('Location: /read_list');
-    }
-
-public function getReaderNew()
+class ReadController extends BaseController
 {
-    $user_id = $_SESSION['user_id'] ?? null;
+    private Read $model;
 
-    if (!$user_id) {
-        exit("Logga in för att se din läslista.");
+    public function __construct()
+    {
+        $this->model = new Read();
     }
 
-    $readlist = $this->model->getReadList($user_id);
+    // Visa läslistan
+    public function getReaderNew()
+    {
+        $user_id = $_SESSION['user_id'] ?? null;
+        if (!$user_id) {
+            header('Location: /login'); // eller exit med meddelande
+            exit;
+        }
 
-    include __DIR__ . '/../views/later/read_list_view.php';
-}
+        $readlist = $this->model->getReadList((int)$user_id);
+        $footers = new \app\models\Footer;
+        $menus = new \app\models\Menu;
+        ob_start();
+        include __DIR__ . '/../views/later/read_list_view.php';
+        $content = ob_get_clean();
+        include __DIR__ . '/../views/layout.php';
+    }
 
+    // Hantera POST från formulär (ingen JS)
+    public function addToReadList()
+    {
+        session_start();
+        $user_id = $_SESSION['user_id'] ?? null;
+        $article_id = isset($_POST['article_id']) ? (int)$_POST['article_id'] : null;
+
+        if (!$user_id || !$article_id) {
+            // fallback: redirect tillbaka med fel, eller visa meddelande
+            header('Location: ' . ($_SERVER['HTTP_REFERER'] ?? '/'));
+            exit;
+        }
+
+        $this->model->add((int)$user_id, $article_id);
+
+        // Redirect tillbaka där användaren kom ifrån (eller till läslistan)
+        header('Location: ' . ($_SERVER['HTTP_REFERER'] ?? '/read_list'));
+        exit;
+    }
 }

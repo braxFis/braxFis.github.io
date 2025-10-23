@@ -40,21 +40,7 @@ class News{
   }
 
   public function create($data){
-    $stmt = $this->db->conn->prepare("INSERT INTO news(title, subtitle, content, date, author, media, tags, layout) VALUES (:title, :subtitle, :content, :date, :author, :media, :tags, :layout)");
-    $stmt->execute([
-      'title' => $data['title'],
-      'subtitle' => $data['subtitle'],
-      'content' => $data['content'],
-      'date' => $data['date'],
-      'author' => $data['author'],
-      'media' => $data['media'],
-      'tags' => $data['tags'],
-      'layout' => json_encode($data['layout'], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
-    ]);
-  }
-
-  public function update($data, $id){
-    $stmt = $this->db->conn->prepare("UPDATE news SET title = :title, subtitle = :subtitle, content = :content, date = :date, author = :author, media = :media, tags = :tags, layout = :layout WHERE id = :id");
+    $stmt = $this->db->conn->prepare("INSERT INTO news(title, subtitle, content, date, author, media, tags, layout, user_id) VALUES (:title, :subtitle, :content, :date, :author, :media, :tags, :layout, :user_id)");
     $stmt->execute([
       'title' => $data['title'],
       'subtitle' => $data['subtitle'],
@@ -64,6 +50,22 @@ class News{
       'media' => $data['media'],
       'tags' => $data['tags'],
       'layout' => json_encode($data['layout'], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE),
+      'user_id' => $data['user_id'],
+    ]);
+  }
+
+  public function update($data, $id){
+    $stmt = $this->db->conn->prepare("UPDATE news SET title = :title, subtitle = :subtitle, content = :content, date = :date, author = :author, media = :media, tags = :tags, layout = :layout, user_id = :user_id WHERE id = :id");
+    $stmt->execute([
+      'title' => $data['title'],
+      'subtitle' => $data['subtitle'],
+      'content' => $data['content'],
+      'date' => $data['date'],
+      'author' => $data['author'],
+      'media' => $data['media'],
+      'tags' => $data['tags'],
+      'layout' => json_encode($data['layout'], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE),
+      'user_id'=> $data['user_id'],
       'id' => $id
     ]);
   }

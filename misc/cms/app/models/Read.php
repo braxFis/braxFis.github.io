@@ -1,42 +1,47 @@
 <?php
-
 namespace app\models;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
-class Read{
+class Read
+{
     private $db;
 
-    public function __construct(){
-        $this->db = new \Database;
+    public function __construct()
+    {
+        $this->db = new \Database(); // se till att denna är korrekt
     }
 
-    public function read($user_id, $article_id){
-        if(!$user_id || !$article_id){
-            exit('Ej inloggad eller ogiltigt id');
-        }
-        $stmt = $this->db->conn->prepare('INSERT IGNORE INTO readlist(user_id, article_id) VALUES(?, ?)');
-        $stmt->execute([$user_id, $article_id]);
-        return $stmt->fetch(\PDO::FETCH_OBJ);
-        //header('Location: /read_list');
-        //exit;
-    }
+    public function add(int $user_id, int $article_id): bool
+    {
+        if (!$user_id || !$article_id) return false;
 
-    public function remove($user_id, $article_id){
-        $stmt = $this->db->conn->prepare('DELETE FROM readlist WHERE id = ? AND article_id = ?');
-        $stmt->execute([$user_id, $article_id]);
-    }
-
-    public function getReadList($user_id){
         $stmt = $this->db->conn->prepare("
-            SELECT n.id, n.title, n.content, n.date
+            INSERT IGNORE INTO readlist (user_id, article_id, created_at)
+            VALUES (?, ?, NOW())
+        ");
+        return $stmt->execute([$user_id, $article_id]);
+    }
+
+    public function getReadList(int $user_id): array
+    {
+        $stmt = $this->db->conn->prepare("
+            SELECT n.id, n.title, n.content, n.date, r.created_at
             FROM readlist r
             JOIN news n ON r.article_id = n.id
             WHERE r.user_id = ?
             ORDER BY r.created_at DESC
         ");
-    $stmt->execute([$user_id]);
-    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-}
+        $stmt->execute([$user_id]);
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
 
+    // valfri: rensa föräldralösa poster
+    public function cleanupOrphans(): int
+    {
+        return $this->db->conn->exec("
+            DELETE FROM readlist
+            WHERE article_id NOT IN (SELECT id FROM news)
+        ");
+    }
 }

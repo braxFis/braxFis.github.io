@@ -26,8 +26,9 @@ $routes = [
     'ADMIN' => [
     'GET' => [
     
-     //Read Later
-     'read_list' => ['controller' => '\app\controllers\ReadController', 'method' => 'getReader'],
+      //Read Later
+     'read_list' => ['controller' => '\app\controllers\ReadController', 'method' => 'getReaderNew'],
+     'read_add'  => ['controller' => '\app\controllers\ReadController', 'method' => 'addToReadList'],
      'remove_read' => ['controller' => '\app\controllers\ReadController', 'method' => 'removeRead'],
      'read_list_improved' => ['controller' => '\app\controllers\ReadController', 'method' =>'getReaderNew'],
 
@@ -112,6 +113,9 @@ $routes = [
 
     ],
     'POST' => [
+
+      //Läs Senare
+      'read_add' => ['controller' => '\app\controllers\ReadController', 'method' => 'addToReadList'],
 
       //Share
       'feature/share/store' => ['controller' => '\app\controllers\ShareController', 'method' => 'store'],
