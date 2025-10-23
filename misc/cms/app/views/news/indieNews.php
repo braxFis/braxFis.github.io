@@ -7,7 +7,7 @@
   font-family: Arial, sans-serif;
 
 }
-.news-container {
+.post-container {
   border: 2px solid #ccc;
   padding: 20px;
   margin: 20px 0;
@@ -75,16 +75,16 @@
 }
 </style>
 <!-- News Section -->
-<div class="news-container">
+<div class="post-container">
   <div class="headline">
     <h2><?php echo $new->title;?></h2>
     <div class="float-right"><p>By <?php echo $new->author;?> | <?php echo $new->date;?></p></div>
     <h3><?php echo $new->subtitle;?></h3>
     <p>Tags: <?php echo $new->tags; ?></p>
     <h3>USER ID:<?php echo $new->user_id;?></h3>
-    
+
   <!-- Läs Senare Widget? -->
-   <?php 
+   <?php
    use app\widgets\ReadWidget;
    echo ReadWidget::renderButton($new->id);
    ?>
@@ -95,7 +95,7 @@
   <!-- Share Widget --> <!-- End Share Widget -->
   <!-- Review Widget --> <!-- End Review Widget -->
   <!-- Comment Widget --> <!-- End Comment Widget -->
-  
+
   <div class="main-content">
     <p><?php echo nl2br($new->content);?></p>
   </div>

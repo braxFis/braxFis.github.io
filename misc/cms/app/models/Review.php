@@ -6,27 +6,27 @@ use Database;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
-class Preview{
+class Review{
   private $db;
 
   public function __construct(){
     $this->db = new \Database;
   }
 
-  public function getPreview($id){
-    $stmt = $this->db->conn->prepare("SELECT * FROM previews WHERE id = :id");
+  public function getReview($id){
+    $stmt = $this->db->conn->prepare("SELECT * FROM reviews WHERE id = :id");
     $stmt->execute([':id' => $id]);
     return $stmt->fetch(\PDO::FETCH_OBJ);
   }
 
-  public function getPreviews(){
-    $stmt = $this->db->conn->prepare("SELECT * FROM previews");
+  public function getReviews(){
+    $stmt = $this->db->conn->prepare("SELECT * FROM reviews");
     $stmt->execute();
     return $stmt->fetchAll(\PDO::FETCH_OBJ);
   }
 
   public function create($data){
-    $stmt = $this->db->conn->prepare("INSERT INTO previews(title, subtitle, content, date, author, category, genre, media, platform, status, tags, release_date) VALUES (:title, :subtitle, :content, :date, :author, :category, :genre, :media, :platform, :status, :tags, :release_date)");
+    $stmt = $this->db->conn->prepare("INSERT INTO reviews(title, subtitle, content, date, author, category, genre, media, platform, status, tags, rating) VALUES (:title, :subtitle, :content, :date, :author, :category, :genre, :media, :platform, :status, :tags, :rating)");
     $stmt->execute([
       ':title' => $data['title'],
       'subtitle' => $data['subtitle'],
@@ -39,12 +39,12 @@ class Preview{
       'platform' => $data['platform'],
       'status' => $data['status'],
       'tags' => $data['tags'],
-      'release_date' => $data['release_date']
+      'rating' => $data['rating']
       ]);
   }
 
   public function update($data, $id){
-    $stmt = $this->db->conn->prepare("UPDATE previews SET title = :title, subtitle = :subtitle, content = :content, date = :date, author = :author, category = :category, genre = :genre, media = :media, platform = :platform, status = :status, tags = :tags, release_date = :release_date WHERE id = :id");
+    $stmt = $this->db->conn->prepare("UPDATE reviews SET title = :title, subtitle = :subtitle, content = :content, date = :date, author = :author, category = :category, genre = :genre, media = :media, platform = :platform, status = :status, tags = :tags, rating = :rating WHERE id = :id");
     $stmt->execute([
       'title' => $data['title'],
       'subtitle' => $data['subtitle'],
@@ -57,13 +57,13 @@ class Preview{
       'platform' => $data['platform'],
       'status' => $data['status'],
       'tags' => $data['tags'],
-      'release_date' => $data['release_date'],
+      'rating' => $data['rating'],
       'id' => $id
       ]);
   }
 
   public function delete($id){
-    $stmt = $this->db->conn->prepare("DELETE FROM previews WHERE id = :id");
+    $stmt = $this->db->conn->prepare("DELETE FROM reviews WHERE id = :id");
     $stmt->execute([':id' => $id]);
   }
 }

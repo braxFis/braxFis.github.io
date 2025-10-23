@@ -20,6 +20,7 @@ class ReviewController extends BaseController {
     $content = ob_get_clean();
     include __DIR__ . '/../views/layout.php';
   }
+
   public function listReview(){
     $reviews = $this->model->getReviews();
     ob_start();

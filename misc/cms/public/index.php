@@ -25,10 +25,12 @@ $routes = [
 
     'ADMIN' => [
     'GET' => [
-    
+
+      //Todo
+      'todo_list' => ['controller' => '\app\controllers\TodoController', 'method' => 'getTodos'],
+
       //Read Later
      'read_list' => ['controller' => '\app\controllers\ReadController', 'method' => 'getReaderNew'],
-     'read_add'  => ['controller' => '\app\controllers\ReadController', 'method' => 'addToReadList'],
      'remove_read' => ['controller' => '\app\controllers\ReadController', 'method' => 'removeRead'],
      'read_list_improved' => ['controller' => '\app\controllers\ReadController', 'method' =>'getReaderNew'],
 

@@ -65,4 +65,14 @@ class TodoController extends BaseController implements FeatureController {
     header('Location: /feature/todo');
     exit;
   }
+
+  public function getTodos(){
+    $todos = $this->model->getTodos();
+    $footers = (new Footer)->getFooterItems();
+    $menus = (new Menu)->getMenuItems();
+    ob_start();
+    include __DIR__ . '/../views/todo/view.php';
+    $content = ob_get_clean();
+    include __DIR__ . '/../views/layout.php';
+  }
 }
