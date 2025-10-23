@@ -56,6 +56,9 @@ class ScoreController extends BaseController{
         // Skapa ny News-instans
         $scores = new \app\models\Score;
 
+        //Review ID
+        $review_id = $_POST['review_id'];
+        
         // Försök spara
         $saved = $this->model->create($postData);
 
