@@ -22,6 +22,8 @@
     <input type="text" name="tags" id="tags">
     <label for="rawg">RAWG Game ID</label>
     <input type="text" name="rawg" id="rawg" value="">
+    <label for="review_id">Review ID</label>
+    <input type="number" name="review_id" value="<?= $review_id ?>">
     <label for="rating">Review Rating</label>
     <input type="text" name="rating" id="rating">
   </div>
@@ -34,11 +36,11 @@
   </div>
 
   <div class="scorecard">
-    <label for="">TBD Point 1</label>
-    <label for="">TBD Point 2</label>
-    <label for="">TBD Point 3</label>
-    <label for="">TBD Point 4</label>
-    <label for="">TBD Point 5</label>
+    <label for="graphics">Graphics</label>
+    <label for="sound">Sound</label>
+    <label for="duration">Duration</label>
+    <label for="storyline">Storyline</label>
+    <label for="gameplay">Gameplay</label>
   </div>
 
   <button type="submit">Create Review</button>
