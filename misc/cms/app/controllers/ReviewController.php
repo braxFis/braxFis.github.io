@@ -15,8 +15,6 @@ class ReviewController extends BaseController {
     $review = $this->model->getReview($id);
     ob_start();
     require __DIR__ . '/../views/reviews/indieReview.php';
-    $like = new \app\controllers\LikeController;
-    $like = $like->displayLike();
     $content = ob_get_clean();
     include __DIR__ . '/../views/layout.php';
   }

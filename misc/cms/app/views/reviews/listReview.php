@@ -4,7 +4,7 @@
   <li>
     <div class="add-border">
       <p>
-        <a href="<?php echo "review/indie/" . $review->id;?>">
+        <a href="<?php echo "indie/" . $review->id;?>">
         <?php echo $review->title;?></a> |
         <span><?php echo $review->author;?></span> |
         <span><?php echo $review->date;?></span>

@@ -1,16 +1,16 @@
 <?php
 
-class SpeechController implements FeatureController {
+class SpeechController {
 // ===== KONFIGURATION =====
-private $apiKey = "Bearer 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";  // ← byt ut till din riktiga NVIDIA API-nyckel
+private string $apiKey = "Bearer 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";  // ← byt ut till din riktiga NVIDIA API-nyckel
 private $functionId = "5e607c81-7aa6-44ce-a11d-9e08f0a3fe49"; // Samma som i din Python-version
-private $voice = "English-US-RadTTS.Male-Neutral";
-private $text = "";
-private $outputFile = "";
+private string $voice = "English-US-RadTTS.Male-Neutral";
+private string $text = "";
+private string $outputFile = "";
 private $payload;
 
 // ===== FÖRBERED DATA =====
-private $url = "https://grpc.nvcf.nvidia.com/v1/functions/$this->functionId/invoke";
+private string $url = "https://grpc.nvcf.nvidia.com/v1/functions/5e607c81-7aa6-44ce-a11d-9e08f0a3fe49/invoke";
 
 public function __construct(string $apiKey){
     $this->apiKey = $apiKey;
