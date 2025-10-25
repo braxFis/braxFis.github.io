@@ -86,13 +86,23 @@
   <!-- Läs Senare Widget? -->
    <?php
    use app\widgets\ReadWidget;
+   use app\widgets\LikeWidget;
    echo ReadWidget::renderButton($new->id);
+   echo LikeWidget::renderLike();
    ?>
   </div>
 
-  <!-- Share Widget --> <!-- End Share Widget -->
-  <!-- Review Widget --> <!-- End Review Widget -->
-  <!-- Comment Widget --> <!-- End Comment Widget -->
+  <!-- Share Widget --> 
+    
+  <!-- End Share Widget -->
+  
+  <!-- Review Widget --> 
+  
+  <!-- End Review Widget -->
+  
+  <!-- Comment Widget --> 
+  
+  <!-- End Comment Widget -->
 
   <div class="main-content">
     <p><?php echo nl2br($new->content);?></p>
