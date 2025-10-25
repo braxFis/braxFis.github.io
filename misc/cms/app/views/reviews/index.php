@@ -27,6 +27,8 @@
       <p><?php echo $review->tags;?></p>
       <label for="Rating">Rating</label>
       <p><?php echo $review->rating;?></p>
+      <label for="Score_ID">Score ID</label>
+      <p><?php echo $review->score_id;?></p>
     </div>
   </li>
   <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>

@@ -26,6 +26,9 @@
       <input type="text" name="tags" id="tags" value="<?php echo $review->tags;?>">
     <label for="rating">Rating</label>
     <input type="text" name="rating" id="rating" value="<?php echo $review->rating;?>">
+
+    <label for="score_id">Score ID</label>
+    <input type="text" name="score_id" id="score_id" value="<?php echo $review->score_id?>">
   </div>
 
   <div class="conclusion">

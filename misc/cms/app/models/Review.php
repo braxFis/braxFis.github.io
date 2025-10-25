@@ -26,7 +26,7 @@ class Review{
   }
 
   public function create($data){
-    $stmt = $this->db->conn->prepare("INSERT INTO reviews(title, subtitle, content, date, author, category, genre, media, platform, status, tags, rating) VALUES (:title, :subtitle, :content, :date, :author, :category, :genre, :media, :platform, :status, :tags, :rating)");
+    $stmt = $this->db->conn->prepare("INSERT INTO reviews(title, subtitle, content, date, author, category, genre, media, platform, status, tags, rating, score_id) VALUES (:title, :subtitle, :content, :date, :author, :category, :genre, :media, :platform, :status, :tags, :rating, :score_id)");
     $stmt->execute([
       ':title' => $data['title'],
       'subtitle' => $data['subtitle'],
@@ -39,12 +39,13 @@ class Review{
       'platform' => $data['platform'],
       'status' => $data['status'],
       'tags' => $data['tags'],
-      'rating' => $data['rating']
+      'rating' => $data['rating'],
+      'score_id' => $data['score_id']
       ]);
   }
 
   public function update($data, $id){
-    $stmt = $this->db->conn->prepare("UPDATE reviews SET title = :title, subtitle = :subtitle, content = :content, date = :date, author = :author, category = :category, genre = :genre, media = :media, platform = :platform, status = :status, tags = :tags, rating = :rating WHERE id = :id");
+    $stmt = $this->db->conn->prepare("UPDATE reviews SET title = :title, subtitle = :subtitle, content = :content, date = :date, author = :author, category = :category, genre = :genre, media = :media, platform = :platform, status = :status, tags = :tags, rating = :rating, score_id = :score_id WHERE id = :id");
     $stmt->execute([
       'title' => $data['title'],
       'subtitle' => $data['subtitle'],
@@ -58,6 +59,7 @@ class Review{
       'status' => $data['status'],
       'tags' => $data['tags'],
       'rating' => $data['rating'],
+      'score_id' => $data['score_id'],
       'id' => $id
       ]);
   }

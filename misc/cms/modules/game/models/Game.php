@@ -37,4 +37,12 @@ class Game {
           return $r['data']['max'];
         }, $data['results']);
     }
+
+    public function getScreenshots($id): array{
+        $data = $this->fetchAPI("games/{$id}/screenshots");
+        if (!$data || !isset($data["results"])) return [];
+        return array_map(function ($r) {
+            var_dump($r);
+        }, $data["results"]);
+    }
 }

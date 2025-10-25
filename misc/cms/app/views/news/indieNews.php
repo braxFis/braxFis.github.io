@@ -88,8 +88,6 @@
    use app\widgets\ReadWidget;
    echo ReadWidget::renderButton($new->id);
    ?>
-  <!-- End Läs Senare Widget -->
-
   </div>
 
   <!-- Share Widget --> <!-- End Share Widget -->

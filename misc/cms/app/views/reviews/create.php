@@ -26,6 +26,8 @@
     <input type="number" name="review_id" value="<?= $review_id ?>">
     <label for="rating">Review Rating</label>
     <input type="text" name="rating" id="rating">
+    <label for="score_id">Score ID</label>
+    <input type="text" name="score_id" value="">
   </div>
 
   <div class="conclusion">

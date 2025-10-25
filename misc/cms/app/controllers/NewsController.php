@@ -2,7 +2,11 @@
 
 namespace app\controllers;
 
+// bootstrap
+require __DIR__ . '/autoload.php';
+
 use app\controllers\ReadController;
+use app\services\ScreenshotService;
 
 require_once __DIR__ . '/../models/News.php';
 require_once __DIR__ . '/../models/Comment.php';
@@ -24,6 +28,9 @@ class NewsController extends BaseController {
     $commentModel = new \app\models\Comment;
     $comments = $commentModel->getComments($id);
     $comment = $commentModel->getComment($id);
+    
+    
+    // Pass to view
     ob_start();
     require __DIR__ . '/../views/news/indieNews.php';
     $content = ob_get_clean();
