@@ -54,6 +54,13 @@
 <?php endforeach; ?>
 
 <button id="loadMoreBtn" data-page="1">Load More</button>
+
+<?php
+
+use app\widgets\ReviewWidget;
+echo ReviewWidget::renderTop100();
+?>
+
 <script>
 
 document.addEventListener("DOMContentLoaded", () => {

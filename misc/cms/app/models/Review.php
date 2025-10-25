@@ -25,6 +25,12 @@ class Review{
     return $stmt->fetchAll(\PDO::FETCH_OBJ);
   }
 
+  public function getTop100Reviews(){
+    $stmt = $this->db->conn->prepare("SELECT * FROM reviews WHERE rating > 70 LIMIT 100 ORDER BY ASC");
+    $stmt->execute();
+    return $stmt->fetchAll(\PDO::FETCH_OBJ);
+  }
+  
   public function create($data){
     $stmt = $this->db->conn->prepare("INSERT INTO reviews(title, subtitle, content, date, author, category, genre, media, platform, status, tags, rating, score_id) VALUES (:title, :subtitle, :content, :date, :author, :category, :genre, :media, :platform, :status, :tags, :rating, :score_id)");
     $stmt->execute([
