@@ -1,23 +1,23 @@
 <?php
 namespace modules\game\models;
 
-class Search
+use app\models\RAWG_API;
+
+class Search extends RAWG_API
 {
-    private $apiKey = "8bc47dab600645ac9164f534d0182baf";
-    private $apiBase = "https://api.rawg.io/api/games";
 
     public function findGames(string $query, int $pageSize = 10): array
     {
         if (empty($query)) return [];
 
         $params = [
-            'key' => $this->apiKey,
+            'key' => (new RAWG_API)->apiKey,
             'search' => $query,
             'page_size' => $pageSize,
             'count' => 10000
         ];
 
-        $url = $this->apiBase . '?' . http_build_query($params);
+        $url = (new RAWG_API)->baseUrl . '?' . http_build_query($params);
         $response = @file_get_contents($url);
 
         if (!$response) return [];
@@ -28,7 +28,7 @@ class Search
 
     public function getDescription(int $id): string
     {
-        $url = "{$this->apiBase}/{$id}?key={$this->apiKey}";
+        $url = (new RAWG_API)->baseUrl . "/{$id}?key=" .  (new RAWG_API)->apiKey;
         $response = @file_get_contents($url);
         if (!$response) return "No description available";
         $data = json_decode($response, true);
@@ -37,7 +37,7 @@ class Search
 
     public function getTrailers(int $id): array
     {
-        $url = "{$this->apiBase}/{$id}/movies?key={$this->apiKey}";
+        $url = (new RAWG_API)->baseUrl . "/{$id}/movies?key=" . (new RAWG_API)->apiKey;
         $response = @file_get_contents($url);
         if (!$response) return [];
         $data = json_decode($response, true);

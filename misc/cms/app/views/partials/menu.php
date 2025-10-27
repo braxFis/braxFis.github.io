@@ -237,6 +237,13 @@
     <i class="fas fa-bars"></i>
 </div>
 
+<!-- Search Widget -->
+<?php
+use app\widgets\SearchWidget;
+echo SearchWidget::renderSearch();
+?>
+<!-- End Search Widget -->
+
 <nav class="main-menu" id="mainMenu">
     <ul style="text-align: left">
         <?php foreach ($menus as $menu): ?>

@@ -16,14 +16,16 @@ class ReviewWidget extends Tabulate{
 
         $html = "<div class='review-container'>";
         foreach($reviews as $review){
-            $html .= "div class='review-inner'>";
+            $html .= "<div class='review-inner'>";
+            $html .= "<a href='/review/indie/{$review->id}'>";
             $html .= "<img src='{$review->media}' width='200' height='200'/>";
             $html .= "<h1>{$review->title}</h1>";
             $html .= "<button>View</button";
+            $html .= "</a>";
             $html .= "</div>";
         }
             $html .= "</div>";
-            
+
             return $html;
     }
 }

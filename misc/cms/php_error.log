@@ -5561,3 +5561,182 @@ Stack trace:
 [25-Oct-2025 00:08:18 UTC] PHP Warning:  Undefined variable $footers in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
 [25-Oct-2025 00:08:18 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
 [25-Oct-2025 00:08:18 UTC] Test logg
+[27-Oct-2025 11:34:51 UTC] Test logg
+[27-Oct-2025 11:35:21 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\models\Gallery.php on line 18
+[27-Oct-2025 11:35:21 UTC] Test logg
+[27-Oct-2025 11:35:26 UTC] Test logg
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:35:30 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:35:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY ASC' at line 1 in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\models\Review.php:30
+Stack trace:
+#0 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\models\Review.php(30): PDOStatement->execute()
+#1 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\widgets\ReviewWidget.php(11): app\models\Review->getTop100Reviews()
+#2 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php(61): app\widgets\ReviewWidget::renderTop100()
+#3 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\controllers\GameController.php(31): require('C:\\Users\\Nick\\D...')
+#4 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\public\index.php(306): modules\game\controllers\GameController->index(NULL)
+#5 {main}
+  thrown in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\models\Review.php on line 30
+[27-Oct-2025 11:35:30 UTC] Test logg
+[27-Oct-2025 11:36:46 UTC] Test logg
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:36:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:36:49 UTC] PHP Fatal error:  Uncaught Error: Undefined constant app\models\RAWG_API::apiKey in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\models\Picture.php:19
+Stack trace:
+#0 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\models\Picture.php(29): app\models\Picture->fetchAPI('games/3498/scre...', Array)
+#1 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\widgets\PictureWidget.php(10): app\models\Picture->getScreenshots('3498')
+#2 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\layout.php(11): app\widgets\PictureWidget::renderImageSideBar('3498')
+#3 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\controllers\GameController.php(33): require('C:\\Users\\Nick\\D...')
+#4 C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\public\index.php(306): modules\game\controllers\GameController->index(NULL)
+#5 {main}
+  thrown in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\models\Picture.php on line 19
+[27-Oct-2025 11:36:49 UTC] Test logg
+[27-Oct-2025 11:36:49 UTC] Test logg
+[27-Oct-2025 11:36:50 UTC] Test logg
+[27-Oct-2025 11:39:36 UTC] Test logg
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 48
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\modules\game\views\index.php on line 49
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:39:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:39:43 UTC] Test logg
+[27-Oct-2025 11:39:43 UTC] Test logg
+[27-Oct-2025 11:42:51 UTC] Test logg
+[27-Oct-2025 11:42:55 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:42:55 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:42:56 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:42:56 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:42:56 UTC] Test logg
+[27-Oct-2025 11:42:56 UTC] Test logg
+[27-Oct-2025 11:43:57 UTC] Test logg
+[27-Oct-2025 11:44:00 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:44:00 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:44:01 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:44:01 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:44:01 UTC] Test logg
+[27-Oct-2025 11:44:01 UTC] Test logg
+[27-Oct-2025 11:45:03 UTC] Test logg
+[27-Oct-2025 11:45:13 UTC] PHP Warning:  Undefined property: stdClass::$url in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\widgets\ReviewWidget.php on line 20
+[27-Oct-2025 11:45:13 UTC] PHP Warning:  Undefined property: stdClass::$url in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\widgets\ReviewWidget.php on line 20
+[27-Oct-2025 11:45:13 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:45:13 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:45:13 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:45:13 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:45:13 UTC] Test logg
+[27-Oct-2025 11:45:13 UTC] Test logg
+[27-Oct-2025 11:45:19 UTC] Test logg
+[27-Oct-2025 11:45:27 UTC] PHP Warning:  Undefined property: stdClass::$url in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\widgets\ReviewWidget.php on line 20
+[27-Oct-2025 11:45:27 UTC] PHP Warning:  Undefined property: stdClass::$url in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\widgets\ReviewWidget.php on line 20
+[27-Oct-2025 11:45:27 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:45:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:45:28 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:45:28 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:45:28 UTC] Test logg
+[27-Oct-2025 11:45:28 UTC] Test logg
+[27-Oct-2025 11:45:37 UTC] Test logg
+[27-Oct-2025 11:45:40 UTC] PHP Warning:  Undefined property: stdClass::$url in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\widgets\ReviewWidget.php on line 20
+[27-Oct-2025 11:45:40 UTC] PHP Warning:  Undefined property: stdClass::$url in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\widgets\ReviewWidget.php on line 20
+[27-Oct-2025 11:45:40 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:45:40 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:45:41 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:45:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:45:41 UTC] Test logg
+[27-Oct-2025 11:45:41 UTC] Test logg
+[27-Oct-2025 11:47:26 UTC] Test logg
+[27-Oct-2025 11:47:31 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:47:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:47:32 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:47:32 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:47:32 UTC] Test logg
+[27-Oct-2025 11:47:32 UTC] Test logg
+[27-Oct-2025 11:47:42 UTC] Test logg
+[27-Oct-2025 11:47:42 UTC] PHP Warning:  Undefined variable $comments in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 117
+[27-Oct-2025 11:47:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 117
+[27-Oct-2025 11:47:42 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:47:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:47:43 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:47:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:47:43 UTC] Test logg
+[27-Oct-2025 11:47:59 UTC] Test logg
+[27-Oct-2025 11:47:59 UTC] PHP Warning:  Undefined variable $comments in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 117
+[27-Oct-2025 11:47:59 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\reviews\indieReview.php on line 117
+[27-Oct-2025 11:47:59 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:47:59 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:48:00 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:48:00 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:48:00 UTC] Test logg
+[27-Oct-2025 11:50:43 UTC] Test logg
+[27-Oct-2025 11:50:48 UTC] PHP Warning:  Undefined variable $menus in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:50:48 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\menu.php on line 242
+[27-Oct-2025 11:50:48 UTC] PHP Warning:  Undefined variable $footers in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:50:48 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Nick\Documents\GitHub\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
+[27-Oct-2025 11:50:48 UTC] Test logg
+[27-Oct-2025 11:50:48 UTC] Test logg

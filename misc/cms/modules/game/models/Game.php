@@ -2,13 +2,13 @@
 
 namespace modules\game\models;
 
-class Game {
-    private $apiKey = "8bc47dab600645ac9164f534d0182baf";
-    private $baseUrl = "https://api.rawg.io/api/";
+use app\models\RAWG_API;
+
+class Game extends RAWG_API {
 
     private function fetchAPI($endpoint, $params = []) {
-        $params['key'] = $this->apiKey;
-        $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
+        $params['key'] = (new RAWG_API)->apiKey;
+        $url = (new RAWG_API)->baseUrl . $endpoint . '?' . http_build_query($params);
 
         $response = file_get_contents($url);
         if (!$response) return null;
@@ -18,8 +18,7 @@ class Game {
     public function getGames($page = 1) {
         $params = [
             'page' => $page,
-            'page_size' => 1,
-            'dates' => '2025-01-01'
+            'page_size' => 1
         ];
         return $this->fetchAPI('games', $params);
     }
