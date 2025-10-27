@@ -25,6 +25,11 @@ class Preview{
     return $stmt->fetchAll(\PDO::FETCH_OBJ);
   }
 
+  public function getTop100Previews(){
+    $stmt = $this->db->conn->prepare("SELECT * FROM previews WHERE rating > 70 LIMIT 100 ORDER BY ASC");
+    $stmt->execute();
+    return $stmt->fetchAll(\PDO::FETCH_OBJ);
+  }
   public function create($data){
     $stmt = $this->db->conn->prepare("INSERT INTO previews(title, subtitle, content, date, author, category, genre, media, platform, status, tags, release_date) VALUES (:title, :subtitle, :content, :date, :author, :category, :genre, :media, :platform, :status, :tags, :release_date)");
     $stmt->execute([

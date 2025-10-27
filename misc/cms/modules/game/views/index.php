@@ -59,6 +59,7 @@
 
 use app\widgets\ReviewWidget;
 echo ReviewWidget::renderTop100();
+
 ?>
 
 <script>

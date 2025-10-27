@@ -25,6 +25,12 @@ class News{
     return $stmt->fetchAll(\PDO::FETCH_OBJ);
   }
 
+  public function getTop100News(){
+    $stmt = $this->db->conn->prepare("SELECT * FROM news WHERE rating > 70 LIMIT 100 ORDER BY ASC");
+    $stmt->execute();
+    return $stmt->fetchAll(\PDO::FETCH_OBJ);
+  }
+  
   public function create($data){
     $stmt = $this->db->conn->prepare("INSERT INTO news(title, subtitle, content, date, author, media, tags, layout, user_id) VALUES (:title, :subtitle, :content, :date, :author, :media, :tags, :layout, :user_id)");
     $stmt->execute([

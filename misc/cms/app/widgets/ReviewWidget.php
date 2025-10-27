@@ -3,6 +3,7 @@
 namespace app\widgets;
 
 use app\models\Review;
+use app\templates\Tabulate;
 
 class ReviewWidget extends Tabulate{
     public static function renderTop100(){
