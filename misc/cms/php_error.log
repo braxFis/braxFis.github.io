@@ -5561,3 +5561,29 @@ Stack trace:
 [25-Oct-2025 00:08:18 UTC] PHP Warning:  Undefined variable $footers in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
 [25-Oct-2025 00:08:18 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in D:\braxFis.github.io\misc\cms\app\views\partials\footer.php on line 31
 [25-Oct-2025 00:08:18 UTC] Test logg
+[27-Oct-2025 20:25:31 UTC] PHP Warning:  require_once(D:\Send\Send-Beta\public/app/services/PaymentService.php): Failed to open stream: No such file or directory in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 20:25:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Send\Send-Beta\public/app/services/PaymentService.php' (include_path='.;C:\php\pear') in D:\Send\Send-Beta\public\index.php:2
+Stack trace:
+#0 {main}
+  thrown in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 23:08:11 UTC] PHP Warning:  require_once(D:\Send\Send-Beta\public/app/services/PaymentService.php): Failed to open stream: No such file or directory in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 23:08:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Send\Send-Beta\public/app/services/PaymentService.php' (include_path='.;C:\php\pear') in D:\Send\Send-Beta\public\index.php:2
+Stack trace:
+#0 {main}
+  thrown in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 23:08:29 UTC] PHP Warning:  require_once(/app/services/PaymentService.php): Failed to open stream: No such file or directory in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 23:08:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/app/services/PaymentService.php' (include_path='.;C:\php\pear') in D:\Send\Send-Beta\public\index.php:2
+Stack trace:
+#0 {main}
+  thrown in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 23:08:47 UTC] PHP Warning:  require_once(/../app/services/PaymentService.php): Failed to open stream: No such file or directory in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 23:08:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/../app/services/PaymentService.php' (include_path='.;C:\php\pear') in D:\Send\Send-Beta\public\index.php:2
+Stack trace:
+#0 {main}
+  thrown in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 23:08:49 UTC] PHP Warning:  require_once(/../app/services/PaymentService.php): Failed to open stream: No such file or directory in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 23:08:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/../app/services/PaymentService.php' (include_path='.;C:\php\pear') in D:\Send\Send-Beta\public\index.php:2
+Stack trace:
+#0 {main}
+  thrown in D:\Send\Send-Beta\public\index.php on line 2
+[27-Oct-2025 23:14:28 UTC] PHP Warning:  file_put_contents(D:\Send\Send-Beta\app\services/../logs/payments.log): Failed to open stream: No such file or directory in D:\Send\Send-Beta\app\services\PaymentService.php on line 50
