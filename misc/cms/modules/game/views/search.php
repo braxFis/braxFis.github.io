@@ -1,8 +1,4 @@
 <section id="search-section">
-  <form method="get" action="/search">
-    <input type="text" name="q" id="search-query" placeholder="Search for a game..." value="<?= htmlspecialchars($_GET['q'] ?? '') ?>">
-    <button type="submit">Search</button>
-  </form>
 
   <?php if (!empty($results)): ?>
     <div class="search-results">

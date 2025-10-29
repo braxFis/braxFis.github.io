@@ -35,20 +35,6 @@
     <?php endforeach; ?>
 
     <p><strong>ESRB Rating:</strong> <?= $item['esrb_rating']['name'] ?? 'Not Rated' ?></p>
-
-    <strong>Trailers</strong>
-    <?php foreach ($item['trailers'] as $trailer): ?>
-        <video width="320" height="240" controls>
-            <source src="<?= htmlspecialchars($trailer) ?>" type="video/mp4">
-        </video>
-    <?php endforeach; ?>
-
-    <strong>Screenshots</strong>
-    <?php foreach ($item['short_screenshots'] as $shot): ?>
-        <a href="<?= htmlspecialchars($shot['image']) ?>">
-            <img src="<?= htmlspecialchars($shot['image']) ?>" width="200" height="200">
-        </a>
-    <?php endforeach; ?>
 </div>
 <hr>
 <?php endforeach; ?>

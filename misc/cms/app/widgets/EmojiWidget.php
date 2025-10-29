@@ -14,7 +14,7 @@ class EmojiWidget{
         <button id="send-button">Send</button>
         </div>
         <script src="/js/functions/emoji.js"></script>
-    HTML;
+      HTML;
 
     return $html;
     }
