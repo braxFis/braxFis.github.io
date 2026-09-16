@@ -5,7 +5,7 @@ class Database
     private $host = "localhost";
     private $user = "root";
     private $pass = "pezDispenser1!";
-    private $dbname = "gd_data";
+    private $dbname = "coma_news";
 
     public $conn;
     public function __construct(){

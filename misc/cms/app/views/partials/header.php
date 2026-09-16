@@ -4,7 +4,216 @@
   <meta charset="utf-8">
   <title></title>
 <style>
-    @media (max-width: 600px) {
+
+  /* =========================================
+SIDEBAR TABS
+========================================= */
+  .home-sidebar-tabs {
+    display: flex;
+    border-bottom: 2px solid #222;
+    margin-bottom: 15px;
+  }
+
+  .home-sidebar-tab {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+    cursor: pointer;
+  }
+
+  .home-sidebar-tab.active {
+    color: #222;
+    background: #f1f1f1;
+  }
+
+  .home-tab-content {
+    display: none;
+  }
+
+  .home-tab-content.active {
+    display: block;
+  }
+
+  /* =========================================
+     HOME PAGE
+     ========================================= */
+
+  .home-page {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+
+  /* =========================================
+     MAIN CONTENT
+     ========================================= */
+
+  .home-main-title {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .home-article {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .home-article-image {
+    width: 220px;
+    height: 125px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  .home-article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .home-article-content {
+    flex: 1;
+  }
+
+  .home-article-title {
+    margin: 0 0 8px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .home-article-meta {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #777;
+  }
+
+  .home-article-genres {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #555;
+  }
+
+  .home-article-description {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+
+  /* =========================================
+     SIDEBAR
+     ========================================= */
+
+  .home-sidebar-section {
+    margin-bottom: 40px;
+  }
+
+  .home-sidebar-title {
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #222;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+
+  /* =========================================
+     TOP 10
+     ========================================= */
+
+  .top10-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+  .top10-number {
+    width: 30px;
+    flex-shrink: 0;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #888;
+  }
+
+  .top10-title {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+
+  /* =========================================
+     UPCOMING
+     ========================================= */
+
+  .upcoming-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+  .upcoming-title {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .upcoming-date {
+    flex-shrink: 0;
+
+    font-size: 13px;
+    color: #777;
+  }
+
+
+  /* =========================================
+     MOBILE
+     ========================================= */
+
+  @media (max-width: 767px) {
+
+    .home-page {
+      padding-top: 25px;
+    }
+
+    .home-article {
+      gap: 15px;
+    }
+
+    .home-article-image {
+      width: 130px;
+      height: 85px;
+    }
+
+    .home-article-title {
+      font-size: 18px;
+    }
+
+    .home-article-description {
+      display: none;
+    }
+
+  }
+
+  @media (max-width: 600px) {
         .post-item {
             flex-direction: column;
         }
@@ -221,188 +430,5 @@
         object-fit: cover;
         border: 1px solid #ccc;
     }
-
-.menu-prime{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #1c1c1c;
-    padding: 15px 30px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    gap: 10px;
-}
-.menu-prime button{
-    background: linear-gradient(135deg, rgb(0, 123, 255), rgb(123, 0, 255));
-}
-
-.menu-prime button a{
-    color: white;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-.menu-prime button:hover{
-    background: linear-gradient(135deg, rgb(0, 20, 40), rgb(60, 80, 100));
-}
-
-    .search-container {
-        /*display: flex;*/
-        /*justify-content: center;*/
-        /*align-items: center;*/
-        max-width: 800px;
-        width: 90%;
-        /*background: linear-gradient(135deg, rgb(0, 123, 255), rgb(123, 0, 255));*/
-        border-radius: 50px;
-        padding: 10px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-
-    .issue-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1rem;
-    }
-
-    .issue-card {
-        padding: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background: #f9f9f9;
-    }
-
-    .pagination {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .container{
-      display: flex;
-    }
-    .reviews{}
-
-    .reviews li{
-      list-style-type: none
-    }
-
-    .add-border li{
-      list-style-type: none
-    }
-    .previews{}
-    .news{}
-
-
-body {
-  /* Prevent the user selecting text in the example */
-  user-select: none;
-}
-
-#draggable {
-  text-align: center;
-  background: white;
-}
-
-.dropzone {
-  width: max-width;
-  height: max-height;
-  background: blueviolet;
-  margin: 10px;
-  padding: 10px;
-}
-
-.dropzone.dragover {
-  background-color: purple;
-}
-
-.dragging {
-  opacity: 0.5;
-}
-
 </style>
 </head>
-<!--<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>-->
-<script src="https://cdn.tiny.cloud/1/19srbsosgvqyagoc7x8ztcytwjhd2vwnqbz8ql6cdpj3t72a/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-<script>
-  tinymce.init({
-    selector: 'textarea#content',
-    height: 400,
-    plugins: [
-      'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview', 'anchor',
-      'searchreplace', 'visualblocks', 'code', 'fullscreen',
-      'insertdatetime', 'media', 'table', 'help', 'wordcount'
-    ],
-    toolbar: 'undo redo | formatselect | bold italic backcolor | \
-    alignleft aligncenter alignright alignjustify | \
-    bullist numlist outdent indent | removeformat | help'
-  });
-</script>
-
-<button id="resetBtn">Återställ</button>
-
-<div class="menu-prime dropzone">
-  <button style="background: blue;color:black;"class="menu-prime" id="draggable" draggable="true"><a style="color:black;"href="/login">Buttface</a></button>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<nav class="menu-prime dropzone" id="drop-target"> <!--Add DnD tags here -->
-        <!--<img src="/uploads/logo.png" alt="logowork.." width="75" height="75">-->
-        <button><a href="/">Home</a></button>
-        <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'):?>
-        <button><a href="/login">Login</a></button>
-        <button><a href="/media">Media</a></button>
-        <?php endif; ?>
-</nav>
-<!--<script type="module" src="/index.js"></script>-->
-<script>
-// 🧹 Reset-knapp
-document.getElementById('resetBtn').addEventListener('click', () => {
-  fetch('reset_position.php', { method: 'POST' })
-    .then(() => location.reload());
-});
-let dragged;
-
-// Hämta sparad position från servern vid laddning
-window.addEventListener('load', () => {
-    fetch('get_position.php')
-        .then(response => response.json())
-        .then(data => {
-            if (data.dropzoneId) {
-                const draggedElem = document.getElementById("draggable");
-                const targetElem = document.getElementById(data.dropzoneId);
-                if (draggedElem && targetElem) {
-                    targetElem.appendChild(draggedElem);
-                }
-            }
-        });
-});
-
-/* events fired on the draggable target */
-const source = document.getElementById("draggable");
-source.addEventListener("dragstart", (event) => {
-    dragged = event.target;
-    event.target.classList.add("dragging");
-});
-
-source.addEventListener("dragend", (event) => {
-    event.target.classList.remove("dragging");
-});
-
-/* events fired on the drop targets */
-const target = document.getElementById("drop-target");
-target.addEventListener("dragover", (event) => event.preventDefault());
-target.addEventListener("drop", (event) => {
-    event.preventDefault();
-    if (event.target.classList.contains("dropzone")) {
-        event.target.appendChild(dragged);
-
-        // Skicka ny position till servern
-        fetch('save_position.php', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({elementId: dragged.id, dropzoneId: event.target.id})
-        });
-    }
-});
-</script>

@@ -236,9 +236,12 @@ $routes = [
 
     'PUBLIC' => [
         'GET' => [
+          '' => ['controller' => '\modules\home\controllers\HomeController', 'method' => 'index'],
           'search' => ['controller' => '\modules\game\controllers\SearchController', 'method' => 'index'],
           'trailers' => ['controller' => '\modules\game\controllers\TrailerController', 'method' => 'index'],
-          '' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'index'],
+          'games' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'index'],
+          'games/([0-9]+)' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'show'],
+          'games/loadMore' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'loadMore'],
           'news/indie/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'indieNews'],
           'review/indie/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'indieReview'],
           'preview/indie/([0-9]+)' => ['controller' => '\app\controllers\PreviewController', 'method' => 'indiePreview'],

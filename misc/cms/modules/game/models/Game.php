@@ -15,13 +15,22 @@ class Game extends RAWG_API {
         return json_decode($response, true);
     }
 
-    public function getGames($page = 1) {
-        $params = [
-            'page' => $page,
-            'page_size' => 1
-        ];
-        return $this->fetchAPI('games', $params);
+    public function getGame($id):?array{
+      $data = $this->fetchAPI("games/{$id}");
+      if(!$data) return null;
+      return $data;
     }
+
+  public function getGames($page = 1)
+  {
+    $params = [
+      'page'      => max(1, (int)$page),
+      'page_size' => 10,
+      'ordering'  => '-rating'
+    ];
+
+    return $this->fetchAPI('games', $params);
+  }
 
     public function getDescription($id) {
         $data = $this->fetchAPI("games/{$id}");
@@ -41,7 +50,6 @@ class Game extends RAWG_API {
         $data = $this->fetchAPI("games/{$id}/screenshots");
         if (!$data || !isset($data["results"])) return [];
         return array_map(function ($r) {
-            var_dump($r);
         }, $data["results"]);
     }
 }

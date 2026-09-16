@@ -7,15 +7,15 @@
 
 <div class="screenshot-container">
 <?php
-use app\widgets\PictureWidget;
-echo (new PictureWidget)::renderImageSideBar("3498");
+//use app\widgets\PictureWidget;
+//echo (new PictureWidget)::renderHomeGallery($games);
 ?>
 </div>
 
 <div class="latest-videos">
 <?php
-use app\widgets\TrailerWidget;
-echo (new TrailerWidget)::renderTrailerSideBar("3498");
+//use app\widgets\TrailerWidget;
+//echo (new TrailerWidget)::renderHomeTrailers($games);
 ?>
 </div>
 

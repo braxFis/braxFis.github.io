@@ -5587,3 +5587,816 @@ Stack trace:
 #0 {main}
   thrown in D:\Send\Send-Beta\public\index.php on line 2
 [27-Oct-2025 23:14:28 UTC] PHP Warning:  file_put_contents(D:\Send\Send-Beta\app\services/../logs/payments.log): Failed to open stream: No such file or directory in D:\Send\Send-Beta\app\services\PaymentService.php on line 50
+[14-Sep-2026 04:16:22 UTC] Test logg
+[14-Sep-2026 04:16:22 UTC] PHP Warning:  require_once(/Users/nicko/Documents/GitHub/GameDefiners/misc/cms/vendor/autoload.php): Failed to open stream: No such file or directory in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/bootstrap.php on line 17
+[14-Sep-2026 04:16:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/Users/nicko/Documents/GitHub/GameDefiners/misc/cms/vendor/autoload.php' (include_path='.:/usr/local/Cellar/php/8.4.8/share/php/pear') in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/bootstrap.php:17
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(3): require_once()
+#1 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/bootstrap.php on line 17
+[14-Sep-2026 04:22:40 UTC] Test logg
+[14-Sep-2026 04:22:45 UTC] Test logg
+[14-Sep-2026 04:24:49 UTC] Test logg
+[14-Sep-2026 04:27:27 UTC] Test logg
+[14-Sep-2026 04:27:32 UTC] Test logg
+[14-Sep-2026 04:27:33 UTC] Test logg
+[14-Sep-2026 04:30:07 UTC] Test logg
+[14-Sep-2026 04:30:10 UTC] Test logg
+[14-Sep-2026 04:31:00 UTC] Test logg
+[14-Sep-2026 04:31:03 UTC] Test logg
+[14-Sep-2026 04:31:06 UTC] Test logg
+[14-Sep-2026 04:33:08 UTC] Test logg
+[14-Sep-2026 04:33:16 UTC] Test logg
+[14-Sep-2026 05:20:30 UTC] Test logg
+[14-Sep-2026 05:20:35 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:20:35 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:20:35 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:20:35 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:20:35 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:20:35 UTC] Test logg
+[14-Sep-2026 05:20:35 UTC] Test logg
+[14-Sep-2026 05:20:36 UTC] Test logg
+[14-Sep-2026 05:20:46 UTC] Test logg
+[14-Sep-2026 05:20:49 UTC] Test logg
+[14-Sep-2026 05:21:10 UTC] Test logg
+[14-Sep-2026 05:21:14 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:21:14 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:21:14 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:21:15 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:21:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:21:15 UTC] Test logg
+[14-Sep-2026 05:21:15 UTC] Test logg
+[14-Sep-2026 05:21:21 UTC] Test logg
+[14-Sep-2026 05:21:21 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:21:21 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:21:21 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:21:21 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:21:21 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:21:23 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:21:23 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:21:37 UTC] Test logg
+[14-Sep-2026 05:21:59 UTC] Test logg
+[14-Sep-2026 05:21:59 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:21:59 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:21:59 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:21:59 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:21:59 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:22:00 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:00 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:00 UTC] Test logg
+[14-Sep-2026 05:22:05 UTC] Test logg
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:05 UTC] Test logg
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:22:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:22:06 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:06 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:06 UTC] Test logg
+[14-Sep-2026 05:22:06 UTC] Test logg
+[14-Sep-2026 05:22:15 UTC] Test logg
+[14-Sep-2026 05:22:15 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:22:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:22:15 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:22:15 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:22:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:22:16 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:16 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:28 UTC] Test logg
+[14-Sep-2026 05:22:28 UTC] Test logg
+[14-Sep-2026 05:22:28 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:22:28 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:22:28 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:22:28 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:22:28 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:22:29 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:29 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:22:37 UTC] Test logg
+[14-Sep-2026 05:22:37 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:22:44 UTC] Test logg
+[14-Sep-2026 05:22:44 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:22:53 UTC] Test logg
+[14-Sep-2026 05:22:53 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:23:03 UTC] Test logg
+[14-Sep-2026 05:23:03 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:23:14 UTC] Test logg
+[14-Sep-2026 05:23:14 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:23:19 UTC] Test logg
+[14-Sep-2026 05:23:23 UTC] Test logg
+[14-Sep-2026 05:23:23 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:23:23 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/3498/movies?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/models/Trailer.php on line 20
+[14-Sep-2026 05:24:02 UTC] Test logg
+[14-Sep-2026 05:24:08 UTC] Test logg
+[14-Sep-2026 05:24:23 UTC] Test logg
+[14-Sep-2026 05:24:27 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:24:27 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:24:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:24:27 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:24:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:24:27 UTC] Test logg
+[14-Sep-2026 05:24:27 UTC] Test logg
+[14-Sep-2026 05:25:30 UTC] Test logg
+[14-Sep-2026 05:25:34 UTC] Test logg
+[14-Sep-2026 05:25:34 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:25:34 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:25:34 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:25:35 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:25:35 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:25:35 UTC] Test logg
+[14-Sep-2026 05:25:40 UTC] Test logg
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  Undefined property: stdClass::$user_id in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previews/indiePreview.php on line 84
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  include(/Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previewspartials/latest_games.php): Failed to open stream: No such file or directory in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previews/indiePreview.php on line 93
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  include(): Failed opening '/Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previewspartials/latest_games.php' for inclusion (include_path='.:/usr/local/Cellar/php/8.4.8/share/php/pear') in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previews/indiePreview.php on line 93
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  include(/Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previewspartials/recommended.php): Failed to open stream: No such file or directory in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previews/indiePreview.php on line 96
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  include(): Failed opening '/Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previewspartials/recommended.php' for inclusion (include_path='.:/usr/local/Cellar/php/8.4.8/share/php/pear') in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previews/indiePreview.php on line 96
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previews/indiePreview.php on line 115
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/previews/indiePreview.php on line 115
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:25:40 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:25:41 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:25:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:25:41 UTC] Test logg
+[14-Sep-2026 05:25:53 UTC] Test logg
+[14-Sep-2026 05:26:31 UTC] Test logg
+[14-Sep-2026 05:26:35 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:26:35 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:26:35 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:44:09 UTC] Test logg
+[14-Sep-2026 05:44:15 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:44:15 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:44:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:44:16 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:44:16 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:44:16 UTC] Test logg
+[14-Sep-2026 05:44:16 UTC] Test logg
+[14-Sep-2026 05:44:34 UTC] Test logg
+[14-Sep-2026 05:44:38 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:44:38 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:44:38 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:44:38 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:44:38 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:44:38 UTC] Test logg
+[14-Sep-2026 05:44:38 UTC] Test logg
+[14-Sep-2026 05:44:43 UTC] Test logg
+[14-Sep-2026 05:44:47 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:44:47 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:44:47 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:45:27 UTC] Test logg
+[14-Sep-2026 05:45:30 UTC] Test logg
+[14-Sep-2026 05:45:30 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:45:30 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 05:45:30 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:45:30 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:45:30 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:45:33 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:45:33 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:45:45 UTC] Test logg
+[14-Sep-2026 05:45:54 UTC] Test logg
+[14-Sep-2026 05:45:59 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 05:45:59 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:45:59 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 05:46:00 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:46:00 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 05:46:00 UTC] Test logg
+[14-Sep-2026 05:46:00 UTC] Test logg
+[14-Sep-2026 06:09:13 UTC] Test logg
+[14-Sep-2026 06:09:27 UTC] Test logg
+[14-Sep-2026 06:09:27 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:09:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:09:27 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:09:27 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:09:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:09:28 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:09:28 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:09:32 UTC] Test logg
+[14-Sep-2026 06:09:32 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:09:32 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:09:32 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:09:32 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:09:32 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:09:33 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:09:33 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:09:33 UTC] Test logg
+[14-Sep-2026 06:09:36 UTC] Test logg
+[14-Sep-2026 06:09:36 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:09:36 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:09:36 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:09:36 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:09:36 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:09:37 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:09:37 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:09:51 UTC] Test logg
+[14-Sep-2026 06:09:51 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:10:02 UTC] Test logg
+[14-Sep-2026 06:10:02 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:10:14 UTC] Test logg
+[14-Sep-2026 06:10:19 UTC] Test logg
+[14-Sep-2026 06:10:19 UTC] Test logg
+[14-Sep-2026 06:10:19 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:10:24 UTC] Test logg
+[14-Sep-2026 06:10:24 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:10:25 UTC] Test logg
+[14-Sep-2026 06:10:29 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:10:29 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:10:29 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:10:29 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:10:29 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:10:29 UTC] Test logg
+[14-Sep-2026 06:10:33 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:10:33 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:10:33 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:10:33 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:10:33 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:10:33 UTC] Test logg
+[14-Sep-2026 06:10:33 UTC] Test logg
+[14-Sep-2026 06:14:51 UTC] Test logg
+[14-Sep-2026 06:14:51 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:14:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:14:51 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:14:51 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:14:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:14:52 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:14:52 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:14:55 UTC] Test logg
+[14-Sep-2026 06:18:03 UTC] Test logg
+[14-Sep-2026 06:18:03 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:18:03 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 06:18:03 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:18:03 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:18:03 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:18:05 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:18:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:24:01 UTC] Test logg
+[14-Sep-2026 06:24:04 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 06:24:04 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:24:04 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 06:24:05 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:24:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 06:24:05 UTC] Test logg
+[14-Sep-2026 06:25:45 UTC] Test logg
+[14-Sep-2026 06:25:46 UTC] Test logg
+[14-Sep-2026 07:59:51 UTC] Test logg
+[14-Sep-2026 07:59:51 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 07:59:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 07:59:51 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 07:59:51 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 07:59:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 07:59:51 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 07:59:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 07:59:55 UTC] Test logg
+[14-Sep-2026 07:59:55 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 07:59:55 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 07:59:55 UTC] Test logg
+[14-Sep-2026 08:00:00 UTC] Test logg
+[14-Sep-2026 08:00:06 UTC] Test logg
+[14-Sep-2026 08:00:06 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 08:00:06 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 08:00:06 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 08:00:06 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 08:00:06 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 08:00:06 UTC] Test logg
+[14-Sep-2026 08:00:06 UTC] Test logg
+[14-Sep-2026 08:00:07 UTC] Test logg
+[14-Sep-2026 08:00:07 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 08:00:07 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 08:00:07 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 08:00:07 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 08:00:07 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 08:00:07 UTC] Test logg
+[14-Sep-2026 08:00:07 UTC] Test logg
+[14-Sep-2026 08:00:08 UTC] Test logg
+[14-Sep-2026 08:00:08 UTC] Test logg
+[14-Sep-2026 08:00:08 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 08:00:08 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 08:00:08 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 08:00:08 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 08:00:08 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 08:00:09 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 08:00:09 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 08:00:31 UTC] Test logg
+[14-Sep-2026 20:23:46 UTC] Test logg
+[14-Sep-2026 20:23:46 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 20:23:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 20:23:46 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:23:46 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:23:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:23:48 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 20:23:48 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 20:23:49 UTC] Test logg
+[14-Sep-2026 20:23:49 UTC] PHP Warning:  Undefined array key "role" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/controllers/BaseController.php on line 7
+[14-Sep-2026 20:23:49 UTC] PHP Warning:  Undefined variable $review_id in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/create.php on line 26
+[14-Sep-2026 20:23:49 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:23:49 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:23:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:23:56 UTC] Test logg
+[14-Sep-2026 20:23:56 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:24:56 UTC] Test logg
+[14-Sep-2026 20:24:58 UTC] Test logg
+[14-Sep-2026 20:24:58 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:25:10 UTC] Test logg
+[14-Sep-2026 20:25:27 UTC] Test logg
+[14-Sep-2026 20:25:27 UTC] PHP Warning:  Undefined variable $comments in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 20:25:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/indieReview.php on line 117
+[14-Sep-2026 20:25:27 UTC] Test logg
+[14-Sep-2026 20:25:27 UTC] Test logg
+[14-Sep-2026 20:25:27 UTC] PHP Warning:  Undefined array key "role" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/controllers/BaseController.php on line 7
+[14-Sep-2026 20:25:27 UTC] PHP Warning:  Undefined variable $review_id in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/reviews/create.php on line 26
+[14-Sep-2026 20:25:27 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:25:27 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:25:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:25:27 UTC] Test logg
+[14-Sep-2026 20:25:27 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:36:52 UTC] Test logg
+[14-Sep-2026 20:36:52 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:36:56 UTC] Test logg
+[14-Sep-2026 20:36:56 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:36:59 UTC] Test logg
+[14-Sep-2026 20:37:06 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:37:06 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:37:06 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:37:07 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 20:37:07 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 20:37:07 UTC] Test logg
+[14-Sep-2026 20:37:10 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:37:10 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:37:10 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:37:10 UTC] Test logg
+[14-Sep-2026 20:37:10 UTC] Test logg
+[14-Sep-2026 20:37:42 UTC] Test logg
+[14-Sep-2026 20:37:55 UTC] Test logg
+[14-Sep-2026 20:37:58 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[14-Sep-2026 20:37:58 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:37:58 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[14-Sep-2026 20:37:58 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[14-Sep-2026 20:37:58 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 02:57:39 UTC] Test logg
+[15-Sep-2026 02:57:50 UTC] Test logg
+[15-Sep-2026 02:57:50 UTC] Test logg
+[15-Sep-2026 02:57:54 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 02:57:54 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 02:57:54 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 02:57:55 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 02:57:55 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 02:57:55 UTC] Test logg
+[15-Sep-2026 02:59:46 UTC] Test logg
+[15-Sep-2026 03:07:30 UTC] Test logg
+[15-Sep-2026 03:07:37 UTC] Test logg
+[15-Sep-2026 03:07:41 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 03:07:41 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 03:07:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 03:07:41 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 03:07:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 03:07:41 UTC] Test logg
+[15-Sep-2026 03:20:26 UTC] Test logg
+[15-Sep-2026 03:20:45 UTC] Test logg
+[15-Sep-2026 03:20:46 UTC] Test logg
+[15-Sep-2026 03:20:50 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 03:20:50 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 03:20:50 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 03:20:51 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 03:20:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 03:20:51 UTC] Test logg
+[15-Sep-2026 04:15:45 UTC] Test logg
+[15-Sep-2026 04:15:45 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 04:15:45 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:15:45 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:15:46 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:15:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:21:29 UTC] Test logg
+[15-Sep-2026 04:21:33 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 04:21:33 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:21:33 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:21:34 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:21:34 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:26:23 UTC] Test logg
+[15-Sep-2026 04:26:23 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 04:26:23 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:26:23 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:26:24 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:26:24 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:27:04 UTC] Test logg
+[15-Sep-2026 04:27:04 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 04:27:04 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:27:04 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:27:05 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:27:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:32:07 UTC] Test logg
+[15-Sep-2026 04:32:07 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 04:32:07 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:32:07 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:32:08 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:32:08 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:34:15 UTC] Test logg
+[15-Sep-2026 04:34:18 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 04:34:18 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:34:18 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:34:19 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:34:19 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:40:13 UTC] Test logg
+[15-Sep-2026 04:40:13 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 04:40:13 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:40:13 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:40:14 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:40:14 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:57:15 UTC] Test logg
+[15-Sep-2026 04:57:17 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 04:57:17 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:57:17 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 04:57:22 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 04:57:22 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:01:50 UTC] Test logg
+[15-Sep-2026 05:01:53 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 05:01:53 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:01:53 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:01:54 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:01:54 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:06:35 UTC] Test logg
+[15-Sep-2026 05:06:46 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games?page=1&amp;page_size=6&amp;key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/home/models/Home.php on line 15
+[15-Sep-2026 05:06:46 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games?page=1&amp;page_size=10&amp;ordering=-rating&amp;key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/home/models/Home.php on line 15
+[15-Sep-2026 05:06:46 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games?page=1&amp;page_size=10&amp;dates=2026-09-15%2C2027-09-15&amp;ordering=-added&amp;key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/home/models/Home.php on line 15
+[15-Sep-2026 05:06:46 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 05:06:46 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:06:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:06:47 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/3498/screenshots?page=1&amp;key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/models/Picture.php on line 21
+[15-Sep-2026 05:06:47 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/3498/movies?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/models/Trailer.php on line 20
+[15-Sep-2026 05:06:47 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:06:47 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:07:33 UTC] Test logg
+[15-Sep-2026 05:07:35 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 05:07:35 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:07:35 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:07:35 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:07:35 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:13:14 UTC] Test logg
+[15-Sep-2026 05:13:15 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 05:13:15 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:13:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:13:16 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:13:16 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:13:42 UTC] Test logg
+[15-Sep-2026 05:13:43 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 05:13:43 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:13:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:13:44 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:13:44 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:13:57 UTC] Test logg
+[15-Sep-2026 05:13:58 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 05:13:58 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:13:58 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:13:59 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:13:59 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:14:40 UTC] Test logg
+[15-Sep-2026 05:14:41 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 05:14:41 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:14:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:14:41 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:14:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:16:35 UTC] Test logg
+[15-Sep-2026 05:16:48 UTC] Test logg
+[15-Sep-2026 05:16:56 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 05:16:56 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:16:56 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:16:56 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:16:56 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:17:08 UTC] Test logg
+[15-Sep-2026 05:17:09 UTC] PHP Warning:  Undefined array key "q" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/SearchWidget.php on line 9
+[15-Sep-2026 05:17:09 UTC] PHP Warning:  Undefined variable $menus in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:17:09 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/menu.php on line 249
+[15-Sep-2026 05:17:10 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:17:10 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:22:43 UTC] Test logg
+[15-Sep-2026 05:42:29 UTC] Test logg
+[15-Sep-2026 05:42:31 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:42:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:42:54 UTC] Test logg
+[15-Sep-2026 05:42:56 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:42:56 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:43:23 UTC] Test logg
+[15-Sep-2026 05:43:25 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:43:25 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:44:51 UTC] Test logg
+[15-Sep-2026 05:44:52 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:44:52 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:45:37 UTC] Test logg
+[15-Sep-2026 05:45:41 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:45:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:46:05 UTC] Test logg
+[15-Sep-2026 05:46:06 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:46:06 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 05:58:28 UTC] Test logg
+[15-Sep-2026 06:12:10 UTC] Test logg
+[15-Sep-2026 06:12:15 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 06:12:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 06:18:22 UTC] Test logg
+[15-Sep-2026 06:18:24 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 06:18:24 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 06:23:07 UTC] Test logg
+[15-Sep-2026 06:23:09 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 06:23:09 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 06:27:20 UTC] Test logg
+[15-Sep-2026 06:27:26 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 06:27:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 06:28:32 UTC] Test logg
+[15-Sep-2026 06:28:37 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 06:28:37 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 11:55:24 UTC] Test logg
+[15-Sep-2026 11:55:25 UTC] Test logg
+[15-Sep-2026 11:55:32 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 11:55:32 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 11:55:32 UTC] Test logg
+[15-Sep-2026 11:55:43 UTC] Test logg
+[15-Sep-2026 11:57:57 UTC] Test logg
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:58:08 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 11:58:08 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 11:58:08 UTC] Test logg
+[15-Sep-2026 11:58:54 UTC] Test logg
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 11:59:10 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 11:59:10 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 11:59:10 UTC] Test logg
+[15-Sep-2026 11:59:54 UTC] Test logg
+[15-Sep-2026 12:00:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 12:00:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 15
+[15-Sep-2026 12:00:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 12:00:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 12:00:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 12:00:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 12:00:10 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 20
+[15-Sep-2026 12:00:11 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:00:11 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:00:11 UTC] Test logg
+[15-Sep-2026 12:08:23 UTC] Test logg
+[15-Sep-2026 12:08:34 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:08:34 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:08:34 UTC] Test logg
+[15-Sep-2026 12:09:39 UTC] Test logg
+[15-Sep-2026 12:09:50 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:09:50 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:09:50 UTC] Test logg
+[15-Sep-2026 12:10:00 UTC] Test logg
+[15-Sep-2026 12:13:00 UTC] Test logg
+[15-Sep-2026 12:13:19 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:13:19 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:13:19 UTC] Test logg
+[15-Sep-2026 12:14:09 UTC] Test logg
+[15-Sep-2026 12:14:11 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:14:11 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:14:32 UTC] Test logg
+[15-Sep-2026 12:15:09 UTC] Test logg
+[15-Sep-2026 12:15:20 UTC] Test logg
+[15-Sep-2026 12:15:22 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:15:22 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:17:14 UTC] Test logg
+[15-Sep-2026 12:17:25 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:17:25 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:17:25 UTC] Test logg
+[15-Sep-2026 12:17:41 UTC] Test logg
+[15-Sep-2026 12:18:19 UTC] Test logg
+[15-Sep-2026 12:25:53 UTC] Test logg
+[15-Sep-2026 12:26:12 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:26:12 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:26:12 UTC] Test logg
+[15-Sep-2026 12:26:15 UTC] Test logg
+[15-Sep-2026 12:26:18 UTC] Test logg
+[15-Sep-2026 12:26:30 UTC] Test logg
+[15-Sep-2026 12:26:32 UTC] Test logg
+[15-Sep-2026 12:29:46 UTC] Test logg
+[15-Sep-2026 12:30:03 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:30:03 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:30:03 UTC] Test logg
+[15-Sep-2026 12:30:07 UTC] Test logg
+[15-Sep-2026 12:30:10 UTC] Test logg
+[15-Sep-2026 12:30:24 UTC] Test logg
+[15-Sep-2026 12:30:24 UTC] Test logg
+[15-Sep-2026 12:30:25 UTC] Test logg
+[15-Sep-2026 12:30:25 UTC] Test logg
+[15-Sep-2026 12:30:25 UTC] Test logg
+[15-Sep-2026 12:30:25 UTC] Test logg
+[15-Sep-2026 12:30:25 UTC] Test logg
+[15-Sep-2026 12:30:25 UTC] Test logg
+[15-Sep-2026 12:30:25 UTC] Test logg
+[15-Sep-2026 12:30:26 UTC] Test logg
+[15-Sep-2026 12:30:26 UTC] Test logg
+[15-Sep-2026 12:32:11 UTC] Test logg
+[15-Sep-2026 12:32:26 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:32:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:32:26 UTC] Test logg
+[15-Sep-2026 12:32:28 UTC] Test logg
+[15-Sep-2026 12:32:46 UTC] Test logg
+[15-Sep-2026 12:35:39 UTC] Test logg
+[15-Sep-2026 12:35:50 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:35:50 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:35:50 UTC] Test logg
+[15-Sep-2026 12:36:00 UTC] Test logg
+[15-Sep-2026 12:38:24 UTC] Test logg
+[15-Sep-2026 12:38:29 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/3498/screenshots?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:32 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/4200?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:33 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/4291/movies?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:33 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/4291/screenshots?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:34 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/13536/movies?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:35 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/5286?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:35 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/5286/movies?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:35 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/12020?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:35 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/12020/movies?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:38 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/28/screenshots?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[15-Sep-2026 12:38:40 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:38:40 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:38:40 UTC] Test logg
+[15-Sep-2026 12:38:57 UTC] Test logg
+[15-Sep-2026 12:40:07 UTC] Test logg
+[15-Sep-2026 12:40:32 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:40:32 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:40:32 UTC] Test logg
+[15-Sep-2026 12:40:39 UTC] Test logg
+[15-Sep-2026 12:40:43 UTC] Test logg
+[15-Sep-2026 12:40:47 UTC] Test logg
+[15-Sep-2026 12:40:47 UTC] Test logg
+[15-Sep-2026 12:40:48 UTC] Test logg
+[15-Sep-2026 12:40:48 UTC] Test logg
+[15-Sep-2026 12:40:48 UTC] Test logg
+[15-Sep-2026 12:40:48 UTC] Test logg
+[15-Sep-2026 12:40:48 UTC] Test logg
+[15-Sep-2026 12:40:48 UTC] Test logg
+[15-Sep-2026 12:40:49 UTC] Test logg
+[15-Sep-2026 12:41:08 UTC] Test logg
+[15-Sep-2026 12:41:11 UTC] Test logg
+[15-Sep-2026 12:41:12 UTC] Test logg
+[15-Sep-2026 12:41:16 UTC] Test logg
+[15-Sep-2026 12:41:16 UTC] Test logg
+[15-Sep-2026 12:41:19 UTC] Test logg
+[15-Sep-2026 12:41:25 UTC] Test logg
+[15-Sep-2026 12:41:26 UTC] Test logg
+[15-Sep-2026 12:41:30 UTC] Test logg
+[15-Sep-2026 12:45:04 UTC] Test logg
+[15-Sep-2026 12:45:31 UTC] Test logg
+[15-Sep-2026 12:46:35 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games?page=1&amp;page_size=10&amp;dates=2026-09-15%2C2027-09-15&amp;ordering=-added&amp;key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/home/models/Home.php on line 15
+[15-Sep-2026 12:46:36 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:46:36 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:52:03 UTC] Test logg
+[15-Sep-2026 12:52:05 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:52:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:55:08 UTC] Test logg
+[15-Sep-2026 12:55:13 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:55:13 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:55:56 UTC] Test logg
+[15-Sep-2026 12:56:30 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:56:30 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:56:30 UTC] Test logg
+[15-Sep-2026 12:57:12 UTC] Test logg
+[15-Sep-2026 12:57:16 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 12:57:16 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 15:36:05 UTC] Test logg
+[15-Sep-2026 15:36:20 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 15:36:20 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 15:36:20 UTC] Test logg
+[15-Sep-2026 15:49:35 UTC] Test logg
+[15-Sep-2026 15:49:46 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 15:49:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 15:49:46 UTC] Test logg
+[15-Sep-2026 15:53:55 UTC] Test logg
+[15-Sep-2026 15:54:09 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 15:54:09 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 15:54:09 UTC] Test logg
+[15-Sep-2026 15:54:16 UTC] Test logg
+[15-Sep-2026 15:54:57 UTC] Test logg
+[15-Sep-2026 15:57:45 UTC] Test logg
+[15-Sep-2026 15:58:17 UTC] Test logg
+[15-Sep-2026 15:59:31 UTC] Test logg
+[15-Sep-2026 15:59:40 UTC] Test logg
+[15-Sep-2026 15:59:45 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 15:59:45 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:00:25 UTC] Test logg
+[15-Sep-2026 16:00:26 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:00:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:00:50 UTC] Test logg
+[15-Sep-2026 16:00:52 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:00:52 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:01:03 UTC] Test logg
+[15-Sep-2026 16:01:04 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:01:04 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:01:16 UTC] Test logg
+[15-Sep-2026 16:01:17 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:01:17 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:02:00 UTC] Test logg
+[15-Sep-2026 16:02:02 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:02:02 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:02:06 UTC] Test logg
+[15-Sep-2026 16:02:07 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:02:07 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:05:38 UTC] Test logg
+[15-Sep-2026 16:05:44 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:05:44 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:05:44 UTC] Test logg
+[15-Sep-2026 16:05:46 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:05:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:06:32 UTC] Test logg
+[15-Sep-2026 16:06:34 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:06:34 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:09:29 UTC] Test logg
+[15-Sep-2026 16:09:31 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:09:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:10:44 UTC] Test logg
+[15-Sep-2026 16:10:49 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:10:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:10:54 UTC] Test logg
+[15-Sep-2026 16:10:56 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:10:56 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:10:59 UTC] Test logg
+[15-Sep-2026 16:11:01 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:11:01 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:11:22 UTC] Test logg
+[15-Sep-2026 16:11:23 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:11:23 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:11:25 UTC] Test logg
+[15-Sep-2026 16:11:27 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:11:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:12:57 UTC] Test logg
+[15-Sep-2026 16:13:14 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:13:14 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:13:15 UTC] Test logg
+[15-Sep-2026 16:13:18 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:13:18 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:14:18 UTC] Test logg
+[15-Sep-2026 16:14:20 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:14:20 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:14:28 UTC] Test logg
+[15-Sep-2026 16:14:29 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 16:14:29 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:33:06 UTC] Test logg
+[15-Sep-2026 17:33:09 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:33:09 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:33:34 UTC] Test logg
+[15-Sep-2026 17:33:36 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:33:36 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:34:16 UTC] Test logg
+[15-Sep-2026 17:34:18 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:34:18 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:36:19 UTC] Test logg
+[15-Sep-2026 17:36:26 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:36:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:42:43 UTC] Test logg
+[15-Sep-2026 17:42:48 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:42:48 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:46:44 UTC] Test logg
+[15-Sep-2026 17:46:52 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:46:52 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:58:52 UTC] Test logg
+[15-Sep-2026 17:59:08 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 17:59:08 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 18:03:51 UTC] Test logg
+[15-Sep-2026 18:03:52 UTC] PHP Warning:  Undefined variable $games in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php on line 11
+[15-Sep-2026 18:03:52 UTC] PHP Fatal error:  Uncaught TypeError: app\widgets\PictureWidget::renderHomeGallery(): Argument #1 ($games) must be of type array, null given, called in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php on line 11 and defined in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/PictureWidget.php:167
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php(11): app\widgets\PictureWidget::renderHomeGallery(NULL)
+#1 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/controllers/GameController.php(33): require('/Users/nicko/Do...')
+#2 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(309): modules\game\controllers\GameController->show('662318')
+#3 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/PictureWidget.php on line 167
+[15-Sep-2026 18:09:09 UTC] Test logg
+[15-Sep-2026 18:09:10 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 18:09:10 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 18:09:39 UTC] Test logg
+[15-Sep-2026 18:09:41 UTC] PHP Warning:  Undefined variable $footers in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
+[15-Sep-2026 18:09:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/partials/footer.php on line 31
