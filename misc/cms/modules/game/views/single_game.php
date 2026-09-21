@@ -534,6 +534,50 @@ $stores = $game['stores'] ?? [];
 
       <?php endif; ?>
 
+      <?php if (!empty($game['publishers'])): ?>
+
+      <div class="game-fact">
+
+      <span>PUBLISHER</span>
+
+          <div class="game-store-list">
+
+            <?php foreach ($game['publishers'] as $publisher): ?>
+
+              <a href="/publisher/<?= htmlspecialchars($publisher['slug']) ?>">
+                <?= htmlspecialchars($publisher['name']) ?>
+              </a>
+
+            <?php endforeach; ?>
+
+          </div>
+
+        </div>
+
+      <?php endif; ?>
+
+      <?php if (!empty($game['developers'])): ?>
+
+        <div class="game-fact">
+
+          <span>DEVELOPER</span>
+
+          <div class="game-store-list">
+
+            <?php foreach ($game['developers'] as $developer): ?>
+
+              <a href="/developer/<?= htmlspecialchars($developer['slug']) ?>">
+                <?= htmlspecialchars($developer['name']) ?>
+              </a>
+
+            <?php endforeach; ?>
+
+          </div>
+
+        </div>
+
+      <?php endif; ?>
+
     </aside>
 
   </section>

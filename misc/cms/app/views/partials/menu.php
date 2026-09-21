@@ -334,64 +334,66 @@
     /* =========================================================
        FULLSCREEN TRAILER
        ========================================================= */
-
     .coma-trailer-lightbox {
       position: fixed;
-
       inset: 0;
 
       z-index: 10000;
 
       display: flex;
-
       align-items: center;
       justify-content: center;
 
-      padding: 40px;
+      width: 100vw;
+      height: 100vh;
 
-      background: rgba(0,0,0,0.96);
+      padding: 40px;
+      box-sizing: border-box;
+
+      background: rgba(0, 0, 0, 0.96);
 
       opacity: 0;
+      pointer-events: none;
 
-      visibility: hidden;
-
-      transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease;
+      transition: opacity 0.3s ease;
     }
-
 
     .coma-trailer-lightbox.active {
-
       opacity: 1;
-
-      visibility: visible;
+      pointer-events: auto;
     }
-
+    .coma-trailer-lightbox {
+      min-height: 100vh !important;
+    }
 
     /* VIDEO */
 
     .coma-trailer-player {
       position: relative;
-
       width: min(1200px, 88vw);
     }
 
-
     .coma-trailer-video {
-      display: block;
-
+      position: relative;
       width: 100%;
-
-      max-height: 82vh;
-
+      height: 0;
+      padding-bottom: 56.25%;
       background: #000;
-
+      overflow: hidden;
       box-shadow:
-        0 30px 100px rgba(0,0,0,0.8);
+        0 30px 100px rgba(0, 0, 0, 0.8);
     }
 
+    .coma-trailer-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
 
+      width: 1000px;
+      height: 653px;
+
+      border: 0;
+    }
     /* CLOSE */
 
     .coma-trailer-close {
@@ -1671,6 +1673,8 @@
     <a href="/" class="coma-logo">
       COMA<span>NEWS</span>
     </a>
+
+    <?= \app\widgets\SearchWidget::renderSearch() ?>
 
     <button type="button" class="coma-menu-toggle" id="comaMenuToggle">
       <span class="coma-menu-label">MENU</span>

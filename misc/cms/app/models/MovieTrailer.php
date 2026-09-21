@@ -6,32 +6,30 @@ use Database;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
-class Trailer extends RAWG_API{
+class MovieTrailer extends TMDB_API {
     private $db;
-    public $tmdb;
-
     public function __construct(){
         $this->db = new \Database;
     }
 
     private function fetchAPI($endpoint, $params = []) {
-        $params['key'] = (new RAWG_API)->apiKey;
-        $url = (new RAWG_API)->baseUrl . $endpoint . '?' . http_build_query($params);
+        $params['api_key'] = (new TMDB_API())->apiKey;
+        $url = (new TMDB_API)->baseUrl . $endpoint . '?' . http_build_query($params);
 
         $response = file_get_contents($url);
         if (!$response) return null;
         return json_decode($response, true);
     }
 
-    public function getTrailers($id): array{
-    $data = $this->fetchAPI("games/{$id}/movies");
+    public function getMovieTrailers($id): array{
+    $data = $this->fetchAPI("movie/{$id}/videos");
     if (!$data || !isset($data['results'])) return [];
 
     return array_map(function ($r) {
         return [
             'name'    => $r['name'] ?? '',
-            'preview' => $r['preview'] ?? '',
-            'max'     => $r['data']['max'] ?? '',
+            'size'    => $r['size'] ?? '',
+            'key'     => $r['key'] ?? ''
         ];
     }, $data['results']);
     }

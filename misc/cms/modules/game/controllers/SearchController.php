@@ -1,40 +1,44 @@
 <?php
+
 namespace modules\game\controllers;
 
 use modules\game\models\Search;
 
 class SearchController
 {
-    public function index()
-    {
-        $results = [];
-        $query = $_GET['q'] ?? null;
+  public function index()
+  {
+    $results = [];
+    $query = trim($_GET['q'] ?? '');
 
-        if ($query) {
-            $search = new Search();
-            $games = $search->findGames($query);
+    if ($query !== '') {
 
-            foreach ($games as $game) {
-                $id = $game['id'];
-                $description = $search->getDescription($id);
-                $trailers = $search->getTrailers($id);
+      $search = new Search();
+      $games = $search->findGames($query);
 
-                $results[] = [
-                    'name' => $game['name'],
-                    'released' => $game['released'] ?? '',
-                    'image' => $game['background_image'] ?? '',
-                    'rating' => $game['rating'] ?? 'N/A',
-                    'metacritic' => $game['metacritic'] ?? 'N/A',
-                    'description' => $description,
-                    'platforms' => $game['platforms'] ?? [],
-                    'genres' => $game['genres'] ?? [],
-                    'esrb' => $game['esrb_rating']['name'] ?? 'Not Rated',
-                    'screenshots' => $game['short_screenshots'] ?? [],
-                    'trailers' => array_filter($trailers)
-                ];
-            }
-        }
+      foreach ($games as $game) {
 
-        require __DIR__ . '/../views/search.php';
+        $results[] = [
+          'id'          => $game['id'] ?? 0,
+          'name'        => $game['name'] ?? '',
+          'released'    => $game['released'] ?? '',
+          'image'       => $game['background_image'] ?? '',
+          'rating'      => $game['rating'] ?? 'N/A',
+          'metacritic'  => $game['metacritic'] ?? 'N/A',
+          'platforms'   => $game['platforms'] ?? [],
+          'genres'      => $game['genres'] ?? [],
+          'esrb'        => $game['esrb_rating']['name'] ?? 'Not Rated',
+          'screenshots' => $game['short_screenshots'] ?? []
+        ];
+      }
+
+      //MOVIES
+      $movies = $search->findMovies($query);
     }
+
+    ob_start();
+    require __DIR__ . '/../views/search.php';
+    $content = ob_get_clean();
+    require __DIR__ . '/../../../app/views/layout.php';
+  }
 }

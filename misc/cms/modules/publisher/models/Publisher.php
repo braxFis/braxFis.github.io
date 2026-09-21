@@ -1,44 +1,41 @@
 <?php
 
-namespace modules\home\models;
+namespace modules\publisher\models;
 
 use app\models\RAWG_API;
 
-class Home extends RAWG_API
-{
-  private function fetchAPI($endpoint, $params = [])
-  {
+class Publisher extends RAWG_API {
+
+  public array $publishers = [
+    'electronic-arts' => 354,
+    'square-enix' => 308,
+    'ubisoft-entertainment' => 918,
+    'microsoft-studios' => 20987,
+    'sega-2' => 3408,
+    'valve' => 3399,
+    'bethesda-softworks' => 339,
+    '2k-games' => 358,
+    'feral-interactive' => 19651,
+    'capcom' => 2150
+  ];
+
+  private function fetchAPI($endpoint, $params = []){
     $params['key'] = $this->apiKey;
-
     $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
-
     $response = file_get_contents($url);
-
-    if (!$response) {
+    if(!$response){
       return null;
     }
-
     return json_decode($response, true);
   }
 
-
-  /*
-  |--------------------------------------------------------------------------
-  | Main Content
-  |--------------------------------------------------------------------------
-  */
-
-  public function getGames(): array
-  {
-    $today = date('Y-m-d');
-    $oneMonthAgo = date('Y-m-d', strtotime('-1 month'));
+  public function getGames($slug):array{
+    $platformId = $this->publishers[$slug];
 
     $params = [
-      'page'      => 1,
+      'page' => 1,
       'page_size' => 10,
-      'dates' => '2020-01-01',
-      'metacritic' => '70,100',
-      'ordering' => '-released'
+      'publishers' => $platformId
     ];
 
     $data = $this->fetchAPI('games', $params);
@@ -46,12 +43,11 @@ class Home extends RAWG_API
     return $data['results'] ?? [];
   }
 
-
   /*
-  |--------------------------------------------------------------------------
-  | Top 10
-  |--------------------------------------------------------------------------
-  */
+|--------------------------------------------------------------------------
+| Top 10
+|--------------------------------------------------------------------------
+*/
 
   public function getTop10(): array
   {
@@ -89,4 +85,5 @@ class Home extends RAWG_API
 
     return $data['results'] ?? [];
   }
+
 }

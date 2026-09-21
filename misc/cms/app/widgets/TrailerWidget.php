@@ -2,8 +2,8 @@
 
 namespace app\widgets;
 
+use app\models\MovieTrailer;
 use app\models\Trailer;
-
 class TrailerWidget
 {
 
@@ -158,8 +158,7 @@ public static function renderHomeTrailers(array $games)
 
   return $html;
 }
-
-  public static function renderTrailerSideBar($id)
+public static function renderTrailerSideBar($id)
   {
     $trailerModel = new Trailer();
     $trailers = $trailerModel->getTrailers($id);
@@ -311,13 +310,13 @@ public static function renderHomeTrailers(array $games)
 
             <div class='coma-trailer-player'>
 
-                <video
+                <div
                     class='coma-trailer-video'
                     controls
                     playsinline
                     preload='metadata'
                 >
-                </video>
+                </div>
 
 
                 <div class='coma-trailer-caption'>
@@ -355,9 +354,252 @@ public static function renderHomeTrailers(array $games)
 
     return $html;
   }
+public static function renderMovieTrailerSideBar($id)
+{
+  $trailerModel = new MovieTrailer();
+  $trailers = $trailerModel->getMovieTrailers($id);
+
+  if (empty($trailers)) {
+    return "<p class='coma-trailers-empty'>No trailers found</p>";
+  }
 
 
-  private static function renderScript()
+  $html = "
+        <section class='coma-trailers'>
+
+            <div class='coma-trailers-header'>
+
+                <div>
+                    <span class='coma-trailers-eyebrow'>
+                        VIDEO
+                    </span>
+
+                    <h3 class='coma-trailers-title'>
+                        Trailers
+                    </h3>
+                </div>
+
+                <span class='coma-trailers-count'>
+                    " . count($trailers) . "
+                </span>
+
+            </div>
+
+
+            <div class='coma-trailer-grid'>
+        ";
+
+
+  foreach ($trailers as $index => $trailer) {
+
+    $name = htmlspecialchars(
+      $trailer['name'],
+      ENT_QUOTES,
+      'UTF-8'
+    );
+
+    $max = htmlspecialchars(
+      $trailer['size'],
+      ENT_QUOTES,
+      'UTF-8'
+    );
+
+    $number = str_pad(
+      $index + 1,
+      2,
+      '0',
+      STR_PAD_LEFT
+    );
+
+    $key = "https://www.youtube.com/embed/" . $trailer['key'];
+
+    $html .= "
+                <button
+                    type='button'
+                    class='coma-trailer-card'
+                    data-title='{$name}'
+                    data-index='{$index}'
+                    data-video='{$trailer['key']}'
+                >
+
+                    <div class='coma-trailer-thumbnail'>
+
+                   <img
+                        src='https://img.youtube.com/vi/{$trailer['key']}/hqdefault.jpg'
+                        alt='{$name}'
+                        loading='lazy'
+                    >
+
+                        <div class='coma-trailer-overlay'></div>
+
+
+                        <span class='coma-trailer-number'>
+                            {$number}
+                        </span>
+
+
+                        <span class='coma-trailer-play'>
+                            <span>▶</span>
+                        </span>
+
+
+                        <span class='coma-trailer-expand'>
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                    <div class='coma-trailer-info'>
+
+                        <span class='coma-trailer-label'>
+                            TRAILER {$number}
+                        </span>
+
+                        <span class='coma-trailer-name'>
+                            {$name}
+                        </span>
+
+                    </div>
+
+                </button>
+            ";
+  }
+
+
+  $html .= "
+            </div>
+
+        </section>
+
+
+        <div
+            class='coma-trailer-lightbox'
+            id='comaTrailerLightbox'
+            aria-hidden='true'
+        >
+
+            <button
+                type='button'
+                class='coma-trailer-close'
+                aria-label='Close'
+            >
+                ×
+            </button>
+
+
+            <button
+                type='button'
+                class='coma-trailer-prev'
+                aria-label='Previous trailer'
+            >
+                ←
+            </button>
+
+
+            <div class='coma-trailer-player'>
+
+                <div class='coma-trailer-video'></div>
+
+                <div class='coma-trailer-caption'>
+
+                    <span class='coma-trailer-current'>
+                        01
+                    </span>
+
+                    <span>/</span>
+
+                    <span class='coma-trailer-total'>
+                        " . count($trailers) . "
+                    </span>
+
+                    <span class='coma-trailer-caption-title'></span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type='button'
+                class='coma-trailer-next'
+                aria-label='Next trailer'
+            >
+                →
+            </button>
+
+        </div>
+        ";
+
+
+  $html .= self::renderScript();
+
+  return $html;
+}
+private static function renderLightbox(int $count)
+  {
+    return "
+        <div
+            class='coma-trailer-lightbox'
+            id='comaTrailerLightbox'
+            aria-hidden='true'
+        >
+
+            <button
+                type='button'
+                class='coma-trailer-close'
+                aria-label='Close'
+            >
+                ×
+            </button>
+
+            <button
+                type='button'
+                class='coma-trailer-prev'
+                aria-label='Previous trailer'
+            >
+                ←
+            </button>
+
+            <div class='coma-trailer-player'>
+
+                <div
+                    class='coma-trailer-video'
+                    id='comaTrailerVideo'
+                    style='width: 100%; aspect-ratio: 16 / 9; position: relative;'
+                >
+                </div>
+
+                <div class='coma-trailer-caption'>
+
+                    <span class='coma-trailer-current'>
+                        01
+                    </span>
+
+                    <span>/</span>
+
+                    <span class='coma-trailer-total'>
+                        {$count}
+                    </span>
+
+                    <span class='coma-trailer-caption-title'></span>
+
+                </div>
+
+            </div>
+
+            <button
+                type='button'
+                class='coma-trailer-next'
+                aria-label='Next trailer'
+            >
+                →
+            </button>
+
+        </div>
+    ";
+  }
+private static function renderScript()
   {
     return <<<'HTML'
 
@@ -370,12 +612,33 @@ document.addEventListener("DOMContentLoaded", function () {
     const lightbox =
         document.getElementById("comaTrailerLightbox");
 
+    console.log("Trailer cards:", cards.length);
+    console.log("Lightbox:", lightbox);
+
     if (!lightbox || cards.length === 0) {
+        console.log("Trailer script stopped");
         return;
     }
+console.log("EVENT LISTENERS START");
 
+cards.forEach(function (card, index) {
 
-    const video =
+    console.log("REGISTER CARD:", index);
+
+    card.addEventListener(
+        "click",
+        function () {
+
+            console.log("CARD CLICK:", index);
+
+            openTrailer(index);
+
+        }
+    );
+
+});
+
+    const videoContainer =
         lightbox.querySelector(".coma-trailer-video");
 
     const current =
@@ -399,6 +662,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showTrailer(index, autoplay = true) {
 
+      console.log(
+    "PLAYER:",
+    videoContainer.offsetWidth,
+    videoContainer.offsetHeight
+);
+
+console.log(
+    "LIGHTBOX:",
+    lightbox.offsetWidth,
+    lightbox.offsetHeight
+);
         if (index < 0) {
             index = cards.length - 1;
         }
@@ -411,24 +685,82 @@ document.addEventListener("DOMContentLoaded", function () {
         currentIndex = index;
 
 
-        const card = cards[currentIndex];
+        const card =
+            cards[currentIndex];
 
 
-        const src =
+        const videoId =
             card.getAttribute("data-video");
 
+        console.log("VIDEO ID:", videoId);
 
         const trailerTitle =
             card.getAttribute("data-title");
 
 
-        video.pause();
+        /*
+         * Remove previous YouTube player
+         */
+ videoContainer.innerHTML = "";
 
-        video.src = src;
+const iframe = document.createElement("iframe");
 
-        video.load();
+iframe.src =
+    "https://www.youtube.com/embed/"
+    + videoId
+    + "?autoplay="
+    + (autoplay ? "1" : "0")
+    + "&rel=0";
 
+iframe.style.position = "absolute";
+iframe.style.top = "0";
+iframe.style.left = "0";
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.display = "block";
+iframe.style.border = "0";
 
+iframe.setAttribute(
+    "allow",
+    "autoplay; encrypted-media; picture-in-picture"
+);
+
+iframe.setAttribute("allowfullscreen", "");
+
+videoContainer.appendChild(iframe);
+
+console.log("VIDEO CONTAINER HTML:");
+console.log(videoContainer.outerHTML);
+
+console.log("IFRAME PARENT:");
+console.log(iframe.parentElement);
+
+console.log("IFRAME STYLE ATTRIBUTE:");
+console.log(iframe.getAttribute("style"));
+
+// TESTA EFTER ATT BROWSER HAR LAYOUTAT ELEMENTET
+requestAnimationFrame(function () {
+
+    console.log(
+        "PLAYER:",
+        videoContainer.offsetWidth,
+        videoContainer.offsetHeight
+    );
+
+    console.log(
+        "IFRAME:",
+        iframe.offsetWidth,
+        iframe.offsetHeight
+    );
+
+    console.log(
+        "IFRAME RECT:",
+        iframe.getBoundingClientRect()
+    );
+
+});       /*
+         * Caption
+         */
         current.textContent =
             String(currentIndex + 1).padStart(2, "0");
 
@@ -436,43 +768,26 @@ document.addEventListener("DOMContentLoaded", function () {
         title.textContent =
             trailerTitle;
 
-
-        if (autoplay) {
-
-            video.play().catch(function () {
-                // Browser may block autoplay.
-            });
-
-        }
-
     }
 
 
-    function openTrailer(index) {
+function openTrailer(index) {
 
-        showTrailer(index, true);
+    lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
 
-
-        lightbox.classList.add("active");
-
-        lightbox.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
-
-        document.body.style.overflow = "hidden";
-
-    }
-
+    showTrailer(index, true);
+}
 
     function closeTrailer() {
 
-        video.pause();
-
-        video.removeAttribute("src");
-
-        video.load();
+        /*
+         * Completely remove YouTube iframe.
+         *
+         * This stops the video and unloads YouTube.
+         */
+        videoContainer.innerHTML = "";
 
 
         lightbox.classList.remove("active");
@@ -488,19 +803,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    cards.forEach(function (card, index) {
+cards.forEach(function (card, index) {
 
-        card.addEventListener(
-            "click",
-            function () {
+    card.addEventListener(
+        "click",
+        function () {
 
-                openTrailer(index);
+            console.log("CARD CLICK:", index);
 
-            }
-        );
+            openTrailer(index);
 
-    });
+        }
+    );
 
+});
 
     close.addEventListener(
         "click",
@@ -592,5 +908,5 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 HTML;
-  }
+}
 }

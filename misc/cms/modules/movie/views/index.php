@@ -65,10 +65,11 @@
        --------------------------------------------------------- */
 
     .game-image {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      overflow: hidden;
-      background: #111;
+      width: 280px;
+      height: 420px;
+      aspect-ratio: 5 / 3;
+      overflow:visible;
+      background: transparent;
     }
 
     .game-image img {
@@ -373,10 +374,6 @@
         margin-bottom: 30px;
       }
 
-      .game-image {
-        aspect-ratio: 16 / 9;
-      }
-
       .game-title {
         font-size: 24px;
       }
@@ -399,6 +396,12 @@
       }
 
     }
+      .game-image img {
+        width: 280px;
+        height: 420px;
+        object-fit: contain;
+      }
+
 
   </style>
 </head>
@@ -409,22 +412,21 @@
 
   <div class="games-header">
     <span class="games-eyebrow">COMA NEWS</span>
-    <h1>Games</h1>
+    <h1>Movies</h1>
   </div>
 
   <div id="game-container">
 
-    <?php foreach ($games as $item): ?>
-
+    <?php foreach ($movies as $item): ?>
       <article class="game">
-
+      <?php $poster = "https://image.tmdb.org/t/p/w500" . $item['poster_path'];?>
         <div class="game-image">
-
-          <?php if (!empty($item['background_image'])): ?>
+          <?php if (!empty($item['poster_path'])): ?>
 
             <img
-              src="<?= htmlspecialchars($item['background_image']) ?>"
-              alt="<?= htmlspecialchars($item['name']) ?>"
+              src=<?= $poster; ?>
+              alt="<?= htmlspecialchars($item['title']) ?>"
+              width=""
               loading="lazy"
             >
 
@@ -438,25 +440,24 @@
           <div class="game-top">
 
             <div>
-              <span class="game-label">GAME</span>
+              <span class="game-label">MOVIE</span>
 
-              <a href="/games/<?= (int)$item['id'] ?>" class="game-title-link">
+              <a href="/movies/<?= (int)$item['id'] ?>" class="game-title-link">
                 <h2 class="game-title">
-                  <?= htmlspecialchars($item['name']) ?>
+                  <?= htmlspecialchars($item['title']) ?>
                 </h2>
               </a>
             </div>
 
             <span class="game-release">
-                            <?= htmlspecialchars($item['released'] ?? 'TBA') ?>
+                            <?= htmlspecialchars($item['release_date'] ?? 'TBA') ?>
                         </span>
 
           </div>
 
-
           <div class="game-description">
 
-            <?= $item['description'] ?>
+            <?= $item['overview'] ?>
 
           </div>
 
@@ -477,7 +478,7 @@
                             </span>
 
               <strong>
-                <?= htmlspecialchars($item['rating'] ?? 'N/A') ?>
+                <?= htmlspecialchars($item['vote_average'] ?? 'N/A') ?>
               </strong>
 
             </div>
@@ -486,15 +487,14 @@
             <div class="game-meta-item">
 
                             <span class="game-meta-label">
-                                METACRITIC
+                                POPULARITY
                             </span>
 
               <strong>
-                <?= htmlspecialchars($item['metacritic'] ?? 'N/A') ?>
+                <?= htmlspecialchars($item['popularity'] ?? 'N/A') ?>
               </strong>
 
             </div>
-
 
             <div class="game-meta-item">
 
@@ -503,76 +503,48 @@
                             </span>
 
               <span>
-                                <?= implode(
-                                  ", ",
-                                  array_map(
-                                    fn($g) => htmlspecialchars($g['name']),
-                                    $item['genres'] ?? []
-                                  )
-                                ) ?>
-                            </span>
+                <?php foreach($item['genres'] as $genre): ?>
+                <?= htmlspecialchars($genre['name']);?>
+                <?php endforeach;?>
+              </span>
 
             </div>
 
+            <div class="game-meta-item">
+              <span class="game-meta-label">
+                BUDGET
+              </span>
+              <span>
+                <?= number_format($item['budget']);?>
+              </span>
+            </div>
 
             <div class="game-meta-item">
-
-                            <span class="game-meta-label">
-                                PLATFORMS
-                            </span>
-
+              <span class="game-meta-label">
+                PLAYTIME
+              </span>
               <span>
-                                <?= implode(
-                                  ", ",
-                                  array_map(
-                                    fn($p) => htmlspecialchars($p['platform']['name']),
-                                    $item['platforms'] ?? []
-                                  )
-                                ) ?>
-                            </span>
+                <?= number_format($item['runtime']);?>
+              </span>
+            </div>
 
+            <div class="game-meta-item">
+              <span class="game-meta-label">
+                REVENUE
+              </span>
+              <?= number_format($item['revenue']);?>
             </div>
 
           </div>
 
-
-          <?php if (!empty($item['stores'])): ?>
-
-            <div class="game-stores">
-
-                            <span class="game-meta-label">
-                                AVAILABLE AT
-                            </span>
-
-              <div class="game-store-links">
-
-                <?php foreach ($item['stores'] as $store): ?>
-
-                  <a
-                    href="https://<?= htmlspecialchars($store['store']['domain']) ?>"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <?= htmlspecialchars($store['store']['name']) ?>
-                  </a>
-
-                <?php endforeach; ?>
-
-              </div>
-
-            </div>
-
-          <?php endif; ?>
-
           <div class="game-esrb">
 
-                        <span class="game-meta-label">
-                            ESRB
-                        </span>
-
+              <span class="game-meta-label">
+              AGE
+              </span>
             <span>
                             <?= htmlspecialchars(
-                              $item['esrb_rating']['name'] ?? 'Not Rated'
+                              $item['certification'] ?? 'Not Rated'
                             ) ?>
                         </span>
 

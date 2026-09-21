@@ -1,44 +1,50 @@
 <?php
 
-namespace modules\home\models;
+namespace modules\genre\models;
 
 use app\models\RAWG_API;
 
-class Home extends RAWG_API
-{
-  private function fetchAPI($endpoint, $params = [])
-  {
+class Genre extends RAWG_API {
+
+  public array $genres = [
+    'action' => 4,
+    'indie' => 51,
+    'adventure' => 3,
+    'role-playing-games-rpg' => 5,
+    'strategy' => 10,
+    'shooter' => 2,
+    'casual' => 40,
+    'simulation' => 14,
+    'puzzle' => 7,
+    'arcade' => 11,
+    'platformer' => 83,
+    'massively-multiplayer' => 59,
+    'racing' => 1,
+    'sports' => 15,
+    'fighting' => 6,
+    'family' => 19,
+    'board-games' => 28,
+    'card' => 17,
+    'educational' => 34
+  ];
+
+  private function fetchAPI($endpoint, $params = []){
     $params['key'] = $this->apiKey;
-
     $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
-
     $response = file_get_contents($url);
-
-    if (!$response) {
+    if(!$response){
       return null;
     }
-
     return json_decode($response, true);
   }
 
-
-  /*
-  |--------------------------------------------------------------------------
-  | Main Content
-  |--------------------------------------------------------------------------
-  */
-
-  public function getGames(): array
-  {
-    $today = date('Y-m-d');
-    $oneMonthAgo = date('Y-m-d', strtotime('-1 month'));
+  public function getGames($slug):array{
+    $platformId = $this->genres[$slug];
 
     $params = [
-      'page'      => 1,
+      'page' => 1,
       'page_size' => 10,
-      'dates' => '2020-01-01',
-      'metacritic' => '70,100',
-      'ordering' => '-released'
+      'genres' => $platformId
     ];
 
     $data = $this->fetchAPI('games', $params);
@@ -46,12 +52,11 @@ class Home extends RAWG_API
     return $data['results'] ?? [];
   }
 
-
   /*
-  |--------------------------------------------------------------------------
-  | Top 10
-  |--------------------------------------------------------------------------
-  */
+|--------------------------------------------------------------------------
+| Top 10
+|--------------------------------------------------------------------------
+*/
 
   public function getTop10(): array
   {
@@ -89,4 +94,5 @@ class Home extends RAWG_API
 
     return $data['results'] ?? [];
   }
+
 }

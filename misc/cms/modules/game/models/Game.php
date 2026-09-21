@@ -25,8 +25,9 @@ class Game extends RAWG_API {
   {
     $params = [
       'page'      => max(1, (int)$page),
-      'page_size' => 10,
-      'ordering'  => '-rating'
+      'page_size' => 20,
+      'dates' => '2026-07-19,2026-12-30',
+      'ordering'  => '-released'
     ];
 
     return $this->fetchAPI('games', $params);

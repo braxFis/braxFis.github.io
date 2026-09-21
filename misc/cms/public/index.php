@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '/../bootstrap.php'; // ✅ Garanterat rätt path
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 //echo "Requested URI: " . $_SERVER['REQUEST_URI'];
 // index.php (din befintliga)
 //require __DIR__ . '/../core/PluginManager.php';
@@ -240,6 +242,12 @@ $routes = [
           'search' => ['controller' => '\modules\game\controllers\SearchController', 'method' => 'index'],
           'trailers' => ['controller' => '\modules\game\controllers\TrailerController', 'method' => 'index'],
           'games' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'index'],
+          'movies' => ['controller' => '\modules\movie\controllers\MovieController', 'method' => 'index'],
+          'movies/([0-9]+)' => ['controller' => '\modules\movie\controllers\MovieController', 'method' => 'show'],
+          'platform/{slug}' => ['controller' => '\modules\platform\controllers\PlatformController', 'method' => 'index'],
+          'genre/{slug}' => ['controller' => '\modules\genre\controllers\GenreController', 'method' => 'index'],
+          'developer/{slug}' => ['controller' => '\modules\developer\controllers\DeveloperController', 'method' => 'index'],
+          'publisher/{slug}' => ['controller' => '\modules\publisher\controllers\PublisherController', 'method' => 'index'],
           'games/([0-9]+)' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'show'],
           'games/loadMore' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'loadMore'],
           'news/indie/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'indieNews'],
@@ -296,7 +304,11 @@ foreach ($routes['USER'][$method] as $route => $info) {
 }
 
 foreach ($routes['PUBLIC'][$method] as $route => $info) {
-    $pattern = preg_replace('#/a-zA-Z([0-9]+)#', '/([a-zA-Z0-9]+)', $route);
+  $pattern = preg_replace(
+    ['#\{id\}#', '#\{slug\}#'],
+    ['([0-9]+)', '([a-zA-Z0-9\-]+)'],
+    $route
+  );
     if(preg_match("#^$pattern$#", $path, $matches)){
         //var_dump(class_exists('\app\controllers\PostController'));
 //        var_dump(get_included_files());

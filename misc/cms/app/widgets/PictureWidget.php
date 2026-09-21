@@ -2,6 +2,7 @@
 
 namespace app\widgets;
 
+use app\models\MoviePicture;
 use app\models\Picture;
 
 class PictureWidget
@@ -164,6 +165,162 @@ public static function renderImageSideBar($id, $page = 1)
 
     return $html;
   }
+public static function renderMovieImageSideBar($id, $page = 1)
+{
+  $imageModel = new MoviePicture();
+  $screenshots = $imageModel->getMovieScreenshots($id);
+  if (empty($screenshots)) {
+    return "<p class='coma-screenshots-empty'>No screenshots found</p>";
+  }
+
+  $html = "
+        <section class='coma-screenshots'>
+
+            <div class='coma-screenshots-header'>
+
+                <div>
+                    <span class='coma-screenshots-eyebrow'>
+                        GALLERY
+                    </span>
+
+                    <h3 class='coma-screenshots-title'>
+                        Screenshots
+                    </h3>
+                </div>
+
+                <span class='coma-screenshots-count'>
+                    " . count($screenshots) . "
+                </span>
+
+            </div>
+
+
+            <div class='coma-screenshot-grid'>
+        ";
+
+
+  foreach ($screenshots as $index => $shot) {
+
+    $src = htmlspecialchars(
+      $shot['file_path'],
+      ENT_QUOTES,
+      'UTF-8'
+    );
+
+    $number = str_pad(
+      $index + 1,
+      2,
+      '0',
+      STR_PAD_LEFT
+    );
+
+
+    $html .= "
+                <button
+                    type='button'
+                    class='coma-screenshot'
+                    data-image='{$src}'
+                    data-index='{$index}'
+                    aria-label='Open screenshot {$number}'
+                >
+
+                    <img
+                        src='{$src}'
+                        alt='Screenshot {$number}'
+                        loading='lazy'
+                    >
+
+                    <span class='coma-screenshot-overlay'>
+
+                        <span class='coma-screenshot-number'>
+                            {$number}
+                        </span>
+
+                        <span class='coma-screenshot-expand'>
+                            ↗
+                        </span>
+
+                    </span>
+
+                </button>
+            ";
+  }
+
+
+  $html .= "
+            </div>
+
+
+            <button
+                type='button'
+                class='coma-screenshots-load-more load-more'
+                data-page='{$page}'
+            >
+                Visa fler
+            </button>
+
+        </section>
+
+
+        <div
+            class='coma-lightbox'
+            id='comaLightbox'
+            aria-hidden='true'
+        >
+
+            <button
+                type='button'
+                class='coma-lightbox-close'
+                aria-label='Close'
+            >
+                ×
+            </button>
+
+
+            <button
+                type='button'
+                class='coma-lightbox-prev'
+                aria-label='Previous screenshot'
+            >
+                ←
+            </button>
+
+
+            <div class='coma-lightbox-content'>
+
+                <img
+                    class='coma-lightbox-image'
+                    src=''
+                    alt=''
+                >
+
+                <div class='coma-lightbox-counter'>
+                    <span class='coma-lightbox-current'>01</span>
+                    /
+                    <span class='coma-lightbox-total'>
+                        " . count($screenshots) . "
+                    </span>
+                </div>
+
+            </div>
+
+
+            <button
+                type='button'
+                class='coma-lightbox-next'
+                aria-label='Next screenshot'
+            >
+                →
+            </button>
+
+        </div>
+        ";
+
+
+  $html .= self::renderScript();
+
+  return $html;
+}
 public static function renderHomeGallery(array $games)
 {
     $imageModel = new Picture();

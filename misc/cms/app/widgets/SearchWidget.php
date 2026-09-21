@@ -2,14 +2,27 @@
 
 namespace app\widgets;
 
-use modules\game\models\Search;
+class SearchWidget
+{
+  public static function renderSearch()
+  {
+    $q = htmlspecialchars(
+      $_GET['q'] ?? '',
+      ENT_QUOTES,
+      'UTF-8'
+    );
 
-class SearchWidget {
-  public static function renderSearch(){
-    $q = $_GET['q'];
-    return '<form method="get" action="/search">
-                <input type="text" name="q" id="search-query" placeholder="Search for a game..." value="{$q}">
-                <button type="submit">Search</button>
-            </form>';
+    return '
+            <form method="get" action="/search">
+                <input
+                    type="text"
+                    name="q"
+                    id="search-query"
+                    placeholder="Search for a game, movie or song..."
+                    value="' . $q . '"
+                >
+                <!--<button type="submit">Search</button>-->
+            </form>
+        ';
   }
 }
