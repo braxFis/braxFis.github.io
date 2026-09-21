@@ -11829,3 +11829,179 @@ Stack trace:
 [21-Sep-2026 10:11:00 UTC] Test logg
 [21-Sep-2026 10:12:35 UTC] Test logg
 [21-Sep-2026 10:12:45 UTC] Test logg
+[21-Sep-2026 10:21:36 UTC] Test logg
+[21-Sep-2026 10:22:08 UTC] Test logg
+[21-Sep-2026 10:22:15 UTC] Test logg
+[21-Sep-2026 10:22:37 UTC] Test logg
+[21-Sep-2026 10:22:47 UTC] Test logg
+[21-Sep-2026 10:22:53 UTC] Test logg
+[21-Sep-2026 13:01:10 UTC] Test logg
+[21-Sep-2026 13:01:34 UTC] Test logg
+[21-Sep-2026 13:01:44 UTC] Test logg
+[21-Sep-2026 13:01:44 UTC] Test logg
+[21-Sep-2026 13:01:44 UTC] PHP Warning:  file_get_contents(http://api.spotify.com/v1/artists//albums?limit=10&amp;api_key=891feba4d2bc4be6a725134b1c38e4c3): Failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 20
+[21-Sep-2026 13:01:45 UTC] Test logg
+[21-Sep-2026 13:07:38 UTC] Test logg
+[21-Sep-2026 13:07:39 UTC] PHP Warning:  file_get_contents(http://api.spotify.com/v1/artists//albums?limit=10): Failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 31
+[21-Sep-2026 13:07:39 UTC] Test logg
+[21-Sep-2026 13:12:06 UTC] Test logg
+[21-Sep-2026 13:13:36 UTC] Test logg
+[21-Sep-2026 13:14:38 UTC] Test logg
+[21-Sep-2026 13:14:38 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/artists//albums?limit=10): Failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 13:14:38 UTC] Test logg
+[21-Sep-2026 13:22:56 UTC] Test logg
+[21-Sep-2026 13:22:56 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/artists//albums?limit=10): Failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 13:22:56 UTC] Test logg
+[21-Sep-2026 13:24:23 UTC] Test logg
+[21-Sep-2026 13:24:24 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/artists//albums?limit=10): Failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 13:24:24 UTC] Test logg
+[21-Sep-2026 13:24:27 UTC] Test logg
+[21-Sep-2026 13:24:28 UTC] Test logg
+[21-Sep-2026 13:24:29 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/artists//albums?limit=10): Failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 13:24:29 UTC] Test logg
+[21-Sep-2026 13:30:01 UTC] Test logg
+[21-Sep-2026 13:30:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method modules\music\controllers\MusicController::index() in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php:324
+Stack trace:
+#0 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php on line 324
+[21-Sep-2026 13:31:22 UTC] Test logg
+[21-Sep-2026 13:31:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method modules\music\controllers\MusicController::index() in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php:324
+Stack trace:
+#0 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php on line 324
+[21-Sep-2026 13:31:23 UTC] Test logg
+[21-Sep-2026 13:31:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method modules\music\controllers\MusicController::index() in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php:324
+Stack trace:
+#0 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php on line 324
+[21-Sep-2026 13:33:52 UTC] Test logg
+[21-Sep-2026 13:36:19 UTC] Test logg
+[21-Sep-2026 13:36:20 UTC] PHP Warning:  Undefined variable $albums in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/views/index.php on line 421
+[21-Sep-2026 13:36:20 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/views/index.php on line 421
+[21-Sep-2026 13:36:20 UTC] Test logg
+[21-Sep-2026 13:37:27 UTC] Test logg
+[21-Sep-2026 13:37:28 UTC] Test logg
+[21-Sep-2026 13:37:52 UTC] Test logg
+[21-Sep-2026 13:46:16 UTC] Test logg
+[21-Sep-2026 13:46:16 UTC] Test logg
+[21-Sep-2026 13:46:18 UTC] Test logg
+[21-Sep-2026 13:46:42 UTC] Test logg
+[21-Sep-2026 13:47:47 UTC] Test logg
+[21-Sep-2026 13:47:47 UTC] Test logg
+[21-Sep-2026 13:47:49 UTC] Test logg
+[21-Sep-2026 13:47:49 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/albums/6tbjWDEIzxoDsBA1FuhfPW): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 13:49:11 UTC] Test logg
+[21-Sep-2026 13:49:12 UTC] Test logg
+[21-Sep-2026 13:49:13 UTC] Test logg
+[21-Sep-2026 13:53:27 UTC] Test logg
+[21-Sep-2026 13:53:28 UTC] Test logg
+[21-Sep-2026 13:53:32 UTC] Test logg
+[21-Sep-2026 13:53:37 UTC] Test logg
+[21-Sep-2026 19:54:50 UTC] Test logg
+[21-Sep-2026 19:55:29 UTC] Test logg
+[21-Sep-2026 19:55:30 UTC] Test logg
+[21-Sep-2026 19:55:36 UTC] Test logg
+[21-Sep-2026 19:55:37 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/albums/6tbjWDEIzxoDsBA1FuhfPW): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 20:05:06 UTC] Test logg
+[21-Sep-2026 20:05:06 UTC] Test logg
+[21-Sep-2026 20:05:09 UTC] Test logg
+[21-Sep-2026 20:05:09 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/albums/6tbjWDEIzxoDsBA1FuhfPW): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 20:14:09 UTC] Test logg
+[21-Sep-2026 20:14:10 UTC] Test logg
+[21-Sep-2026 20:15:11 UTC] Test logg
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] PHP Warning:  Array to string conversion in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php on line 26
+[21-Sep-2026 20:15:12 UTC] Test logg
+[21-Sep-2026 20:15:37 UTC] Test logg
+[21-Sep-2026 20:15:38 UTC] Test logg
+[21-Sep-2026 20:19:33 UTC] Test logg
+[21-Sep-2026 20:19:34 UTC] Test logg
+[21-Sep-2026 20:19:46 UTC] Test logg
+[21-Sep-2026 20:19:49 UTC] Test logg
+[21-Sep-2026 20:19:52 UTC] Test logg
+[21-Sep-2026 20:19:53 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/albums/2qNrJcE9LjzPdiXbrjkqFa): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 20:24:46 UTC] Test logg
+[21-Sep-2026 20:24:47 UTC] Test logg
+[21-Sep-2026 20:26:09 UTC] Test logg
+[21-Sep-2026 20:26:09 UTC] Test logg
+[21-Sep-2026 20:26:23 UTC] Test logg
+[21-Sep-2026 20:26:52 UTC] Test logg
+[21-Sep-2026 20:27:31 UTC] Test logg
+[21-Sep-2026 20:27:57 UTC] Test logg
+[21-Sep-2026 20:42:39 UTC] Test logg
+[21-Sep-2026 20:42:40 UTC] Test logg
+[21-Sep-2026 20:42:56 UTC] Test logg
+[21-Sep-2026 20:47:46 UTC] Test logg
+[21-Sep-2026 20:47:47 UTC] Test logg
+[21-Sep-2026 20:48:00 UTC] Test logg
+[21-Sep-2026 20:48:00 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/albums/2qNrJcE9LjzPdiXbrjkqFa): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 20:51:23 UTC] Test logg
+[21-Sep-2026 20:51:23 UTC] Test logg
+[21-Sep-2026 20:51:38 UTC] Test logg
+[21-Sep-2026 20:51:38 UTC] Test logg
+[21-Sep-2026 20:51:56 UTC] Test logg
+[21-Sep-2026 20:51:57 UTC] PHP Warning:  file_get_contents(https://api.spotify.com/v1/albums/2qNrJcE9LjzPdiXbrjkqFa): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/models/Music.php on line 35
+[21-Sep-2026 20:53:33 UTC] Test logg
+[21-Sep-2026 20:53:39 UTC] Test logg
+[21-Sep-2026 20:53:39 UTC] Test logg
+[21-Sep-2026 20:53:40 UTC] Test logg
+[21-Sep-2026 20:55:19 UTC] Test logg
+[21-Sep-2026 20:55:21 UTC] Test logg
+[21-Sep-2026 20:55:22 UTC] Test logg
+[21-Sep-2026 20:55:24 UTC] Test logg
+[21-Sep-2026 20:55:39 UTC] Test logg
+[21-Sep-2026 20:58:28 UTC] Test logg
+[21-Sep-2026 21:00:39 UTC] Test logg
+[21-Sep-2026 21:00:54 UTC] Test logg
+[21-Sep-2026 21:01:12 UTC] Test logg
+[21-Sep-2026 21:02:59 UTC] Test logg
+[21-Sep-2026 21:03:49 UTC] Test logg
+[21-Sep-2026 21:04:02 UTC] Test logg
+[21-Sep-2026 21:04:16 UTC] Test logg
+[21-Sep-2026 21:04:38 UTC] Test logg
+[21-Sep-2026 21:07:47 UTC] Test logg
+[21-Sep-2026 21:08:35 UTC] Test logg
+[21-Sep-2026 21:09:24 UTC] Test logg
+[21-Sep-2026 21:09:25 UTC] PHP Warning:  Undefined array key "genres" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/views/single_artist.php on line 577
+[21-Sep-2026 21:09:25 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/views/single_artist.php on line 577
+[21-Sep-2026 21:09:25 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/views/single_artist.php:577
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/controllers/MusicController.php(82): require()
+#1 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(326): modules\music\controllers\MusicController->artist('4NJhFmfw43RLBLj...')
+#2 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/music/views/single_artist.php on line 577
+[21-Sep-2026 21:12:12 UTC] Test logg
+[21-Sep-2026 21:12:52 UTC] Test logg
+[21-Sep-2026 21:13:10 UTC] Test logg
+[21-Sep-2026 21:14:36 UTC] Test logg
+[21-Sep-2026 21:14:40 UTC] Test logg
+[21-Sep-2026 21:14:53 UTC] Test logg
+[21-Sep-2026 21:15:09 UTC] Test logg
+[21-Sep-2026 21:16:15 UTC] Test logg
+[21-Sep-2026 21:16:15 UTC] Test logg
+[21-Sep-2026 21:16:21 UTC] Test logg
+[21-Sep-2026 21:17:13 UTC] Test logg
+[21-Sep-2026 21:17:29 UTC] Test logg
+[21-Sep-2026 21:17:58 UTC] Test logg
+[21-Sep-2026 21:21:17 UTC] Test logg
+[21-Sep-2026 21:21:27 UTC] Test logg

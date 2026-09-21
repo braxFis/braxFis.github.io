@@ -2,8 +2,8 @@
 class JourneyModel
 {
     private $clientId = "AIHg7YkE1D3qDZAdT5Gj8PZ70SEa";
-    private $clientSecret = "chPfiZKgepM7WH1lklGePGO71zYa";
-    private $accessToken = "";
+private $clientSecret = "chPfiZKgepM7WH1lklGePGO71zYa";
+private $accessToken = "";
 
     public function __construct()
     {
