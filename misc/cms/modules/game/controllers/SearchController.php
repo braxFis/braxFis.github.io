@@ -10,6 +10,7 @@ class SearchController
   {
     $results = [];
     $query = trim($_GET['q'] ?? '');
+    $year = (int)($_GET['year'] ?? 0);
 
     if ($query !== '') {
 
@@ -34,6 +35,14 @@ class SearchController
 
       //MOVIES
       $movies = $search->findMovies($query);
+
+      //ALBUMS
+      $albums = $search->findAlbums($query);
+
+      //ALBUM DATE FILTER
+      if($year >= 1900){
+        $albums = $search->findAlbumsByYear($year);
+      }
     }
 
     ob_start();

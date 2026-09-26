@@ -17,7 +17,7 @@ class Music extends SPOTIFY_API
     }
   }
 
-  private function fetchAPI($endpoint, $params = [])
+  public function fetchAPI($endpoint, $params = [])
   {
     $url = $this->baseUrl . $endpoint;
 
@@ -41,18 +41,36 @@ class Music extends SPOTIFY_API
     return json_decode($response, true);
   }
 
-  public function search($query, $type = 'artist')
+  public function search($query, $type = 'artist', $offset = 0)
   {
     return $this->fetchAPI(
       'search',
       [
         'q' => $query,
         'type' => $type,
-        'limit' => 10
+        'limit' => 10,
+        'offset' => $offset
       ]
     );
   }
 
+  public function searchAlbumsByYear($year, $offset = 0)
+  {
+    return $this->search(
+      'year:' . $year,
+      'album',
+      $offset
+    );
+  }
+
+  public function searchNewAlbums($offset = 0)
+  {
+    return $this->search(
+      'tag:new',
+      'album',
+      $offset
+    );
+  }
   public function getArtist($id)
   {
     return $this->fetchAPI(

@@ -58,4 +58,5 @@ class SPOTIFY_API{
 
     return $data['access_token'] ?? null;
   }
+
 }

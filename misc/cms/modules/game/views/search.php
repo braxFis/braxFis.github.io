@@ -1,7 +1,8 @@
+
 <style>
   /* =========================================================
-  SEARCH - MAIN CONTENT
-  ========================================================= */
+     SEARCH - MAIN CONTENT
+     ========================================================= */
 
   #search-section {
     width: 100%;
@@ -9,8 +10,8 @@
 
 
   /* ---------------------------------------------------------
-  HEADER
-  --------------------------------------------------------- */
+     HEADER
+     --------------------------------------------------------- */
 
   .search-main-header {
     display: flex;
@@ -56,8 +57,8 @@
 
 
   /* ---------------------------------------------------------
-  SECTION
-  --------------------------------------------------------- */
+     SECTION
+     --------------------------------------------------------- */
 
   .search-result-section {
     margin-bottom: 45px;
@@ -76,8 +77,8 @@
 
 
   /* ---------------------------------------------------------
-  RESULT LIST
-  --------------------------------------------------------- */
+     RESULT LIST
+     --------------------------------------------------------- */
 
   .search-results {
     display: flex;
@@ -86,8 +87,18 @@
 
 
   /* ---------------------------------------------------------
-  GAME / MOVIE RESULT
-  --------------------------------------------------------- */
+     GAME / MOVIE / MUSIC RESULT
+     --------------------------------------------------------- */
+
+  .search-game,
+  .search-movie,
+  .search-album {
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid #ddd;
+  }
+
 
   .search-game {
     display: grid;
@@ -95,12 +106,8 @@
     grid-template-columns: 210px minmax(0, 1fr);
 
     gap: 22px;
-
-    padding: 0 0 28px;
-    margin-bottom: 28px;
-
-    border-bottom: 1px solid #ddd;
   }
+
 
   .search-movie {
     display: grid;
@@ -108,17 +115,21 @@
     grid-template-columns: 140px minmax(0, 1fr);
 
     gap: 22px;
+  }
 
-    padding: 0 0 28px;
-    margin-bottom: 28px;
 
-    border-bottom: 1px solid #ddd;
+  .search-album {
+    display: grid;
+
+    grid-template-columns: 180px minmax(0, 1fr);
+
+    gap: 22px;
   }
 
 
   /* ---------------------------------------------------------
-  GAME IMAGE
-  --------------------------------------------------------- */
+     GAME IMAGE
+     --------------------------------------------------------- */
 
   .search-game-image {
     display: block;
@@ -152,8 +163,8 @@
 
 
   /* ---------------------------------------------------------
-  MOVIE IMAGE
-  --------------------------------------------------------- */
+     MOVIE IMAGE
+     --------------------------------------------------------- */
 
   .search-movie-image {
     display: block;
@@ -187,21 +198,58 @@
 
 
   /* ---------------------------------------------------------
-  CONTENT
-  --------------------------------------------------------- */
+     ALBUM IMAGE
+     --------------------------------------------------------- */
+
+  .search-album-image {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: #111;
+  }
+
+  .search-album-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+      transform 0.6s ease,
+      filter 0.4s ease;
+  }
+
+  .search-album:hover .search-album-image img {
+    transform: scale(1.05);
+    filter: brightness(0.82);
+  }
+
+
+  /* ---------------------------------------------------------
+     CONTENT
+     --------------------------------------------------------- */
 
   .search-game-content,
-  .search-movie-content {
+  .search-movie-content,
+  .search-album-content {
     min-width: 0;
   }
 
 
   /* ---------------------------------------------------------
-  TOP
-  --------------------------------------------------------- */
+     TOP
+     --------------------------------------------------------- */
 
   .search-game-top,
-  .search-movie-top {
+  .search-movie-top,
+  .search-album-top {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -212,7 +260,8 @@
   }
 
   .search-game-label,
-  .search-movie-label {
+  .search-movie-label,
+  .search-album-label {
     display: block;
 
     margin-bottom: 5px;
@@ -225,7 +274,8 @@
   }
 
   .search-game-title,
-  .search-movie-title {
+  .search-movie-title,
+  .search-album-title {
     margin: 0;
 
     color: #111;
@@ -238,34 +288,26 @@
   }
 
   .search-game-title a,
-  .search-movie-title a {
+  .search-movie-title a,
+  .search-album-title a {
     color: inherit;
     text-decoration: none;
   }
 
   .search-game-title a:hover,
-  .search-movie-title a:hover {
+  .search-movie-title a:hover,
+  .search-album-title a:hover {
     color: #777;
-  }
-
-  .search-game-release,
-  .search-movie-release {
-    flex-shrink: 0;
-
-    color: #777;
-
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1px;
   }
 
 
   /* ---------------------------------------------------------
-  META
-  --------------------------------------------------------- */
+     META
+     --------------------------------------------------------- */
 
   .search-game-meta,
-  .search-movie-meta {
+  .search-movie-meta,
+  .search-album-meta {
     display: flex;
 
     flex-wrap: wrap;
@@ -279,7 +321,8 @@
   }
 
   .search-game-meta-item,
-  .search-movie-meta-item {
+  .search-movie-meta-item,
+  .search-album-meta-item {
     display: flex;
 
     flex-direction: column;
@@ -288,7 +331,8 @@
   }
 
   .search-game-meta-item span,
-  .search-movie-meta-item span {
+  .search-movie-meta-item span,
+  .search-album-meta-item span {
     color: #999;
 
     font-size: 7px;
@@ -298,7 +342,8 @@
   }
 
   .search-game-meta-item strong,
-  .search-movie-meta-item strong {
+  .search-movie-meta-item strong,
+  .search-album-meta-item strong {
     color: #222;
 
     font-size: 12px;
@@ -307,8 +352,8 @@
 
 
   /* ---------------------------------------------------------
-  NO RESULTS
-  --------------------------------------------------------- */
+     NO RESULTS
+     --------------------------------------------------------- */
 
   .search-no-results {
     color: #777;
@@ -319,8 +364,8 @@
 
 
   /* ---------------------------------------------------------
-  MOBILE
-  --------------------------------------------------------- */
+     MOBILE
+     --------------------------------------------------------- */
 
   @media (max-width: 700px) {
 
@@ -333,7 +378,8 @@
     }
 
     .search-game,
-    .search-movie {
+    .search-movie,
+    .search-album {
       grid-template-columns: 1fr;
 
       gap: 15px;
@@ -348,11 +394,17 @@
 
     .search-movie-image {
       width: 180px;
+
       aspect-ratio: 2 / 3;
     }
 
+    .search-album-image {
+      width: 180px;
+    }
+
     .search-game-title,
-    .search-movie-title {
+    .search-movie-title,
+    .search-album-title {
       font-size: 22px;
     }
   }
@@ -362,7 +414,10 @@
 <section id="search-section">
 
   <?php
-  $totalResults = count($results) + count($movies);
+  $totalResults =
+    count($results) +
+    count($movies) +
+    count($albums);
   ?>
 
 
@@ -371,6 +426,7 @@
     <header class="search-main-header">
 
       <div>
+
         <span class="search-main-eyebrow">
           SEARCH
         </span>
@@ -378,6 +434,7 @@
         <h1 class="search-main-title">
           Search Results
         </h1>
+
       </div>
 
       <span class="search-main-count">
@@ -443,7 +500,7 @@
 
                   <?php if (!empty($item['released'])): ?>
 
-                    <span class="search-game-release">
+                    <span>
                       <?= htmlspecialchars($item['released']) ?>
                     </span>
 
@@ -601,7 +658,7 @@
 
                   <?php if (!empty($movie['release_date'])): ?>
 
-                    <span class="search-movie-release">
+                    <span>
                       <?= htmlspecialchars($movie['release_date']) ?>
                     </span>
 
@@ -638,6 +695,186 @@
 
                       <strong>
                         <?= htmlspecialchars($movie['original_title']) ?>
+                      </strong>
+
+                    </div>
+
+                  <?php endif; ?>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          <?php endforeach; ?>
+
+        </div>
+
+      </section>
+
+    <?php endif; ?>
+
+
+    <!-- =====================================================
+    MUSIC
+    ====================================================== -->
+    <form method="get" action="/search" class="search-filter">
+
+      <?php if (!empty($query)): ?>
+        <input
+          type="hidden"
+          name="q"
+          value="<?= htmlspecialchars($query) ?>"
+        >
+      <?php endif; ?>
+
+      <label for="year">
+        Album release year
+      </label>
+
+      <select name="year" id="year">
+
+        <option value="">All years</option>
+
+        <?php for ($yearOption = date('Y'); $yearOption >= 2000; $yearOption--): ?>
+
+          <option
+            value="<?= $yearOption ?>"
+            <?= $year == $yearOption ? 'selected' : '' ?>
+          >
+            <?= $yearOption ?>
+          </option>
+
+        <?php endfor; ?>
+
+      </select>
+
+      <button type="submit">
+        Filter
+      </button>
+
+    </form>
+    <?php if (!empty($albums)): ?>
+
+      <section class="search-result-section">
+
+        <h2 class="search-result-section-title">
+          Music
+        </h2>
+
+        <div class="search-results">
+
+          <?php foreach ($albums as $album): ?>
+
+            <?php
+            $albumId = $album['id'] ?? '';
+            $albumName = $album['name'] ?? '';
+            $albumImage = $album['images'][0]['url'] ?? '';
+
+            $artists = [];
+
+            if (!empty($album['artists'])) {
+              foreach ($album['artists'] as $artist) {
+                if (!empty($artist['name'])) {
+                  $artists[] = $artist['name'];
+                }
+              }
+            }
+
+            $artistNames = implode(', ', $artists);
+            ?>
+
+            <article class="search-album">
+
+              <?php if ($albumImage && $albumId): ?>
+
+                <a
+                  class="search-album-image"
+                  href="/music/album/<?= htmlspecialchars($albumId) ?>"
+                >
+                  <img
+                    src="<?= htmlspecialchars($albumImage) ?>"
+                    alt="<?= htmlspecialchars($albumName) ?>"
+                  >
+                </a>
+
+              <?php endif; ?>
+
+
+              <div class="search-album-content">
+
+                <div class="search-album-top">
+
+                  <div>
+
+                    <span class="search-album-label">
+                      ALBUM
+                    </span>
+
+                    <h2 class="search-album-title">
+
+                      <?php if ($albumId): ?>
+
+                        <a href="/music/album/<?= htmlspecialchars($albumId) ?>">
+                          <?= htmlspecialchars($albumName) ?>
+                        </a>
+
+                      <?php else: ?>
+
+                        <?= htmlspecialchars($albumName) ?>
+
+                      <?php endif; ?>
+
+                    </h2>
+
+                  </div>
+
+                </div>
+
+
+                <div class="search-album-meta">
+
+                  <?php if ($artistNames): ?>
+
+                    <div class="search-album-meta-item">
+
+                      <span>ARTIST</span>
+
+                      <strong>
+                        <?= htmlspecialchars($artistNames) ?>
+                      </strong>
+
+                    </div>
+
+                  <?php endif; ?>
+
+
+                  <?php if (!empty($album['album_type'])): ?>
+
+                    <div class="search-album-meta-item">
+
+                      <span>TYPE</span>
+
+                      <strong>
+                        <?= htmlspecialchars(
+                          ucfirst($album['album_type'])
+                        ) ?>
+                      </strong>
+
+                    </div>
+
+                  <?php endif; ?>
+
+
+                  <?php if (!empty($album['release_date'])): ?>
+
+                    <div class="search-album-meta-item">
+
+                      <span>RELEASED</span>
+
+                      <strong>
+                        <?= htmlspecialchars($album['release_date']) ?>
                       </strong>
 
                     </div>
