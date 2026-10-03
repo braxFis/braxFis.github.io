@@ -407,6 +407,145 @@
     .search-album-title {
       font-size: 22px;
     }
+
+    .search-person {
+      grid-template-columns: 1fr;
+
+      gap: 15px;
+
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+    }
+
+    .search-person-image {
+      width: 180px;
+    }
+
+    .search-person-title {
+      font-size: 22px;
+    }
+  }
+
+  /* ---------------------------------------------------------
+   PEOPLE RESULT
+   --------------------------------------------------------- */
+
+  .search-person {
+    display: grid;
+
+    grid-template-columns: 140px minmax(0, 1fr);
+
+    gap: 22px;
+
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+
+  .search-person-image {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 2 / 3;
+
+    overflow: hidden;
+
+    background: #111;
+  }
+
+
+  .search-person-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+      transform 0.6s ease,
+      filter 0.4s ease;
+  }
+
+
+  .search-person:hover .search-person-image img {
+    transform: scale(1.05);
+    filter: brightness(0.82);
+  }
+
+
+  .search-person-content {
+    min-width: 0;
+  }
+
+
+  .search-person-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #888;
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+
+  .search-person-title {
+    margin: 0;
+
+    color: #111;
+
+    font-size: 24px;
+    line-height: 1.05;
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .search-person-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin-top: 18px;
+    padding-top: 13px;
+
+    border-top: 1px solid #eee;
+  }
+
+
+  .search-person-meta-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+  }
+
+
+  .search-person-meta-item span {
+    color: #999;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .search-person-meta-item strong {
+    color: #222;
+
+    font-size: 12px;
+    font-weight: 700;
   }
 </style>
 
@@ -418,6 +557,7 @@
     count($results) +
     count($movies) +
     count($albums);
+    count($people);
   ?>
 
 
@@ -926,3 +1066,103 @@
   <?php endif; ?>
 
 </section>
+
+<!-- =====================================================
+PEOPLE
+====================================================== -->
+
+<?php if (!empty($people)): ?>
+
+  <section class="search-result-section">
+
+    <h2 class="search-result-section-title">
+      People
+    </h2>
+
+    <div class="search-results">
+
+      <?php foreach ($people as $person): ?>
+
+        <?php
+        $personName = $person['name'] ?? '';
+        $personImage = !empty($person['profile_path'])
+          ? 'https://image.tmdb.org/t/p/w500' . $person['profile_path']
+          : '';
+
+        $knownFor = [];
+
+        if (!empty($person['known_for'])) {
+          foreach ($person['known_for'] as $known) {
+
+            $title =
+              $known['title']
+              ?? $known['name']
+              ?? '';
+
+            if ($title) {
+              $knownFor[] = $title;
+            }
+          }
+        }
+        ?>
+
+        <article class="search-person">
+
+          <?php if ($personImage): ?>
+
+            <div class="search-person-image">
+
+              <img
+                src="<?= htmlspecialchars($personImage) ?>"
+                alt="<?= htmlspecialchars($personName) ?>"
+              >
+
+            </div>
+
+          <?php endif; ?>
+
+
+          <div class="search-person-content">
+
+            <span class="search-person-label">
+              PERSON
+            </span>
+
+            <a
+              href="/people/<?= (int)$person['id'] ?>"
+              class="search-person-title"
+            >
+              <?= htmlspecialchars($personName) ?>
+            </a>
+
+            <?php if (!empty($knownFor)): ?>
+
+              <div class="search-person-meta">
+
+                <div class="search-person-meta-item">
+
+                  <span>KNOWN FOR</span>
+
+                  <strong>
+                    <?= htmlspecialchars(
+                      implode(', ', array_slice($knownFor, 0, 4))
+                    ) ?>
+                  </strong>
+
+                </div>
+
+              </div>
+
+            <?php endif; ?>
+
+          </div>
+
+        </article>
+
+      <?php endforeach; ?>
+
+    </div>
+
+  </section>
+
+<?php endif; ?>

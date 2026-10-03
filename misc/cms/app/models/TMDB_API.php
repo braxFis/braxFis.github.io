@@ -2,8 +2,6 @@
 
 namespace app\models;
 
-use Database;
-
 require_once __DIR__ . '/../../bootstrap.php';
 
 class TMDB_API{
@@ -24,6 +22,30 @@ class TMDB_API{
     ];
 
     $url = $this->baseUrl . "search/movie?" . http_build_query($params);
+
+    $response = @file_get_contents($url);
+
+    if (!$response) {
+      return [];
+    }
+
+    $data = json_decode($response, true);
+
+    return $data['results'] ?? [];
+  }
+
+  public function searchPeople(string $query): array
+  {
+    if (empty(trim($query))) {
+      return [];
+    }
+
+    $params = [
+      'api_key' => $this->apiKey,
+      'query'   => trim($query)
+    ];
+
+    $url = $this->baseUrl . "search/person?" . http_build_query($params);
 
     $response = @file_get_contents($url);
 

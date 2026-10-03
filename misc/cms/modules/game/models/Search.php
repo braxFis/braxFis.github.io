@@ -90,4 +90,11 @@ class Search extends RAWG_API
 
     return $albums;
   }
+
+  public function findPeople(string $query): array
+  {
+    $tmdb = new TMDB_API();
+
+    return $tmdb->searchPeople($query);
+  }
 }

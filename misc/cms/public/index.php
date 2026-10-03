@@ -246,6 +246,8 @@ $routes = [
           'movies/([0-9]+)' => ['controller' => '\modules\movie\controllers\MovieController', 'method' => 'show'],
           'music' => ['controller' => '\modules\music\controllers\MusicController', 'method' => 'index'],
           'artists' => ['controller' => '\modules\music\controllers\MusicController', 'method' => 'indexArtists'],
+          'people' => ['controller' => '\modules\people\controllers\PeopleController', 'method' => 'index'],
+          'people/([0-9]+)' => ['controller' => '\modules\people\controllers\PeopleController', 'method' => 'show'],
           'music/([^/]+)/albums' => ['controller' => '\modules\music\controllers\MusicController', 'method' => 'album'],
           'music/album/([^/]+)' => ['controller' => '\modules\music\controllers\MusicController', 'method' => 'show'],
           'music/artist/([^/]+)' => ['controller' => '\modules\music\controllers\MusicController', 'method' => 'artist'],

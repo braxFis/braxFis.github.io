@@ -12,9 +12,18 @@ class SearchController
     $query = trim($_GET['q'] ?? '');
     $year = (int)($_GET['year'] ?? 0);
 
+    $movies = [];
+    $albums = [];
+    $people = [];
+
     if ($query !== '') {
 
       $search = new Search();
+
+      // =====================================================
+      // GAMES
+      // =====================================================
+
       $games = $search->findGames($query);
 
       foreach ($games as $game) {
@@ -33,21 +42,46 @@ class SearchController
         ];
       }
 
-      //MOVIES
+
+      // =====================================================
+      // MOVIES
+      // =====================================================
+
       $movies = $search->findMovies($query);
 
-      //ALBUMS
+
+      // =====================================================
+      // ALBUMS
+      // =====================================================
+
       $albums = $search->findAlbums($query);
 
-      //ALBUM DATE FILTER
-      if($year >= 1900){
+
+      // =====================================================
+      // ALBUM DATE FILTER
+      // =====================================================
+
+      if ($year >= 1900) {
         $albums = $search->findAlbumsByYear($year);
       }
+
+
+      // =====================================================
+      // PEOPLE
+      // =====================================================
+
+      $people = $search->findPeople($query);
     }
+
+
+    // =====================================================
+    // VIEW
+    // =====================================================
 
     ob_start();
     require __DIR__ . '/../views/search.php';
     $content = ob_get_clean();
+
     require __DIR__ . '/../../../app/views/layout.php';
   }
 }
