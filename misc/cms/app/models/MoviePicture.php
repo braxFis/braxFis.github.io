@@ -8,10 +8,9 @@ use app\models\TMDB_API;
 require_once __DIR__ . '/../../bootstrap.php';
 
 class MoviePicture extends TMDB_API {
-    private $db;
 
     public function __construct(){
-        $this->db = new \Database;
+
     }
 
     private function fetchAPI($endpoint, $params = []) {

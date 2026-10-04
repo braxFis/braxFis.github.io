@@ -7,9 +7,7 @@ use Database;
 require_once __DIR__ . '/../../bootstrap.php';
 
 class MovieTrailer extends TMDB_API {
-    private $db;
     public function __construct(){
-        $this->db = new \Database;
     }
 
     private function fetchAPI($endpoint, $params = []) {
