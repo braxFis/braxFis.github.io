@@ -311,6 +311,105 @@ font-size: 22px;
 }
 
 }
+
+.coma-carousel {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.coma-carousel-window {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.coma-carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+.coma-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.coma-carousel-item {
+  position: relative;
+
+  flex: 0 0 340px;
+
+  width: 340px;
+  height: 190px;
+
+  padding: 0;
+  border: 0;
+
+  overflow: hidden;
+
+  background: #111;
+  cursor: pointer;
+}
+
+.coma-carousel-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.coma-carousel-button {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  color: inherit;
+
+  font-size: 24px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.coma-carousel-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+@media (max-width: 900px) {
+
+  .coma-carousel-item {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .coma-carousel {
+    gap: 10px;
+  }
+
+  .coma-carousel-button {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .coma-carousel-item {
+    flex-basis: 100%;
+  }
+
+}
 </style>
 <div class="container home-page">
 
@@ -545,7 +644,7 @@ font-size: 22px;
     <div class="latest-videos">
       <?php
       use app\widgets\TrailerWidget;
-      echo (new TrailerWidget)::renderHomeTrailers($games);
+      echo (new TrailerWidget)::renderHomeTrailers($trailerGames);
       ?>
     </div>
 <script>

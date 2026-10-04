@@ -43,61 +43,162 @@ background: #555;
     grid-template-columns: 1fr;
   }
 }
+.footer-column h1 {
+  margin-top: 0;
+}
 
+.footer-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  margin-top: 30px;
+}
 </style>
 <a href="#" class="to-top" id="toTop">
     <i class="fas fa-chevron-up"></i>
 </a>
 <?php
+
 use modules\genre\models\Genre;
 use modules\platform\models\Platform;
 use modules\developer\models\Developer;
 use modules\publisher\models\Publisher;
+
 $genreModel = new Genre();
 $platformModel = new Platform();
 $developerModel = new Developer();
 $publisherModel = new Publisher();
+
 $genres = $genreModel->genres;
 $platforms = $platformModel->platforms;
 $developers = $developerModel->developers;
 $publishers = $publisherModel->publishers;
-?>
-<footer class="main-footer">
-    <div class="genres">
-      <h1>GENRES</h1>
-      <ul>
-        <?php foreach ($genres as $key => $val):?>
-          <li><a href="/genre/<?= $key;?>"><?= strtoupper($key);?></a></li>
-        <?php endforeach;?>
-      </ul>
-    </div>
-    <div class="platforms">
-      <h1>PLATFORMS</h1>
-      <ul>
-        <?php foreach ($platforms as $key => $val):?>
-        <li><a href="/platform/<?= $key;?>"><?= strtoupper($key);?></a></li>
-        <?php endforeach;?>
-      </ul>
-    </div>
-    <div class="publishers">
-      <ul>
-        <h1>PUBLISHERS</h1>
-        <?php foreach ($publishers as $key => $val):?>
-          <li><a href="/publisher/<?= $key;?>"><?= strtoupper($key);?></a></li>
-        <?php endforeach;?>
-      </ul>
-    </div>
-    <div class="developers">
-      <h1>DEVELOPERS</h1>
-      <ul>
-        <?php foreach ($developers as $key => $val):?>
-          <li><a href="/developer/<?= $key;?>"><?= strtoupper($key);?></a></li>
-        <?php endforeach;?>
-      </ul>
-    </div>
-    <p>&copy; <?= date('Y') ?> - OWL Project - All Rights Reserved</p>
-</footer>
 
+?>
+
+<footer class="main-footer">
+
+  <!-- EXPLORE -->
+
+  <div class="footer-column">
+
+    <h1>EXPLORE</h1>
+
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/games">GAMES</a></li>
+      <li><a href="/movies">MOVIES</a></li>
+      <li><a href="/music">MUSIC</a></li>
+      <li><a href="/people">PEOPLE</a></li>
+      <li><a href="/news">NEWS</a></li>
+      <li><a href="/reviews">REVIEWS</a></li>
+      <li><a href="/features">FEATURES</a></li>
+    </ul>
+
+  </div>
+
+
+  <!-- GAMES -->
+
+  <div class="footer-column">
+
+    <h1>GAMES</h1>
+
+    <ul>
+
+      <li>
+        <a href="/games">ALL GAMES</a>
+      </li>
+
+      <li>
+        <a href="/genre">GENRES</a>
+      </li>
+
+      <li>
+        <a href="/platform">PLATFORMS</a>
+      </li>
+
+      <li>
+        <a href="/developer">DEVELOPERS</a>
+      </li>
+
+      <li>
+        <a href="/publisher">PUBLISHERS</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <!-- MOVIES -->
+
+  <div class="footer-column">
+
+    <h1>MOVIES</h1>
+
+    <ul>
+
+      <li>
+        <a href="/movies">ALL MOVIES</a>
+      </li>
+
+      <li>
+        <a href="/people">PEOPLE</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <!-- MUSIC -->
+
+  <div class="footer-column">
+
+    <h1>MUSIC</h1>
+
+    <ul>
+
+      <li>
+        <a href="/music">MUSIC</a>
+      </li>
+
+      <li>
+        <a href="/artists">ARTISTS</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; <?= date('Y') ?> - COMA NEWS - All Rights Reserved
+    </p>
+
+  </div>
+
+</footer>
 <script>
     const toTop = document.getElementById('toTop');
 

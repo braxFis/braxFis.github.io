@@ -7,11 +7,9 @@ use Database;
 require_once __DIR__ . '/../../bootstrap.php';
 
 class Trailer extends RAWG_API{
-    private $db;
     public $tmdb;
 
     public function __construct(){
-        $this->db = new \Database;
     }
 
     private function fetchAPI($endpoint, $params = []) {

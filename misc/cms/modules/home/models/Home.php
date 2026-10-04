@@ -35,10 +35,9 @@ class Home extends RAWG_API
 
     $params = [
       'page'      => 1,
-      'page_size' => 10,
-      'dates' => '2020-01-01',
-      'metacritic' => '70,100',
-      'ordering' => '-released'
+      'page_size' => 20,
+      'dates'     => $oneMonthAgo . ',' . $today,
+      'ordering'  => '-released'
     ];
 
     $data = $this->fetchAPI('games', $params);
@@ -46,7 +45,47 @@ class Home extends RAWG_API
     return $data['results'] ?? [];
   }
 
+  /*
+|--------------------------------------------------------------------------
+| Trailer Games
+|--------------------------------------------------------------------------
+*/
 
+  public function getTrailerGames(): array
+  {
+    $params = [
+      'page'      => 1,
+      'page_size' => 30,
+      'ordering'  => '-added'
+    ];
+
+    $data = $this->fetchAPI('games', $params);
+
+    $games = $data['results'] ?? [];
+    $trailerGames = [];
+
+    foreach ($games as $game) {
+
+      if (empty($game['id'])) {
+        continue;
+      }
+
+      $trailerData = $this->fetchAPI(
+        "games/{$game['id']}/movies"
+      );
+      if (empty($trailerData['results'])) {
+        continue;
+      }
+
+      $trailerGames[] = $game;
+
+      if (count($trailerGames) >= 6) {
+        break;
+      }
+    }
+
+    return $trailerGames;
+  }
   /*
   |--------------------------------------------------------------------------
   | Top 10
@@ -89,4 +128,5 @@ class Home extends RAWG_API
 
     return $data['results'] ?? [];
   }
+
 }

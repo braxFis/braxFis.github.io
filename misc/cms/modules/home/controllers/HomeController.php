@@ -18,6 +18,8 @@ class HomeController
   {
     $games = $this->model->getGames();
 
+    $trailerGames = $this->model->getTrailerGames();
+
     $top10 = $this->model->getTop10();
 
     $upcoming = $this->model->getUpcoming();

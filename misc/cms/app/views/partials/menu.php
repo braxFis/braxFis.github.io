@@ -1667,14 +1667,53 @@
       }
 
     }
+
+    .coma-menu-overlay.active .coma-menu-link:nth-child(7) {
+      animation-delay: 0.44s;
+    }
+
+    .coma-menu-overlay.active .coma-menu-link:nth-child(8) {
+      animation-delay: 0.50s;
+    }
+
+    .coma-logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .coma-logo img {
+        width: 140px;
+      }
+    }
+    .coma-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    body {
+      padding-top: 80px;
+    }
+    .coma-search {
+      width: 230px;
+      transition: width 0.3s ease;
+    }
+
+    .coma-search:focus-within {
+      width: 380px;
+    }
 </style>
   <header class="coma-header">
 
     <a href="/" class="coma-logo">
-      COMA<span>NEWS</span>
+      <img src="/img/coma_logo.png"/>
     </a>
 
-    <?= \app\widgets\SearchWidget::renderSearch() ?>
+    <div class="coma-search">
+      <?= \app\widgets\SearchWidget::renderSearch() ?>
+    </div>
 
     <button type="button" class="coma-menu-toggle" id="comaMenuToggle">
       <span class="coma-menu-label">MENU</span>
@@ -1721,43 +1760,49 @@
             <span class="coma-menu-arrow">↗</span>
           </a>
 
-
           <a href="/games" class="coma-menu-link">
             <span class="coma-menu-number">02</span>
             <span class="coma-menu-title">GAMES</span>
             <span class="coma-menu-arrow">↗</span>
           </a>
 
+          <a href="/movies" class="coma-menu-link">
+            <span class="coma-menu-number">03</span>
+            <span class="coma-menu-title">MOVIES</span>
+            <span class="coma-menu-arrow">↗</span>
+          </a>
+
+          <a href="/music" class="coma-menu-link">
+            <span class="coma-menu-number">04</span>
+            <span class="coma-menu-title">MUSIC</span>
+            <span class="coma-menu-arrow">↗</span>
+          </a>
+
+          <a href="/people" class="coma-menu-link">
+            <span class="coma-menu-number">05</span>
+            <span class="coma-menu-title">PEOPLE</span>
+            <span class="coma-menu-arrow">↗</span>
+          </a>
 
           <a href="/news" class="coma-menu-link">
-            <span class="coma-menu-number">03</span>
+            <span class="coma-menu-number">06</span>
             <span class="coma-menu-title">NEWS</span>
             <span class="coma-menu-arrow">↗</span>
           </a>
 
-
           <a href="/reviews" class="coma-menu-link">
-            <span class="coma-menu-number">04</span>
+            <span class="coma-menu-number">07</span>
             <span class="coma-menu-title">REVIEWS</span>
             <span class="coma-menu-arrow">↗</span>
           </a>
 
-
-          <a href="/previews" class="coma-menu-link">
-            <span class="coma-menu-number">05</span>
-            <span class="coma-menu-title">PREVIEWS</span>
-            <span class="coma-menu-arrow">↗</span>
-          </a>
-
-
           <a href="/features" class="coma-menu-link">
-            <span class="coma-menu-number">06</span>
+            <span class="coma-menu-number">08</span>
             <span class="coma-menu-title">FEATURES</span>
             <span class="coma-menu-arrow">↗</span>
           </a>
 
         </nav>
-
       </div>
 
 
@@ -1772,7 +1817,7 @@
 
           <div class="coma-featured-image">
             <img
-              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80"
+              src=""
               alt="Featured game"
             >
           </div>
