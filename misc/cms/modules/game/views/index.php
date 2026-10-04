@@ -1,14 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>Games</title>
+
   <link rel="stylesheet" href="/misc/css/style.css">
+
   <style>
-      /* =========================================================
-         COMA NEWS - GAMES PAGE
-         ========================================================= */
+    /* =========================================================
+       COMA NEWS - GAMES PAGE
+       ========================================================= */
 
     .games-page {
       width: min(1100px, 92%);
@@ -208,6 +211,7 @@
     .game-meta {
       display: flex;
       flex-wrap: wrap;
+      align-items: flex-start;
       gap: 25px;
 
       margin-top: 25px;
@@ -254,15 +258,16 @@
        --------------------------------------------------------- */
 
     .game-stores {
-      margin-top: 20px;
+      max-width: none;
     }
 
     .game-store-links {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 8px;
 
-      margin-top: 8px;
+      margin-top: 5px;
     }
 
     .game-store-links a {
@@ -295,14 +300,7 @@
        --------------------------------------------------------- */
 
     .game-esrb {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      margin-top: 18px;
-
-      color: #444;
-      font-size: 11px;
+      min-width: 100px;
     }
 
 
@@ -369,6 +367,7 @@
       .game {
         grid-template-columns: 1fr;
         gap: 18px;
+
         padding-bottom: 30px;
         margin-bottom: 30px;
       }
@@ -398,6 +397,10 @@
         gap: 18px;
       }
 
+      .game-meta-item {
+        max-width: 100%;
+      }
+
     }
 
   </style>
@@ -408,9 +411,17 @@
 <div class="games-page">
 
   <div class="games-header">
-    <span class="games-eyebrow">COMA NEWS</span>
-    <h1>Games</h1>
+
+    <span class="games-eyebrow">
+      COMA NEWS
+    </span>
+
+    <h1>
+      Games
+    </h1>
+
   </div>
+
 
   <div id="game-container">
 
@@ -418,13 +429,26 @@
 
       <article class="game">
 
+
+        <!-- =================================================
+             IMAGE
+             ================================================= -->
+
         <div class="game-image">
 
           <?php if (!empty($item['background_image'])): ?>
 
             <img
-              src="<?= htmlspecialchars($item['background_image']) ?>"
-              alt="<?= htmlspecialchars($item['name']) ?>"
+              src="<?= htmlspecialchars(
+                $item['background_image'],
+                ENT_QUOTES,
+                'UTF-8'
+              ) ?>"
+              alt="<?= htmlspecialchars(
+                $item['name'] ?? 'Game',
+                ENT_QUOTES,
+                'UTF-8'
+              ) ?>"
               loading="lazy"
             >
 
@@ -433,32 +457,66 @@
         </div>
 
 
+        <!-- =================================================
+             CONTENT
+             ================================================= -->
+
         <div class="game-content">
+
+
+          <!-- =================================================
+               TOP
+               ================================================= -->
 
           <div class="game-top">
 
             <div>
-              <span class="game-label">GAME</span>
 
-              <a href="/games/<?= (int)$item['id'] ?>" class="game-title-link">
+              <span class="game-label">
+                GAME
+              </span>
+
+              <a
+                href="/games/<?= (int)($item['id'] ?? 0) ?>"
+                class="game-title-link"
+              >
+
                 <h2 class="game-title">
-                  <?= htmlspecialchars($item['name']) ?>
+                  <?= htmlspecialchars(
+                    $item['name'] ?? 'Unknown Game',
+                    ENT_QUOTES,
+                    'UTF-8'
+                  ) ?>
                 </h2>
+
               </a>
+
             </div>
 
+
             <span class="game-release">
-                            <?= htmlspecialchars($item['released'] ?? 'TBA') ?>
-                        </span>
+
+              <?= htmlspecialchars(
+                $item['released'] ?? 'TBA',
+                ENT_QUOTES,
+                'UTF-8'
+              ) ?>
+
+            </span>
 
           </div>
 
+
+          <!-- =================================================
+               DESCRIPTION
+               ================================================= -->
 
           <div class="game-description">
 
-            <?= $item['description'] ?>
+            <?= $item['description'] ?? 'No description available.' ?>
 
           </div>
+
 
           <button
             type="button"
@@ -468,113 +526,178 @@
           </button>
 
 
+          <!-- =================================================
+               META
+               ================================================= -->
+
           <div class="game-meta">
 
+
+            <!-- RATING -->
+
             <div class="game-meta-item">
 
-                            <span class="game-meta-label">
-                                RATING
-                            </span>
+              <span class="game-meta-label">
+                RATING
+              </span>
 
               <strong>
-                <?= htmlspecialchars($item['rating'] ?? 'N/A') ?>
+                <?= htmlspecialchars(
+                  $item['rating'] ?? 'N/A',
+                  ENT_QUOTES,
+                  'UTF-8'
+                ) ?>
               </strong>
 
             </div>
 
 
+            <!-- METACRITIC -->
+
             <div class="game-meta-item">
 
-                            <span class="game-meta-label">
-                                METACRITIC
-                            </span>
+              <span class="game-meta-label">
+                METACRITIC
+              </span>
 
               <strong>
-                <?= htmlspecialchars($item['metacritic'] ?? 'N/A') ?>
+                <?= htmlspecialchars(
+                  $item['metacritic'] ?? 'N/A',
+                  ENT_QUOTES,
+                  'UTF-8'
+                ) ?>
               </strong>
 
             </div>
 
 
+            <!-- GENRE -->
+
             <div class="game-meta-item">
 
-                            <span class="game-meta-label">
-                                GENRE
-                            </span>
+              <span class="game-meta-label">
+                GENRE
+              </span>
 
               <span>
-                                <?= implode(
-                                  ", ",
-                                  array_map(
-                                    fn($g) => htmlspecialchars($g['name']),
-                                    $item['genres'] ?? []
-                                  )
-                                ) ?>
-                            </span>
+
+                <?= implode(
+                  ", ",
+                  array_map(
+                    fn($g) => htmlspecialchars(
+                      $g['name'] ?? 'Unknown',
+                      ENT_QUOTES,
+                      'UTF-8'
+                    ),
+                    $item['genres'] ?? []
+                  )
+                ) ?>
+
+              </span>
 
             </div>
 
 
+            <!-- PLATFORMS -->
+
             <div class="game-meta-item">
 
-                            <span class="game-meta-label">
-                                PLATFORMS
-                            </span>
+              <span class="game-meta-label">
+                PLATFORMS
+              </span>
 
               <span>
-                                <?= implode(
-                                  ", ",
-                                  array_map(
-                                    fn($p) => htmlspecialchars($p['platform']['name']),
-                                    $item['platforms'] ?? []
-                                  )
-                                ) ?>
-                            </span>
+
+                <?= implode(
+                  ", ",
+                  array_map(
+                    fn($p) => htmlspecialchars(
+                      $p['platform']['name'] ?? 'Unknown',
+                      ENT_QUOTES,
+                      'UTF-8'
+                    ),
+                    $item['platforms'] ?? []
+                  )
+                ) ?>
+
+              </span>
 
             </div>
 
-          </div>
 
+            <!-- AVAILABLE AT -->
 
-          <?php if (!empty($item['stores'])): ?>
+            <?php if (!empty($item['stores'])): ?>
 
-            <div class="game-stores">
+              <div class="game-meta-item game-stores">
 
-                            <span class="game-meta-label">
-                                AVAILABLE AT
-                            </span>
+                <span class="game-meta-label">
+                  AVAILABLE AT
+                </span>
 
-              <div class="game-store-links">
+                <div class="game-store-links">
 
-                <?php foreach ($item['stores'] as $store): ?>
+                  <?php foreach ($item['stores'] as $store): ?>
 
-                  <a
-                    href="https://<?= htmlspecialchars($store['store']['domain']) ?>"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <?= htmlspecialchars($store['store']['name']) ?>
-                  </a>
+                    <?php
 
-                <?php endforeach; ?>
+                    $domain =
+                      $store['store']['domain'] ?? '';
+
+                    $storeName =
+                      $store['store']['name'] ?? '';
+
+                    ?>
+
+                    <?php if ($domain !== '' && $storeName !== ''): ?>
+
+                      <a
+                        href="https://<?= htmlspecialchars(
+                          $domain,
+                          ENT_QUOTES,
+                          'UTF-8'
+                        ) ?>"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <?= htmlspecialchars(
+                          $storeName,
+                          ENT_QUOTES,
+                          'UTF-8'
+                        ) ?>
+                      </a>
+
+                    <?php endif; ?>
+
+                  <?php endforeach; ?>
+
+                </div>
 
               </div>
 
+            <?php endif; ?>
+
+
+            <!-- ESRB -->
+
+            <div class="game-meta-item game-esrb">
+
+              <span class="game-meta-label">
+                ESRB
+              </span>
+
+              <span>
+
+                <?= htmlspecialchars(
+                  $item['esrb_rating']['name'] ?? 'Not Rated',
+                  ENT_QUOTES,
+                  'UTF-8'
+                ) ?>
+
+              </span>
+
             </div>
 
-          <?php endif; ?>
-
-          <div class="game-esrb">
-
-                        <span class="game-meta-label">
-                            ESRB
-                        </span>
-
-            <span>
-                            <?= htmlspecialchars(
-                              $item['esrb_rating']['name'] ?? 'Not Rated'
-                            ) ?>
-                        </span>
 
           </div>
 
@@ -586,6 +709,10 @@
 
   </div>
 
+
+  <!-- =======================================================
+       LOAD MORE
+       ======================================================= -->
 
   <div class="games-load-more">
 
@@ -606,9 +733,10 @@
 
   document.addEventListener("DOMContentLoaded", () => {
 
-    /*
-     * READ MORE
-     */
+
+    /* =======================================================
+       READ MORE
+       ======================================================= */
 
     document.addEventListener("click", (event) => {
 
@@ -617,10 +745,13 @@
       }
 
       const button = event.target;
+
       const description =
         button.previousElementSibling;
 
+
       description.classList.toggle("expanded");
+
 
       if (description.classList.contains("expanded")) {
 
@@ -635,9 +766,9 @@
     });
 
 
-    /*
-     * LOAD MORE
-     */
+    /* =======================================================
+       LOAD MORE
+       ======================================================= */
 
     const btn =
       document.getElementById("loadMoreBtn");
@@ -654,7 +785,7 @@
     btn.addEventListener("click", async () => {
 
       const currentPage =
-        parseInt(btn.dataset.page);
+        parseInt(btn.dataset.page, 10);
 
       const nextPage =
         currentPage + 1;
@@ -680,18 +811,23 @@
         if (!games || games.length === 0) {
 
           btn.disabled = true;
-          btn.textContent = "No more games";
+
+          btn.textContent =
+            "No more games";
 
           return;
+
         }
 
 
         games.forEach(game => {
 
+
           const block =
             document.createElement("article");
 
-          block.className = "game";
+          block.className =
+            "game";
 
 
           const description =
@@ -700,93 +836,99 @@
 
           block.innerHTML = `
 
-                    <div class="game-image">
+            <div class="game-image">
 
-                        ${
+              ${
             game.background_image
               ?
               `
-                            <img
-                                src="${game.background_image}"
-                                alt="${game.name}"
-                                loading="lazy"
-                            >
-                            `
+                    <img
+                      src="${game.background_image}"
+                      alt="${game.name || "Game"}"
+                      loading="lazy"
+                    >
+                  `
               :
               ""
           }
 
-                    </div>
+            </div>
 
 
-                    <div class="game-content">
-
-                        <div class="game-top">
-
-                            <div>
-
-                                <span class="game-label">
-                                    GAME
-                                </span>
-
-                                <h2 class="game-title">
-                                    ${game.name}
-                                </h2>
-
-                            </div>
-
-                            <span class="game-release">
-                                ${game.released || "TBA"}
-                            </span>
-
-                        </div>
+            <div class="game-content">
 
 
-                        <div class="game-description">
+              <div class="game-top">
 
-                            ${description}
+                <div>
 
-                        </div>
+                  <span class="game-label">
+                    GAME
+                  </span>
 
-                        <button
-                            type="button"
-                            class="game-read-more"
-                        >
-                            Read More
-                        </button>
+                  <h2 class="game-title">
+                    ${game.name || "Unknown Game"}
+                  </h2>
 
-
-                        <div class="game-meta">
-
-                            <div class="game-meta-item">
-
-                                <span class="game-meta-label">
-                                    RATING
-                                </span>
-
-                                <strong>
-                                    ${game.rating || "N/A"}
-                                </strong>
-
-                            </div>
+                </div>
 
 
-                            <div class="game-meta-item">
+                <span class="game-release">
+                  ${game.released || "TBA"}
+                </span>
 
-                                <span class="game-meta-label">
-                                    METACRITIC
-                                </span>
+              </div>
 
-                                <strong>
-                                    ${game.metacritic || "N/A"}
-                                </strong>
 
-                            </div>
+              <div class="game-description">
 
-                        </div>
+                ${description}
 
-                    </div>
-                `;
+              </div>
+
+
+              <button
+                type="button"
+                class="game-read-more"
+              >
+                Read More
+              </button>
+
+
+              <div class="game-meta">
+
+
+                <div class="game-meta-item">
+
+                  <span class="game-meta-label">
+                    RATING
+                  </span>
+
+                  <strong>
+                    ${game.rating ?? "N/A"}
+                  </strong>
+
+                </div>
+
+
+                <div class="game-meta-item">
+
+                  <span class="game-meta-label">
+                    METACRITIC
+                  </span>
+
+                  <strong>
+                    ${game.metacritic ?? "N/A"}
+                  </strong>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+          `;
 
 
           container.appendChild(block);
@@ -796,6 +938,7 @@
 
         btn.dataset.page =
           nextPage;
+
 
       } catch (error) {
 

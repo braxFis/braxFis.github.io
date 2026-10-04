@@ -32,18 +32,52 @@ class GameController
 
     require __DIR__ . '/../../../app/views/layout.php';
   }
+
   /*
    * Games page
    */
   public function index($page = 1): array
   {
+    /*
+     * Main games
+     */
     $data = $this->model->getGames($page);
 
     $games = [];
 
-    $model = new Gallery();
-    $images = $model->getGallery();
+    $trailerGames = $this->model->getTrailerGames();
 
+    /*
+     * Gallery Rotator
+     */
+    $galleryItems = [];
+
+    foreach ($data['results'] as $item) {
+
+      if (
+        empty($item['id']) ||
+        empty($item['background_image'])
+      ) {
+        continue;
+      }
+
+      $galleryItems[] = [
+        'id'       => (int) $item['id'],
+        'image'    => $item['background_image'],
+        'title'    => $item['name'] ?? 'Unknown Game',
+        'subtitle' => 'Featured Game',
+        'url'      => '/games/' . (int) $item['id']
+      ];
+
+      if (count($galleryItems) >= 6) {
+        break;
+      }
+    }
+
+
+    /*
+     * Prepare games
+     */
     foreach ($data['results'] as $item) {
 
       $id = $item['id'];
@@ -61,18 +95,24 @@ class GameController
     }
 
 
+    /*
+     * Render view
+     */
     ob_start();
 
     require __DIR__ . "/../views/index.php";
 
     $content = ob_get_clean();
 
+
+    /*
+     * Render global layout
+     */
     require __DIR__ . "/../../../app/views/layout.php";
 
 
     return $games;
   }
-
 
   /*
    * Load more games

@@ -1,48 +1,55 @@
 <?php include __DIR__ . '/partials/header.php'; ?>
+
 <?php include __DIR__ . '/partials/menu.php'; ?>
 
-<main class="page-content">
+
+  <!-- =====================================================
+       GALLERY
+       ===================================================== -->
+
+<?php if (!empty($galleryItems)): ?>
+
+  <div class="gallery">
+
+    <?= \app\widgets\GalleryWidget::render($galleryItems) ?>
+
+  </div>
+
+<?php endif; ?>
+
+
+  <!-- =====================================================
+       PAGE CONTENT
+       ===================================================== -->
+
+  <div style="margin-top:100px"></div>
+
+  <main class="page-content">
+
     <?= $content ?>
-</main>
 
-<div class="screenshot-container">
-<?php
-//use app\widgets\PictureWidget;
-//echo (new PictureWidget)::renderHomeGallery($games);
-?>
-</div>
+  </main>
 
-<div class="latest-videos">
-<?php
-//use app\widgets\TrailerWidget;
-//echo (new TrailerWidget)::renderHomeTrailers($games);
-?>
-</div>
 
-<script>
-document.addEventListener('click', async (e) => {
-    if (!e.target.classList.contains('load-more')) return;
+  <!-- =====================================================
+       SCREENSHOTS
+       ===================================================== -->
 
-    const btn = e.target;
-    const container = document.getElementById('screenshot-container');
-    const nextPage = parseInt(btn.dataset.page) + 1;
-    btn.disabled = true;
-    btn.textContent = "Laddar...";
+<?php if (!empty($games)): ?>
 
-    try {
-        const res = await fetch(`/ajax/screenshots.php?id=3498&page=${nextPage}`);
-        const data = await res.json();
-        if (data.html) {
-            // Lägg till ny HTML före knappen
-            btn.insertAdjacentHTML('beforebegin', data.html);
-            btn.remove(); // ta bort gamla knappen
-        } else {
-            btn.textContent = "Inga fler bilder";
-        }
-    } catch {
-        btn.textContent = "Fel vid hämtning";
-    }
-});
-</script>
+  <div class="screenshot-container">
+    <?= \app\widgets\PictureWidget::renderGallery($games) ?>
+  </div>
+
+  <?php if (!empty($trailerGames)): ?>
+
+    <div class="latest-videos">
+      <?= \app\widgets\TrailerWidget::renderTrailers($trailerGames) ?>
+    </div>
+
+  <?php endif; ?>
+
+<?php endif; ?>
+
 
 <?php include __DIR__ . '/partials/footer.php'; ?>

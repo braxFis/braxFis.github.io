@@ -633,21 +633,7 @@ font-size: 22px;
       </section>
 
     </aside>
-
-    <div class="screenshot-container">
-      <?php
-      use app\widgets\PictureWidget;
-      echo (new PictureWidget)::renderHomeGallery($games);
-      ?>
-    </div>
-
-    <div class="latest-videos">
-      <?php
-      use app\widgets\TrailerWidget;
-      echo (new TrailerWidget)::renderHomeTrailers($trailerGames);
-      ?>
-    </div>
-<script>
+    <script>
 
 /* ==============================
 TABS

@@ -4,9 +4,10 @@ namespace app\widgets;
 
 use app\models\MovieTrailer;
 use app\models\Trailer;
+use modules\game\models\Game;
 class TrailerWidget
 {
-public static function renderHomeTrailers(array $games)
+  public static function renderTrailers(array $games)
   {
     $trailerModel = new Trailer();
 
@@ -34,11 +35,11 @@ public static function renderHomeTrailers(array $games)
         }
 
         $trailers[] = [
-          'name'    => $trailer['name'] ?? 'Trailer',
+          'name' => $trailer['name'] ?? 'Trailer',
           'preview' => $trailer['preview'] ?? '',
-          'max'     => $trailer['max'],
-          'game'    => $game['name'] ?? 'Unknown Game',
-          'id'      => (int) $game['id']
+          'max' => $trailer['max'],
+          'game' => $game['name'] ?? 'Unknown Game',
+          'id' => (int)$game['id']
         ];
 
         break;
@@ -114,7 +115,7 @@ public static function renderHomeTrailers(array $games)
         'UTF-8'
       );
 
-      $gameId = (int) $trailer['id'];
+      $gameId = (int)$trailer['id'];
 
       $number = str_pad(
         $index + 1,
@@ -266,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return $html;
   }
 
-public static function renderTrailerSideBar($id)
+  public static function renderTrailerSideBar($id)
   {
     $trailerModel = new Trailer();
     $trailers = $trailerModel->getTrailers($id);
@@ -462,17 +463,18 @@ public static function renderTrailerSideBar($id)
 
     return $html;
   }
-public static function renderMovieTrailerSideBar($id)
-{
-  $trailerModel = new MovieTrailer();
-  $trailers = $trailerModel->getMovieTrailers($id);
 
-  if (empty($trailers)) {
-    return "<p class='coma-trailers-empty'>No trailers found</p>";
-  }
+  public static function renderMovieTrailerSideBar($id)
+  {
+    $trailerModel = new MovieTrailer();
+    $trailers = $trailerModel->getMovieTrailers($id);
+
+    if (empty($trailers)) {
+      return "<p class='coma-trailers-empty'>No trailers found</p>";
+    }
 
 
-  $html = "
+    $html = "
         <section class='coma-trailers'>
 
             <div class='coma-trailers-header'>
@@ -498,30 +500,30 @@ public static function renderMovieTrailerSideBar($id)
         ";
 
 
-  foreach ($trailers as $index => $trailer) {
+    foreach ($trailers as $index => $trailer) {
 
-    $name = htmlspecialchars(
-      $trailer['name'],
-      ENT_QUOTES,
-      'UTF-8'
-    );
+      $name = htmlspecialchars(
+        $trailer['name'],
+        ENT_QUOTES,
+        'UTF-8'
+      );
 
-    $max = htmlspecialchars(
-      $trailer['size'],
-      ENT_QUOTES,
-      'UTF-8'
-    );
+      $max = htmlspecialchars(
+        $trailer['size'],
+        ENT_QUOTES,
+        'UTF-8'
+      );
 
-    $number = str_pad(
-      $index + 1,
-      2,
-      '0',
-      STR_PAD_LEFT
-    );
+      $number = str_pad(
+        $index + 1,
+        2,
+        '0',
+        STR_PAD_LEFT
+      );
 
-    $key = "https://www.youtube.com/embed/" . $trailer['key'];
+      $key = "https://www.youtube.com/embed/" . $trailer['key'];
 
-    $html .= "
+      $html .= "
                 <button
                     type='button'
                     class='coma-trailer-card'
@@ -572,10 +574,10 @@ public static function renderMovieTrailerSideBar($id)
 
                 </button>
             ";
-  }
+    }
 
 
-  $html .= "
+    $html .= "
             </div>
 
         </section>
@@ -640,11 +642,12 @@ public static function renderMovieTrailerSideBar($id)
         ";
 
 
-  $html .= self::renderScript();
+    $html .= self::renderScript();
 
-  return $html;
-}
-private static function renderLightbox(int $count)
+    return $html;
+  }
+
+  private static function renderLightbox(int $count)
   {
     return "
         <div
@@ -707,7 +710,8 @@ private static function renderLightbox(int $count)
         </div>
     ";
   }
-private static function renderScript()
+
+  private static function renderScript()
   {
     return <<<'HTML'
 
@@ -1016,5 +1020,5 @@ cards.forEach(function (card, index) {
 </script>
 
 HTML;
-}
+  }
 }

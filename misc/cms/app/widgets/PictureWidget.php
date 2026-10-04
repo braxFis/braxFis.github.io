@@ -321,7 +321,7 @@ public static function renderMovieImageSideBar($id, $page = 1)
 
   return $html;
 }
-public static function renderHomeGallery(array $games)
+public static function renderGallery(array $games)
   {
     $imageModel = new Picture();
 

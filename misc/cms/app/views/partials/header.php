@@ -424,5 +424,271 @@ SIDEBAR TABS
         object-fit: cover;
         border: 1px solid #ccc;
     }
+
+  /* =========================================================
+ COMA NEWS - SCREENSHOT / TRAILER CAROUSEL
+ ========================================================= */
+
+  .coma-carousel {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .coma-carousel-window {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .coma-carousel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+  }
+
+  .coma-carousel-item {
+    position: relative;
+    flex: 0 0 340px;
+    width: 340px;
+    height: 190px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    background: #111;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .coma-carousel-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  /* =========================================================
+     NAVIGATION BUTTONS
+     ========================================================= */
+
+  .coma-carousel-button {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    background: transparent;
+    color: inherit;
+
+    font-size: 24px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .coma-carousel-button:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+  }
+
+
+  /* =========================================================
+     SCREENSHOT OVERLAY
+     ========================================================= */
+
+  .coma-screenshot {
+    position: relative;
+  }
+
+  .coma-screenshot-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding: 14px 16px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0)
+      );
+
+    color: #fff;
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+  }
+
+  .coma-screenshot:hover .coma-screenshot-overlay {
+    opacity: 1;
+  }
+
+  .coma-screenshot-number {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  .coma-screenshot-expand {
+    font-size: 20px;
+  }
+
+
+  /* =========================================================
+     TRAILER
+     ========================================================= */
+
+  .coma-trailer-preview {
+    position: absolute;
+    inset: 0;
+  }
+
+  .coma-trailer-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+  }
+
+  .coma-trailer:hover .coma-trailer-preview img {
+    transform: scale(1.05);
+  }
+
+  .coma-trailer-play {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 54px;
+    height: 54px;
+
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .coma-trailer:hover .coma-trailer-play {
+    background: #fff;
+    color: #000;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+
+  .coma-trailer-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 14px 16px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0)
+      );
+
+    color: #fff;
+  }
+
+  .coma-trailer-number {
+    flex: 0 0 auto;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.7;
+  }
+
+  .coma-trailer-name {
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+
+  @media (max-width: 900px) {
+
+    .coma-carousel-item {
+      flex-basis: calc((100% - 20px) / 2);
+      width: calc((100% - 20px) / 2);
+    }
+  }
+
+
+  @media (max-width: 600px) {
+
+    .coma-carousel {
+      gap: 10px;
+    }
+
+    .coma-carousel-button {
+      flex: 0 0 38px;
+      width: 38px;
+      height: 38px;
+
+      font-size: 20px;
+    }
+
+    .coma-carousel-item {
+      flex-basis: 100%;
+      width: 100%;
+      height: 200px;
+    }
+
+    .coma-screenshot-overlay {
+      opacity: 1;
+    }
+  }
 </style>
 </head>

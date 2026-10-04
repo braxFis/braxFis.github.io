@@ -535,17 +535,6 @@
 
     </aside>
 
-    <div class="screenshot-container">
-      <?php
-      echo \app\widgets\PictureWidget::renderHomeGallery($games);
-      ?>
-    </div>
-
-    <div class="latest-videos">
-      <?php
-      echo \app\widgets\TrailerWidget::renderHomeTrailers($games);
-      ?>
-    </div>
     <script>
 
       /* ==============================

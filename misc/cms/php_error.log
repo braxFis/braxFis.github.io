@@ -12646,3 +12646,421 @@ Stack trace:
 [04-Oct-2026 03:35:15 UTC] Test logg
 [04-Oct-2026 03:40:41 UTC] Test logg
 [04-Oct-2026 03:45:17 UTC] Test logg
+[04-Oct-2026 14:18:55 UTC] Test logg
+[04-Oct-2026 14:19:36 UTC] Test logg
+[04-Oct-2026 14:19:52 UTC] Test logg
+[04-Oct-2026 14:25:15 UTC] Test logg
+[04-Oct-2026 14:26:40 UTC] Test logg
+[04-Oct-2026 14:33:43 UTC] Test logg
+[04-Oct-2026 14:40:46 UTC] Test logg
+[04-Oct-2026 14:43:09 UTC] Test logg
+[04-Oct-2026 14:43:37 UTC] Test logg
+[04-Oct-2026 14:43:39 UTC] Test logg
+[04-Oct-2026 14:43:57 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/961205/screenshots?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[04-Oct-2026 14:43:57 UTC] PHP Warning:  file_get_contents(https://api.rawg.io/api/games/1019656/movies?key=8bc47dab600645ac9164f534d0182baf): Failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/models/Game.php on line 13
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:44:08 UTC] Test logg
+[04-Oct-2026 14:48:32 UTC] Test logg
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:48:56 UTC] Test logg
+[04-Oct-2026 14:52:48 UTC] Test logg
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:53:26 UTC] Test logg
+[04-Oct-2026 14:53:27 UTC] Test logg
+[04-Oct-2026 14:53:39 UTC] Test logg
+[04-Oct-2026 14:53:54 UTC] Test logg
+[04-Oct-2026 14:54:46 UTC] Test logg
+[04-Oct-2026 14:54:58 UTC] Test logg
+[04-Oct-2026 14:56:30 UTC] Test logg
+[04-Oct-2026 14:56:37 UTC] Test logg
+[04-Oct-2026 14:57:03 UTC] Test logg
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 14:57:23 UTC] Test logg
+[04-Oct-2026 14:57:32 UTC] Test logg
+[04-Oct-2026 15:08:33 UTC] Test logg
+[04-Oct-2026 15:09:08 UTC] Test logg
+[04-Oct-2026 15:09:45 UTC] Test logg
+[04-Oct-2026 15:09:54 UTC] Test logg
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:10:30 UTC] PHP Warning:  Undefined variable $trailerGames in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php on line 53
+[04-Oct-2026 15:10:30 UTC] PHP Fatal error:  Uncaught TypeError: app\widgets\TrailerWidget::renderTrailers(): Argument #1 ($games) must be of type array, null given, called in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php on line 53 and defined in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/TrailerWidget.php:10
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php(53): app\widgets\TrailerWidget::renderTrailers(NULL)
+#1 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/controllers/GameController.php(121): require('/Users/nicko/Do...')
+#2 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(328): modules\game\controllers\GameController->index(NULL)
+#3 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/TrailerWidget.php on line 10
+[04-Oct-2026 15:10:30 UTC] Test logg
+[04-Oct-2026 15:14:01 UTC] Test logg
+[04-Oct-2026 15:14:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method modules\game\models\Game::getTrailerGames() in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/controllers/GameController.php:52
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(328): modules\game\controllers\GameController->index(NULL)
+#1 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/controllers/GameController.php on line 52
+[04-Oct-2026 15:15:51 UTC] Test logg
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:16:25 UTC] Test logg
+[04-Oct-2026 15:20:08 UTC] Test logg
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:20:34 UTC] Test logg
+[04-Oct-2026 15:24:04 UTC] Test logg
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:24:44 UTC] Test logg
+[04-Oct-2026 15:29:16 UTC] Test logg
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:29:53 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:30:08 UTC] Test logg
+[04-Oct-2026 15:35:43 UTC] Test logg
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Warning:  Undefined array key "domain" in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/game/views/index.php on line 552
+[04-Oct-2026 15:36:13 UTC] Test logg
+[04-Oct-2026 18:15:04 UTC] Test logg
+[04-Oct-2026 18:15:33 UTC] Test logg
+[04-Oct-2026 18:17:47 UTC] Test logg
+[04-Oct-2026 18:18:25 UTC] Test logg
+[04-Oct-2026 18:21:43 UTC] Test logg
+[04-Oct-2026 18:22:19 UTC] Test logg
+[04-Oct-2026 18:25:27 UTC] Test logg
+[04-Oct-2026 18:26:11 UTC] Test logg
+[04-Oct-2026 18:27:21 UTC] Test logg
+[04-Oct-2026 18:28:01 UTC] Test logg
+[04-Oct-2026 18:30:24 UTC] Test logg
+[04-Oct-2026 18:31:06 UTC] Test logg
+[04-Oct-2026 18:39:57 UTC] Test logg
+[04-Oct-2026 18:41:00 UTC] Test logg
+[04-Oct-2026 18:41:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method app\widgets\PictureWidget::renderHomeGallery() in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/genre/views/index.php:540
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/genre/controllers/GenreController.php(22): require()
+#1 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(328): modules\genre\controllers\GenreController->index('action')
+#2 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/genre/views/index.php on line 540
+[04-Oct-2026 18:44:20 UTC] Test logg
+[04-Oct-2026 18:46:27 UTC] Test logg
+[04-Oct-2026 18:50:19 UTC] Test logg
+[04-Oct-2026 18:50:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method app\widgets\PictureWidget::renderHomeGallery() in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/genre/views/index.php:540
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/genre/controllers/GenreController.php(22): require()
+#1 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(328): modules\genre\controllers\GenreController->index('action')
+#2 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/genre/views/index.php on line 540
+[04-Oct-2026 18:51:07 UTC] Test logg
+[04-Oct-2026 18:51:15 UTC] PHP Warning:  Undefined variable $trailerGames in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php on line 53
+[04-Oct-2026 18:51:15 UTC] PHP Fatal error:  Uncaught TypeError: app\widgets\TrailerWidget::renderTrailers(): Argument #1 ($games) must be of type array, null given, called in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php on line 53 and defined in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/TrailerWidget.php:10
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php(53): app\widgets\TrailerWidget::renderTrailers(NULL)
+#1 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/genre/controllers/GenreController.php(26): require('/Users/nicko/Do...')
+#2 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(328): modules\genre\controllers\GenreController->index('action')
+#3 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/TrailerWidget.php on line 10
+[04-Oct-2026 18:51:42 UTC] Test logg
+[04-Oct-2026 18:51:45 UTC] PHP Warning:  Undefined variable $trailerGames in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php on line 53
+[04-Oct-2026 18:51:45 UTC] PHP Fatal error:  Uncaught TypeError: app\widgets\TrailerWidget::renderTrailers(): Argument #1 ($games) must be of type array, null given, called in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php on line 53 and defined in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/TrailerWidget.php:10
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/views/layout.php(53): app\widgets\TrailerWidget::renderTrailers(NULL)
+#1 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/genre/controllers/GenreController.php(26): require('/Users/nicko/Do...')
+#2 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(328): modules\genre\controllers\GenreController->index('action')
+#3 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/app/widgets/TrailerWidget.php on line 10
+[04-Oct-2026 18:53:34 UTC] Test logg
+[04-Oct-2026 18:53:42 UTC] Test logg
+[04-Oct-2026 18:54:02 UTC] Test logg
+[04-Oct-2026 18:54:16 UTC] Test logg
+[04-Oct-2026 18:54:40 UTC] Test logg
+[04-Oct-2026 18:54:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method app\widgets\PictureWidget::renderHomeGallery() in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/publisher/views/index.php:540
+Stack trace:
+#0 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/publisher/controllers/PublisherController.php(22): require()
+#1 /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/public/index.php(328): modules\publisher\controllers\PublisherController->index('electronic-arts')
+#2 {main}
+  thrown in /Users/nicko/Documents/GitHub/GameDefiners/misc/cms/modules/publisher/views/index.php on line 540
+[04-Oct-2026 18:55:17 UTC] Test logg
+[04-Oct-2026 18:55:29 UTC] Test logg
