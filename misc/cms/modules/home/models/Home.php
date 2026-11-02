@@ -6,20 +6,35 @@ use app\models\RAWG_API;
 
 class Home extends RAWG_API
 {
-  private function fetchAPI($endpoint, $params = [])
-  {
+private function fetchAPI($endpoint, $params = [])
+{
     $params['key'] = $this->apiKey;
 
     $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
 
-    $response = file_get_contents($url);
+    $context = stream_context_create([
+        'http' => [
+            'timeout' => 10,
+            'ignore_errors' => true
+        ]
+    ]);
 
-    if (!$response) {
-      return null;
+    $response = @file_get_contents($url, false, $context);
+
+    if ($response === false) {
+        error_log("RAWG request failed: {$url}");
+        return ['results' => []];
     }
 
-    return json_decode($response, true);
-  }
+    $data = json_decode($response, true);
+
+    if (!is_array($data)) {
+        error_log("RAWG returned invalid JSON: {$url}");
+        return ['results' => []];
+    }
+
+    return $data;
+}
 
 
   /*
