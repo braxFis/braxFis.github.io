@@ -1,7 +1,9 @@
 FROM php:8.3-apache
 
+# Enable Apache rewrite
 RUN a2enmod rewrite
 
+# Set Apache document root
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/misc/cms/public
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
@@ -9,10 +11,23 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
     /etc/apache2/apache2.conf \
     /etc/apache2/conf-available/*.conf
 
-WORKDIR /var/www/html
+# Install Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
+# Copy application
+WORKDIR /var/www/html
 COPY . .
 
+# Install PHP dependencies
+WORKDIR /var/www/html/misc/cms
+
+RUN composer install \
+    --no-dev \
+    --prefer-dist \
+    --no-interaction \
+    --optimize-autoloader
+
+# Set permissions
 RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
