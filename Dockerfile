@@ -28,4 +28,4 @@ RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-10000} -t public"]
+CMD ["php", "-d", "display_errors=1", "-d", "error_reporting=E_ALL", "-S", "0.0.0.0:10000", "-t", "public"]
