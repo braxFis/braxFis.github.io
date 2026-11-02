@@ -31,11 +31,14 @@ RUN composer install \
     --no-dev \
     --prefer-dist \
     --no-interaction \
-    --optimize-autoloader \
-    && echo "=== COMPOSER DIRECTORY ===" \
-    && ls -la vendor \
-    && test -f vendor/autoload.php \
-    && echo "=== AUTOLOAD FILE EXISTS ==="
+    --optimize-autoloader
+
+RUN echo "CHECKING AUTOLOAD" \
+    && pwd \
+    && ls -la /var/www/html/misc/cms/ \
+    && ls -la /var/www/html/misc/cms/vendor/ \
+    && test -f /var/www/html/misc/cms/vendor/autoload.php \
+    && echo "AUTOLOAD EXISTS"
     
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html
