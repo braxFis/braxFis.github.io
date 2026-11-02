@@ -3,6 +3,13 @@ FROM php:8.3-apache
 # Enable Apache rewrite
 RUN a2enmod rewrite
 
+# Install system dependencies and PHP ZIP extension
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libzip-dev \
+    unzip \
+    && docker-php-ext-install zip \
+    && rm -rf /var/lib/apt/lists/*
+
 # Set Apache document root
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/misc/cms/public
 
@@ -18,7 +25,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/html
 COPY . .
 
-# Install PHP dependencies
+# Install Composer dependencies
 WORKDIR /var/www/html/misc/cms
 
 RUN composer install \
