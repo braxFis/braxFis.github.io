@@ -43,6 +43,13 @@ RUN echo "CHECKING AUTOLOAD" \
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html
 
-EXPOSE 80
+# Configure Apache to use Render's port
+EXPOSE 10000
 
-CMD ["sh", "-c", "echo '=== RUNTIME CHECK ===' && ls -la /var/www/html/misc/cms/vendor/autoload.php && echo '=== APACHE STARTING ===' && apache2-foreground"]
+CMD ["sh", "-c", "\
+PORT=${PORT:-10000}; \
+sed -ri \"s/Listen 80/Listen ${PORT}/\" /etc/apache2/ports.conf; \
+sed -ri \"s/<VirtualHost \\*:80>/<VirtualHost *:${PORT}>/\" /etc/apache2/sites-available/000-default.conf; \
+echo \"Apache starting on port ${PORT}\"; \
+exec apache2-foreground"]
+
