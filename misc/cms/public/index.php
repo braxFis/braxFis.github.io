@@ -274,9 +274,13 @@ $routes = [
 ];
 $path = $request;
 
-$method = $_SERVER['REQUEST_METHOD'];
+$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 
-foreach ($routes['ADMIN'][$method] as $route => $info) {
+if ($method === 'HEAD') {
+    $method = 'GET';
+}
+
+foreach (($routes['ADMIN'][$method] ?? []) as $route => $info) {
   $pattern = preg_replace(['#\{id\}#', '#\{slug\}#'], ['([0-9]+)', '([a-zA-Z0-9\-]+)'], $route);
   if(preg_match("#^$pattern$#", $path, $matches)){
         //var_dump(class_exists('\app\controllers\PostController'));
@@ -293,7 +297,7 @@ foreach ($routes['ADMIN'][$method] as $route => $info) {
     }
 }
 
-foreach ($routes['USER'][$method] as $route => $info) {
+foreach (($routes['USER'][$method] ?? []) as $route => $info) {
     $pattern = preg_replace('#/([0-9]+)#', '/([0-9]+)', $route);
     if(preg_match("#^$pattern$#", $path, $matches)){
         //var_dump(class_exists('\app\controllers\PostController'));
@@ -310,7 +314,7 @@ foreach ($routes['USER'][$method] as $route => $info) {
     }
 }
 
-foreach ($routes['PUBLIC'][$method] as $route => $info) {
+foreach (($routes['PUBLIC'][$method] ?? []) as $route => $info) {
   $pattern = preg_replace(
     ['#\{id\}#', '#\{slug\}#'],
     ['([0-9]+)', '([a-zA-Z0-9\-]+)'],
