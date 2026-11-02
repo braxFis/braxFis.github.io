@@ -25,15 +25,18 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/html
 COPY . .
 
-# Install Composer dependencies
 WORKDIR /var/www/html/misc/cms
 
 RUN composer install \
     --no-dev \
     --prefer-dist \
     --no-interaction \
-    --optimize-autoloader
-
+    --optimize-autoloader \
+    && echo "=== COMPOSER DIRECTORY ===" \
+    && ls -la vendor \
+    && test -f vendor/autoload.php \
+    && echo "=== AUTOLOAD FILE EXISTS ==="
+    
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html
 
