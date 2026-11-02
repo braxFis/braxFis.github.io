@@ -1,0 +1,10 @@
+yaml
+services:
+  - type: web
+    name: my-php-app
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: true
