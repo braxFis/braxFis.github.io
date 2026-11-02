@@ -1,31 +1,25 @@
-FROM php:8.3-cli
+FROM php:8.3-apache
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
-    && docker-php-ext-install zip \
-    && rm -rf /var/lib/apt/lists/*
+    && docker-php-ext-install zip
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-WORKDIR /var/www/html
-
-COPY . .
-
-# Verify project files
-RUN ls -la /var/www/html/misc/cms/ \
-    && test -f /var/www/html/misc/cms/composer.json
-
-WORKDIR /var/www/html/misc/cms
+COPY . /var/www/html
 
 RUN composer install \
+    --working-dir=/var/www/html/misc/cms \
     --no-dev \
     --prefer-dist \
-    --no-interaction \
-    --optimize-autoloader
+    --no-interaction
 
-RUN chown -R www-data:www-data /var/www/html
+RUN sed -ri -e 's!/var/www/html!/var/www/html/misc/cms/public!g' \
+    /etc/apache2/sites-available/*.conf
+
+RUN a2enmod rewrite
 
 EXPOSE 10000
 
-CMD ["php", "-d", "display_errors=1", "-d", "error_reporting=E_ALL", "-S", "0.0.0.0:10000", "-t", "public"]
+CMD ["apache2-foreground"]
