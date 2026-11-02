@@ -45,4 +45,4 @@ RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
 
-CMD ["apache2-foreground"]
+CMD ["sh", "-c", "echo '=== RUNTIME CHECK ===' && ls -la /var/www/html/misc/cms/vendor/autoload.php && echo '=== APACHE STARTING ===' && apache2-foreground"]
