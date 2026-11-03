@@ -26,6 +26,10 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
 
 RUN apache2ctl -t
 
+RUN cat /etc/apache2/ports.conf
+
+RUN cat /etc/apache2/sites-available/000-default.conf
+
 EXPOSE 80
 
 CMD ["apache2-foreground"]
