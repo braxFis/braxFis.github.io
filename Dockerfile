@@ -1,27 +1,27 @@
-FROM php:8.3-cli
+FROM php:8.3-apache
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     && docker-php-ext-install zip \
-    && rm -rf /var/lib/apt/lists/*
+    && a2enmod rewrite
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-WORKDIR /var/www/html
-
-COPY . .
-
-WORKDIR /var/www/html/misc/cms
+COPY . /var/www/html
 
 RUN composer install \
+    --working-dir=/var/www/html/misc/cms \
     --no-dev \
     --prefer-dist \
     --no-interaction \
     --optimize-autoloader
 
-EXPOSE 10000
+RUN sed -i 's#/var/www/html#/var/www/html/misc/cms/public#g' \
+    /etc/apache2/sites-available/000-default.conf
 
-WORKDIR /var/www/html/misc/cms
+EXPOSE 80
 
-CMD ["sh", "-c", "pwd && ls -la && ls -la public && php -S 0.0.0.0:${PORT} -t public"]
+RUN apache2ctl -t
+
+CMD ["apache2-foreground"]
