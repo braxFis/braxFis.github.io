@@ -12,28 +12,27 @@ private function fetchAPI($endpoint, $params = [])
 
     $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
 
-    $context = stream_context_create([
-        'http' => [
-            'timeout' => 10,
-            'ignore_errors' => true
-        ]
+    $ch = curl_init();
+
+    curl_setopt_array($ch, [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_TIMEOUT => 15,
+        CURLOPT_USERAGENT => 'BraxFisCMS/1.0'
     ]);
 
-    $response = @file_get_contents($url, false, $context);
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-    if ($response === false) {
+    curl_close($ch);
+
+    if ($httpCode !== 200 || !$response) {
         error_log("RAWG request failed: {$url}");
         return ['results' => []];
     }
 
-    $data = json_decode($response, true);
-
-    if (!is_array($data)) {
-        error_log("RAWG returned invalid JSON: {$url}");
-        return ['results' => []];
-    }
-
-    return $data;
+    return json_decode($response, true) ?: ['results' => []];
 }
 
 
