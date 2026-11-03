@@ -17,11 +17,15 @@ RUN composer install \
     --no-interaction \
     --optimize-autoloader
 
-RUN sed -i 's#/var/www/html#/var/www/html/misc/cms/public#g' \
-    /etc/apache2/sites-available/000-default.conf
+ENV APACHE_DOCUMENT_ROOT=/var/www/html/misc/cms/public
 
-EXPOSE 80
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
+    /etc/apache2/sites-available/*.conf \
+    /etc/apache2/apache2.conf \
+    /etc/apache2/conf-available/*.conf
 
 RUN apache2ctl -t
+
+EXPOSE 80
 
 CMD ["apache2-foreground"]
