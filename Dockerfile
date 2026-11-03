@@ -22,4 +22,6 @@ RUN composer install \
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "php -S 0.0.0.0:${PORT} -t public"]
+WORKDIR /var/www/html/misc/cms
+
+CMD ["sh", "-c", "pwd && ls -la && ls -la public && php -S 0.0.0.0:${PORT} -t public"]
