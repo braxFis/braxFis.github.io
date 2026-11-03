@@ -20,6 +20,6 @@ RUN sed -ri -e 's!/var/www/html!/var/www/html/misc/cms/public!g' \
 
 RUN a2enmod rewrite
 
-EXPOSE 10000
+EXPOSE 80
 
 CMD ["apache2-foreground"]
