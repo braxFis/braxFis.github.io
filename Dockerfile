@@ -24,12 +24,10 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
     /etc/apache2/apache2.conf \
     /etc/apache2/conf-available/*.conf
 
-RUN apache2ctl -t
+# Configure Apache to listen on port 10000
+RUN sed -i 's/Listen 80/Listen 10000/' /etc/apache2/ports.conf \
+    && sed -i 's/:80>/:10000>/' /etc/apache2/sites-available/000-default.conf
 
-RUN cat /etc/apache2/ports.conf
-
-RUN cat /etc/apache2/sites-available/000-default.conf
-
-EXPOSE 80
+EXPOSE 10000
 
 CMD ["apache2-foreground"]
