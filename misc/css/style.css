@@ -555,13 +555,17 @@ textarea {
    --------------------------------------------------------- */
 
 .games-load-more {
-  display: flex;
-  justify-content: center;
-
-  margin-top: 50px;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
 }
 
-.games-load-more button {
+
+/**.games-load-more button {
   padding: 13px 30px;
 
   border: 1px solid #111;
@@ -588,7 +592,7 @@ textarea {
 .games-load-more button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
-}
+}**/
 
 
 /* =========================================================

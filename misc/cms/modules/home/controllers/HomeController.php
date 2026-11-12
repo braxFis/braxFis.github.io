@@ -25,7 +25,8 @@ class HomeController
     /*
      * Games with trailers
      */
-    $trailerGames = $this->model->getTrailerGames();
+    $trailerGames = (($data['results'][0]['rating_source'] ?? '') === 'IGDB')
+      ? [] : $this->model->getTrailerGames();
 
 
     /*

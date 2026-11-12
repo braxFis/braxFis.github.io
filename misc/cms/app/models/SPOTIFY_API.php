@@ -45,7 +45,7 @@ class SPOTIFY_API{
 
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-    curl_close($ch);
+    //curl_close($ch);
 
     $data = json_decode($response, true);
 

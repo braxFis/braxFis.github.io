@@ -467,7 +467,7 @@ font-size: 22px;
                                 GAME
                             </span>
 
-                  <a href="/games/<?= (int)$item['id'] ?>" class="game-title-link">
+                  <a href="/games/<?= rawurlencode((string)($item['id'] ?? '')) ?>" class="game-title-link">
                     <h2 class="game-title">
                       <?= htmlspecialchars($item['name']) ?>
                     </h2>
@@ -594,7 +594,7 @@ font-size: 22px;
               </span>
 
               <span class="top10-title">
-                <a href="/games/<?= (int)$game['id'] ?>" class="game-title-link">
+                <a href="/games/<?= rawurlencode((string)($game['id'] ?? '')) ?>" class="game-title-link">
                     <?= htmlspecialchars($game['name']) ?>
                 </a>
               </span>
@@ -615,7 +615,7 @@ font-size: 22px;
             <div class="upcoming-item">
 
                     <span class="upcoming-title">
-                      <a href="/games/<?= (int)$game['id'] ?>" class="game-title-link">
+                      <a href="/games/<?= rawurlencode((string)($game['id'] ?? '')) ?>" class="game-title-link">
                         <?= htmlspecialchars($game['name']) ?>
                       </a>
                     </span>

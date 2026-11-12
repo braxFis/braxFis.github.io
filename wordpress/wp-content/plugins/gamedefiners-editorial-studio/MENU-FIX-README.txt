@@ -1,0 +1,1 @@
+0.1.14: Bulkimport submenu registered at admin_menu priority 30, after Editorial Studio parent menu. Open WordPress admin -> Editorial Studio -> Bulkimport or wp-admin/admin.php?page=gdes-bulk. No generator changes.

@@ -2,23 +2,17 @@
 
 namespace app\models;
 
-use Database;
+use app\services\GameDataService;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
-class Trailer extends RAWG_API{
-    public $tmdb;
+class Trailer{
 
     public function __construct(){
     }
 
     private function fetchAPI($endpoint, $params = []) {
-        $params['key'] = (new RAWG_API)->apiKey;
-        $url = (new RAWG_API)->baseUrl . $endpoint . '?' . http_build_query($params);
-
-        $response = file_get_contents($url);
-        if (!$response) return null;
-        return json_decode($response, true);
+      return (new GameDataService())->fetch($endpoint, $params);
     }
 
     public function getTrailers($id): array{

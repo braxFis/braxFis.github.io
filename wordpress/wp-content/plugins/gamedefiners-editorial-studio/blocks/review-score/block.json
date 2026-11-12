@@ -1,0 +1,22 @@
+{
+  "apiVersion": 2,
+  "name": "gamedefiners/review-score",
+  "version": "0.1.0",
+  "title": "GameDefiners: Recensionsbedömning",
+  "category": "widgets",
+  "icon": "awards",
+  "description": "Fem gemensamma bedömningskriterier för GameDefiners-recensioner.",
+  "textdomain": "gamedefiners-editorial-studio",
+  "attributes": {
+    "criteria": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "style": "file:./style.css",
+  "editorStyle": "file:./editor.css"
+}

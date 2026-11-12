@@ -47,6 +47,14 @@
     letter-spacing: -1.5px;
   }
 
+  .search-query-label {
+    margin: 10px 0 0;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
   .search-main-count {
     color: #888;
 
@@ -550,14 +558,21 @@
 </style>
 
 
+
 <section id="search-section">
 
   <?php
-  $totalResults =
-    count($results) +
-    count($movies) +
-    count($albums);
-    count($people);
+  $results = is_array($results ?? null) ? $results : [];
+  $movies = is_array($movies ?? null) ? $movies : [];
+  $albums = is_array($albums ?? null) ? $albums : [];
+  $people = is_array($people ?? null) ? $people : [];
+  $year = $year ?? null;
+  $query = $query ?? ($_GET['q'] ?? '');
+
+  $totalResults = count($results)
+    + count($movies)
+    + count($albums)
+    + count($people);
   ?>
 
 
@@ -574,6 +589,16 @@
         <h1 class="search-main-title">
           Search Results
         </h1>
+
+        <?php if (trim((string) $query) !== ''): ?>
+          <p class="search-query-label">
+            Results for &ldquo;<?= htmlspecialchars((string) $query, ENT_QUOTES, 'UTF-8') ?>&rdquo;
+          </p>
+        <?php elseif (!empty($year)): ?>
+          <p class="search-query-label">
+            Albums from <?= (int) $year ?>
+          </p>
+        <?php endif; ?>
 
       </div>
 
@@ -599,134 +624,110 @@
         <div class="search-results">
 
           <?php foreach ($results as $item): ?>
+            <?php
+              $gameId = rawurlencode((string)($item['id'] ?? ''));
+              $gameName = (string) ($item['name'] ?? '');
+              // GameDataService must resolve the ID from the provider used.
+              $gameLink = '/games/' . $gameId;
+
+              // Use the normalized image first, then common RAWG/IGDB fields.
+              $gameImage = !empty($item['image'])
+                ? $item['image']
+                : ($item['background_image'] ?? '');
+              if (!$gameImage && !empty($item['cover']['url'])) {
+                $gameImage = $item['cover']['url'];
+              }
+              if (!$gameImage && !empty($item['cover']['image_id'])) {
+                $gameImage = 'https://images.igdb.com/igdb/image/upload/t_cover_big/'
+                  . $item['cover']['image_id'] . '.jpg';
+              }
+              if (is_string($gameImage) && substr($gameImage, 0, 2) === '//') {
+                $gameImage = 'https:' . $gameImage;
+              }
+              $gameImage = is_string($gameImage) ? $gameImage : '';
+
+              $releaseDate = $item['released'] ?? $item['first_release_date'] ?? null;
+              if (is_numeric($releaseDate) && (int) $releaseDate > 100000000) {
+                $releaseDate = gmdate('Y-m-d', (int) $releaseDate);
+              }
+
+              $rating = $item['rating'] ?? null;
+              if ($rating === null && isset($item['total_rating'])) {
+                // IGDB total_rating is on a 0-100 scale; display as 0-5.
+                $rating = round((float) $item['total_rating'] / 20, 2);
+              }
+              $metacritic = $item['metacritic'] ?? null;
+
+              $genreNames = [];
+              foreach (($item['genres'] ?? []) as $genre) {
+                $name = is_array($genre) ? ($genre['name'] ?? '') : (is_string($genre) ? $genre : '');
+                if ($name !== '') $genreNames[] = $name;
+              }
+
+              $platformNames = [];
+              foreach (($item['platforms'] ?? []) as $platform) {
+                if (is_array($platform)) {
+                  $name = $platform['platform']['name'] ?? $platform['name'] ?? '';
+                } else {
+                  $name = is_string($platform) ? $platform : '';
+                }
+                if ($name !== '') $platformNames[] = $name;
+              }
+            ?>
 
             <article class="search-game">
-
-              <?php if (!empty($item['image'])): ?>
-
-                <a
-                  class="search-game-image"
-                  href="/games/<?= (int)$item['id'] ?>"
-                >
-                  <img
-                    src="<?= htmlspecialchars($item['image']) ?>"
-                    alt="<?= htmlspecialchars($item['name']) ?>"
-                  >
+              <?php if ($gameImage !== ''): ?>
+                <a class="search-game-image" href="<?= htmlspecialchars($gameLink, ENT_QUOTES, 'UTF-8') ?>">
+                  <img src="<?= htmlspecialchars($gameImage, ENT_QUOTES, 'UTF-8') ?>"
+                       alt="<?= htmlspecialchars($gameName, ENT_QUOTES, 'UTF-8') ?>" loading="lazy">
                 </a>
-
               <?php endif; ?>
 
-
               <div class="search-game-content">
-
                 <div class="search-game-top">
-
                   <div>
-
-                    <span class="search-game-label">
-                      GAME
-                    </span>
-
+                    <span class="search-game-label">GAME</span>
                     <h2 class="search-game-title">
-
-                      <a href="/games/<?= (int)$item['id'] ?>">
-                        <?= htmlspecialchars($item['name']) ?>
+                      <a href="<?= htmlspecialchars($gameLink, ENT_QUOTES, 'UTF-8') ?>">
+                        <?= htmlspecialchars($gameName, ENT_QUOTES, 'UTF-8') ?>
                       </a>
-
                     </h2>
-
                   </div>
-
-
-                  <?php if (!empty($item['released'])): ?>
-
-                    <span>
-                      <?= htmlspecialchars($item['released']) ?>
-                    </span>
-
+                  <?php if (!empty($releaseDate)): ?>
+                    <span><?= htmlspecialchars((string) $releaseDate, ENT_QUOTES, 'UTF-8') ?></span>
                   <?php endif; ?>
-
                 </div>
 
-
-                <div class="search-game-meta">
-
-                  <div class="search-game-meta-item">
-
-                    <span>RATING</span>
-
-                    <strong>
-                      <?= htmlspecialchars($item['rating']) ?>
-                    </strong>
-
+                <?php if ($rating !== null || $metacritic !== null || $genreNames || $platformNames): ?>
+                  <div class="search-game-meta">
+                    <?php if ($rating !== null): ?>
+                      <div class="search-game-meta-item">
+                        <span>RATING</span>
+                        <strong><?= htmlspecialchars((string) $rating, ENT_QUOTES, 'UTF-8') ?></strong>
+                      </div>
+                    <?php endif; ?>
+                    <?php if ($metacritic !== null): ?>
+                      <div class="search-game-meta-item">
+                        <span>METACRITIC</span>
+                        <strong><?= htmlspecialchars((string) $metacritic, ENT_QUOTES, 'UTF-8') ?></strong>
+                      </div>
+                    <?php endif; ?>
+                    <?php if ($genreNames): ?>
+                      <div class="search-game-meta-item">
+                        <span>GENRE</span>
+                        <strong><?= htmlspecialchars(implode(', ', $genreNames), ENT_QUOTES, 'UTF-8') ?></strong>
+                      </div>
+                    <?php endif; ?>
+                    <?php if ($platformNames): ?>
+                      <div class="search-game-meta-item">
+                        <span>PLATFORMS</span>
+                        <strong><?= htmlspecialchars(implode(', ', $platformNames), ENT_QUOTES, 'UTF-8') ?></strong>
+                      </div>
+                    <?php endif; ?>
                   </div>
-
-
-                  <div class="search-game-meta-item">
-
-                    <span>METACRITIC</span>
-
-                    <strong>
-                      <?= htmlspecialchars($item['metacritic']) ?>
-                    </strong>
-
-                  </div>
-
-
-                  <?php if (!empty($item['genres'])): ?>
-
-                    <div class="search-game-meta-item">
-
-                      <span>GENRE</span>
-
-                      <strong>
-                        <?= htmlspecialchars(
-                          implode(
-                            ', ',
-                            array_column(
-                              $item['genres'],
-                              'name'
-                            )
-                          )
-                        ) ?>
-                      </strong>
-
-                    </div>
-
-                  <?php endif; ?>
-
-
-                  <?php if (!empty($item['platforms'])): ?>
-
-                    <div class="search-game-meta-item">
-
-                      <span>PLATFORMS</span>
-
-                      <strong>
-                        <?= htmlspecialchars(
-                          implode(
-                            ', ',
-                            array_column(
-                              array_column(
-                                $item['platforms'],
-                                'platform'
-                              ),
-                              'name'
-                            )
-                          )
-                        ) ?>
-                      </strong>
-
-                    </div>
-
-                  <?php endif; ?>
-
-                </div>
-
+                <?php endif; ?>
               </div>
-
             </article>
-
           <?php endforeach; ?>
 
         </div>
@@ -1036,40 +1037,9 @@
     <?php endif; ?>
 
 
-  <?php elseif (!empty($_GET['q'])): ?>
-
-    <header class="search-main-header">
-
-      <div>
-
-        <span class="search-main-eyebrow">
-          SEARCH
-        </span>
-
-        <h1 class="search-main-title">
-          Search Results
-        </h1>
-
-      </div>
-
-      <span class="search-main-count">
-        0 RESULTS
-      </span>
-
-    </header>
-
-    <p class="search-no-results">
-      Inga resultat hittades för
-      "<?= htmlspecialchars($_GET['q']) ?>"
-    </p>
-
-  <?php endif; ?>
-
-</section>
-
-<!-- =====================================================
-PEOPLE
-====================================================== -->
+    <!-- =====================================================
+    PEOPLE
+    ====================================================== -->
 
 <?php if (!empty($people)): ?>
 
@@ -1166,3 +1136,46 @@ PEOPLE
   </section>
 
 <?php endif; ?>
+
+
+  <?php elseif (trim((string) $query) !== '' || !empty($year)): ?>
+
+    <header class="search-main-header">
+
+      <div>
+
+        <span class="search-main-eyebrow">
+          SEARCH
+        </span>
+
+        <h1 class="search-main-title">
+          Search Results
+        </h1>
+
+        <?php if (trim((string) $query) !== ''): ?>
+          <p class="search-query-label">
+            Results for &ldquo;<?= htmlspecialchars((string) $query, ENT_QUOTES, 'UTF-8') ?>&rdquo;
+          </p>
+        <?php elseif (!empty($year)): ?>
+          <p class="search-query-label">
+            Albums from <?= (int) $year ?>
+          </p>
+        <?php endif; ?>
+
+      </div>
+
+      <span class="search-main-count">
+        0 RESULTS
+      </span>
+
+    </header>
+
+    <p class="search-no-results">
+      Inga resultat hittades för
+      "<?= htmlspecialchars((string) $query, ENT_QUOTES, 'UTF-8') ?>"
+    </p>
+
+  <?php endif; ?>
+
+</section>
+

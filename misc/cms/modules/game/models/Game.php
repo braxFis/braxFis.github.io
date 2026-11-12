@@ -2,18 +2,13 @@
 
 namespace modules\game\models;
 
-use app\models\RAWG_API;
+use app\services\GameDataService;
 
-class Game extends RAWG_API {
+class Game {
 
   private function fetchAPI($endpoint, $params = []) {
-        $params['key'] = (new RAWG_API)->apiKey;
-        $url = (new RAWG_API)->baseUrl . $endpoint . '?' . http_build_query($params);
-
-        $response = file_get_contents($url);
-        if (!$response) return null;
-        return json_decode($response, true);
-    }
+      return (new GameDataService())->fetch($endpoint, $params);
+  }
 
   public function getGame($id):?array{
       $data = $this->fetchAPI("games/{$id}");
@@ -60,8 +55,7 @@ class Game extends RAWG_API {
   public function getScreenshots($id): array{
         $data = $this->fetchAPI("games/{$id}/screenshots");
         if (!$data || !isset($data["results"])) return [];
-        return array_map(function ($r) {
-        }, $data["results"]);
+        return $data['results'];
     }
 
   public function getTrailerGames(): array

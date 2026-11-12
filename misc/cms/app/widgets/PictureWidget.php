@@ -421,7 +421,7 @@ public static function renderGallery(array $games)
         'UTF-8'
       );
 
-      $gameId = (int) $shot['id'];
+      $gameId = rawurlencode((string)($shot['id'] ?? ''));
 
       $number = str_pad(
         $index + 1,

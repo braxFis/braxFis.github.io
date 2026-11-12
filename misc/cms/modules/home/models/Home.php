@@ -2,23 +2,13 @@
 
 namespace modules\home\models;
 
-use app\models\RAWG_API;
+use app\services\GameDataService;
 
-class Home extends RAWG_API
+class Home
 {
   private function fetchAPI($endpoint, $params = [])
   {
-    $params['key'] = $this->apiKey;
-
-    $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
-
-    $response = file_get_contents($url);
-
-    if (!$response) {
-      return null;
-    }
-
-    return json_decode($response, true);
+    return (new GameDataService())->fetch($endpoint, $params);
   }
 
 

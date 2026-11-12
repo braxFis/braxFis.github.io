@@ -1,0 +1,1 @@
+Version 0.1.12 - prompt fix based on 0.1.9. Restores use of general model knowledge, removes VERIFY instructions, checks incomplete Responses API output and rejects under-100-word fragments. No live web research is added. Existing CLI and WordPress workflows retained. Test with Mass Effect 3 / News; compare with Playground. Backup plugin before upgrading.

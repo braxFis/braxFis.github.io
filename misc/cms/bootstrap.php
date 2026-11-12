@@ -16,5 +16,11 @@ define('BASE_DIR', dirname(__DIR__));
 //Include Composer Autoloader
 require_once __DIR__ . '/vendor/autoload.php';
 
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable(
+    __DIR__ . '/config'
+);
+
+$dotenv->load();
+
 //Include the database class
 require_once 'config/db.php';

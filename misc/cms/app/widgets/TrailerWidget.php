@@ -115,7 +115,7 @@ class TrailerWidget
         'UTF-8'
       );
 
-      $gameId = (int)$trailer['id'];
+      $gameId = $trailer['id'];
 
       $number = str_pad(
         $index + 1,
