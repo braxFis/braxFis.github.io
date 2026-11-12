@@ -1,5 +1,5 @@
 <?php
-
+namespace app\controllers;
 class SpeechController {
 // ===== KONFIGURATION =====
 private string $apiKey = "Bearer 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";  // ← byt ut till din riktiga NVIDIA API-nyckel

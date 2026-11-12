@@ -2,14 +2,38 @@
 
 namespace modules\home\models;
 
-use app\services\GameDataService;
+use app\models\RAWG_API;
 
-class Home
+class Home extends RAWG_API
 {
-  private function fetchAPI($endpoint, $params = [])
-  {
-    return (new GameDataService())->fetch($endpoint, $params);
-  }
+private function fetchAPI($endpoint, $params = [])
+{
+    $params['key'] = $this->apiKey;
+
+    $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
+
+    $ch = curl_init();
+
+    curl_setopt_array($ch, [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_TIMEOUT => 15,
+        CURLOPT_USERAGENT => 'BraxFisCMS/1.0'
+    ]);
+
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    curl_close($ch);
+
+    if ($httpCode !== 200 || !$response) {
+        error_log("RAWG request failed: {$url}");
+        return ['results' => []];
+    }
+
+    return json_decode($response, true) ?: ['results' => []];
+}
 
 
   /*

@@ -255,7 +255,7 @@ $routes = [
           'genre/{slug}' => ['controller' => '\modules\genre\controllers\GenreController', 'method' => 'index'],
           'developer/{slug}' => ['controller' => '\modules\developer\controllers\DeveloperController', 'method' => 'index'],
           'publisher/{slug}' => ['controller' => '\modules\publisher\controllers\PublisherController', 'method' => 'index'],
-          'games/((?:igdb-)?[0-9]+)' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'show'],
+          'games/([0-9]+)' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'show'],
           'games/loadMore' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'loadMore'],
           'news/indie/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'indieNews'],
           'review/indie/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'indieReview'],
@@ -265,9 +265,6 @@ $routes = [
           'login' => ['controller' => '\app\controllers\UserController', 'method' => 'login'],
           'register' => ['controller' => '\app\controllers\UserController', 'method' => 'register'],
           'logout' => ['controller' => '\app\controllers\UserController', 'method' => 'logout'],
-          'walkthroughs' => ['controller' => '\modules\guide\controllers\GuideController','method' => 'index'],
-          'games/([0-9]+)/guides' => ['controller' => '\modules\guide\controllers\GuideController','method' => 'forGame'],
-          'games/([0-9]+)/guides/{slug}' => ['controller' => '\modules\guide\controllers\GuideController','method' => 'show'],
         ],
         'POST' => [
           'login' => ['controller' => '\app\controllers\UserController', 'method' => 'login'],
@@ -277,9 +274,13 @@ $routes = [
 ];
 $path = $request;
 
-$method = $_SERVER['REQUEST_METHOD'];
+$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 
-foreach ($routes['ADMIN'][$method] as $route => $info) {
+if ($method === 'HEAD') {
+    $method = 'GET';
+}
+
+foreach (($routes['ADMIN'][$method] ?? []) as $route => $info) {
   $pattern = preg_replace(['#\{id\}#', '#\{slug\}#'], ['([0-9]+)', '([a-zA-Z0-9\-]+)'], $route);
   if(preg_match("#^$pattern$#", $path, $matches)){
         //var_dump(class_exists('\app\controllers\PostController'));
@@ -296,7 +297,7 @@ foreach ($routes['ADMIN'][$method] as $route => $info) {
     }
 }
 
-foreach ($routes['USER'][$method] as $route => $info) {
+foreach (($routes['USER'][$method] ?? []) as $route => $info) {
     $pattern = preg_replace('#/([0-9]+)#', '/([0-9]+)', $route);
     if(preg_match("#^$pattern$#", $path, $matches)){
         //var_dump(class_exists('\app\controllers\PostController'));
@@ -313,38 +314,23 @@ foreach ($routes['USER'][$method] as $route => $info) {
     }
 }
 
-
-foreach ($routes['PUBLIC'][$method] as $route => $info) {
-
-    $pattern = preg_replace(
-        ['#\{id\}#', '#\{slug\}#'],
-        ['([0-9]+)', '([a-zA-Z0-9\-]+)'],
-        $route
-    );
-
-    if (preg_match("#^$pattern$#", $path, $matches)) {
-
+foreach (($routes['PUBLIC'][$method] ?? []) as $route => $info) {
+  $pattern = preg_replace(
+    ['#\{id\}#', '#\{slug\}#'],
+    ['([0-9]+)', '([a-zA-Z0-9\-]+)'],
+    $route
+  );
+    if(preg_match("#^$pattern$#", $path, $matches)){
+        //var_dump(class_exists('\app\controllers\PostController'));
+//        var_dump(get_included_files());
         $controller = new $info['controller'];
-        $action = $info['method'];
+        $id = isset($matches[1]) ? $matches[1] : null;
 
-        // Extract all captured URL parameters
-        $params = array_slice($matches, 1);
-
-        if ($method === 'POST' && $action !== 'delete') {
-
-            // Preserve the existing POST convention:
-            // method($_POST, $id)
-            $controller->{$action}(
-                $_POST,
-                $params[0] ?? null
-            );
-
-        } else {
-
-            // Pass all URL parameters to the controller
-            $controller->{$action}(...$params);
+        if($method == 'POST' && $info['method'] !== 'delete'){
+            $controller->{$info['method']}($_POST, $id);
+        } else{
+            $controller->{$info['method']}($id);
         }
-
         exit;
     }
 }
