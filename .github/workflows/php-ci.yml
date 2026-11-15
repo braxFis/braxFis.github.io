@@ -27,3 +27,6 @@ jobs:
           find . -type f -name "*.php" \
             -not -path "./vendor/*" \
             -print0 | xargs -0 -r -n1 php -l
+
+      - name: Game data regression tests
+        run: php misc/cms/tests/game_data_regression.php

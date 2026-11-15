@@ -7,8 +7,8 @@ define('BASE_DIR', dirname(__DIR__));
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/php_error.log');
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
 error_reporting(E_ALL);
 
 error_log("=== BOOTSTRAP STARTED ===");
@@ -31,6 +31,13 @@ error_log("Composer autoload.php FOUND");
 require_once $autoload;
 
 error_log("Composer autoload loaded successfully");
+
+// Server environment takes precedence; local credentials stay outside Git.
+// UnsafeImmutable deliberately exposes values through getenv(), used by API clients.
+foreach ([__DIR__ . '/config', __DIR__] as $environmentDirectory) {
+    \Dotenv\Dotenv::createUnsafeImmutable($environmentDirectory)->safeLoad();
+}
+ini_set('display_errors', getenv('APP_DEBUG') === '1' ? '1' : '0');
 
 // Database configuration
 $dbConfig = __DIR__ . '/config/db.php';

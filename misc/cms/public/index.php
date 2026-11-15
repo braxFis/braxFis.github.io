@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../bootstrap.php'; // ✅ Garanterat rätt path
 
 error_reporting(E_ALL);
-ini_set('display_errors', '1');
+ini_set('display_errors', getenv('APP_DEBUG') === '1' ? '1' : '0');
 //echo "Requested URI: " . $_SERVER['REQUEST_URI'];
 // index.php (din befintliga)
 //require __DIR__ . '/../core/PluginManager.php';
@@ -255,7 +255,7 @@ $routes = [
           'genre/{slug}' => ['controller' => '\modules\genre\controllers\GenreController', 'method' => 'index'],
           'developer/{slug}' => ['controller' => '\modules\developer\controllers\DeveloperController', 'method' => 'index'],
           'publisher/{slug}' => ['controller' => '\modules\publisher\controllers\PublisherController', 'method' => 'index'],
-          'games/([0-9]+)' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'show'],
+          'games/((?:igdb-)?[0-9]+)' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'show'],
           'games/loadMore' => ['controller' => '\modules\game\controllers\GameController', 'method' => 'loadMore'],
           'news/indie/([0-9]+)' => ['controller' => '\app\controllers\NewsController', 'method' => 'indieNews'],
           'review/indie/([0-9]+)' => ['controller' => '\app\controllers\ReviewController', 'method' => 'indieReview'],

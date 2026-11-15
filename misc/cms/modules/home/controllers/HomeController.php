@@ -25,7 +25,7 @@ class HomeController
     /*
      * Games with trailers
      */
-    $trailerGames = (($data['results'][0]['rating_source'] ?? '') === 'IGDB')
+    $trailerGames = (($games[0]['rating_source'] ?? '') === 'IGDB')
       ? [] : $this->model->getTrailerGames();
 
 
@@ -60,11 +60,11 @@ class HomeController
 
 
       $galleryItems[] = [
-        'id'       => (int) $game['id'],
+        'id'       => (string) $game['id'],
         'image'    => $game['background_image'],
         'title'    => $game['name'] ?? 'Unknown Game',
         'subtitle' => 'Featured Game',
-        'url'      => '/games/' . (int) $game['id']
+        'url'      => '/games/' . rawurlencode((string) $game['id'])
       ];
 
 
