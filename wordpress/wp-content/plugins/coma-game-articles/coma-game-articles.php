@@ -2,15 +2,15 @@
 /**
  * Plugin Name: COMA Game Articles
  * Description: Associate WordPress posts with games using RAWG search and automatic IGDB fallback; provide articles through REST.
- * Version: 1.0.0
- * Requires PHP: 7.4
+ * Version: 1.1.0
+ * Requires PHP: 8.1
  * Text Domain: coma-game-articles
  */
 
 if (!defined('ABSPATH')) { exit; }
 
 final class COMA_Game_Articles {
-    const VERSION = '1.0.0';
+    const VERSION = '1.1.0';
     const SETTINGS = 'coma_game_articles_settings';
     const NONCE_ACTION = 'coma_game_articles_save';
     const AJAX_NONCE = 'coma_game_articles_search';
@@ -96,7 +96,14 @@ final class COMA_Game_Articles {
         $title = get_post_meta($post->ID, self::META_TITLE, true);
         ?>
         <div id="coma-game-picker">
-          <p><label for="coma-game-query">Sök efter ett spel (RAWG med IGDB-reserv)</label></p>
+          <p><label for="coma-game-query">Sök efter ett spel</label></p>
+          <p><label for="coma-game-provider">Sökkälla</label>
+          <select id="coma-game-provider" style="width:100%">
+            <option value="igdb" <?php selected((self::options()['preferred'] ?? 'rawg'), 'igdb'); ?>>IGDB (endast)</option>
+            <option value="rawg" <?php selected((self::options()['preferred'] ?? 'rawg'), 'rawg'); ?>>RAWG (endast)</option>
+            <option value="auto">Automatisk reservkälla</option>
+          </select></p>
+          <p class="description">Välj IGDB för CMS-spelsidor med igdb-ID. Ett IGDB-fel byter inte källa i läget endast IGDB.</p>
           <input type="search" id="coma-game-query" style="width:100%" autocomplete="off" placeholder="Exempel: Tomb Raider">
           <div id="coma-game-search-status" role="status" aria-live="polite"></div>
           <div id="coma-game-results" aria-label="Sökresultat"></div>
@@ -151,24 +158,40 @@ final class COMA_Game_Articles {
         if (strlen($query) < 2 || strlen($query) > 120) {
             wp_send_json_error(['message' => 'Skriv mellan 2 och 120 tecken.'], 400);
         }
-        $cache_key = 'coma_search_' . md5($query . ':' . (self::options()['preferred'] ?? 'rawg'));
-        $cached = get_transient($cache_key);
-        if (is_array($cached)) { wp_send_json_success($cached); }
         $o = self::options();
         $primary = ($o['preferred'] ?? 'rawg') === 'igdb' ? 'igdb' : 'rawg';
-        $secondary = $primary === 'rawg' ? 'igdb' : 'rawg';
+        $mode = isset($_GET['source']) ? sanitize_key(wp_unslash($_GET['source'])) : $primary;
+        if (!in_array($mode, ['igdb', 'rawg', 'auto'], true)) {
+            wp_send_json_error(['message' => 'Ogiltig sökkälla.'], 400);
+        }
+        // Include configuration in the cache identity so saved credentials take effect immediately.
+        $configuration = [
+            defined('COMA_RAWG_API_KEY') ? COMA_RAWG_API_KEY : ($o['rawg_key'] ?? ''),
+            defined('COMA_IGDB_CLIENT_ID') ? COMA_IGDB_CLIENT_ID : ($o['igdb_client_id'] ?? ''),
+            defined('COMA_IGDB_CLIENT_SECRET') ? COMA_IGDB_CLIENT_SECRET : ($o['igdb_client_secret'] ?? ''),
+        ];
+        $cache_key = 'coma_search_v2_' . hash('sha256', $query . ':' . $mode . ':' . $primary . ':' . implode(':', $configuration));
+        $cached = get_transient($cache_key);
+        if (is_array($cached)) { wp_send_json_success($cached); }
+        $sources = $mode === 'auto' ? [$primary, $primary === 'rawg' ? 'igdb' : 'rawg'] : [$mode];
         $errors = [];
-        foreach ([$primary, $secondary] as $source) {
+        foreach ($sources as $source) {
             $result = $source === 'rawg' ? self::search_rawg($query, $o) : self::search_igdb($query, $o);
             if (!is_wp_error($result)) {
-                // A legitimate empty result is not evidence of an outage. Do not mix identifiers.
-                $payload = ['source' => $source, 'games' => $result, 'fallback' => ($source !== $primary)];
+                $payload = [
+                    'source' => $source, 'games' => $result,
+                    'fallback' => $mode === 'auto' && $source !== $primary,
+                    'fallback_reason' => $errors[$primary] ?? '',
+                ];
                 set_transient($cache_key, $payload, 5 * MINUTE_IN_SECONDS);
                 wp_send_json_success($payload);
             }
             $errors[$source] = $result->get_error_message();
         }
-        wp_send_json_error(['message' => 'Varken RAWG eller IGDB kunde användas. Kontrollera API-uppgifter och anslutning.', 'details' => $errors], 502);
+        $message = $mode === 'auto'
+            ? 'Varken RAWG eller IGDB kunde användas.'
+            : strtoupper($mode) . ': ' . ($errors[$mode] ?? 'Sökningen misslyckades.');
+        wp_send_json_error(['message' => $message, 'details' => $errors], 502);
     }
 
     private static function search_rawg($query, $o) {
@@ -201,11 +224,13 @@ final class COMA_Game_Articles {
         $cache_key = 'coma_igdb_token_' . md5($client_id . ':' . $secret);
         $token = get_transient($cache_key);
         if (is_string($token) && $token) { return ['client_id' => $client_id, 'token' => $token]; }
-        $url = add_query_arg(['client_id' => $client_id, 'client_secret' => $secret, 'grant_type' => 'client_credentials'], 'https://id.twitch.tv/oauth2/token');
-        $res = wp_remote_post($url, ['timeout' => 8, 'body' => []]);
+                $res = wp_remote_post('https://id.twitch.tv/oauth2/token', [
+            'timeout' => 8,
+            'body' => ['client_id' => $client_id, 'client_secret' => $secret, 'grant_type' => 'client_credentials'],
+        ]);
         if (is_wp_error($res)) { return $res; }
         $data = json_decode(wp_remote_retrieve_body($res), true);
-        if (wp_remote_retrieve_response_code($res) !== 200 || empty($data['access_token'])) { return new WP_Error('igdb_token', 'Kunde inte hämta Twitch access token'); }
+        if (wp_remote_retrieve_response_code($res) !== 200 || empty($data['access_token'])) { return new WP_Error('igdb_token', 'Kunde inte hämta Twitch access token (HTTP ' . wp_remote_retrieve_response_code($res) . '). Kontrollera Client ID och Client Secret i WordPress-inställningarna.'); }
         $ttl = max(60, min(3600, absint($data['expires_in'] ?? 3600) - 120));
         set_transient($cache_key, $data['access_token'], $ttl);
         return ['client_id' => $client_id, 'token' => $data['access_token']];

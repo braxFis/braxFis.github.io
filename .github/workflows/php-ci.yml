@@ -35,3 +35,6 @@ jobs:
         run: |
           php misc/cms/tests/wordpress_mirror_regression.php
           php misc/cms/tests/wordpress_export_regression.php
+
+      - name: Game picker provider tests
+        run: php misc/cms/tests/game_picker_provider_regression.php

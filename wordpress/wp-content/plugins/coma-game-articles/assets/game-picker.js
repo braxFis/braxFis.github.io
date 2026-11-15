@@ -3,6 +3,7 @@
   const root = document.getElementById('coma-game-picker');
   if (!root || !window.COMAGamePicker) return;
   const query = document.getElementById('coma-game-query');
+  const provider = document.getElementById('coma-game-provider');
   const results = document.getElementById('coma-game-results');
   const status = document.getElementById('coma-game-search-status');
   const id = document.getElementById('coma-game-id');
@@ -14,7 +15,14 @@
   let controller = null;
   let serial = 0;
 
+  function cancelSearch() {
+    clearTimeout(timer);
+    if (controller) controller.abort();
+    serial++;
+  }
+
   function select(game) {
+    cancelSearch();
     id.value = String(game.id);
     source.value = game.source;
     title.value = game.name;
@@ -25,11 +33,14 @@
   }
 
   clear.addEventListener('click', () => {
+    cancelSearch();
     id.value = ''; source.value = ''; title.value = '';
     selected.textContent = 'Inget spel valt.';
     query.value = '';
     results.replaceChildren(); status.textContent = '';
   });
+
+  if (provider) provider.addEventListener('change', () => query.dispatchEvent(new Event('input')));
 
   query.addEventListener('input', () => {
     clearTimeout(timer);
@@ -46,12 +57,14 @@
         url.searchParams.set('action', 'coma_game_search');
         url.searchParams.set('nonce', COMAGamePicker.nonce);
         url.searchParams.set('query', term);
+        url.searchParams.set('source', provider ? provider.value : 'igdb');
         const response = await fetch(url.toString(), {signal: controller.signal, credentials: 'same-origin'});
         const payload = await response.json();
         if (run !== serial) return;
         if (!response.ok || !payload.success) throw new Error(payload.data?.message || 'Sökningen misslyckades');
-        const {games, source: usedSource, fallback} = payload.data;
+        const {games, source: usedSource, fallback, fallback_reason} = payload.data;
         status.textContent = `${games.length} träffar via ${usedSource.toUpperCase()}${fallback ? ' (reservkälla)' : ''}.`;
+        if (fallback && fallback_reason) status.textContent += ` Orsak: ${fallback_reason}`;
         if (!games.length) { status.textContent += ' Inga spel hittades.'; return; }
         games.forEach(game => {
           const button = document.createElement('button');
