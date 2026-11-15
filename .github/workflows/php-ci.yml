@@ -30,3 +30,8 @@ jobs:
 
       - name: Game data regression tests
         run: php misc/cms/tests/game_data_regression.php
+
+      - name: WordPress publishing regression tests
+        run: |
+          php misc/cms/tests/wordpress_mirror_regression.php
+          php misc/cms/tests/wordpress_export_regression.php

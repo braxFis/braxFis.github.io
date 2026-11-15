@@ -598,3 +598,5 @@ $stores = $game['stores'] ?? [];
     <?= TrailerWidget::renderTrailerSideBar($game['id']) ?>
 
 </div>
+
+<?php require __DIR__ . '/../../../app/views/articles/game.php'; ?>

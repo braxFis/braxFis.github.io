@@ -238,6 +238,8 @@ $routes = [
 
     'PUBLIC' => [
         'GET' => [
+          'articles' => ['controller' => '\app\controllers\ArticleController', 'method' => 'index'],
+          'articles/([0-9]+)' => ['controller' => '\app\controllers\ArticleController', 'method' => 'show'],
           '' => ['controller' => '\modules\home\controllers\HomeController', 'method' => 'index'],
           'search' => ['controller' => '\modules\game\controllers\SearchController', 'method' => 'index'],
           'trailers' => ['controller' => '\modules\game\controllers\TrailerController', 'method' => 'index'],

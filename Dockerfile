@@ -2,9 +2,10 @@ FROM php:8.3-apache
 
 RUN apt-get update && apt-get install -y \
     libzip-dev \
+    libxml2-dev \
     libcurl4-openssl-dev \
     unzip \
-    && docker-php-ext-install zip curl pdo_mysql \
+    && docker-php-ext-install zip curl pdo_mysql dom \
     && a2enmod rewrite
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer

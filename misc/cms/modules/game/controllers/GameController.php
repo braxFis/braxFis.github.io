@@ -25,6 +25,13 @@ class GameController
       echo "Game not found";
       exit;
     }
+    $relatedArticles = [];
+    try {
+        $mirror = \app\services\WordPressMirror::configured();
+        if ($mirror) { $relatedArticles = $mirror->forGame((string) $id); }
+    } catch (\Throwable $error) {
+        error_log('Related article mirror unavailable: ' . get_class($error));
+    }
     ob_start();
     require __DIR__ . '/../views/single_game.php';
 
