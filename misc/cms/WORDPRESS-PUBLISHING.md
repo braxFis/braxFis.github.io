@@ -23,9 +23,9 @@ IGDB 42 och RAWG 42 är olika spel och blandas aldrig.
    wp-content/plugins på WordPress-servern. Aktivera **COMA Content Export** i
    WordPress → Tillägg. COMA Game Articles behövs bara för spelkopplingen.
 2. Kontrollera den offentliga exporten:
-   https://DIN-WORDPRESS/wp-json/coma-sync/v1/articles?page=1
+   https://DIN-WORDPRESS/index.php?rest_route=/coma-sync/v1/articles&page=1
    Ange WordPress webbplatsadress (home URL), inklusive eventuell underkatalog,
-   inte /wp-admin eller REST-adressen. WordPress permalänkar/REST-routing måste fungera.
+   inte /wp-admin eller REST-adressen. Synken använder index.php?rest_route= och kräver inte omskrivning av /wp-json/-adresser.
 3. Ställ in CMS-serverns miljövariabler (eller config/.env lokalt):
    WORDPRESS_URL=https://DIN-WORDPRESS
    WORDPRESS_MIRROR_FILE=/srv/coma-data/wordpress/articles.json

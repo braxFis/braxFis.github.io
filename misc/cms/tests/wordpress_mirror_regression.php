@@ -26,6 +26,8 @@ function feed(array $items, string $generation = ''): callable {
     $generation = $generation ?: str_repeat('a', 64);
     return static function (string $url) use ($items, $generation): array {
         parse_str((string) parse_url($url, PHP_URL_QUERY), $query);
+        check(parse_url($url, PHP_URL_PATH) === '/index.php', 'Sync must bypass pretty-permalink rewrites');
+        check(($query['rest_route'] ?? '') === '/coma-sync/v1/articles', 'Every page and version check must use REST query routing');
         $page = (int) ($query['page'] ?? 1);
         return ['schema' => 1, 'source' => 'https://wp.example', 'generation' => $generation,
             'page' => $page, 'pages' => max(1, (int) ceil(count($items) / 50)),

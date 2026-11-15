@@ -80,7 +80,7 @@ final class WordPressMirror
             for ($page = 1; ; $page++) {
                 $params = ['page' => $page];
                 if ($generation !== null) { $params['generation'] = $generation; }
-                $url = $this->source . '/wp-json/coma-sync/v1/articles?' . http_build_query($params);
+                $url = $this->exportUrl($params);
                 $data = ($this->fetch)($url);
                 if (!is_array($data) || ($data['schema'] ?? null) !== 1
                     || ($data['source'] ?? '') !== $this->source
@@ -108,8 +108,7 @@ final class WordPressMirror
             }
             if (count($items) !== $total) { throw new \RuntimeException('Incomplete export; previous mirror kept.'); }
             // Check generation again after the last page, including empty exports.
-            $final = ($this->fetch)($this->source . '/wp-json/coma-sync/v1/articles?' .
-                http_build_query(['page' => 1, 'generation' => $generation]));
+            $final = ($this->fetch)($this->exportUrl(['page' => 1, 'generation' => $generation]));
             if (($final['generation'] ?? null) !== $generation || ($final['total'] ?? null) !== $total
                 || ($final['source'] ?? '') !== $this->source) {
                 throw new \RuntimeException('WordPress changed before commit; retry sync.');
@@ -185,6 +184,14 @@ final class WordPressMirror
         ];
     }
 
+    private function exportUrl(array $params): string
+    {
+        // Works with plain permalinks and PHP's development server (no rewrite rules).
+        return $this->source . '/index.php?' . http_build_query(
+            ['rest_route' => '/coma-sync/v1/articles'] + $params
+        );
+    }
+
     private function http(string $url): array
     {
         $body = '';
@@ -202,9 +209,19 @@ final class WordPressMirror
         ]);
         $ok = curl_exec($ch);
         $status = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $curlCode = curl_errno($ch);
+        $curlMessage = curl_error($ch);
+        $contentType = (string) curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
         curl_close($ch);
-        if ($ok === false || $status !== 200) {
+        if ($ok === false) {
+            throw new \RuntimeException('WordPress connection failed (cURL ' . $curlCode . '): ' .
+                $curlMessage . '; previous mirror kept.');
+        }
+        if ($status !== 200) {
             throw new \RuntimeException('WordPress export HTTP ' . $status . '; previous mirror kept.');
+        }
+        if (stripos($contentType, 'text/html') !== false) {
+            throw new \RuntimeException('WordPress returned an HTML page instead of the JSON export. Check the site URL and REST routing; previous mirror kept.');
         }
         $data = json_decode($body, true, 128, JSON_THROW_ON_ERROR);
         if (!is_array($data)) { throw new \RuntimeException('WordPress returned invalid JSON.'); }
