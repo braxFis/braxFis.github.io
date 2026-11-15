@@ -2,20 +2,28 @@
 
 class Database
 {
-    private $host = "localhost";
-    private $user = "root";
-    private $pass = "pezDispenser1!";
-    private $dbname = "coma_news";
-
     public $conn;
-    public function __construct(){
-        try{
-            $this->conn = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->pass);
-            //echo "Connected successfully";
-        } catch (Exception $ex) {
-            //echo $ex->getMessage();
-            echo json_encode(['status' => 'error', 'message' => $ex->getMessage()]);
-            exit;
+
+    public function __construct()
+    {
+        $host = getenv('DB_HOST') ?: 'localhost';
+        $name = getenv('DB_NAME') ?: 'coma_news';
+        $user = getenv('DB_USER') ?: 'root';
+        $password = getenv('DB_PASS');
+        if ($password === false) {
+            throw new RuntimeException('DB_PASS is not configured.');
+        }
+        try {
+            $this->conn = new PDO(
+                "mysql:host={$host};dbname={$name};charset=utf8mb4",
+                $user,
+                $password,
+                [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+            );
+        } catch (PDOException $exception) {
+            error_log('Database connection failed (code ' . $exception->getCode() . ').');
+            http_response_code(503);
+            exit('Databasen är tillfälligt otillgänglig.');
         }
     }
 }

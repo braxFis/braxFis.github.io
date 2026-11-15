@@ -27,7 +27,7 @@ class GalleryWidget
       }
 
       $gallery[] = [
-        'id'       => (int) $item['id'],
+        'id'       => (string) $item['id'],
         'image'    => $item['image'],
         'title'    => $item['title'] ?? '',
         'subtitle' => $item['subtitle'] ?? '',
@@ -83,7 +83,7 @@ class GalleryWidget
       $url = $item['url'];
 
       if (empty($url)) {
-        $url = '/games/' . $item['id'];
+        $url = '/games/' . rawurlencode((string) $item['id']);
       }
 
       $url = htmlspecialchars(
