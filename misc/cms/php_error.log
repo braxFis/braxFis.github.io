@@ -15580,3 +15580,219 @@ Stack trace:
 [11-Nov-2026 21:46:38 UTC] Test logg
 [11-Nov-2026 21:46:38 UTC] Test logg
 [11-Nov-2026 21:46:38 UTC] Test logg
+[15-Nov-2026 05:29:11 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:29:11 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:29:11 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:29:11 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:29:11 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:29:11 UTC] Database config FOUND
+[15-Nov-2026 05:29:11 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:29:11 UTC] PHP Warning:  Undefined property: modules\home\models\Home::$apiKey in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 11
+[15-Nov-2026 05:29:12 UTC] PHP Deprecated:  Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 28
+[15-Nov-2026 05:29:12 UTC] RAWG request failed: https://api.rawg.io/api/games?page=1&page_size=20&dates=2026-10-15%2C2026-11-15&ordering=-released
+[15-Nov-2026 05:29:12 UTC] PHP Warning:  Undefined property: modules\home\models\Home::$apiKey in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 11
+[15-Nov-2026 05:29:12 UTC] PHP Deprecated:  Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 28
+[15-Nov-2026 05:29:12 UTC] RAWG request failed: https://api.rawg.io/api/games?page=1&page_size=30&ordering=-added
+[15-Nov-2026 05:29:12 UTC] PHP Warning:  Undefined property: modules\home\models\Home::$apiKey in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 11
+[15-Nov-2026 05:29:12 UTC] PHP Deprecated:  Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 28
+[15-Nov-2026 05:29:12 UTC] RAWG request failed: https://api.rawg.io/api/games?page=1&page_size=10&ordering=-rating
+[15-Nov-2026 05:29:12 UTC] PHP Warning:  Undefined property: modules\home\models\Home::$apiKey in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 11
+[15-Nov-2026 05:29:12 UTC] PHP Deprecated:  Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 28
+[15-Nov-2026 05:29:12 UTC] RAWG request failed: https://api.rawg.io/api/games?page=1&page_size=10&dates=2026-11-15%2C2027-11-15&ordering=-added
+[15-Nov-2026 05:29:13 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:29:13 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:29:13 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:29:13 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:29:13 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:29:13 UTC] Database config FOUND
+[15-Nov-2026 05:29:13 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:29:25 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:29:25 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:29:25 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:29:25 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:29:25 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:29:25 UTC] Database config FOUND
+[15-Nov-2026 05:29:25 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:29:25 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:29:26 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:29:26 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:29:26 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:29:26 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:29:26 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:29:26 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:29:26 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:29:26 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:29:26 UTC] Database config FOUND
+[15-Nov-2026 05:29:26 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:29:26 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:29:26 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:29:26 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:29:26 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:29:26 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:29:26 UTC] Database config FOUND
+[15-Nov-2026 05:29:26 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:30:15 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:30:15 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:30:15 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:30:15 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:30:15 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:30:15 UTC] Database config FOUND
+[15-Nov-2026 05:30:15 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:30:15 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:30:15 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:30:17 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:30:17 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:30:17 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:30:17 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:30:17 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:30:17 UTC] Database config FOUND
+[15-Nov-2026 05:30:17 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:30:33 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:30:33 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:30:33 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:30:33 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:30:33 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:30:33 UTC] Database config FOUND
+[15-Nov-2026 05:30:33 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:30:33 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:30:33 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:30:33 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:30:33 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:30:33 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:30:33 UTC] Database config FOUND
+[15-Nov-2026 05:30:33 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:30:48 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:30:48 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:30:48 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:30:48 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:30:48 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:30:48 UTC] Database config FOUND
+[15-Nov-2026 05:30:48 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:30:48 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:30:48 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:30:48 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:30:48 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:30:48 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:30:48 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:30:48 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:30:48 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:30:48 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:30:48 UTC] Database config FOUND
+[15-Nov-2026 05:30:48 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:30:48 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:30:48 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:30:48 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:30:48 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:30:48 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:30:48 UTC] Database config FOUND
+[15-Nov-2026 05:30:48 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:32:57 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:32:57 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:32:57 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:32:57 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:32:57 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:32:57 UTC] Database config FOUND
+[15-Nov-2026 05:32:57 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:32:57 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:32:57 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:41:01 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:01 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:01 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:01 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:01 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:01 UTC] Database config FOUND
+[15-Nov-2026 05:41:01 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:01 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:41:01 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:41:01 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:41:01 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:41:01 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:01 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:01 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:01 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:01 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:01 UTC] Database config FOUND
+[15-Nov-2026 05:41:01 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:01 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:01 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:01 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:01 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:01 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:01 UTC] Database config FOUND
+[15-Nov-2026 05:41:01 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:03 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:03 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:03 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:03 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:03 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:03 UTC] Database config FOUND
+[15-Nov-2026 05:41:03 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:03 UTC] PHP Warning:  Undefined property: modules\home\models\Home::$apiKey in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 11
+[15-Nov-2026 05:41:04 UTC] PHP Deprecated:  Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 28
+[15-Nov-2026 05:41:04 UTC] RAWG request failed: https://api.rawg.io/api/games?page=1&page_size=20&dates=2026-10-15%2C2026-11-15&ordering=-released
+[15-Nov-2026 05:41:04 UTC] PHP Warning:  Undefined property: modules\home\models\Home::$apiKey in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 11
+[15-Nov-2026 05:41:04 UTC] PHP Deprecated:  Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 28
+[15-Nov-2026 05:41:04 UTC] RAWG request failed: https://api.rawg.io/api/games?page=1&page_size=30&ordering=-added
+[15-Nov-2026 05:41:04 UTC] PHP Warning:  Undefined property: modules\home\models\Home::$apiKey in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 11
+[15-Nov-2026 05:41:04 UTC] PHP Deprecated:  Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 28
+[15-Nov-2026 05:41:04 UTC] RAWG request failed: https://api.rawg.io/api/games?page=1&page_size=10&ordering=-rating
+[15-Nov-2026 05:41:04 UTC] PHP Warning:  Undefined property: modules\home\models\Home::$apiKey in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 11
+[15-Nov-2026 05:41:04 UTC] PHP Deprecated:  Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in D:\Projects\coma-news\braxFis.github.io\misc\cms\modules\home\models\Home.php on line 28
+[15-Nov-2026 05:41:04 UTC] RAWG request failed: https://api.rawg.io/api/games?page=1&page_size=10&dates=2026-11-15%2C2027-11-15&ordering=-added
+[15-Nov-2026 05:41:04 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:04 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:04 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:04 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:04 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:04 UTC] Database config FOUND
+[15-Nov-2026 05:41:04 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:15 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:15 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:15 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:15 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:15 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:15 UTC] Database config FOUND
+[15-Nov-2026 05:41:15 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:15 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:41:15 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:41:15 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:41:15 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:41:15 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:15 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:15 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:15 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:15 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:15 UTC] Database config FOUND
+[15-Nov-2026 05:41:15 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:15 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:15 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:15 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:15 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:15 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:15 UTC] Database config FOUND
+[15-Nov-2026 05:41:15 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:47 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:47 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:47 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:47 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:47 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:47 UTC] Database config FOUND
+[15-Nov-2026 05:41:47 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:47 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:41:47 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:41:47 UTC] RAWG request failed: Missing RAWG_API_KEY
+[15-Nov-2026 05:41:47 UTC] IGDB fallback failed: IGDB_CLIENT_ID missing.
+[15-Nov-2026 05:41:47 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:47 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:47 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:47 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:47 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:47 UTC] Database config FOUND
+[15-Nov-2026 05:41:47 UTC] === BOOTSTRAP COMPLETED ===
+[15-Nov-2026 05:41:47 UTC] === BOOTSTRAP STARTED ===
+[15-Nov-2026 05:41:47 UTC] BASE_PATH: D:\Projects\coma-news\braxFis.github.io\misc\cms
+[15-Nov-2026 05:41:47 UTC] PHP VERSION: 8.5.11
+[15-Nov-2026 05:41:47 UTC] Composer autoload.php FOUND
+[15-Nov-2026 05:41:47 UTC] Composer autoload loaded successfully
+[15-Nov-2026 05:41:47 UTC] Database config FOUND
+[15-Nov-2026 05:41:47 UTC] === BOOTSTRAP COMPLETED ===
