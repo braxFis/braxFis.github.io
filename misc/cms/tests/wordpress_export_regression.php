@@ -11,7 +11,7 @@ function home_url($path) { return 'https://wp.example/'; }
 function is_post_publicly_viewable($post) { return $post->post_status === 'publish'; }
 function setup_postdata($post) {}
 function wp_reset_postdata() {}
-function get_post_meta($id, $key, $single) { return $key === '_coma_game_source' ? 'igdb' : 42; }
+function get_post_meta($id, $key, $single) { return ['_coma_game_source'=>'igdb', '_coma_game_id'=>42, '_coma_movie_source'=>'tmdb', '_coma_movie_id'=>11][$key] ?? ''; }
 function get_the_title($post) { return 'Article ' . $post->ID; }
 function html($value) { return strip_tags($value); }
 function wp_strip_all_tags($value) { return strip_tags($value); }
@@ -58,6 +58,7 @@ $response = COMA_Content_Export::articles(new Request());
 check($queryArgs['post_status'] === 'publish' && $queryArgs['has_password'] === false, 'Query excludes protected posts');
 check(count($response->data['articles']) === 1, 'Only publicly visible, unprotected articles exported');
 check($response->data['articles'][0]['game'] === ['source' => 'igdb', 'id' => 42], 'Provider mapping exported');
+check($response->data['articles'][0]['movie'] === ['source' => 'tmdb', 'id' => 11], 'Movie and game namespaces exported separately');
 check(COMA_Content_Export::articles(new Request(['generation' => str_repeat('0',64)])) instanceof WP_Error, 'Stale generation rejected');
 check(COMA_Content_Export::articles(new Request(['page' => -1])) instanceof WP_Error, 'Invalid page rejected');
 $changeDuringRender = true;

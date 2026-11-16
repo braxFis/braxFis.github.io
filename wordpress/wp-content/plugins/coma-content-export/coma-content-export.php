@@ -2,7 +2,7 @@
 /**
  * Plugin Name: COMA Content Export
  * Description: Public, versioned export of published articles for the COMA CMS mirror.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Requires PHP: 8.0
  */
 if (!defined('ABSPATH')) { exit; }
@@ -33,7 +33,7 @@ final class COMA_Content_Export
             return new WP_Error('invalid_page', 'Invalid page.', ['status' => 400]);
         }
         $revision = (string) get_option(self::REVISION, 'initial');
-        $generation = hash('sha256', 'v1:' . $revision);
+        $generation = hash('sha256', 'v1-movie-links:' . $revision);
         $expected = (string) ($request->get_param('generation') ?? '');
         if ($expected !== '' && !hash_equals($generation, $expected)) {
             return new WP_Error('snapshot_changed', 'Content changed; restart sync.', ['status' => 409]);
@@ -62,6 +62,10 @@ final class COMA_Content_Export
             $gameId = (int) get_post_meta($entry->ID, '_coma_game_id', true);
             $game = in_array($gameSource, ['igdb', 'rawg'], true) && $gameId > 0
                 ? ['source' => $gameSource, 'id' => $gameId] : null;
+            $movieSource = (string) get_post_meta($entry->ID, '_coma_movie_source', true);
+            $movieId = (int) get_post_meta($entry->ID, '_coma_movie_id', true);
+            $movie = $movieSource === 'tmdb' && $movieId > 0
+                ? ['source' => 'tmdb', 'id' => $movieId] : null;
             // Render Gutenberg/dynamic blocks on WordPress, then remove unsafe markup.
             $items[] = [
                 'id' => (int) $entry->ID,
@@ -77,6 +81,7 @@ final class COMA_Content_Export
                 'categories' => wp_get_post_categories($entry->ID, ['fields' => 'names']),
                 'tags' => wp_get_post_tags($entry->ID, ['fields' => 'names']),
                 'game' => $game,
+                'movie' => $movie,
             ];
         }
         $post = $previous;

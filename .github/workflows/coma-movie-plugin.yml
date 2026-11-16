@@ -1,0 +1,54 @@
+name: COMA movie plugin
+on:
+  pull_request:
+    paths:
+      - 'wordpress/wp-content/plugins/coma-game-articles/**'
+      - 'wordpress/wp-content/plugins/coma-content-export/**'
+      - 'misc/cms/tests/movie_articles_regression.php'
+      - 'misc/cms/tests/wordpress_export_regression.php'
+      - '.github/workflows/coma-movie-plugin.yml'
+  push:
+    branches: ['chatgpt/coma-game-articles-tmdb']
+permissions:
+  contents: read
+jobs:
+  validate-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+      - name: Check plugin syntax
+        run: |
+          find wordpress/wp-content/plugins/coma-game-articles wordpress/wp-content/plugins/coma-content-export -name '*.php' -print0 | xargs -0 -n1 php -l
+          node --check wordpress/wp-content/plugins/coma-game-articles/assets/movie-picker.js
+      - name: Test film associations and existing game providers
+        run: |
+          php misc/cms/tests/movie_articles_regression.php
+          php misc/cms/tests/game_picker_provider_regression.php
+          php misc/cms/tests/wordpress_export_regression.php
+      - name: Build installable ZIP files
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile, ZIP_DEFLATED
+          for name, version in [('coma-game-articles','1.2.0'),('coma-content-export','1.1.0')]:
+              folder = Path('wordpress/wp-content/plugins') / name
+              with ZipFile(name + '-' + version + '.zip', 'w', ZIP_DEFLATED) as z:
+                  for p in sorted(folder.rglob('*')):
+                      if p.is_file():
+                          z.write(p, p.relative_to(folder.parent))
+              with ZipFile(name + '-' + version + '.zip') as z:
+                  assert z.testzip() is None
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coma-game-articles-1.2.0
+          path: coma-game-articles-1.2.0.zip
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coma-content-export-1.1.0
+          path: coma-content-export-1.1.0.zip
+          retention-days: 14

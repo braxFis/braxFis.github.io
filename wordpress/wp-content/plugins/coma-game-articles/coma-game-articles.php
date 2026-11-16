@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: COMA Game Articles
- * Description: Associate WordPress posts with games using RAWG search and automatic IGDB fallback; provide articles through REST.
- * Version: 1.1.0
+ * Description: Associate WordPress articles with RAWG/IGDB games and TMDB movies; expose published article links through REST.
+ * Version: 1.2.0
  * Requires PHP: 8.1
  * Text Domain: coma-game-articles
  */
@@ -10,7 +10,7 @@
 if (!defined('ABSPATH')) { exit; }
 
 final class COMA_Game_Articles {
-    const VERSION = '1.1.0';
+    const VERSION = '1.2.0';
     const SETTINGS = 'coma_game_articles_settings';
     const NONCE_ACTION = 'coma_game_articles_save';
     const AJAX_NONCE = 'coma_game_articles_search';
@@ -48,11 +48,12 @@ final class COMA_Game_Articles {
         $input = is_array($input) ? $input : [];
         $old = self::options();
         $out = [];
-        foreach (['rawg_key','igdb_client_id','igdb_client_secret'] as $key) {
+        foreach (['rawg_key','igdb_client_id','igdb_client_secret','tmdb_read_token'] as $key) {
             $entered = isset($input[$key]) ? trim((string) wp_unslash($input[$key])) : '';
             // Leave blank to keep the previously saved credential.
             $out[$key] = $entered !== '' ? sanitize_text_field($entered) : ($old[$key] ?? '');
         }
+        if (!empty($input['remove_tmdb_token'])) { $out['tmdb_read_token'] = ''; }
         $out['preferred'] = in_array(($input['preferred'] ?? ''), ['rawg', 'igdb'], true) ? $input['preferred'] : 'rawg';
         return $out;
     }
@@ -67,6 +68,7 @@ final class COMA_Game_Articles {
         <?php settings_fields('coma_game_articles'); ?>
         <table class="form-table" role="presentation">
           <?php foreach ([
+            'tmdb_read_token' => 'TMDB API Read Access Token (filmer)',
             'rawg_key' => 'RAWG API-nyckel',
             'igdb_client_id' => 'IGDB / Twitch Client ID',
             'igdb_client_secret' => 'IGDB / Twitch Client Secret',
@@ -74,12 +76,14 @@ final class COMA_Game_Articles {
           <tr><th scope="row"><label for="coma-<?php echo esc_attr($field); ?>"><?php echo esc_html($label); ?></label></th>
           <td><input type="password" autocomplete="new-password" class="regular-text" id="coma-<?php echo esc_attr($field); ?>" name="<?php echo esc_attr(self::SETTINGS . '[' . $field . ']'); ?>" value="" placeholder="<?php echo !empty($o[$field]) ? esc_attr('Sparad (lämna tomt för att behålla)') : ''; ?>"><p class="description"><?php echo !empty($o[$field]) ? 'Nyckel sparad.' : 'Ingen nyckel sparad.'; ?></p></td></tr>
           <?php endforeach; ?>
-          <tr><th scope="row">Föredragen källa</th><td><select name="<?php echo esc_attr(self::SETTINGS); ?>[preferred]">
+          <tr><th scope="row">TMDB-token</th><td><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS); ?>[remove_tmdb_token]" value="1"> Ta bort sparad TMDB-token</label><p class="description">Filmer använder TMDB. Du kan också ange COMA_TMDB_READ_TOKEN i wp-config.php. Token visas aldrig i sökresultat.</p></td></tr>
+          <tr><th scope="row">Föredragen spelkälla</th><td><select name="<?php echo esc_attr(self::SETTINGS); ?>[preferred]">
           <option value="rawg" <?php selected(($o['preferred'] ?? 'rawg'), 'rawg'); ?>>RAWG → IGDB</option>
           <option value="igdb" <?php selected(($o['preferred'] ?? 'rawg'), 'igdb'); ?>>IGDB → RAWG</option>
           </select></td></tr>
         </table><?php submit_button('Spara inställningar'); ?></form>
         <p><strong>REST API:</strong> <code><?php echo esc_html(rest_url('coma/v1/games/igdb/123/articles')); ?></code> eller <code><?php echo esc_html(rest_url('coma/v1/games/rawg/123/articles')); ?></code>.</p>
+        <p><strong>Filmer:</strong> Ange TMDB-token ovan och använd panelen ”COMA: koppla till film” när du redigerar ett inlägg. Artikelkopplingar för filmer hämtas via <code><?php echo esc_html(rest_url('coma/v1/movies/tmdb/11/articles')); ?></code>.</p>
         <p><strong>Viktigt:</strong> RAWG-ID och IGDB-ID är olika. För att artikeln ska synas på din MVC-spelsida måste den sidan känna till både spelets källa och ID eller ha en ID-mappning.</p>
         </div>
         <?php
@@ -313,3 +317,6 @@ final class COMA_Game_Articles {
 }
 
 COMA_Game_Articles::init();
+
+require_once __DIR__ . '/includes/class-coma-movie-articles.php';
+COMA_Movie_Articles::init();
