@@ -28,27 +28,39 @@ jobs:
           php misc/cms/tests/movie_articles_regression.php
           php misc/cms/tests/game_picker_provider_regression.php
           php misc/cms/tests/wordpress_export_regression.php
-      - name: Build installable ZIP files
+      - name: Prepare directly installable artifact folders
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          from shutil import copytree
           from zipfile import ZipFile, ZIP_DEFLATED
           for name, version in [('coma-game-articles','1.2.0'),('coma-content-export','1.1.0')]:
-              folder = Path('wordpress/wp-content/plugins') / name
-              with ZipFile(name + '-' + version + '.zip', 'w', ZIP_DEFLATED) as z:
-                  for p in sorted(folder.rglob('*')):
+              source = Path('wordpress/wp-content/plugins') / name
+              # Upload the parent folder, so GitHub's ZIP contains plugin-name/*.php.
+              # Uploading a prebuilt ZIP would instead create ZIP-inside-ZIP.
+              upload_root = Path('installable') / (name + '-' + version)
+              folder = upload_root / name
+              copytree(source, folder)
+              main = folder / (name + '.php')
+              assert 'Plugin Name:' in main.read_text()
+              assert 'Version: ' + version in main.read_text()
+              assert not list(folder.rglob('*.zip'))
+              with ZipFile('/tmp/' + name + '.zip', 'w', ZIP_DEFLATED) as z:
+                  for p in sorted(upload_root.rglob('*')):
                       if p.is_file():
-                          z.write(p, p.relative_to(folder.parent))
-              with ZipFile(name + '-' + version + '.zip') as z:
+                          z.write(p, p.relative_to(upload_root))
+              with ZipFile('/tmp/' + name + '.zip') as z:
                   assert z.testzip() is None
+                  assert name + '/' + name + '.php' in z.namelist()
+                  assert not any(p.endswith('.zip') for p in z.namelist())
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: coma-game-articles-1.2.0
-          path: coma-game-articles-1.2.0.zip
+          path: installable/coma-game-articles-1.2.0/
           retention-days: 14
       - uses: actions/upload-artifact@v4
         with:
           name: coma-content-export-1.1.0
-          path: coma-content-export-1.1.0.zip
+          path: installable/coma-content-export-1.1.0/
           retention-days: 14
