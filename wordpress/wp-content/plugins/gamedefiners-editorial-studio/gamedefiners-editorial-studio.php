@@ -2,7 +2,7 @@
 /**
  * Plugin Name: GameDefiners Editorial Studio
  * Description: A modular editorial workspace for creating AI-assisted WordPress drafts and standardized game review scorecards.
- * Version: 0.1.15
+ * Version: 0.1.16
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Author: GameDefiners
@@ -13,12 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'GDES_VERSION', '0.1.15' );
+define( 'GDES_VERSION', '0.1.16' );
 define( 'GDES_FILE', __FILE__ );
 define( 'GDES_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GDES_URL', plugin_dir_url( __FILE__ ) );
 
 require_once GDES_PATH . 'includes/class-gdes-movie-reporter.php';
+require_once GDES_PATH . 'includes/class-gdes-tmdb.php';
+GDES_TMDB::boot();
 require_once GDES_PATH . 'includes/class-gdes-openai.php';
 require_once GDES_PATH . 'includes/class-gdes-plugin.php';
 require_once GDES_PATH . 'includes/class-gdes-generator.php';

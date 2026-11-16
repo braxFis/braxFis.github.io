@@ -38,3 +38,25 @@ jobs:
 
       - name: Game picker provider tests
         run: php misc/cms/tests/game_picker_provider_regression.php
+
+      - name: Editorial Studio TMDB regression tests
+        run: php misc/cms/tests/editorial_tmdb_regression.php
+
+      - name: Build installable Editorial Studio ZIP
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile, ZIP_DEFLATED
+          plugin = Path("wordpress/wp-content/plugins/gamedefiners-editorial-studio")
+          with ZipFile("gamedefiners-editorial-studio-0.1.16.zip", "w", ZIP_DEFLATED) as archive:
+              for path in sorted(plugin.rglob("*")):
+                  if path.is_file():
+                      archive.write(path, path.relative_to(plugin.parent))
+          PY
+
+      - name: Upload installable Editorial Studio ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-studio-0.1.16
+          path: gamedefiners-editorial-studio-0.1.16.zip
+          retention-days: 14

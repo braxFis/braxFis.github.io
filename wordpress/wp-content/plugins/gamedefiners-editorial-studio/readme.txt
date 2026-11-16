@@ -3,7 +3,7 @@ Contributors: gamedefiners
 Tags: editorial, openai, reviews, gutenberg, writing
 Requires at least: 6.5
 Requires PHP: 7.4
-Stable tag: 0.1.2
+Stable tag: 0.1.16
 License: GPLv2 or later
 
 A first-stage editorial plugin for GameDefiners.
@@ -44,3 +44,6 @@ Generated drafts are not fact-checked. Supply source notes and verify dates, pla
 * The default model ID is gpt-6.1-terra and can be changed in settings. Model availability and API pricing may change.
 * The block is a dynamic Gutenberg block. If the plugin is deactivated, its rendered front-end output may disappear until the plugin is reactivated.
 \n== Version 0.1.2 WP-CLI ==\nRun from the WordPress installation directory:\nwp gamedefiners generate --title="Skyrim: nyheter" --brief="Skriv en nyhetsartikel utifrån mina verifierade uppgifter." --type=news --author=1\nFor reviews, provide --hands-on-notes. CLI uses the same generator as the admin form. Creates drafts only. WP-CLI must be installed separately. No RAWG/IGDB integration or automatic game lookup is included.\n
+
+== Version 0.1.16 ==
+TMDB-filmsökning och filmunderlag i artikelverkstaden. Filmreporter via ämnesval, säkra serverbaserade TMDB-inställningar och gemensam TMDB-klient för release-scan. Se TMDB-README.md.
