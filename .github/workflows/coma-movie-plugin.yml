@@ -1,0 +1,66 @@
+name: COMA movie plugin
+on:
+  pull_request:
+    paths:
+      - 'wordpress/wp-content/plugins/coma-game-articles/**'
+      - 'wordpress/wp-content/plugins/coma-content-export/**'
+      - 'misc/cms/tests/movie_articles_regression.php'
+      - 'misc/cms/tests/wordpress_export_regression.php'
+      - '.github/workflows/coma-movie-plugin.yml'
+  push:
+    branches: ['chatgpt/coma-game-articles-tmdb']
+permissions:
+  contents: read
+jobs:
+  validate-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+      - name: Check plugin syntax
+        run: |
+          find wordpress/wp-content/plugins/coma-game-articles wordpress/wp-content/plugins/coma-content-export -name '*.php' -print0 | xargs -0 -n1 php -l
+          node --check wordpress/wp-content/plugins/coma-game-articles/assets/movie-picker.js
+      - name: Test film associations and existing game providers
+        run: |
+          php misc/cms/tests/movie_articles_regression.php
+          php misc/cms/tests/game_picker_provider_regression.php
+          php misc/cms/tests/wordpress_export_regression.php
+      - name: Prepare directly installable artifact folders
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from shutil import copytree
+          from zipfile import ZipFile, ZIP_DEFLATED
+          for name, version in [('coma-game-articles','1.2.0'),('coma-content-export','1.1.0')]:
+              source = Path('wordpress/wp-content/plugins') / name
+              # Upload the parent folder, so GitHub's ZIP contains plugin-name/*.php.
+              # Uploading a prebuilt ZIP would instead create ZIP-inside-ZIP.
+              upload_root = Path('installable') / (name + '-' + version)
+              folder = upload_root / name
+              copytree(source, folder)
+              main = folder / (name + '.php')
+              assert 'Plugin Name:' in main.read_text()
+              assert 'Version: ' + version in main.read_text()
+              assert not list(folder.rglob('*.zip'))
+              with ZipFile('/tmp/' + name + '.zip', 'w', ZIP_DEFLATED) as z:
+                  for p in sorted(upload_root.rglob('*')):
+                      if p.is_file():
+                          z.write(p, p.relative_to(upload_root))
+              with ZipFile('/tmp/' + name + '.zip') as z:
+                  assert z.testzip() is None
+                  assert name + '/' + name + '.php' in z.namelist()
+                  assert not any(p.endswith('.zip') for p in z.namelist())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coma-game-articles-1.2.0
+          path: installable/coma-game-articles-1.2.0/
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coma-content-export-1.1.0
+          path: installable/coma-content-export-1.1.0/
+          retention-days: 14

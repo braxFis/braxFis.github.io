@@ -1,4 +1,4 @@
-COMA Game Articles v1.0.0
+COMA Game Articles v1.2.0
 ==========================
 
 INSTALLATION
@@ -33,3 +33,22 @@ SÄKERHET / BEGRÄNSNINGAR
 - Stöder vanliga WordPress-inlägg (post), inte custom post types ännu.
 - Om du byter källa för ett tidigare kopplat spel behöver du välja spel igen, eller bygga stabil ID-mappning i MVC.
 - WordPress lagrar API-uppgifter i options-tabellen. På extra känsliga installationer kan du i stället lägga COMA_RAWG_API_KEY, COMA_IGDB_CLIENT_ID och COMA_IGDB_CLIENT_SECRET i wp-config.php.
+
+FILMKOPPLINGAR (NYTT I 1.2.0)
+1. Uppdatera samma tillägg: COMA Game Articles.
+2. Inställningar -> COMA Game Articles -> TMDB API Read Access Token.
+3. Inlägg -> Redigera -> panelen "COMA: koppla till film".
+4. Sök filmtitel, välj rätt film/årtal och uppdatera artikeln.
+5. "Ta bort filmkoppling" tar bort endast filmkopplingen när artikeln sparas.
+
+Varje artikel kan ha en spelkoppling OCH en separat filmkoppling. Befintliga RAWG/IGDB-ID:n ändras inte. Film-ID, källa och titel sparas i _coma_movie_id, _coma_movie_source och _coma_movie_title. Snabbredigering utan panelens fält behåller kopplingen.
+
+Publika filmartiklar:
+GET https://din-wordpress-domän.se/wp-json/coma/v1/movies/tmdb/11/articles
+Endast publicerade inlägg utan lösenord lämnas ut. Utkast, privata inlägg och lösenordsskyddade artiklar lämnas inte ut.
+
+TMDB-token används endast på servern, skickas som Bearer-header och visas aldrig i JavaScript eller sökresultat. Du kan ange COMA_TMDB_READ_TOKEN i wp-config.php i stället. Tomt fält behåller tidigare token; kryssrutan tar bort sparad token. Sökresultat cachas i fem minuter och ny token ger en ny cacheidentitet. Ingen reservkälla till spel används för filmer.
+
+Om du använder COMA Content Export: uppdatera även det till version 1.1.0 för att få med movie-fältet i synkflödet. Befintligt game-fält och schema 1 behålls. Konsumenten måste läsa movie-fältet och ha filmvyer för att visa filmkopplingar; det skapas inte automatiskt av WordPress-tillägget.
+
+Inga filmartiklar genereras och inga affischer laddas ned. Du kopplar själv en film till en befintlig artikel. Följ TMDB:s API-, attribuerings- och kommersiella användningsvillkor. This product uses the TMDB API but is not endorsed or certified by TMDB.

@@ -3,3 +3,6 @@
 .coma-game-result:hover, .coma-game-result:focus { background:#eef5ff; border-color:#2271b1; }
 .coma-game-result img { flex:none; width:45px; height:50px; object-fit:cover; }
 #coma-game-search-status { padding-top:6px; font-size:12px; }
+
+#coma-movie-results { max-height: 275px; overflow-y: auto; margin-top: 6px; }
+#coma-movie-search-status { padding-top: 6px; font-size: 12px; }
