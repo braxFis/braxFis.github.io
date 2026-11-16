@@ -30,6 +30,12 @@ class GDES_OpenAI {
             'guide'   => 'Game guide',
             'list'    => 'List article',
         );
+        $is_movie = ! empty( $payload['reporter_role'] ) && 'movie' === $payload['reporter_role'];
+        if ( $is_movie ) {
+            $type_labels['preview'] = 'Film preview';
+            $type_labels['review'] = 'Film review';
+            $type_labels['guide'] = 'Film guide';
+        }
         $article_type = isset( $type_labels[ $payload['article_type'] ] ) ? $type_labels[ $payload['article_type'] ] : 'Editorial article';
 
         $system = "You are the editorial writing assistant for GameDefiners, a gaming publication. Create a useful, original and readable article draft.\n"
@@ -64,6 +70,7 @@ class GDES_OpenAI {
         $tone = isset( $payload['tone'] ) ? $payload['tone'] : 'Engaging and professional';
         $language = ( 'en' === $payload['language'] ) ? 'English' : 'Swedish';
 
+        if ( $is_movie ) { $system .= "\nLANGUAGE OVERRIDE: Write the article in {$language}, as explicitly requested by the editor.\n"; }
         $publication = (!empty($payload['reporter_role']) && $payload['reporter_role'] === 'movie') ? 'an independent entertainment publication' : 'GameDefiners';
         $user = "Create a {$article_type} draft for {$publication}.\n"
             . "Working title: {$payload['title']}\n"
@@ -74,9 +81,10 @@ class GDES_OpenAI {
             . "OPTIONAL EDITOR-SUPPLIED FACTS AND SOURCE NOTES (may contain only general instructions; not independently verified by this plugin):\n{$payload['facts']}\n";
 
         if ( 'review' === $payload['article_type'] ) {
-            $user .= "\nHANDS-ON NOTES FROM THE WRITER:\n{$payload['hands_on_notes']}\n\n"
+            $notes_label = $is_movie ? "FIRSTHAND FILM VIEWING NOTES" : "HANDS-ON NOTES FROM THE WRITER";
+            $user .= "\n{$notes_label}:\n{$payload['hands_on_notes']}\n\n"
                 . "This is a review draft. Stay strictly within the writer's notes. If the notes do not support a personal experience claim, omit it. Do not manufacture a personal experience or final score. The review scorecard will be added and completed separately in WordPress.\n";
-            if ( ! empty( $criteria ) ) {
+            if ( ! $is_movie && ! empty( $criteria ) ) {
                 $user .= "The publication's standard review criteria are: " . implode( '; ', array_map( 'sanitize_text_field', $criteria ) ) . ". Do not assign scores to them.\n";
             }
         }

@@ -69,28 +69,15 @@ class GDES_Release_Scan {
             $releases = json_decode(file_get_contents($path),true);
             if (!is_array($releases) || !array_is_list($releases)) WP_CLI::error('JSON must be an array.');
         } elseif ($source === 'tmdb') {
-            // TMDB v3 API key, from environment or wp-config.php.
-            $key = defined('TMDB_API_KEY') ? TMDB_API_KEY : getenv('TMDB_API_KEY');
-            if (!$key) WP_CLI::error('TMDB_API_KEY missing. Set it in wp-config.php or environment.');
             $releases = array();
             // Sort by TMDB popularity to prioritize movies with broader audience interest.
             for ($page = 1; $page <= 5; $page++) {
-                $url = add_query_arg(array(
-                    'api_key'=>$key,
+                $payload = GDES_TMDB::request('/discover/movie', array(
                     'primary_release_date.gte'=>$today->format('Y-m-d'),
                     'primary_release_date.lte'=>$end->format('Y-m-d'),
-                    'sort_by'=>'popularity.desc',
-                    'include_adult'=>'false',
-                    'page'=>$page,
-                ), 'https://api.themoviedb.org/3/discover/movie');
-                $response = wp_remote_get($url,array('timeout'=>18,'headers'=>array('Accept'=>'application/json')));
-                if (is_wp_error($response)) WP_CLI::error('TMDB unavailable: '.$response->get_error_message());
-                $status = wp_remote_retrieve_response_code($response);
-                if ($status !== 200) WP_CLI::error('TMDB returned HTTP '.$status.'; no drafts created.');
-                $payload = json_decode(wp_remote_retrieve_body($response),true);
-                if (!is_array($payload) || !isset($payload['results']) || !is_array($payload['results'])) {
-                    WP_CLI::error('TMDB returned invalid response.');
-                }
+                    'sort_by'=>'popularity.desc', 'include_adult'=>'false', 'page'=>$page,
+                ));
+                if (is_wp_error($payload)) WP_CLI::error($payload->get_error_message());
                 foreach ($payload['results'] as $movie) {
                     if (empty($movie['id']) || empty($movie['title']) || empty($movie['release_date'])) continue;
                     if ((float)($movie['popularity'] ?? 0) < $min_popularity || (float)($movie['popularity'] ?? 0) > $max_popularity) continue;

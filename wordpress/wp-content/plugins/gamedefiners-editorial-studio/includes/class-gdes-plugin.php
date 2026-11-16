@@ -22,6 +22,7 @@ class GDES_Plugin {
     public static function default_settings() {
         return array(
             'api_key' => '',
+            'tmdb_read_token' => '',
             'model' => 'gpt-6.1-terra',
             'default_language' => 'sv',
             'default_tone' => 'Engagerad och professionell',
@@ -72,6 +73,12 @@ class GDES_Plugin {
             return;
         }
         wp_enqueue_style( 'gdes-admin', GDES_URL . 'assets/admin.css', array(), GDES_VERSION );
+        if ( false !== strpos( (string) $hook, 'gdes-editorial-new' ) ) {
+            wp_enqueue_script( 'gdes-tmdb', GDES_URL . 'assets/tmdb-picker.js', array(), GDES_VERSION, true );
+            wp_localize_script( 'gdes-tmdb', 'GDESTmdb', array(
+                'ajaxUrl' => admin_url( 'admin-ajax.php' ), 'nonce' => wp_create_nonce( 'gdes_tmdb_search' ),
+            ) );
+        }
     }
 
     private function wrap_start( $title, $intro = '' ) {
@@ -91,7 +98,7 @@ class GDES_Plugin {
         }
         $settings = $this->settings();
         $has_key = (bool) GDES_OpenAI::get_api_key();
-        $this->wrap_start( 'AI Editorial Studio', 'En redaktionell arbetsyta för GameDefiners. Börja med ett utkast och bygg ut arbetsflödet efter hand.' );
+        $this->wrap_start( 'AI Editorial Studio', 'En redaktionell arbetsyta för spel- och filmartiklar. Börja med ett utkast och granska det före publicering.' );
         ?>
         <div class="gdes-status <?php echo $has_key ? 'is-ready' : 'is-pending'; ?>">
             <strong><?php echo $has_key ? 'OpenAI-anslutning konfigurerad' : 'OpenAI är inte anslutet ännu'; ?></strong>
@@ -102,7 +109,7 @@ class GDES_Plugin {
             <section class="gdes-card"><span class="dashicons dashicons-awards"></span><h2>Recensionsbedömning</h2><p>Ett separat Gutenberg-block med fem gemensamma kriterier. Redaktören väljer bedömning och skriver motivering till varje punkt.</p><span class="gdes-tag">Ingår i version 0.1.0</span></section>
             <section class="gdes-card"><span class="dashicons dashicons-admin-generic"></span><h2>Redaktionella inställningar</h2><p>Ändra modell, standardspråk, ton, längd, grundinstruktioner och de fem centrala recensionskriterierna.</p><a class="button" href="<?php echo esc_url( admin_url( 'admin.php?page=gdes-editorial-settings' ) ); ?>">Öppna inställningar</a></section>
         </div>
-        <div class="gdes-card gdes-roadmap"><h2>Vad den här första versionen gör – och inte gör</h2><p><strong>Ingår:</strong> adminpanel, redaktionella inställningar, OpenAI-utkast via Responses API och recensionsblock.</p><p><strong>Kommer i senare versioner:</strong> anslutning till din befintliga RAWG-del, idéverkstad, automatisk research/faktakontroll, bildhantering och redaktionskalender. Pluginet ändrar inte din befintliga RAWG-databas eller dina nuvarande spelfaktamoduler.</p><p class="description">AI-utkast är inte faktagranskade. Kontrollera datum, plattformar, citat och andra sakuppgifter innan publicering. Recensioner kräver egna testanteckningar; AI:n ska inte hitta på spelupplevelser.</p></div>
+        <div class="gdes-card gdes-roadmap"><h2>Filmunderlag och artikelutkast</h2><p>Välj Film (TMDB) i artikelverkstaden för att söka på filmtitel och hämta metadata. Ange en egen artikelvinkel och källor. Filmreporterns instruktioner används för filmartiklar; befintliga spelflöden finns kvar.</p><p class="description">AI-utkast är inte faktagranskade. Kontrollera datum, citat och andra sakuppgifter innan publicering. Recensioner kräver egna test- eller visningsanteckningar.</p></div>
         <?php
         $this->wrap_end();
     }
@@ -122,6 +129,20 @@ class GDES_Plugin {
             <input type="hidden" name="action" value="gdes_generate_draft">
             <?php wp_nonce_field( 'gdes_generate_draft', 'gdes_nonce' ); ?>
             <div class="gdes-form-grid">
+                <label class="gdes-field"><span>Ämne</span><select name="reporter_role" id="gdes-reporter-role"><option value="game">Spel</option><option value="movie">Film (TMDB)</option></select></label>
+                <section class="gdes-field gdes-span-2" id="gdes-tmdb-picker" hidden>
+                    <h2>Hämta filmunderlag från TMDB</h2>
+                    <label for="gdes-tmdb-query">Filmtitel</label>
+                    <input type="search" id="gdes-tmdb-query" placeholder="Exempel: Alien" maxlength="120">
+                    <button type="button" class="button" id="gdes-tmdb-search">Sök film</button>
+                    <p id="gdes-tmdb-status" role="status" aria-live="polite"></p>
+                    <div id="gdes-tmdb-results"></div>
+                    <input type="hidden" name="tmdb_id" id="gdes-tmdb-id" value="">
+                    <p id="gdes-tmdb-selected">Ingen film vald.</p>
+                    <button type="button" class="button" id="gdes-tmdb-clear">Ta bort filmval</button>
+                    <p class="description">Vald films metadata hämtas på servern när utkastet skapas. Ange själv artikelvinkel och verifierade nyhetskällor nedan. TMDB är bakgrundsunderlag, inte faktagranskning.</p>
+                    <p class="description">This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+                </section>
                 <label class="gdes-field gdes-span-2"><span>Artikelrubrik / arbetstitel</span><input type="text" name="title" class="regular-text" required maxlength="180" placeholder="Exempel: Första intrycket av ..."></label>
                 <label class="gdes-field"><span>Artikeltyp</span><select name="article_type" id="gdes-article-type">
                     <option value="news">Nyhet</option><option value="preview">Preview</option><option value="review">Recension</option><option value="guide">Guide</option><option value="list">Topplista</option>
@@ -130,8 +151,8 @@ class GDES_Plugin {
                 <label class="gdes-field"><span>Textlängd</span><select name="length"><option value="short" <?php selected( $settings['default_length'], 'short' ); ?>>Kort</option><option value="medium" <?php selected( $settings['default_length'], 'medium' ); ?>>Normal</option><option value="long" <?php selected( $settings['default_length'], 'long' ); ?>>Lång</option></select></label>
                 <label class="gdes-field"><span>Ton</span><input type="text" name="tone" value="<?php echo esc_attr( $settings['default_tone'] ); ?>" maxlength="100"></label>
                 <label class="gdes-field gdes-span-2"><span>Artikelvinkel / instruktioner</span><textarea name="brief" rows="4" required placeholder="Vad ska artikeln handla om? Vilken vinkel vill du ha? Vad ska läsaren få ut av den?"></textarea></label>
-                <label class="gdes-field gdes-span-2"><span>Fakta och källanteckningar</span><textarea name="facts" rows="6" placeholder="Klistra in verifierade uppgifter, källänkar och egna anteckningar. Pluginet hämtar inte fakta automatiskt i den här versionen."></textarea><small>Uppgifter här skickas till OpenAI som underlag. Lägg gärna in källans URL och vad den bekräftar.</small></label>
-                <label class="gdes-field gdes-span-2" id="gdes-hands-on-wrap"><span>Egna speltestanteckningar (krävs för recensioner)</span><textarea name="hands_on_notes" rows="5" placeholder="Beskriv vad du själv har spelat/testat: plattform, speltid, upplevelser, styrkor, problem och konkreta exempel."></textarea><small>För recensioner krävs egna anteckningar. AI:n får inte hitta på att skribenten har spelat spelet.</small></label>
+                <label class="gdes-field gdes-span-2"><span>Fakta och källanteckningar</span><textarea name="facts" rows="6" placeholder="Klistra in verifierade uppgifter, källänkar och egna anteckningar. För film kan du även välja TMDB-underlag ovan."></textarea><small>Uppgifter här skickas till OpenAI som underlag. Lägg gärna in källans URL och vad den bekräftar.</small></label>
+                <label class="gdes-field gdes-span-2" id="gdes-hands-on-wrap"><span>Egna test- eller visningsanteckningar (krävs för recensioner)</span><textarea name="hands_on_notes" rows="5" placeholder="Beskriv vad du själv har spelat, testat eller sett. Ge konkreta observationer, styrkor och problem."></textarea><small>För recensioner krävs egna anteckningar. AI:n får inte hitta på att skribenten har spelat spelet eller sett filmen.</small></label>
             </div>
             <p class="gdes-form-actions"><button type="submit" class="button button-primary button-hero" <?php disabled( ! $has_key ); ?>>Generera WordPress-utkast</button> <a class="button button-link" href="<?php echo esc_url( admin_url( 'admin.php?page=gdes-editorial' ) ); ?>">Tillbaka</a></p>
             <p class="description">Utkastet skapas med statusen ”Utkast”. Ingen artikel publiceras automatiskt. Kontrollera alltid fakta och källor innan publicering.</p>
@@ -162,6 +183,11 @@ class GDES_Plugin {
                     <?php if ( GDES_OpenAI::get_api_key() ) : ?><label class="gdes-check"><input type="checkbox" name="remove_api_key" value="1"> Ta bort sparad API-nyckel</label><?php endif; ?>
                 <?php endif; ?>
                 <label class="gdes-field"><span>OpenAI-modell</span><input type="text" name="model" value="<?php echo esc_attr( $settings['model'] ); ?>" required><small>Standard: gpt-6.1-terra. Du kan ändra modell-ID när du vill.</small></label>
+            </section>
+            <section class="gdes-settings-section"><h2>TMDB – filmunderlag</h2>
+                <label class="gdes-field"><span>TMDB API Read Access Token</span><input type="password" name="tmdb_read_token" value="" autocomplete="new-password" placeholder="<?php echo GDES_TMDB::token() ? 'Token konfigurerad – lämna tomt för att behålla' : 'API Read Access Token'; ?>"><small>Serverbaserad filmsökning. Du kan också använda konstanten GDES_TMDB_READ_TOKEN eller miljövariabeln TMDB_API_READ_TOKEN. Token visas aldrig i sökresultat eller JavaScript.</small></label>
+                <label class="gdes-check"><input type="checkbox" name="remove_tmdb_token" value="1"> Ta bort sparad TMDB-token (påverkar inte wp-config.php/miljövariabler)</label>
+                <p class="description">Kontrollera TMDB:s licens- och attribueringsvillkor för din användning. Filmdata och bildrättigheter är separata; inga affischer importeras automatiskt.</p>
             </section>
             <section class="gdes-settings-section"><h2>Standard för artikelutkast</h2>
                 <label class="gdes-field"><span>Standardspråk</span><select name="default_language"><option value="sv" <?php selected( $settings['default_language'], 'sv' ); ?>>Svenska</option><option value="en" <?php selected( $settings['default_language'], 'en' ); ?>>Engelska</option></select></label>
@@ -197,6 +223,11 @@ class GDES_Plugin {
                 $new['api_key'] = sanitize_text_field( trim( (string) wp_unslash( $_POST['api_key'] ) ) );
             }
         }
+        if ( ! empty( $_POST['remove_tmdb_token'] ) ) {
+            $new['tmdb_read_token'] = '';
+        } elseif ( isset( $_POST['tmdb_read_token'] ) && is_string( $_POST['tmdb_read_token'] ) && '' !== trim( wp_unslash( $_POST['tmdb_read_token'] ) ) ) {
+            $new['tmdb_read_token'] = sanitize_text_field( trim( wp_unslash( $_POST['tmdb_read_token'] ) ) );
+        }
         $model = isset( $_POST['model'] ) ? sanitize_text_field( wp_unslash( $_POST['model'] ) ) : $old['model'];
         $new['model'] = preg_match( '/^[a-zA-Z0-9._-]{2,80}$/', $model ) ? $model : $old['model'];
         $new['default_language'] = ( isset( $_POST['default_language'] ) && 'en' === $_POST['default_language'] ) ? 'en' : 'sv';
@@ -228,6 +259,8 @@ class GDES_Plugin {
         }
         $payload = array(
             'title' => $title,
+            'reporter_role' => isset( $_POST['reporter_role'] ) && 'movie' === $_POST['reporter_role'] ? 'movie' : 'game',
+            'tmdb_id' => isset( $_POST['tmdb_id'] ) && is_string( $_POST['tmdb_id'] ) ? sanitize_text_field( wp_unslash( $_POST['tmdb_id'] ) ) : '',
             'article_type' => $type,
             'language' => ( isset( $_POST['language'] ) && 'en' === $_POST['language'] ) ? 'en' : 'sv',
             'length' => isset( $_POST['length'] ) && in_array( $_POST['length'], array( 'short', 'medium', 'long' ), true ) ? sanitize_key( $_POST['length'] ) : 'medium',
