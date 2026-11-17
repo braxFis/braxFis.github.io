@@ -1,0 +1,16 @@
+.git
+.github
+.idea
+.DS_Store
+**/.DS_Store
+**/.env
+**/.env.*
+!**/.env.example
+**/vendor
+**/node_modules
+**/php_error.log
+**/*.sql
+**/*.sql.gz
+cms/public/uploads
+cms/var
+cms/tests

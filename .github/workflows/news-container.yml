@@ -1,0 +1,31 @@
+name: News container preparation
+on:
+  push:
+    branches: [chatgpt/prepare-news-container]
+  pull_request:
+    paths: ['misc/**', '.github/workflows/news-container.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline CMS regression tests
+        run: |
+          php misc/cms/tests/game_data_regression.php
+          php misc/cms/tests/wordpress_mirror_regression.php
+          php misc/cms/tests/wordpress_export_regression.php
+          php misc/cms/tests/game_picker_provider_regression.php
+      - name: Build News image
+        run: docker build -f misc/Dockerfile -t moviezimmer-news:test misc
+      - name: Verify Apache, PHP and Composer autoload
+        run: |
+          docker run -d --name news-smoke -p 127.0.0.1:18080:80 moviezimmer-news:test
+          trap 'docker logs news-smoke; docker rm -f news-smoke' EXIT
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:18080/health.php > /tmp/news-health; then break; fi
+            sleep 2
+          done
+          grep -q 'AUTOLOAD EXISTS' /tmp/news-health
