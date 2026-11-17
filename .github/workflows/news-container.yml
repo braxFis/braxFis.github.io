@@ -29,3 +29,5 @@ jobs:
             sleep 2
           done
           grep -q 'AUTOLOAD EXISTS' /tmp/news-health
+          curl -fsS http://127.0.0.1:18080/misc/css/style.css > /dev/null
+          curl -fsS http://127.0.0.1:18080/misc/js/parts/main.js > /dev/null
