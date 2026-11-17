@@ -1,4 +1,13 @@
 <?php
+// Read private values from the runtime environment, never from version control.
+function coma_required_env($name) {
+    $value = getenv($name);
+    if ($value === false || $value === '') {
+        exit('Missing required WordPress environment configuration: ' . $name);
+    }
+    return $value;
+}
+
 /**
  * The base configuration for WordPress
  *
@@ -18,9 +27,9 @@
  * @package WordPress
  */
 // ** API KEY for RAWG API ** //
-define('RAWG_API_KEY', '8bc47dab600645ac9164f534d0182baf');
+define('RAWG_API_KEY', (getenv('RAWG_API_KEY') ?: ''));
 // ** API KEY for TMDB API ** //
-define('TMDB_API_KEY', '891feba4d2bc4be6a725134b1c38e4c3');
+define('TMDB_API_KEY', (getenv('TMDB_API_KEY') ?: ''));
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'wordpress_db' );
@@ -29,7 +38,7 @@ define( 'DB_NAME', 'wordpress_db' );
 define( 'DB_USER', 'root' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'pezDispenser1!' );
+define( 'DB_PASSWORD', coma_required_env('WORDPRESS_DB_PASSWORD') );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
@@ -52,14 +61,14 @@ define('WP_ENVIRONMENT_TYPE', 'local');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define( 'AUTH_KEY',         coma_required_env('WORDPRESS_AUTH_KEY') );
+define( 'SECURE_AUTH_KEY',  coma_required_env('WORDPRESS_SECURE_AUTH_KEY') );
+define( 'LOGGED_IN_KEY',    coma_required_env('WORDPRESS_LOGGED_IN_KEY') );
+define( 'NONCE_KEY',        coma_required_env('WORDPRESS_NONCE_KEY') );
+define( 'AUTH_SALT',        coma_required_env('WORDPRESS_AUTH_SALT') );
+define( 'SECURE_AUTH_SALT', coma_required_env('WORDPRESS_SECURE_AUTH_SALT') );
+define( 'LOGGED_IN_SALT',   coma_required_env('WORDPRESS_LOGGED_IN_SALT') );
+define( 'NONCE_SALT',       coma_required_env('WORDPRESS_NONCE_SALT') );
 
 /**#@-*/
 
