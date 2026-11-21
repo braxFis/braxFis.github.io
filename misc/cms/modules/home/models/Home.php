@@ -2,24 +2,14 @@
 
 namespace modules\home\models;
 
-use app\models\RAWG_API;
+use app\services\GameDataService;
 
-class Home extends RAWG_API
+class Home
 {
-  private function fetchAPI($endpoint, $params = [])
-  {
-    $params['key'] = $this->apiKey;
-
-    $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
-
-    $response = file_get_contents($url);
-
-    if (!$response) {
-      return null;
-    }
-
-    return json_decode($response, true);
-  }
+private function fetchAPI($endpoint, $params = [])
+{
+    return (new GameDataService())->fetch($endpoint, $params);
+}
 
 
   /*
@@ -63,6 +53,11 @@ class Home extends RAWG_API
 
     $games = $data['results'] ?? [];
     $trailerGames = [];
+
+    // Do not make a separate network request for every IGDB game on the homepage.
+    if (($games[0]['rating_source'] ?? '') === 'IGDB') {
+      return [];
+    }
 
     foreach ($games as $game) {
 

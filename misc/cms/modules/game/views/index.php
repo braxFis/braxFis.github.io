@@ -477,7 +477,7 @@
               </span>
 
               <a
-                href="/games/<?= (int)($item['id'] ?? 0) ?>"
+                href="/games/<?= rawurlencode((string)($item['id'] ?? '')) ?>"
                 class="game-title-link"
               >
 
@@ -866,9 +866,12 @@
                     GAME
                   </span>
 
-                  <h2 class="game-title">
-                    ${game.name || "Unknown Game"}
-                  </h2>
+                <h2 class="game-title">
+                    <a href="/games/${encodeURIComponent(game.id)}"
+                      class="game-title-link">
+                        ${game.name || "Unknown Game"}
+                    </a>
+                </h2>
 
                 </div>
 

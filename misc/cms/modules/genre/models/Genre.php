@@ -2,9 +2,9 @@
 
 namespace modules\genre\models;
 
-use app\models\RAWG_API;
+use app\services\GameDataService;
 
-class Genre extends RAWG_API {
+class Genre {
 
   public array $genres = [
     'action' => 4,
@@ -29,22 +29,21 @@ class Genre extends RAWG_API {
   ];
 
   private function fetchAPI($endpoint, $params = []){
-    $params['key'] = $this->apiKey;
-    $url = $this->baseUrl . $endpoint . '?' . http_build_query($params);
-    $response = file_get_contents($url);
-    if(!$response){
-      return null;
-    }
-    return json_decode($response, true);
+    return (new GameDataService())->fetch($endpoint, $params);
   }
 
   public function getGames($slug):array{
-    $platformId = $this->genres[$slug];
+    if (!isset($this->genres[$slug])) {
+      return [];
+    }
+    $genreId = $this->genres[$slug];
 
     $params = [
       'page' => 1,
       'page_size' => 10,
-      'genres' => $platformId
+      'genres' => $genreId,
+      // Internal hint: lets IGDB resolve the equivalent without reusing a RAWG ID.
+      'genre_slug' => $slug
     ];
 
     $data = $this->fetchAPI('games', $params);

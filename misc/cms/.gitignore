@@ -1,2 +1,10 @@
 /vendor
 /node_modules/
+
+.env
+.env.*
+!.env.example
+/config/.env
+/php_error.log
+
+/var/wordpress/

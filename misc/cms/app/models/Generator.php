@@ -1,5 +1,5 @@
 <?php
-
+namespace app\controllers;
 class OpenAIClient {
     private $apiKey;
     private $endpoint = "https://api.openai.com/v1/chat/completions";

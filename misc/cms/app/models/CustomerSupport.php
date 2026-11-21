@@ -1,5 +1,5 @@
 <?php
-
+namespace app\controllers;
 class RealtimeAgent {
     public string $name;
     public string $instructions;

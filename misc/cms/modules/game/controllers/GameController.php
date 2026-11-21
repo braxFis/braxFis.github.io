@@ -25,6 +25,13 @@ class GameController
       echo "Game not found";
       exit;
     }
+    $relatedArticles = [];
+    try {
+        $mirror = \app\services\WordPressMirror::configured();
+        if ($mirror) { $relatedArticles = $mirror->forGame((string) $id); }
+    } catch (\Throwable $error) {
+        error_log('Related article mirror unavailable: ' . get_class($error));
+    }
     ob_start();
     require __DIR__ . '/../views/single_game.php';
 
@@ -45,14 +52,15 @@ class GameController
 
     $games = [];
 
-    $trailerGames = $this->model->getTrailerGames();
+    $trailerGames = (($data['results'][0]['rating_source'] ?? '') === 'IGDB')
+      ? [] : $this->model->getTrailerGames();
 
     /*
      * Gallery Rotator
      */
     $galleryItems = [];
 
-    foreach ($data['results'] as $item) {
+    foreach (($data['results'] ?? []) as $item) {
 
       if (
         empty($item['id']) ||
@@ -62,11 +70,11 @@ class GameController
       }
 
       $galleryItems[] = [
-        'id'       => (int) $item['id'],
+        'id'       => $item['id'],
         'image'    => $item['background_image'],
         'title'    => $item['name'] ?? 'Unknown Game',
         'subtitle' => 'Featured Game',
-        'url'      => '/games/' . (int) $item['id']
+        'url'      => '/games/' . $item['id']
       ];
 
       if (count($galleryItems) >= 6) {
@@ -78,18 +86,17 @@ class GameController
     /*
      * Prepare games
      */
-    foreach ($data['results'] as $item) {
+    foreach (($data['results'] ?? []) as $item) {
 
       $id = $item['id'];
 
-      $item['description'] =
-        $this->model->getDescription($id);
-
-      $item['trailers'] =
-        $this->model->getTrailers($id);
-
-      $item['short_screenshots'] =
-        $this->model->getScreenshots($id);
+      // IGDB records already include their summaries. Avoid repeated detail
+      // calls for each entry, which also exhaust API rate limits.
+      if (!str_starts_with((string)$id, 'igdb-')) {
+        $item['description'] = $this->model->getDescription($id);
+        $item['trailers'] = $this->model->getTrailers($id);
+        $item['short_screenshots'] = $this->model->getScreenshots($id);
+      }
 
       $games[] = $item;
     }
@@ -118,19 +125,15 @@ class GameController
    * Load more games
    *
    */
-  public function loadMore($page = 1)
-  {
-    var_dump($page);
-    exit;
-    $data = $this->model->getGames($page);
+public function loadMore($page = 1)
+{
+    $page = max(1, (int) ($_GET['page'] ?? $page));
 
+    $data = $this->model->getGames($page);
     $games = $data['results'] ?? [];
 
-
-    header('Content-Type: application/json');
-
+    header('Content-Type: application/json; charset=utf-8');
     echo json_encode($games);
-
     exit;
-  }
+}
 }

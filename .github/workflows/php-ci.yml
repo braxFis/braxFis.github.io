@@ -1,0 +1,40 @@
+name: PHP CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  php-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: PHP syntax check
+        run: |
+          find . -type f -name "*.php" \
+            -not -path "./vendor/*" \
+            -print0 | xargs -0 -r -n1 php -l
+
+      - name: Game data regression tests
+        run: php misc/cms/tests/game_data_regression.php
+
+      - name: WordPress publishing regression tests
+        run: |
+          php misc/cms/tests/wordpress_mirror_regression.php
+          php misc/cms/tests/wordpress_export_regression.php
+
+      - name: Game picker provider tests
+        run: php misc/cms/tests/game_picker_provider_regression.php

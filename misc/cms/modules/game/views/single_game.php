@@ -587,17 +587,16 @@ $stores = $game['stores'] ?? [];
        SCREENSHOTS
        ===================================================== -->
 
-  <?= PictureWidget::renderImageSideBar(
-    $game['id']
-  ) ?>
+    
+    <?= PictureWidget::renderImageSideBar($game['id']) ?>
 
 
   <!-- =====================================================
        TRAILERS
        ===================================================== -->
 
-  <?= TrailerWidget::renderTrailerSideBar(
-    $game['id']
-  ) ?>
+    <?= TrailerWidget::renderTrailerSideBar($game['id']) ?>
+
+<?php require __DIR__ . '/../../../app/views/articles/game.php'; ?>
 
 </div>
